@@ -8,7 +8,7 @@ _— Почему же она называется каскадной?_ — эт
 * чуть важнее — стили, заданные пользователем в недрах настроек браузера; встречаются редко
 * самые важные — стили автора странички, но и там всё идёт по порядку
     *   самый низкий приоритет у тех, что лежат во внешнем подключённом файле
-    *   затем те, что встроили внутрь HTML с помощью тега <style>
+    *   затем те, что встроили внутрь HTML с помощью тега `<style>`
     *   потом те, что захардкодили плохие люди (не вы, вы так делать не будете) в атрибуте «style»
     *   самый высокий приоритет у правил с меткой «!important»
     *   при равенстве приоритетов тапки у того, кто объявлен последним
@@ -28,7 +28,7 @@ _— Почему же она называется каскадной?_ — эт
 при этом [1:0:0:0] > [0:x:y:z] > [0:0:x:y] > [0:0:0:x].
 
 Пример селекторов, выстроенных по приоритету (первые важнее):
-
+```
 #my p#id — [0:2:0:1]
 
 #my #id — [0:2:0:0]
@@ -44,6 +44,7 @@ _— Почему же она называется каскадной?_ — эт
 .content p — [0:0:1:1]
 
 P — [0:0:0:1]
+```
 
 HTML-код для иллюстрации специфичности из предыдущего примера (см. [css.priority.html](http://anton.shevchuk.name/book/code/css.priority.html)):
 
@@ -122,15 +123,13 @@ HTML-код для иллюстрации специфичности из пре
 </html>
 ```
 
-Это пример простого и правильного HTML5 с небольшим добавлением CSS3. Давайте разберём селекторы в приведённом CSS-коде (я умышленно не выносил CSS в отдельный файл, ибо так наглядней):
+Это пример простого и правильного HTML5 с небольшим добавлением CSS3. Давайте разберём селекторы в приведённом CSS-коде
+(я умышленно не выносил CSS в отдельный файл, ибо так наглядней):
 
-`body` — данные правила будут применены к тегу <body> и всем его потомкам, запомните: настройки шрифтов распространяются вниз «по каскаду»
-
-`h1,h2` — мы выбираем теги `<h1>` и `<h2>`, и устанавливаем цвет шрифта для данных тегов и их потомков
-
-`#content` — выбираем элемент с «id="content"», настройки отступов не распространяются на потомков, они будут изменяться тольки для данного элемента
-
-`.box` — выбираем элементы с «class="box"», и изменяем внешний вид границ элементов с заданным классом
+* `body` — данные правила будут применены к тегу <body> и всем его потомкам, запомните: настройки шрифтов распространяются вниз «по каскаду»
+* `h1,h2` — мы выбираем теги `<h1>` и `<h2>`, и устанавливаем цвет шрифта для данных тегов и их потомков
+* `#content` — выбираем элемент с «id="content"», настройки отступов не распространяются на потомков, они будут изменяться тольки для данного элемента
+* `.box` — выбираем элементы с «class="box"», и изменяем внешний вид границ элементов с заданным классом
 
 Теперь подробнее и с усложнёнными примерами:
 
@@ -147,12 +146,13 @@ HTML-код для иллюстрации специфичности из пре
 | a + span | будут выбраны все элементы <span> следующие сразу за элементом <a> |
 | a[href^=http] | будут выбраны все элементы <a> у которых атрибут «href» начинается с http (предположительно, все внешние ссылки) |
 
-_Это отнюдь не весь список, описание же всех CSS3 селекторов можно найти на соответствующей страничке W3C:_ [_http_](http://www.google.com/url?q=http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-selectors%2F&sa=D&sntz=1&usg=AFQjCNGwwWrRQwrxYspj1m-IczSL59wx1w)[_://_](http://www.google.com/url?q=http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-selectors%2F&sa=D&sntz=1&usg=AFQjCNGwwWrRQwrxYspj1m-IczSL59wx1w)[_www_](http://www.google.com/url?q=http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-selectors%2F&sa=D&sntz=1&usg=AFQjCNGwwWrRQwrxYspj1m-IczSL59wx1w)[_._](http://www.google.com/url?q=http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-selectors%2F&sa=D&sntz=1&usg=AFQjCNGwwWrRQwrxYspj1m-IczSL59wx1w)[_w_](http://www.google.com/url?q=http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-selectors%2F&sa=D&sntz=1&usg=AFQjCNGwwWrRQwrxYspj1m-IczSL59wx1w)[_3._](http://www.google.com/url?q=http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-selectors%2F&sa=D&sntz=1&usg=AFQjCNGwwWrRQwrxYspj1m-IczSL59wx1w)[_org_](http://www.google.com/url?q=http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-selectors%2F&sa=D&sntz=1&usg=AFQjCNGwwWrRQwrxYspj1m-IczSL59wx1w)[_/_](http://www.google.com/url?q=http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-selectors%2F&sa=D&sntz=1&usg=AFQjCNGwwWrRQwrxYspj1m-IczSL59wx1w)[_TR_](http://www.google.com/url?q=http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-selectors%2F&sa=D&sntz=1&usg=AFQjCNGwwWrRQwrxYspj1m-IczSL59wx1w)[_/_](http://www.google.com/url?q=http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-selectors%2F&sa=D&sntz=1&usg=AFQjCNGwwWrRQwrxYspj1m-IczSL59wx1w)[_css_](http://www.google.com/url?q=http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-selectors%2F&sa=D&sntz=1&usg=AFQjCNGwwWrRQwrxYspj1m-IczSL59wx1w)[_3-_](http://www.google.com/url?q=http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-selectors%2F&sa=D&sntz=1&usg=AFQjCNGwwWrRQwrxYspj1m-IczSL59wx1w)[_selectors_](http://www.google.com/url?q=http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-selectors%2F&sa=D&sntz=1&usg=AFQjCNGwwWrRQwrxYspj1m-IczSL59wx1w)[_/_](http://www.google.com/url?q=http%3A%2F%2Fwww.w3.org%2FTR%2Fcss3-selectors%2F&sa=D&sntz=1&usg=AFQjCNGwwWrRQwrxYspj1m-IczSL59wx1w)
+_Это отнюдь не весь список, описание же всех CSS3 селекторов можно найти на соответствующей страничке W3C: [https://www.w3.org/TR/selectors-3/](https://www.w3.org/TR/selectors-3/)
 
-_40% задач, которые вы будете решать с помощью jQuery, сводятся к поиску необходимого элемента на странице, так что_ **_знание CSS селекторов обязательно_**_. Вот ещё кусочек CSS для тренировки, напишите соответствующий ему HTML (это тоже вопрос с собеседования ;):_
+_40% задач, которые вы будете решать с помощью jQuery, сводятся к поиску необходимого элемента на странице, так что **знание CSS селекторов обязательно**. 
+Вот ещё кусочек CSS для тренировки, напишите соответствующий ему HTML (это тоже вопрос с собеседования ;):_
 
 ```css
-#my p.announce, .tt.pm li li a:hover+span { color: #f00; }
+#my p.announce, .tt.pm li li a:hover+span { 
+    color: #f00;
+}
 ```
-
-_Пишите прям тут:_

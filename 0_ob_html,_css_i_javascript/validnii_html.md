@@ -1,33 +1,22 @@
 ## Валидный HTML {#html}
 
-Зелёный маркер [W3C validator'а](http://validator.w3.org/) – это правильно, и к этому надо стремиться, так что не забывайте закрывать теги да прописывать обязательные параметры. Приведу пример HTML-кода, в котором допущено 6 ошибок (согласно спецификации HTML 5), найдите их:
+Зелёный маркер [W3C validator'а](http://validator.w3.org/) – это правильно, и к этому надо стремиться, 
+так что не забывайте закрывать теги да прописывать обязательные параметры. Приведу пример HTML-кода, 
+в котором допущено 6 ошибок (согласно спецификации HTML 5), найдите их:
 
+
+```html
 <!DOCTYPE html>
-
 <html>
-
-<body>
-
-<h2>Lorem ipsum
-
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-
-Nunc urna metus, ultricies eu, congue vel, laoreet id, justo.
-
-Aliquam fermentum adipiscing pede. Suspendisse dapibus ornare
-
-quam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-
-<p>
-
-<a href="/index.php?mod=default&amp;act=image">
-
-<img src="/img001.jpg">
-
-</a>
-
-</body>
-
+    <body>
+        <h2>Lorem ipsum
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Nunc urna metus, ultricies eu, congue vel, laoreet id, justo.
+        Aliquam fermentum adipiscing pede. Suspendisse dapibus ornare
+        quam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<p>
+        <a href="/index.php?mod=default&amp;act=image"><img src="/img001.jpg"></a>
+    </body>
 </html>
+```
 
-_Если сомневаетесь в своих знаниях, то проверьте данный код на странице_ [_https://validator.w3.org/nu/#textarea_](https://validator.w3.org/nu/)
+_Если сомневаетесь в своих знаниях, то проверьте данный код на странице [https://validator.w3.org/nu/#textarea](https://validator.w3.org/nu/)

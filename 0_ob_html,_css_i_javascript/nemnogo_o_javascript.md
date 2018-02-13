@@ -36,6 +36,19 @@ var age = 32;
 
 Всё просто, объявляем переменную, используя ключевое слово «var».
 
+{% exercise %}
+Define a variable `x` equal to 10.
+
+{% initial %}
+
+{% solution %}
+var x = 10;
+
+{% validation %}
+assert(x == 10);
+
+{% endexercise %}
+
 _Можно, конечно же, и без «var», но делать я вам это настоятельно не рекомендую, т.к. могут возникнуть непредвиденные проблемы в коде, о чём чуть позже расскажу._
 
 Да, да, JavaScript относится к языкам с динамической типизацией, и нам нет нужды указывать тип данных при объявлении переменных, вы даже можете устроить «holy war» по этому поводу, но делайте это локально, не выходя за рамки своей черепной коробки.
@@ -170,29 +183,6 @@ var pi = 3.1415;
 Math.sqrt(-5);
 ```
 
-{% exercise %}
-Define a variable `x` equal to 10.
-
-{% initial %}
-var x =
-
-{% solution %}
-var x = 10;
-
-{% validation %}
-assert(x == 10);
-
-{% context %}
-// This is context code available everywhere
-// The user will be able to evaluate `exposedVar`
-var exposedVar = 3;
-// ... or call `exposedFunction`
-function exposedFunction {
-    return 3;
-}
-{% endexercise %}
-
-
 но учтите:
 
 ```javascript
@@ -294,9 +284,11 @@ for (let i = 0; i < users.length; i++) {
 users.push("Sidorov"); // добавляем элемент в конец массива
 
 var sidorov = users.pop(); // удаляем и возращаем последний элемент
+```
 
 Для работы с первыми элементами массива следует использовать методы «unshift()» и «shift()»:
 
+```javascript
 users.unshift("Sidorov"); // добавляем элемент в начало массива
 
 var sidorov = users.shift(); // удаляем и возращаем первый элемент
@@ -499,14 +491,14 @@ alert(anotherFunc()); // => 5
 
 Что же тут происходит? Функция, объявленная внутри другой функции, имеет доступ к переменным родительской функции. Повтыкайте в код, пока вас не осенит, о чём я тут толкую.
 
-Хорошая задачка, которая в полной мере даёт понимание сути проблемы: «Армия функций» [[_https://learn.javascript.ru/task/make-army_](https://learn.javascript.ru/task/make-army)_]_
+Хорошая задачка, которая в полной мере даёт понимание сути проблемы: «Армия функций» [https://learn.javascript.ru/task/make-army](https://learn.javascript.ru/task/make-army)
 
 Рекомендуемые статьи по теме:
 
-*   «Привязка контекста и карринг: "bind"» - [[https://learn.javascript.ru/bind](https://learn.javascript.ru/bind)]
-*   «Явное указание this: "call", "apply"» - [[https://learn.javascript.ru/call-apply](https://learn.javascript.ru/call-apply)]
-*   «Функции "изнутри", замыкания» - [[http://learn.javascript.ru/closures](http://learn.javascript.ru/closures)]
-*   «Использование замыканий» - [[http://learn.javascript.ru/closures-usage](http://learn.javascript.ru/closures-usage)]
-*   «Closures: Front to Back» - [[http://net.tutsplus.com/tutorials/javascript-ajax/closures-front-to-back/](http://net.tutsplus.com/tutorials/javascript-ajax/closures-front-to-back/)]
+*   «Привязка контекста и карринг: "bind"» - [https://learn.javascript.ru/bind](https://learn.javascript.ru/bind)
+*   «Явное указание this: "call", "apply"» - [https://learn.javascript.ru/call-apply](https://learn.javascript.ru/call-apply)
+*   «Функции "изнутри", замыкания» - [[http://learn.javascript.ru/closures](http://learn.javascript.ru/closures)
+*   «Использование замыканий» - [http://learn.javascript.ru/closures-usage](http://learn.javascript.ru/closures-usage)
+*   «Closures: Front to Back» - [http://net.tutsplus.com/tutorials/javascript-ajax/closures-front-to-back/](http://net.tutsplus.com/tutorials/javascript-ajax/closures-front-to-back/)
 
 Вводная по JavaScript затянулась, лучше не поленитесь, и изучите весь учебник от Ильи Кантора — [http://learn.javascript.ru/](http://learn.javascript.ru/).

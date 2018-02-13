@@ -2,32 +2,27 @@
 
 Ещё чуть-чуть о полезном инструментарии: есть такой классный плагин – jQuery-inlog [[http://prinzhorn.github.com/jquery-inlog/](http://prinzhorn.github.com/jquery-inlog/)] – основное его назначение — дать нам чуть-чуть больше понимания о происходящем внутри самого jQuery, вот кусочек HTML:
 
+```html
 <body>
-
-<div class="bar">
-
-<div class="bar">
-
-<div id="foo"></div>
-
-</div>
-
-</div>
-
-<div id="bacon"></div>
-
+    <div class="bar">
+        <div class="bar">
+            <div id="foo"></div>
+        </div>
+    </div>
+    <div id="bacon"></div>
 </body>
+```
 
 А вот и код, который его обслуживает:
 
+```javascript
 $l(true);
-
 $("#foo").parents(".bar").next().prev().parent().fadeOut();
-
 $l(false);
+```
 
 Какие-то странные манипуляции, для какого же элемента будет применён метод «.fadeOut()»? Для выяснения оного наш код обёрнут в вызов метода «$l()». «$l()» — это и есть собственно вызов плагина, результат его работы можно найти в консоли:
 
 У данного плагина есть ещё настройки, которые регулируют объём информации выводимой в консоль.
 
-_Пример и скриншот взять с_ [_официальной документации_](http://prinzhorn.github.com/jquery-inlog/) _по плагину_
+_Пример и скриншот взять с [официальной документации](http://prinzhorn.github.com/jquery-inlog/) по плагину_
