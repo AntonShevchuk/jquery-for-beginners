@@ -16,7 +16,7 @@ _Большинство приведенных изменений касаетс
 
 *   Метод «jQuery.ajax()» теперь совместим с Promise, и вы можете использовать методы «.then()» и «.catch()»:
 
-_$._ajax_({url:_ &quot;/get-my-page.html&quot;/* и т.д. */ _})_
+_$._ajax_({url:_ "/get-my-page.html"/* и т.д. */ _})_
 
 _._then_(_function_() {_ /* всё ОК */ _})_
 
@@ -25,14 +25,14 @@ _._catch_(_function_() {_ /* ошибка */ _})_
 _;_
 
 *   Добавлена новая сигнатура для вызова двух AJAX-методов «$.get(settings)» и «$.post(settings)», теперь настройки совместимы с «$.ajax(settings)».
-*   При подключении скриптов с другого домена теперь в обязательном порядке требует указания «dataType: &quot;script&quot;»
+*   При подключении скриптов с другого домена теперь в обязательном порядке требует указания «dataType: "script"»
 *   При выполнении AJAX-запросов и указании URL с хэшем, последний более не обрезается, а отправляется на сервер как есть.
 
 ### Атрибуты
 
 *   Раньше метод «.removeAttr()» для true-false атрибутов, таких как «checked», «selected» и «readonly», втихую выставлял соответсвующее свойство DOM элемента в «false», теперь извольте делать сие ручками:
 
-$(&quot;input[type=email]&quot;).removeAttr(&quot;readonly&quot;).prop(&quot;readonly&quot;, false)
+$("input[type=email]").removeAttr("readonly").prop("readonly", false)
 
 *   Если вызовите метод «.val()» для мультиселекта, в котором ничего не выбрано, то получите в ответ пустой массив, а раньше был «null»
 *   Для SVG заработали методы по манипуляции с классами (хотя полноценной поддержки SVG в jQuery нет).
@@ -45,7 +45,7 @@ $(&quot;input[type=email]&quot;).removeAttr(&quot;readonly&quot;).prop(&quot;rea
 *   Методы «.width()», «.height()» и так далее, раньше вызвав их для пустой коллекции объектов мы получали «null», теперь «undefined».
 *   Официально добавлен promise «jQuery.ready», который очень удобно заюзать вместе с «$.when()»:
 
-$.when($.ready, $.getScript(&quot;script.js&quot;) ).then(function() {
+$.when($.ready, $.getScript("script.js") ).then(function() {
 
 // документ готов, и скрипт script.js подгружен
 
@@ -67,7 +67,7 @@ $.when($.ready, $.getScript(&quot;script.js&quot;) ).then(function() {
 
 _// было_
 
-_$._get_(_&quot;/get-my-page.html&quot;_)_
+_$._get_(_"/get-my-page.html"_)_
 
 _._done_(_function_(data, textStatus, jqXHR) {_ /* всё ОК */ _})_
 
@@ -75,7 +75,7 @@ _._fail_(_function_(jqXHR, textStatus, errorThrown) {_ /* ошибка */ _});_
 
 _// стало_
 
-_$._get_(_&quot;/get-my-page.html&quot;_)_
+_$._get_(_"/get-my-page.html"_)_
 
 _._then_(_function_(data) {_ /* всё ОК */ _})_
 
@@ -83,7 +83,7 @@ _._catch_(_function_(error) {_ /* ошибка */ _});_
 
 ### Размеры {#-0}
 
-Небольшие изменения постигли функции «.width()», «.height()», «.css(&quot;width&quot;)», и «.css(&quot;height&quot;)», теперь они могут возвращать не только integer значение высоты и ширины, но и float, такая точность связана с переходом на использование «getBoundingClientRect()».
+Небольшие изменения постигли функции «.width()», «.height()», «.css("width")», и «.css("height")», теперь они могут возвращать не только integer значение высоты и ширины, но и float, такая точность связана с переходом на использование «getBoundingClientRect()».
 
 Ещё момент, вызов «$(window).outerWidth()» и «$(window).outerHeight()» теперь будут включать в себя размеры скролбаров окна.
 
@@ -101,25 +101,25 @@ _._catch_(_function_(error) {_ /* ошибка */ _});_
 
 // было
 
-$(&quot;img&quot;).load(fn)
+$("img").load(fn)
 
 // стало
 
-$(&quot;img&quot;).on(&quot;load&quot;, fn).
+$("img").on("load", fn).
 
-Удалено синтетическое событие «ready», так что «.on(&quot;ready&quot;, fn)» более не работает, используйте синтаксис «$(fn)».
+Удалено синтетическое событие «ready», так что «.on("ready", fn)» более не работает, используйте синтаксис «$(fn)».
 
 Делегированные события, в случае если их пытаются повесить c использованием неправильных селекторов теперь будут сразу ругаться и выбрасывать ошибку. Дебажить станет легче:
 
 // пример сломанного селектора div:not
 
-$(&quot;body&quot;).on(&quot;click&quot;, &quot;div:not&quot;, e =&gt; false);
+$("body").on("click", "div:not", e => false);
 
 ### Селекторы {#-3}
 
-За селекторы «:hidden» и «:visible» теперь отвечает «getClientRects()», если у запрашиваемого элемента есть layout box, значит он считается видимым, как результат пустой &lt;span&gt; или &lt;br/&gt; теперь считаются видимыми.
+За селекторы «:hidden» и «:visible» теперь отвечает «getClientRects()», если у запрашиваемого элемента есть layout box, значит он считается видимым, как результат пустой <span> или <br/> теперь считаются видимыми.
 
-Кривые селекторы «$(&quot;#&quot;)» и «.find(&quot;#&quot;)» теперь будут вызывать ошибку.
+Кривые селекторы «$("#")» и «.find("#")» теперь будут вызывать ошибку.
 
 Описал многое, но не всё, полное руководство доступно на официальном сайте:
 

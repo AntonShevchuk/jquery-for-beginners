@@ -14,23 +14,23 @@ callback – функция которая будет вызвана при за
 
 // в элемент с id=content будет вставлен весь HTML с указанной страницы
 
-$(&quot;#content&quot;).load(&quot;/get-my-page.html&quot;);
+$("#content").load("/get-my-page.html");
 
 // в элемент с id=content будет вставлен HTML с указанной страницы
 
 // выбранный по указанному селектору #wrapper
 
-$(&quot;#content&quot;).load(&quot;/get-my-page.html #wrapper&quot;);
+$("#content").load("/get-my-page.html #wrapper");
 
 // передаем данные на сервер
 
-$(&quot;#content&quot;).load(&quot;/get-my-page.html&quot;, {id:42});
+$("#content").load("/get-my-page.html", {id:42});
 
 // обрабатываем полученные данные
 
-$(&quot;#content&quot;).load(&quot;/get-my-page.html&quot;, function(){
+$("#content").load("/get-my-page.html", function(){
 
-alert(&quot;Ничего оригинальней не придумал&quot;);
+alert("Ничего оригинальней не придумал");
 
 });
 
@@ -42,19 +42,19 @@ _Следующий метод с которым я вас познакомлю 
 
 _$._ajax_({_
 
-_url:_ &quot;/get-my-page.html&quot;_,_ // указываем URL
+_url:_ "/get-my-page.html"_,_ // указываем URL
 
-_method:_ &quot;GET&quot;_,_ // HTTP метод, по умолчанию GET
+_method:_ "GET"_,_ // HTTP метод, по умолчанию GET
 
-_data: {_&quot;id&quot;: 42}_,_ // данные, которые отправляем на сервер
+_data: {_"id": 42}_,_ // данные, которые отправляем на сервер
 
-_dataType:_ &quot;html&quot;_,_ // тип данных загружаемых с сервера
+_dataType:_ "html"_,_ // тип данных загружаемых с сервера
 
 _success:_ function _(data) {_
 
 // вешаем свой обработчик события success
 
-$(&quot;#content&quot;).html(data)
+$("#content").html(data)
 
 _}_
 
@@ -64,11 +64,11 @@ _Тут мы обрабатывали HTML ответ от сервера – э
 
 _{_
 
-&quot;note&quot;_: {_
+"note"_: {_
 
-&quot;time&quot;_:_&quot;2012.09.21 13:11:15&quot;_,_
+"time"_:_"2012.09.21 13:11:15"_,_
 
-&quot;text&quot;_:_&quot;Рассказать про JSONP&quot;
+"text"_:_"Рассказать про JSONP"
 
 _}_
 

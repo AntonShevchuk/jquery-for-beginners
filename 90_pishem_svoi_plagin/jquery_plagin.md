@@ -4,23 +4,23 @@
 
 ### JavaScript и даже не jQuery {#javascript-jquery}
 
-Дабы не забывать истоков — начнем с реализации на нативном JavaScript&#039;е:
+Дабы не забывать истоков — начнем с реализации на нативном JavaScript'е:
 
 var loader = function () {
 
 // находим все параграфы
 
-var para = document.getElementsByTagName(&#039;P&#039;);
+var para = document.getElementsByTagName('P');
 
 // перебираем все, и вешаем обработчик
 
-for (var i=0,size=para.length;i&lt;size;i++) {
+for (var i=0,size=para.length;i<size;i++) {
 
 // обработчик
 
 para[i].onclick = function() {
 
-this.style.color = &quot;#FF0000&quot;;
+this.style.color = "#FF0000";
 
 }
 
@@ -30,7 +30,7 @@ this.style.color = &quot;#FF0000&quot;;
 
 // естественно, весь код должен работать после загрузки всей страницы
 
-document.addEventListener(&quot;DOMContentLoaded&quot;, loader, false);
+document.addEventListener("DOMContentLoaded", loader, false);
 
 Данный код не является кроссбраузерным, и написан с целью лишний раз подчеркнуть удобство использования библиотеки ;)
 
@@ -40,9 +40,9 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, loader, false);
 
 $(function(){
 
-$(&#039;p&#039;).click(function(){
+$('p').click(function(){
 
-$(this).css(&#039;color&#039;, &#039;#ff0000&#039;);
+$(this).css('color', '#ff0000');
 
 })
 
@@ -56,7 +56,7 @@ $.fn.mySimplePlugin = function() {
 
 $(this).click(function(){
 
-$(this).css(&#039;color&#039;, &#039;#ff0000&#039;);
+$(this).css('color', '#ff0000');
 
 })
 
@@ -84,7 +84,7 @@ return this;
 
 // значение по умолчанию - ЗЕЛЁНЫЙ
 
-var defaults = { color:&#039;green&#039; };
+var defaults = { color:'green' };
 
 // актуальные настройки, глобальные
 
@@ -100,7 +100,7 @@ options = $.extend({}, defaults, options, params);
 
 $(this).click(function(){
 
-$(this).css(&#039;color&#039;, options.color);
+$(this).css('color', options.color);
 
 });
 
@@ -114,11 +114,11 @@ return this;
 
 // первый вызов
 
-$(&#039;p:first,p:last&#039;).mySimplePlugin();
+$('p:first,p:last').mySimplePlugin();
 
 // второй вызов
 
-$(&#039;p:eq(1)&#039;).mySimplePlugin({ color: &#039;red&#039; });
+$('p:eq(1)').mySimplePlugin({ color: 'red' });
 
 В результате работы данного плагина, каждый клик будет изменять цвет параграфа на красный, т.к. мы используем глобальную переменную для хранения настроек, то второй вызов плагина изменят значение для всех элементов.
 
@@ -128,7 +128,7 @@ $(&#039;p:eq(1)&#039;).mySimplePlugin({ color: &#039;red&#039; });
 
 var options = $.extend({}, defaults, params);
 
-А разница то в одном «var». Мне даже сложно себе представить как много часов убито в поисках потерянного «var» в JavaScript&#039;е, будьте внимательны
+А разница то в одном «var». Мне даже сложно себе представить как много часов убито в поисках потерянного «var» в JavaScript'е, будьте внимательны
 
 ### Работаем с коллекциями объектов
 
@@ -150,7 +150,7 @@ return this.each(function(){
 
 $(this).click(function(){
 
-$(this).css(&#039;color&#039;, options.color);
+$(this).css('color', options.color);
 
 });
 
@@ -162,7 +162,7 @@ $(this).css(&#039;color&#039;, options.color);
 
 return this.click(function(){
 
-$(this).css(&#039;color&#039;, options.color);
+$(this).css('color', options.color);
 
 });
 
@@ -174,7 +174,7 @@ $(this).css(&#039;color&#039;, options.color);
 
 // настройки со значением по умолчанию
 
-var defaults = { color:&#039;green&#039; };
+var defaults = { color:'green' };
 
 // наши будущие публичные методы
 
@@ -190,17 +190,17 @@ var options = $.extend({}, defaults, params);
 
 // инициализируем лишь единожды
 
-if (!this.data(&#039;mySimplePlugin&#039;)) {
+if (!this.data('mySimplePlugin')) {
 
 // закинем настройки в реестр data
 
-this.data(&#039;mySimplePlugin&#039;, options);
+this.data('mySimplePlugin', options);
 
 // добавим событий
 
-this.on(&#039;click.mySimplePlugin&#039;, function(){
+this.on('click.mySimplePlugin', function(){
 
-$(this).css(&#039;color&#039;, options.color);
+$(this).css('color', options.color);
 
 });
 
@@ -214,11 +214,11 @@ return this;
 
 color: function(color) {
 
-var options = $(this).data(&#039;mySimplePlugin&#039;);
+var options = $(this).data('mySimplePlugin');
 
 options.color = color;
 
-$(this).data(&#039;mySimplePlugin&#039;, options);
+$(this).data('mySimplePlugin', options);
 
 },
 
@@ -226,7 +226,7 @@ $(this).data(&#039;mySimplePlugin&#039;, options);
 
 reset: function() {
 
-$(this).css(&#039;color&#039;, &#039;black&#039;);
+$(this).css('color', 'black');
 
 }
 
@@ -246,7 +246,7 @@ if ( methods[method] ) {
 
 return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
 
-} else if ( typeof method === &#039;object&#039; || ! method ) {
+} else if ( typeof method === 'object' || ! method ) {
 
 // если первым параметром идет объект, либо совсем пусто
 
@@ -258,7 +258,7 @@ return methods.init.apply( this, arguments );
 
 // если ничего не получилось
 
-$.error(&#039;Метод &quot;&#039; + method + &#039;&quot; в плагине не найден&#039;);
+$.error('Метод "' + method + '" в плагине не найден');
 
 }
 
@@ -268,15 +268,15 @@ $.error(&#039;Метод &quot;&#039; + method + &#039;&quot; в плагине 
 
 // вызов без параметров - будет вызван init
 
-$(&#039;p&#039;).mySimplePlugin();
+$('p').mySimplePlugin();
 
 // вызов метода color и передача цвета в качестве параметров
 
-$(&#039;p&#039;).mySimplePlugin(&#039;color&#039;, &#039;#FFFF00&#039;);
+$('p').mySimplePlugin('color', '#FFFF00');
 
 // вызов метода reset
 
-$(&#039;p&#039;).mySimplePlugin(&#039;reset&#039;);
+$('p').mySimplePlugin('reset');
 
 Для понимания данного кусочка кода, вы должны разобраться лишь с переменной «arguments», и с методом «apply()». Тут им целые статьи посвятили, дерзайте:
 
@@ -288,9 +288,9 @@ $(&#039;p&#039;).mySimplePlugin(&#039;reset&#039;);
 
 Если ваш плагин вешает какой-либо обработчик, то лучше всего (читай всегда) данный обработчик повесить в своём собственном namespace:
 
-return this.on(&quot;click.mySimplePlugin&quot;, function(){
+return this.on("click.mySimplePlugin", function(){
 
-$(this).css(&#039;color&#039;, options.color);
+$(this).css('color', options.color);
 
 });
 
@@ -298,11 +298,11 @@ $(this).css(&#039;color&#039;, options.color);
 
 // вызовем лишь наш обработчик
 
-$(&#039;p&#039;).trigger(&quot;click.mySimplePlugin&quot;);
+$('p').trigger("click.mySimplePlugin");
 
 // убираем все наши обработчики
 
-$(&#039;p&#039;).off(&quot;.mySimplePlugin&quot;);
+$('p').off(".mySimplePlugin");
 
 Дежавю? Ок!
 

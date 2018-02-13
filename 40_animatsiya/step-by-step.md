@@ -20,10 +20,10 @@ _now_; // текущее значение анимированного пара�
 
 // now = (obj.end - obj.start) * obj.pos
 
-_$(this).html(obj.prop +&#039;: &#039;+now+obj.unit);_ // вывод текста
+_$(this).html(obj.prop +': '+now+obj.unit);_ // вывод текста
 
 }
 
-$(&quot;#box&quot;).animate({height: &quot;+=10px&quot;}, {step: customStep});
+$("#box").animate({height: "+=10px"}, {step: customStep});
 
 _Мне ни разу не приходилось использовать step-функции, лишь только для_ [_примера_](http://anton.shevchuk.name/book/code/animate.step.html)

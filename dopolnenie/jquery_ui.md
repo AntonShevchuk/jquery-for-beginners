@@ -21,7 +21,7 @@ jQuery UI представляет из себя набор виджетов и 
 *   Accordion – данный виджет следует использовать если у вас уже используется jQuery UI в проекте, сам по себе основной его функционал можно реализовать в несколько строк (посмотреть можно в [accordion.html](http://anton.shevchuk.name/book/code/accordion.html))
 *   Autocomplete – как и следует из название, данный виджет отвечает за добавление функции автодополнения к полям ввода, естественно с поддержкой AJAX
 *   Button – создание кнопок используя JavaScript – ещё тот моветон, но возможно пригодится, если вы сильно завязались на jQuery UI:
-*   Datepicker – если ваш браузер не поддерживает в полной мере спецификацию HTML5 и &lt;input type=&quot;date&quot;/&gt; в частности, то потребуется эмуляция данной возможности с помощью виджета:
+*   Datepicker – если ваш браузер не поддерживает в полной мере спецификацию HTML5 и <input type="date"/> в частности, то потребуется эмуляция данной возможности с помощью виджета:
 *   Dialog – виджет предназначенный для создания слегка неуклюжих диалоговых окон:
 *   Menu – создание меню из списка, с поддержкой вложенности
 *   Progressbar – название говорит само за себя, и да в HTML5 он тоже включён:
@@ -49,7 +49,7 @@ _Все виджеты и плагины завязаны на ядро jQuery U
 
 За анимацию цвета отвечает компонент «Effects Core», который позволяет анимировать изменения цвета посредством использования функции «.animate()»:
 
-$(&quot;#my&quot;).animate({ backgroundColor: &quot;black&quot; }, 1000);
+$("#my").animate({ backgroundColor: "black" }, 1000);
 
 Да-да, jQuery из коробки не умеет этого делать, а вот jQuery UI позволяет анимировать следующие параметры:
 
@@ -63,15 +63,15 @@ $(&quot;#my&quot;).animate({ backgroundColor: &quot;black&quot; }, 1000);
 
 Ещё одной возможностью заключенной в «Effects Core» является анимация изменений класса DOM элемента, т.е. когда вы будете присваивать новый класс элементу, то вместо обычного моментального применения новых CSS свойств вы будете наблюдать анимацию этих свойств от текущих до заданных в присваиваемом классе. Для использования данного функционала нам потребуются старые знакомые – методы «.addClass()», «.toggleClass()» и «.removeClass()», с одной лишь разницей – при вызове метода вторым параметром должна быть указана скорость анимации:
 
-$(&quot;#my&quot;).addClass(&quot;active&quot;, 1000);
+$("#my").addClass("active", 1000);
 
-$(&quot;#my&quot;).toggleClass(&quot;active&quot;, 1000);
+$("#my").toggleClass("active", 1000);
 
-$(&quot;#my&quot;).removeClass(&quot;active&quot;, 1000);
+$("#my").removeClass("active", 1000);
 
 Если из предыдущего абзаца у вас не возникло понимания сути происходящего, то этот код для вас:
 
-&lt;style&gt;
+<style>
 
 #my {
 
@@ -85,31 +85,31 @@ font-size:20px;
 
 }
 
-&lt;/style&gt;
+</style>
 
-&lt;script&gt;
+<script>
 
 $(function (){
 
-$(&quot;#my&quot;).addClass(&quot;active&quot;, 1000);
+$("#my").addClass("active", 1000);
 
 // тут получается аналогично следующему вызову
 
-$(&quot;#my&quot;).animate({&quot;font-size&quot;:&quot;20px&quot;}, 1000);
+$("#my").animate({"font-size":"20px"}, 1000);
 
 });
 
-&lt;/script&gt;
+</script>
 
 _А ещё появляется метод «.switchClass()», который заменяет один класс другим, но мне он ни разу не пригодился._
 
 О наборе эффектов я не буду долго рассказывать, их лучше посмотреть в действии на странице [http://jqueryui.com/effect/](http://jqueryui.com/effect/). Для работы с эффектами появляется метод «.effect()», но сам по себе его лучше не использовать, ведь UI расширил функционал встроенных методов «.show()», «.hide()» и «.toggle()», теперь, передав в качестве параметра скорости анимации названия эффекта вы получите необходимый результат:
 
-$(&quot;#my&quot;).hide(&quot;puff&quot;);
+$("#my").hide("puff");
 
-$(&quot;#my&quot;).show(&quot;transfer&quot;);
+$("#my").show("transfer");
 
-$(&quot;#my&quot;).toggle(&quot;explode&quot;);
+$("#my").toggle("explode");
 
 _Приведу список эффектов, может кто запомнит: blind, bounce, clip, drop, explode, fold, highlight, puff, pulsate, scale, shake, size, slide, transfer._
 
@@ -127,13 +127,13 @@ _Если в какой-то момент времени потребуется 
 
 Первое, о чём стоит рассказать, это то, что правила написания плагинов для jQuery слишком вальяжны, что не способствует их качеству. При создании jQuery UI, походу, решили пойти путём стандартизации процесса написания плагинов и виджетов, я не могу сказать насколько задумка удалась, но стало явно лучше чем было. Начну с описания каркаса для вашего виджета:
 
-$.widget(&quot;book.expose&quot;, {
+$.widget("book.expose", {
 
 // настройки по умолчанию
 
 options: {
 
-color: &quot;red&quot;
+color: "red"
 
 },
 
@@ -149,9 +149,9 @@ this.name; // имя - expose
 
 this.namespace; // пространство – book
 
-_this.element_.on(&quot;click.&quot;+this.eventNamespace, function(){
+_this.element_.on("click."+this.eventNamespace, function(){
 
-console.log(&quot;click&quot;);
+console.log("click");
 
 }_)_
 
@@ -163,7 +163,7 @@ _setOption: function( key, value ) {
 
 // применяем изменения настроек
 
-this._super(&quot;_setOption&quot;, key, value );
+this._super("_setOption", key, value );
 
 },
 
@@ -175,7 +175,7 @@ this._super(&quot;_setOption&quot;, key, value );
 
 _destroy: function() {
 
-this.element.off(&#039;.&#039;+this.eventNamespace);
+this.element.off('.'+this.eventNamespace);
 
 }
 
@@ -185,19 +185,19 @@ this.element.off(&#039;.&#039;+this.eventNamespace);
 
 options – хранилище настроек виджета для конкретного элемента
 
-_create() – отвечает за инициализацию виджета – тут должны происходить изменения в DOM&#039;е, и «вешаться» обработчики событий
+_create() – отвечает за инициализацию виджета – тут должны происходить изменения в DOM'е, и «вешаться» обработчики событий
 
 _destroy() – антипод для «_create()» – должен подчистить всё, что мы намусорили
 
 _setOption(key, value) – данный метод будет вызван при попытке изменить какие-либо настройки:
 
-$(&quot;#my&quot;).expose({key:value})
+$("#my").expose({key:value})
 
-_Наблюдательный глаз заметит, что все перечисленные методы начинаются со знака подчёркивания – это такой способ выделить «приватные» методы, которые недоступны для запуска, и если мы попытаемся запустить «$(&#039;#my&#039;).expose(&#039;_destroy&#039;)», то получим ошибку. Но учтите – это лишь договорённость, соблюдайте, её!_
+_Наблюдательный глаз заметит, что все перечисленные методы начинаются со знака подчёркивания – это такой способ выделить «приватные» методы, которые недоступны для запуска, и если мы попытаемся запустить «$('#my').expose('_destroy')», то получим ошибку. Но учтите – это лишь договорённость, соблюдайте, её!_
 
 _Для обхода договорённости о приватности можно использовать метод «data()»:_
 
-_$(&quot;#my&quot;).data(&quot;expose&quot;)._destroy() // место для смайла «(evil)»_
+_$("#my").data("expose")._destroy() // место для смайла «(evil)»_
 
 В данном примере, я постарался задать хороший тон написания виджетов – я «повесил» обработчики событий в namespace, это даст в дальнейшем возможность контролировать происходящее без необходимости залазить в код виджета, это «true story».
 
@@ -214,13 +214,13 @@ this._on(this.element, {
 
 mouseover:function(event) {
 
-console.log(&quot;Hello mouse&quot;);
+console.log("Hello mouse");
 
 },
 
 mouseout:function(event) {
 
-console.log(&quot;Bye mouse&quot;);
+console.log("Bye mouse");
 
 }
 
@@ -228,13 +228,13 @@ console.log(&quot;Bye mouse&quot;);
 
 Второй метод – «_off()» – позволяет выборочно отключать обработчики:
 
-this._off(this.element, &quot;mouseout click&quot;);
+this._off(this.element, "mouseout click");
 
 Ну каркас баркасом, пора переходить к функционалу – добавим произвольную функцию с произвольным функционалом:
 
 callMe:function(){
 
-console.log(&quot;Allo?&quot;);
+console.log("Allo?");
 
 }
 
@@ -246,11 +246,11 @@ this.callMe()
 
 // извне
 
-$(&quot;#my&quot;).expose(&quot;callMe&quot;)
+$("#my").expose("callMe")
 
 Если ваша функция принимает параметры, то передача оных осуществляется следующим способом:
 
-$(&quot;#my&quot;).expose(&quot;callMe&quot;, &quot;Hello!&quot;)
+$("#my").expose("callMe", "Hello!")
 
 Если вы хотите достучаться в обработчике событий до метода виджета, то не забудьте про область видимости переменных, и сделайте следующий манёвр:
 
@@ -258,7 +258,7 @@ _create: function() {
 
 var self = this; // вот он!
 
-this.element.on(&quot;click.&quot;+this.eventNamespace, function(){
+this.element.on("click."+this.eventNamespace, function(){
 
 // тут используем self, т.к. this уже указывает на
 
@@ -274,15 +274,15 @@ self.callMe();
 
 // инициируем событие
 
-this._trigger(&quot;incomingCall&quot;);
+this._trigger("incomingCall");
 
 // подписываемся на событие при инициализации виджета
 
-$(&quot;#my&quot;).expose({
+$("#my").expose({
 
 incommingCall: function(ev) {
 
-console.log(&quot;din-don&quot;);
+console.log("din-don");
 
 }
 
@@ -292,9 +292,9 @@ console.log(&quot;din-don&quot;);
 
 // имя виджета + имя события
 
-$(&quot;#my&quot;).on(&quot;exposeincomingCall&quot;, function(){
+$("#my").on("exposeincomingCall", function(){
 
-console.log(&quot;tru-lya-lya&quot;)
+console.log("tru-lya-lya")
 
 });
 
@@ -310,7 +310,7 @@ options: {
 
 hide: {
 
-effect: &quot;slideDown&quot;, // настройки эквиваленты вызову
+effect: "slideDown", // настройки эквиваленты вызову
 
 duration: 500 // .slideDown( 500)
 
@@ -324,7 +324,7 @@ this._hide( this.element, this.options.hide, function() {
 
 // это наша функция обратного вызова
 
-console.log(&#039;спрятали&#039;);
+console.log('спрятали');
 
 });
 
@@ -332,19 +332,19 @@ console.log(&#039;спрятали&#039;);
 
 enable: function() {
 
-return this._setOption( &quot;disabled&quot;, false );
+return this._setOption( "disabled", false );
 
 },
 
 disable: function() {
 
-return this._setOption( &quot;disabled&quot;, true );
+return this._setOption( "disabled", true );
 
 },
 
 Фактически, данный функции создают синоним для вызова:
 
-$(&quot;#my&quot;).expose({ &quot;disabled&quot;: true }) // или false
+$("#my").expose({ "disabled": true }) // или false
 
 Наша задача сводится лишь к отслеживанию данного флага в методе «_setOption()».
 

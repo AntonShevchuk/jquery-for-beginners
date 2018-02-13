@@ -2,13 +2,13 @@
 
 _Пропустите это раздел, и вернитесь к нему тогда, когда вас заинтересует, как происходит поиск элементов внутри «$»_
 
-В качестве «поисковика» по элементам DOM&#039;а jQuery использует библиотеку Sizzle. Данная библиотека одно время была неотъемлемой частью jQuery, затем «отпочковалась» в отдельный проект, который с радостью используется как самим jQuery, так и Dojo Toolkit. Но хватит лирики, давайте перейдем непосредственно к поиску. Для оного в JavaScript&#039;е предусмотрены следующие методы (не в jQuery, не в Sizzle, а в JavaScript&#039;е):
+В качестве «поисковика» по элементам DOM'а jQuery использует библиотеку Sizzle. Данная библиотека одно время была неотъемлемой частью jQuery, затем «отпочковалась» в отдельный проект, который с радостью используется как самим jQuery, так и Dojo Toolkit. Но хватит лирики, давайте перейдем непосредственно к поиску. Для оного в JavaScript'е предусмотрены следующие методы (не в jQuery, не в Sizzle, а в JavaScript'е):
 
-getElementById(_id_) — поиск по «id=&quot;…&quot;»
+getElementById(_id_) — поиск по «id="…"»
 
-getElementsByName(_name_) — поиск по «name=&quot;name&quot;» и «id=&quot;name&quot;»
+getElementsByName(_name_) — поиск по «name="name"» и «id="name"»
 
-getElementsByClassName(_class_) — поиск по «class=&quot;class&quot;»
+getElementsByClassName(_class_) — поиск по «class="class"»
 
 getElementsByTagName(_tag_) — поиск по тегу
 
@@ -56,12 +56,12 @@ return oldSelect( selector, context, results, seed, xml );
 
 });
 
-Но давайте уже рассмотрим, как Sizzle ищет в DOM&#039;е, если-таки метод «document.querySelectorAll()» споткнулся. Начнём с разбора алгоритма работы на следующем примере:
+Но давайте уже рассмотрим, как Sizzle ищет в DOM'е, если-таки метод «document.querySelectorAll()» споткнулся. Начнём с разбора алгоритма работы на следующем примере:
 
-$(&quot;thead &gt; .active, tbody &gt; .active&quot;)
+$("thead > .active, tbody > .active")
 
-1.  Получить первое выражение до запятой: «thead &gt; .active»
-2.  Разбить на кусочки: «thead», «&gt;», «.active»
+1.  Получить первое выражение до запятой: «thead > .active»
+2.  Разбить на кусочки: «thead», «>», «.active»
 3.  Найти исходное множество элементов по последнему кусочку (все «.active»)
 4.  Фильтровать справа налево (все «.active» которые находятся непосредственно в «thead»)
 5.  Искать следующий запрос после запятой (возвращаемся к первому пункту)
@@ -71,41 +71,41 @@ $(&quot;thead &gt; .active, tbody &gt; .active&quot;)
 
 Копаем глубже. При анализе даже самого маленького выражения есть несколько нюансов, на которые стоит обратить внимание. Первый – это приоритет поиска, он различен для различных браузеров (в зависимости от их возможностей, или «невозможностей»):
 
-order: new RegExp( &quot;ID|TAG&quot; +
+order: new RegExp( "ID|TAG" +
 
-(assertUsableName ? &quot;|NAME&quot; : &quot;&quot;) +
+(assertUsableName ? "|NAME" : "") +
 
-(assertUsableClassName ? &quot;|CLASS&quot; : &quot;&quot;)
+(assertUsableClassName ? "|CLASS" : "")
 
 )
 
 _Не обращайте внимание на RegExp – это внутренняя кухня Sizzle_
 
-Таким образом, рассматривая выражение «div#my», Sizzle найдёт вначале элемент с «id=&quot;my&quot;», а потом уже проверит на соответствие с &lt;div&gt;. Хорошо, это вроде как фильтрация, и она тоже соблюдает очерёдность – это второй нюанс:
+Таким образом, рассматривая выражение «div#my», Sizzle найдёт вначале элемент с «id="my"», а потом уже проверит на соответствие с <div>. Хорошо, это вроде как фильтрация, и она тоже соблюдает очерёдность – это второй нюанс:
 
 preFilter: {
 
-&quot;ATTR&quot;: function (match) { /* ... */ },
+"ATTR": function (match) { /* ... */ },
 
-&quot;CHILD&quot;: function (match) { /* ... */ },
+"CHILD": function (match) { /* ... */ },
 
-&quot;PSEUDO&quot;: function (match) { /* ... */ },
+"PSEUDO": function (match) { /* ... */ },
 
 },
 
 filter: {
 
-&quot;ID&quot;: function (id) { /* ... */ },
+"ID": function (id) { /* ... */ },
 
-&quot;TAG&quot;: function (nodeName) { /* ... */ },
+"TAG": function (nodeName) { /* ... */ },
 
-&quot;CLASS&quot;: function (className) { /* ... */ },
+"CLASS": function (className) { /* ... */ },
 
-&quot;ATTR&quot;: function (name, operator, check) { /* ... */ },
+"ATTR": function (name, operator, check) { /* ... */ },
 
-&quot;CHILD&quot;: function (type, argument, first, last) { /* ... */ },
+"CHILD": function (type, argument, first, last) { /* ... */ },
 
-&quot;PSEUDO&quot;: function (pseudo, argument, context, xml) { /* ... */ }
+"PSEUDO": function (pseudo, argument, context, xml) { /* ... */ }
 
 }
 
@@ -113,19 +113,19 @@ filter: {
 
 relative: {
 
-&quot;&gt;&quot;: { dir: &quot;parentNode&quot;, first: true },
+">": { dir: "parentNode", first: true },
 
-&quot; &quot;: { dir: &quot;parentNode&quot; },
+" ": { dir: "parentNode" },
 
-&quot;+&quot;: { dir: &quot;previousSibling&quot;, first: true },
+"+": { dir: "previousSibling", first: true },
 
-&quot;~&quot;: { dir: &quot;previousSibling&quot; }
+"~": { dir: "previousSibling" }
 
 },
 
 Ой, зачем я вас всем этим гружу? Почитайте лучше об оптимизации запросов абзацем ниже.
 
-Официальная документация по библиотеке Sizzle доступна на GitHub&#039;е проекта:
+Официальная документация по библиотеке Sizzle доступна на GitHub'е проекта:
 
 *   «Sizzle Documentation»
 

@@ -6,31 +6,31 @@ _Стоит помнить, что есть ещё пользователи, у 
 
 Как же всё это обойти и на грабли не наступить? Да всё очень просто — создавайте обычную навигацию, которую вы бы делали не слышав ни разу о AJAX и компании:
 
-&lt;ul class=&quot;navigation&quot;&gt;
+<ul class="navigation">
 
-&lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+<li><a href="/">Home</a></li>
 
-&lt;li&gt;&lt;a href=&quot;/about.html&quot;&gt;About Us&lt;/a&gt;&lt;/li&gt;
+<li><a href="/about.html">About Us</a></li>
 
-&lt;li&gt;&lt;a href=&quot;/contact.html&quot;&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+<li><a href="/contact.html">Contact Us</a></li>
 
-&lt;/ul&gt;
+</ul>
 
-&lt;section id=&quot;content&quot;&gt;&lt;!-- Content --&gt;&lt;/section&gt;
+<section id="content"><!-- Content --></section>
 
-Данный пример работает у нас без JavaScript’a, все страницы в нашем меню используют один и тот же шаблон для вывода информации, и по факту у нас изменяется лишь содержимое &lt;div&gt; с «id=&quot;content&quot;». Теперь приступим к загрузке контента посредством AJAX – для этого добавим следующий код:
+Данный пример работает у нас без JavaScript’a, все страницы в нашем меню используют один и тот же шаблон для вывода информации, и по факту у нас изменяется лишь содержимое <div> с «id="content"». Теперь приступим к загрузке контента посредством AJAX – для этого добавим следующий код:
 
 $(function() {
 
 // вешаем обработчик на все ссылки в нашем меню navigation
 
-$(&quot;ul.navigation a&quot;).click(function(){
+$("ul.navigation a").click(function(){
 
-var url = $(this).attr(&quot;href&quot;); // возьмем ссылку
+var url = $(this).attr("href"); // возьмем ссылку
 
-url =+ &quot;?ajax=true&quot;; // добавим к ней параметр ajax=true
+url =+ "?ajax=true"; // добавим к ней параметр ajax=true
 
-$(&quot;#content&quot;).load(url); // загружаем обновлённое содержимое
+$("#content").load(url); // загружаем обновлённое содержимое
 
 return false; // возвращаем false
 
@@ -40,7 +40,7 @@ return false; // возвращаем false
 
 });
 
-В данном примере мы предполагаем, что сервер, видя параметр «ajax=true» вернет нам не полностью всю страницу, а лишь обновление для искомого элемента &lt;div id=&quot;content&quot;&gt;.
+В данном примере мы предполагаем, что сервер, видя параметр «ajax=true» вернет нам не полностью всю страницу, а лишь обновление для искомого элемента <div id="content">.
 
 _Конечно, сервер должен быть умнее и не требовать явного указания для использования AJAX’а, а должен вполне удовлетвориться, словив header «X_REQUESTED_WITH» со значением «XMLHttpRequest». Большинство современных фреймворков для web-разработки с этим справляются «из коробки»._
 
@@ -50,15 +50,15 @@ $(function() {
 
 // вешаем обработчик на все ссылки в нашем меню navigation
 
-$(&quot;ul.navigation a&quot;).click(function(){
+$("ul.navigation a").click(function(){
 
-var url = $(this).attr(&quot;href&quot;); // возьмем ссылку
+var url = $(this).attr("href"); // возьмем ссылку
 
 // загружаем страницу целиком, но в наш контейнер вставляем
 
 // лишь содержимое #content загружаемой страницы
 
-$(&quot;#content&quot;).load(url + &quot; #content &gt; *&quot;);
+$("#content").load(url + " #content > *");
 
 return false; // возвращаем false
 

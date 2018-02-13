@@ -16,37 +16,37 @@ _Метод «.css()» возвращает текущее значение, а 
 
 Примеры использования ([css.html](http://anton.shevchuk.name/book/code/css.html)):
 
-$(&quot;#my&quot;).css(&#039;color&#039;) // получаем значение цвета шрифта
+$("#my").css('color') // получаем значение цвета шрифта
 
-$(&quot;#my&quot;).css(&#039;color&#039;, &#039;red&#039;) // устанавливаем значение цвета шрифта
+$("#my").css('color', 'red') // устанавливаем значение цвета шрифта
 
 // установка нескольких значений
 
-$(&quot;#my&quot;).css({
+$("#my").css({
 
-&#039;color&#039;:&#039;red&#039;,
+'color':'red',
 
-&#039;font-size&#039;:&#039;14px&#039;,
+'font-size':'14px',
 
-&#039;margin-left&#039;:&#039;10px&#039;
+'margin-left':'10px'
 
 })
 
 // альтернативный способ
 
-$(&quot;#my&quot;).css({
+$("#my").css({
 
-color:&#039;red&#039;,
+color:'red',
 
-fontSize:&#039;14px&#039;,
+fontSize:'14px',
 
-marginLeft:&#039;10px&#039;,
+marginLeft:'10px',
 
 })
 
 // используя функцию обратного вызова
 
-$(&quot;#my&quot;).css(&#039;height&#039;, function(i, value){
+$("#my").css('height', function(i, value){
 
 return parseFloat(value) * 1.2;
 
@@ -78,33 +78,33 @@ _В приведённых методах в качестве «className» мо
 
 // добавляем несколько классов за раз
 
-$(&quot;#my&quot;).addClass(&#039;active notice&#039;)
+$("#my").addClass('active notice')
 
 // переключаем несколько классов
 
-$(&quot;#my&quot;).toggleClass(&#039;active notice&#039;)
+$("#my").toggleClass('active notice')
 
 // работает вот так (похоже на классовый XOR):
 
-&lt;div id=&quot;my&quot; class=&quot;active notice&quot;&gt; → &lt;div id=&quot;my&quot; class=&quot;&quot;&gt;
+<div id="my" class="active notice"> → <div id="my" class="">
 
-&lt;div id=&quot;my&quot; class=&quot;active&quot;&gt; → &lt;div id=&quot;my&quot; class=&quot;notice&quot;&gt;
+<div id="my" class="active"> → <div id="my" class="notice">
 
-&lt;div id=&quot;my&quot; class=&quot;&quot;&gt; → &lt;div id=&quot;my&quot; class=&quot;active notice&quot;&gt;
+<div id="my" class=""> → <div id="my" class="active notice">
 
 // аналогично предыдущему примеру
 
-$(&quot;#my&quot;).toggleClass(&#039;active&#039;)
+$("#my").toggleClass('active')
 
-$(&quot;#my&quot;).toggleClass(&#039;notice&#039;)
+$("#my").toggleClass('notice')
 
 // проверяем наличие класса(-ов)
 
-$(&quot;#my&quot;).hasClass(&#039;active&#039;)
+$("#my").hasClass('active')
 
 // удаляем несколько классов за раз
 
-$(&quot;#my&quot;).removeClass(&#039;active notice&#039;)
+$("#my").removeClass('active notice')
 
 Также, стоит вспомнить, что у DOM-элементов бывают атрибуты отличные от класса, и мы их тоже можем изменять. Для этого нам потребуются следующие методы:
 
@@ -116,27 +116,27 @@ removeAttr(_attrName_) — удаление атрибута
 
 Атрибуты – это всё то, что мы видим внутри угловых скобочек, когда пишем HTML-код:
 
-&lt;!-- В данном примере это href, title, class --&gt;
+<!-- В данном примере это href, title, class -->
 
-&lt;a href=&quot;#top&quot; title=&quot;anchor&quot; class=&quot;simple&quot;&gt;To Top&lt;/a&gt;
+<a href="#top" title="anchor" class="simple">To Top</a>
 
 Атрибуты, с которыми вам чаще других придётся сталкиваться:
 
 // _получение_ альтернативного текста картинки
 
-var altText = $(&#039;img&#039;).attr(&#039;alt&#039;)
+var altText = $('img').attr('alt')
 
 // изменение адреса картинки
 
-$(&#039;img&#039;).attr(&#039;src&#039;, &#039;/images/default.png&#039;)
+$('img').attr('src', '/images/default.png')
 
 // работаем со ссылками
 
-$(&#039;a#my&#039;).attr({
+$('a#my').attr({
 
-&#039;href&#039;:&#039;http://anton.shevchuk.name&#039;,
+'href':'http://anton.shevchuk.name',
 
-&#039;title&#039;:&#039;My Personal Blog&#039;,
+'title':'My Personal Blog',
 
 });
 

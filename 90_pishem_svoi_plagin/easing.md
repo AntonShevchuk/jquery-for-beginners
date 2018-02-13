@@ -20,21 +20,21 @@ $.extend($.easing, {
 
 heart:function(x) {
 
-if (x &lt; 0.3) return Math.pow(x, 4) * 49.4;
+if (x < 0.3) return Math.pow(x, 4) * 49.4;
 
-if (x &lt; 0.4) return 9 * x - 2.3;
+if (x < 0.4) return 9 * x - 2.3;
 
-if (x &lt; 0.5) return -13 * x + 6.5;
+if (x < 0.5) return -13 * x + 6.5;
 
-if (x &lt; 0.6) return 4 * x - 2;
+if (x < 0.6) return 4 * x - 2;
 
-if (x &lt; 0.7) return 0.4;
+if (x < 0.7) return 0.4;
 
-if (x &lt; 0.75) return 4 * x - 2.4;
+if (x < 0.75) return 4 * x - 2.4;
 
-if (x &lt; 0.8) return -4 * x + 3.6;
+if (x < 0.8) return -4 * x + 3.6;
 
-if (x &gt;= 0.8) return 1 - Math.sin(Math.acos(x));
+if (x >= 0.8) return 1 - Math.sin(Math.acos(x));
 
 }
 
@@ -42,27 +42,27 @@ if (x &gt;= 0.8) return 1 - Math.sin(Math.acos(x));
 
 Чуть-чуть пояснений, конструкция «$.extend({}, {})» «смешивает» объекты:
 
-$.extend({name:&quot;Anton&quot;}, {location:&quot;Kharkiv&quot;});
+$.extend({name:"Anton"}, {location:"Kharkiv"});
 
-&gt;&gt;&gt;
+>>>
 
 {
 
-name:&quot;Anton&quot;,
+name:"Anton",
 
-location:&quot;Kharkiv&quot;
+location:"Kharkiv"
 
 }
 
-$.extend({name:&quot;Anton&quot;, location:&quot;Kharkiv&quot;}, {location:&quot;Kyiv&quot;});
+$.extend({name:"Anton", location:"Kharkiv"}, {location:"Kyiv"});
 
-&gt;&gt;&gt;
+>>>
 
 {
 
-name:&quot;Anton&quot;,
+name:"Anton",
 
-location:&quot;Kyiv&quot;
+location:"Kyiv"
 
 }
 
@@ -86,7 +86,7 @@ return $.easing.heart(1 - x);
 
 heartInOut: function (x) {
 
-if (x &lt; 0.5) return $.easing.heartIn(x);
+if (x < 0.5) return $.easing.heartIn(x);
 
 return $.easing.heartOut(x);
 
@@ -99,6 +99,6 @@ return $.easing.heartOut(x);
 
 Работать с данным творением надо следующим образом:
 
-$(&quot;#my&quot;).animate({height:&quot;+200px&quot;}, 2000, &quot;heartIn&quot;); // вот оно
+$("#my").animate({height:"+200px"}, 2000, "heartIn"); // вот оно
 
 Пример работы данной функции можно пощупать на странице [easing.html](http://anton.shevchuk.name/book/code/easing.html)

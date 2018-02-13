@@ -12,9 +12,9 @@ var D = $.Deferred();
 
 // подключаем обработчики
 
-D.then(function() { console.log(&quot;first&quot;) });
+D.then(function() { console.log("first") });
 
-D.then(function() { console.log(&quot;second&quot;) });
+D.then(function() { console.log("second") });
 
 // изменяем статус на «fulfilled» - «выполнен успешно»
 
@@ -28,7 +28,7 @@ D.resolve();
 
 // данный обработчик подключён слишком поздно, и будет вызван сразу
 
-D.then(function() { console.log(&quot;third&quot;) });
+D.then(function() { console.log("third") });
 
 Если всё это перевести на человеческий язык, то получится следующий сценарий:
 
@@ -45,9 +45,9 @@ var D = $.Deferred();
 
 // подключаем обработчики
 
-D.then(function() { console.log(&quot;done&quot;) });
+D.then(function() { console.log("done") });
 
-D.catch(function() { console.log(&quot;fail&quot;) });
+D.catch(function() { console.log("fail") });
 
 // изменяем статус на «rejected» - «выполнен с ошибкой»
 
@@ -63,9 +63,9 @@ D.reject();
 
 В действительности метод «.then()», позволяет вешать одновременно как обработчики для положительного сценария, так и для варианта с ошибкой:
 
-D.then(function(result) { console.log(&quot;done&quot;) },
+D.then(function(result) { console.log("done") },
 
-function(error) { console.log(&quot;fail&quot;) });
+function(error) { console.log("fail") });
 
 Становится ли от этого код читаемым – сомневаюсь, но такой вариант существует и используется повсеместно, я же предпочитаю для отлова ошибок использовать метод «.catch()», который по своей сути лишь сокращенная запись для «.then(null, fn)»:
 
@@ -73,11 +73,11 @@ var D = $.Deferred();
 
 // подключаем обработчик ошибок через then()
 
-D.then(null, function() { console.log(&quot;fail&quot;) });
+D.then(null, function() { console.log("fail") });
 
 // подключаем обработчик ошибок через catch()
 
-D.catch(function() { console.log(&quot;again fail&quot;) });
+D.catch(function() { console.log("again fail") });
 
 Ещё упомяну метод «.always()» – он добавляет обработчики, которые будут выполнены вне зависимости от случившегося (в дейсвтительности, внутри происходит вызов «.done(arguments)» и «.fail(arguments)»).
 
@@ -89,13 +89,13 @@ D.catch(function() { console.log(&quot;again fail&quot;) });
 
 А ещё, кроме поведения «ждём чуда», с помощью Deferred можно выстраивать цепочки вызовов – «живые очереди»:
 
-$.ajax(&#039;ajax/example.json&#039;)
+$.ajax('ajax/example.json')
 
 .then(function(){
 
 // подождём окончания AJAX запроса
 
-return $(&#039;article img&#039;).slideUp(2000).promise()
+return $('article img').slideUp(2000).promise()
 
 })
 
@@ -103,7 +103,7 @@ return $(&#039;article img&#039;).slideUp(2000).promise()
 
 // подождём пока спрячутся картинки
 
-return $(&#039;article p&#039;).slideUp(2000).promise()
+return $('article p').slideUp(2000).promise()
 
 })
 
@@ -111,7 +111,7 @@ return $(&#039;article p&#039;).slideUp(2000).promise()
 
 // подождём пока спрячутся параграфы
 
-return $(&#039;article&#039;).hide(2000).promise()
+return $('article').hide(2000).promise()
 
 })
 
@@ -135,11 +135,11 @@ var money = 100; // наш бюджет
 
 D.progress(function($){
 
-console.log(money + &quot; - &quot; + $ + &quot; = &quot; + (money-$));
+console.log(money + " - " + $ + " = " + (money-$));
 
 money -= $;
 
-if (money &lt; 0) { // деньги закончились
+if (money < 0) { // деньги закончились
 
 D.reject();
 
@@ -155,9 +155,9 @@ setTimeout(function(){ D.notify(50); }, 1000); // покупка 2
 
 setTimeout(function(){ D.notify(30); }, 1500); // покупка 3
 
-D.then(function(){ console.info(&quot;All Ok&quot;) });
+D.then(function(){ console.info("All Ok") });
 
-D.catch(function(){ console.error(&quot;Insufficient Funds&quot;) });
+D.catch(function(){ console.error("Insufficient Funds") });
 
 Испытайте всю мощь Deferred в примере [_deferred.html_](http://anton.shevchuk.name/book/code/deferred.html)
 
@@ -165,17 +165,17 @@ D.catch(function(){ console.error(&quot;Insufficient Funds&quot;) });
 
 $.when(
 
-$.ajax(&quot;/ajax/example.json&quot;),
+$.ajax("/ajax/example.json"),
 
-$(&quot;article&quot;).slideUp(200)
+$("article").slideUp(200)
 
 ).then(function(){
 
-alert(&quot;All done&quot;);
+alert("All done");
 
 }, function(){
 
-alert(&quot;Something wrong&quot;);
+alert("Something wrong");
 
 })
 

@@ -1,6 +1,6 @@
 ## _Прокачиваем AJAX_ {#ajax}
 
-У нас есть три способа для «прокачки» AJAX&#039;а в jQuery: это создание префильтров, добавление новых конверторов и транспортов.
+У нас есть три способа для «прокачки» AJAX'а в jQuery: это создание префильтров, добавление новых конверторов и транспортов.
 
 ### _Префильтры_
 
@@ -56,7 +56,7 @@ $.ajaxPrefilter(function( options ) {
 
 if ( options.crossDomain ) {
 
-options.url = &quot;/proxy/&quot; + encodeURIComponent( options.url );
+options.url = "/proxy/" + encodeURIComponent( options.url );
 
 options.crossDomain = false;
 
@@ -66,7 +66,7 @@ options.crossDomain = false;
 
 Префильтры можно «вешать» на определенный тип «dataType» (т.е. в зависимости от ожидаемого типа данных от сервера будут срабатывать различные фильтры):
 
-$.ajaxPrefilter(&quot;json script&quot;, function(options, original, jqXHR) {
+$.ajaxPrefilter("json script", function(options, original, jqXHR) {
 
 /* ... */
 
@@ -82,7 +82,7 @@ if ( isActuallyScript( options.url ) ) {
 
 // теперь «ждём» script
 
-return &quot;script&quot;;
+return "script";
 
 }
 
@@ -96,19 +96,19 @@ _Будьте очень осторожны когда оперируете гл
 
 Всё конверторы хранятся в глобальных настройках «ajaxSettings»:
 
-// формат ключа &quot;из_формата в_формат&quot;
+// формат ключа "из_формата в_формат"
 
-// в качестве входного формата можно использовать &quot;*&quot;
+// в качестве входного формата можно использовать "*"
 
 converters: {
 
-&quot;* text&quot;: window.String, // что угодно приводим к тексту
+"* text": window.String, // что угодно приводим к тексту
 
-&quot;text html&quot;: true, // текст к html (флаг true == без изменений)
+"text html": true, // текст к html (флаг true == без изменений)
 
-&quot;text json&quot;: jQuery.parseJSON, // текст к JSON
+"text json": jQuery.parseJSON, // текст к JSON
 
-&quot;text xml&quot;: jQuery.parseXML // разбираем текст как xml
+"text xml": jQuery.parseXML // разбираем текст как xml
 
 }
 
@@ -118,7 +118,7 @@ $.ajaxSetup({
 
 converters: {
 
-&quot;text mydatatype&quot;: function( textValue ) {
+"text mydatatype": function( textValue ) {
 
 if ( valid( textValue ) ) {
 
@@ -144,17 +144,17 @@ _Имена «dataType» должны всегда быть в нижнем ре
 
 Конверторы следует использовать, если требуется внедрить произвольные форматы «dataType», или для конвертации данных в нужный формат. Необходимый «dataType» указываем при вызове метода «$.ajax()»:
 
-$.ajax( url, { dataType: &quot;mydatatype&quot; });
+$.ajax( url, { dataType: "mydatatype" });
 
 Конверторы можно задавать так же непосредственно при вызове «$.ajax()», дабы не засорять общие настройки:
 
 $.ajax( url, {
 
-dataType: &quot;xml text mydatatype&quot;,
+dataType: "xml text mydatatype",
 
 converters: {
 
-&quot;xml text&quot;: function( xmlValue ) {
+"xml text": function( xmlValue ) {
 
 // получаем необходимые данные из XML
 
@@ -230,7 +230,7 @@ headers – строка содержащая заголовки ответа с
 
 Как и префильтры, транспорт можно привязывать к определенному типу запрашиваемых данных:
 
-$.ajaxTransport( &quot;script&quot;, function( options, originalOptions, jqXHR ) {
+$.ajaxTransport( "script", function( options, originalOptions, jqXHR ) {
 
 /* привязываемся лишь к script*/
 
@@ -238,9 +238,9 @@ $.ajaxTransport( &quot;script&quot;, function( options, originalOptions, jqXHR )
 
 А теперь мега-напряг – пример транспорта «image»:
 
-$.ajaxTransport( &quot;image&quot;, function( options ) {
+$.ajaxTransport( "image", function( options ) {
 
-if (options.type === &quot;GET&quot; &amp;&amp; options.async ) {
+if (options.type === "GET" &amp;&amp; options.async ) {
 
 var image;
 
@@ -256,7 +256,7 @@ if ( image ) {
 
 var statusText =
 
-( status == 200 ) ? &quot;success&quot; : &quot;error&quot;,
+( status == 200 ) ? "success" : "error",
 
 tmp = image;
 

@@ -2,27 +2,27 @@
 
 Ещё чуть-чуть о полезном инструментарии: есть такой классный плагин – jQuery-inlog [[http://prinzhorn.github.com/jquery-inlog/](http://prinzhorn.github.com/jquery-inlog/)] – основное его назначение — дать нам чуть-чуть больше понимания о происходящем внутри самого jQuery, вот кусочек HTML:
 
-&lt;body&gt;
+<body>
 
-&lt;div class=&quot;bar&quot;&gt;
+<div class="bar">
 
-&lt;div class=&quot;bar&quot;&gt;
+<div class="bar">
 
-&lt;div id=&quot;foo&quot;&gt;&lt;/div&gt;
+<div id="foo"></div>
 
-&lt;/div&gt;
+</div>
 
-&lt;/div&gt;
+</div>
 
-&lt;div id=&quot;bacon&quot;&gt;&lt;/div&gt;
+<div id="bacon"></div>
 
-&lt;/body&gt;
+</body>
 
 А вот и код, который его обслуживает:
 
 $l(true);
 
-$(&quot;#foo&quot;).parents(&quot;.bar&quot;).next().prev().parent().fadeOut();
+$("#foo").parents(".bar").next().prev().parent().fadeOut();
 
 $l(false);
 

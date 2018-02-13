@@ -2,13 +2,13 @@
 
 Мы уже успели познакомиться с методом «.click()», в действительности этот метод представляет из себя обёртку для вызова «.on()» и «.trigger()»:
 
-if (arguments.length &gt; 0) {
+if (arguments.length > 0) {
 
-this.on(&quot;click&quot;, null, data, fn ) :
+this.on("click", null, data, fn ) :
 
 } else {
 
-this.trigger(&quot;click&quot;);
+this.trigger("click");
 
 }
 
@@ -18,7 +18,7 @@ _Ой, код я чуть-чуть изменил — для читаемост�
 
 // вешаем обработчик
 
-$(&#039;.class&#039;).on(&#039;click&#039;, function(){
+$('.class').on('click', function(){
 
 // что-то делаем
 
@@ -26,11 +26,11 @@ $(&#039;.class&#039;).on(&#039;click&#039;, function(){
 
 // вызываем обработчик
 
-$(&#039;.class&#039;).trigger(&#039;click&#039;);
+$('.class').trigger('click');
 
 // отключаем обработчик
 
-$(&#039;.class&#039;).off(&#039;click&#039;);
+$('.class').off('click');
 
 Можно повесить обработчик событий практически на любой объект:
 
@@ -40,7 +40,7 @@ var obj = {
 
 test:function() {
 
-console.log(&#039;obj.test&#039;);
+console.log('obj.test');
 
 }
 
@@ -48,9 +48,9 @@ console.log(&#039;obj.test&#039;);
 
 // создаём обработчик произвольного события someEvent
 
-$(obj).on(&#039;someEvent&#039;, function(){
+$(obj).on('someEvent', function(){
 
-console.log(&#039;obj.someEvent&#039;);
+console.log('obj.someEvent');
 
 this.test();
 
@@ -58,7 +58,7 @@ this.test();
 
 // инициируем событие someEvent
 
-$(obj).trigger(&#039;someEvent&#039;);
+$(obj).trigger('someEvent');
 
 // полюбопытствуем
 

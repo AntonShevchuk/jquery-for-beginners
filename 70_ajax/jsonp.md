@@ -4,11 +4,11 @@ JSONP – это наш старый знакомый JSON с прослойко
 
 _{_
 
-&quot;note&quot;_: {_
+"note"_: {_
 
-&quot;time&quot;_:_&quot;2012.09.21 13:12:42&quot;_,_
+"time"_:_"2012.09.21 13:12:42"_,_
 
-&quot;text&quot;_:_&quot;Рассказать зачем нужен JSONP&quot;
+"text"_:_"Рассказать зачем нужен JSONP"
 
 _}_
 
@@ -18,11 +18,11 @@ _}_
 
 alertMe_({_
 
-&quot;note&quot;_: {_
+"note"_: {_
 
-&quot;time&quot;_:_&quot;2012.09.21 13:13:13&quot;_,_
+"time"_:_"2012.09.21 13:13:13"_,_
 
-&quot;text&quot;_:_&quot;Каков же профит от использования JSONP?&quot;
+"text"_:_"Каков же профит от использования JSONP?"
 
 _}_
 
@@ -30,19 +30,19 @@ _})_
 
 Таким образом, описав в своём коде функцию «alertMe()» мы сможем обработать данные с удаленного сервера. Зачастую, сервера ловят параметр «callback» или «jsonp», и используют его как имя функции обёртки:
 
-&lt;script type=&quot;text/javascript&quot;
+<script type="text/javascript"
 
-src=&quot;http://domain.com/getUsers/?callback=alertMe&quot;&gt;
+src="http://domain.com/getUsers/?callback=alertMe">
 
-&lt;/script&gt;
+</script>
 
 Ну это было предыстория, теперь вернёмся к jQuery и методу «.ajax()»:
 
 _$._ajax_({_
 
-_url:_ &quot;http://domain.com/getUsers/?callback=?&quot;_,_ // указываем URL
+_url:_ "http://domain.com/getUsers/?callback=?"_,_ // указываем URL
 
-_dataType:_ &quot;jsonp&quot;_,_
+_dataType:_ "jsonp"_,_
 
 _success:_ function _(data) {_
 
@@ -54,7 +54,7 @@ _});_
 
 В запрашиваемом URL наблюдательный читатель заметит незаконченную структуру «callback=?», так вот вместо «?» будет подставлено имя ново сгенерированной функции, внутри которой будет осуществляться вызов функции «success()». Вместо этой прокси-функции можно использовать и свою функцию, достаточно указать её имя в качестве параметра «jsonpCallback» при вызове «$.ajax()». Оба этих подхода есть в примере [ajax.jsonp.html](http://anton.shevchuk.name/book/code/ajax.jsonp.html).
 
-_А ещё стоит упомянуть, что можно указать как обзывается callback-параметр используя параметр «jsonp», таким образом указав «jsonp:&quot;my&quot;» в URL будет добавлена структура «my=?»_
+_А ещё стоит упомянуть, что можно указать как обзывается callback-параметр используя параметр «jsonp», таким образом указав «jsonp:"my"» в URL будет добавлена структура «my=?»_
 
 На данный момент достаточно много сервисов предоставляют API с поддержкой JSONP:
 

@@ -6,19 +6,19 @@ var C = $.Callbacks();
 
 C.add(function(msg) {
 
-console.log(msg+&quot; first&quot;)
+console.log(msg+" first")
 
 });
 
 C.add(function(msg) {
 
-console.log(msg+&quot; second&quot;)
+console.log(msg+" second")
 
 });
 
-C.fire(&quot;Go&quot;);
+C.fire("Go");
 
-&gt;&gt;&gt;
+>>>
 
 Go first
 
@@ -40,25 +40,25 @@ stopOnFalse — как только какая-нить функция верн�
 
 Наверное, будет лучше с примерами, вот «once»:
 
-var C = $.Callbacks(&quot;once&quot;);
+var C = $.Callbacks("once");
 
 C.add(function(msg) {
 
-console.log(msg+&quot; first&quot;)
+console.log(msg+" first")
 
 });
 
 C.add(function(msg) {
 
-console.log(msg+&quot; second&quot;)
+console.log(msg+" second")
 
 });
 
-C.fire(&quot;Go&quot;);
+C.fire("Go");
 
-C.fire(&quot;Again&quot;); // не даст результата, только Go
+C.fire("Again"); // не даст результата, только Go
 
-&gt;&gt;&gt;
+>>>
 
 Go first
 
@@ -66,25 +66,25 @@ Go second
 
 C «memory» посложнее, будьте внимательней:
 
-var C = $.Callbacks(&quot;memory&quot;);
+var C = $.Callbacks("memory");
 
 C.add(function(msg) {
 
-console.log(msg+&quot; first&quot;)
+console.log(msg+" first")
 
 });
 
-C.fire(&quot;Go&quot;);
+C.fire("Go");
 
 C.add(function(msg) {
 
-console.log(msg+&quot; second&quot;)
+console.log(msg+" second")
 
 });
 
-C.fire(&quot;Again&quot;);
+C.fire("Again");
 
-&gt;&gt;&gt;
+>>>
 
 Go first
 
@@ -96,11 +96,11 @@ Again second
 
 Пример с уникальностью прост до безобразия:
 
-var C = $.Callbacks(&quot;unique&quot;);
+var C = $.Callbacks("unique");
 
 var func = function(msg) {
 
-console.log(msg+&quot; first&quot;)
+console.log(msg+" first")
 
 };
 
@@ -108,35 +108,35 @@ C.add(func);
 
 C.add(func); // эта строка не повлияет на результат
 
-C.fire(&quot;Go&quot;); // только Go first
+C.fire("Go"); // только Go first
 
-&gt;&gt;&gt;
+>>>
 
 Go first
 
 Флаг «stopOnFalse»:
 
-var C = $.Callbacks(&quot;stopOnFalse&quot;);
+var C = $.Callbacks("stopOnFalse");
 
 C.add(function(msg) {
 
-console.log(msg+&quot; first&quot;);
+console.log(msg+" first");
 
 return false; // вот он – роковой false
 
 });
 
-C.add(function(msg) { console.log(msg+&quot; second&quot;) });
+C.add(function(msg) { console.log(msg+" second") });
 
-C.fire(&quot;Go&quot;); // только Go first
+C.fire("Go"); // только Go first
 
-&gt;&gt;&gt;
+>>>
 
 Go first
 
 Перечисленные флаги можно комбинировать и получать интересные результаты, а можно не получать, а лишь посмотреть на пример [callbacks.html](http://anton.shevchuk.name/book/code/callbacks.html)
 
-_Из_ истории_: объект «Deferred» отпочковался от метода «$.ajax()» в результате рефакторинга версии 1.5\. Шло время, появлялись новые версии jQuery, и вот новый виток рефакторинга – результатом стало отделение «Callbacks» от «Deferred» в версии 1.7, таким образом в текущей версии библиотеки метод «$.ajax()» работает с объектом «Deferred», который является надстройкой над «Callbacks». Дабы не вносить путаницу в терминологию, я использую определение «Deferred Callbacks» и при работе с «Callbacks», ибо колбэков много, и каждый раз уточнять, что я говорю именно «о том самом» — дело достаточно утомительное._
+_Из_ истории_: объект «Deferred» отпочковался от метода «$.ajax()» в результате рефакторинга версии 1.5. Шло время, появлялись новые версии jQuery, и вот новый виток рефакторинга – результатом стало отделение «Callbacks» от «Deferred» в версии 1.7, таким образом в текущей версии библиотеки метод «$.ajax()» работает с объектом «Deferred», который является надстройкой над «Callbacks». Дабы не вносить путаницу в терминологию, я использую определение «Deferred Callbacks» и при работе с «Callbacks», ибо колбэков много, и каждый раз уточнять, что я говорю именно «о том самом» — дело достаточно утомительное._
 
 Статьи по данной теме:
 

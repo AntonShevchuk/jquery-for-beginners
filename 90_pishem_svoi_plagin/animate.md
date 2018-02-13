@@ -10,7 +10,7 @@ _Информация в данном разделе актуальна для j
 
 Начну рассказ с «jQuery.Tween.propHooks», т.к. уже есть плагины, в код которых можно заглянуть :) Для пущей наглядности я возьму достаточно тривиальную задачу – заставим плавно изменить цвет шрифта для заданного набора элементов:
 
-$(&#039;p&#039;).animate({color:&#039;#ff0000&#039;});
+$('p').animate({color:'#ff0000'});
 
 Приведенный выше код не даст никакого эффекта, т.к. свойство «color» библиотека из коробки не анимирует, но это можно исправить – надо лишь прокачать «jQuery.Tween.propHooks»:
 
@@ -50,15 +50,15 @@ tween.unit; // еденицы измерения
 
 console.log(tween);
 
-&gt;&gt;&gt;
+>>>
 
-easing: &quot;swing&quot;
+easing: "swing"
 
 elem: HTMLParagraphElement
 
-end: &quot;#ff0000&quot;
+end: "#ff0000"
 
-now: &quot;NaNrgb(0, 0, 0)&quot;
+now: "NaNrgb(0, 0, 0)"
 
 options: Object
 
@@ -68,19 +68,19 @@ duration: 1000
 
 old: false
 
-queue: &quot;fx&quot;
+queue: "fx"
 
 specialEasing: Object
 
 pos: 1
 
-prop: &quot;color&quot;
+prop: "color"
 
-start: &quot;rgb(0, 0, 0)&quot;
+start: "rgb(0, 0, 0)"
 
-unit: &quot;px&quot;
+unit: "px"
 
-В консоле у нас будет очень много данных, т.к. приведённый метод вызывается N кол-во раз, в зависимости от продолжительности анимации, при этом «tween.pos» постепенно наращивает своё значение с 0 до 1\. По умолчанию, наращивание происходит линейно, если надо как-то иначе — то стоит посмотреть на easing плагин или дочитать раздел до конца (об этом я уже упоминал в главе [Анимация](../40_animatsiya/README.md))
+В консоле у нас будет очень много данных, т.к. приведённый метод вызывается N кол-во раз, в зависимости от продолжительности анимации, при этом «tween.pos» постепенно наращивает своё значение с 0 до 1. По умолчанию, наращивание происходит линейно, если надо как-то иначе — то стоит посмотреть на easing плагин или дочитать раздел до конца (об этом я уже упоминал в главе [Анимация](../40_animatsiya/README.md))
 
 Даже при таком раскладе мы уже можем изменять выбранный элемент (путём манипуляций над «tween.elem»), но есть более удобный способ – можно установить свойство «run» объекта «tween»:
 
@@ -121,7 +121,7 @@ tween.end = parseColor(tween.end);
 
 tween.run = function(progress) {
 
-tween.elem.style[&#039;color&#039;] =
+tween.elem.style['color'] =
 
 // вычисляем промежуточное значение
 
@@ -153,7 +153,7 @@ opts; // опции анимации
 
 // отключаем анимацию при попытке анимировать высоту элемента
 
-if (props[&#039;height&#039;] != undefined) {
+if (props['height'] != undefined) {
 
 return this;
 
@@ -169,7 +169,7 @@ _Осторожно, для понимания происходящего пот
 
 // создаём поддержку нового свойства для анимации – diagonal
 
-jQuery.Animation.tweener( &quot;diagonal&quot;, function( property, value ) {
+jQuery.Animation.tweener( "diagonal", function( property, value ) {
 
 // создаём tween объект
 
@@ -177,9 +177,9 @@ var tween = this.createTween( property, value );
 
 // промежуточные вычисления и данные
 
-var a = jQuery.css(tween.elem, &#039;width&#039;, true );
+var a = jQuery.css(tween.elem, 'width', true );
 
-var b = jQuery.css(tween.elem, &#039;height&#039;, true );
+var b = jQuery.css(tween.elem, 'height', true );
 
 var c = Math.sqrt(a*a + b*b), sinA = a/c, sinB = b/c;
 

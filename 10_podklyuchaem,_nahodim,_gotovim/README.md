@@ -4,21 +4,21 @@
 
 1.  Скачиваем jQuery с домашней страницы проекта ([http://jquery.com/](http://jquery.com/)) и положим рядышком с нашей HTML-страничкой (советую скачать development-версию —всегда интересно покопаться в исходном коде :):
 
-&lt;head&gt;
+<head>
 
-&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.js&quot;&gt;&lt;/script&gt;
+<script type="text/javascript" src="js/jquery.js"></script>
 
-&lt;/head&gt;
+</head>
 
 _Данный способ хорош для работы в offline, или при медленном соединении с интернетом. Отдельно стоит обратить внимание на путь — скрипты в отдельной папке, и это не случайно, нужно приучать себя к порядку._
 
 1.  Используем [CDN](http://ru.wikipedia.org/wiki/Content_Delivery_Network). Я предпочитаю сервис от компании [Google](https://developers.google.com/speed/libraries/), но есть ещё [Microsoft](https://docs.microsoft.com/en-us/aspnet/ajax/cdn/overview) и [Яндекс](https://tech.yandex.ru/jslibs/), а так же универсальный [http://cdnjs.com/](http://cdnjs.com/), последний, кстати, размещает много популярных плагинов, за что им отдельное спасибо:
 
-&lt;head&gt;
+<head>
 
-&lt;script type=&quot;text/javascript&quot; src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-&lt;/head&gt;
+</head>
 
 _Небольшие пояснения: CDN – достаточно умная штука, при таком запросе библиотеки jQuery вам вернутся HTTP-заголовки, в которых будет сказано, что «протухнет» этот файл лишь через год. Если же вы запросите файл по адресу «jquery/3.1/jquery.min.js», то вам вернётся последняя доступная версия библиотеки из ветки 3.1 — на момент написания сих строк это была версия 3.1.0, при этом в заголовках «expires» будет стоять текущая дата, и кэш будет жить лишь один час._
 

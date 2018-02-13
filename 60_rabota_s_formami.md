@@ -8,33 +8,33 @@ change — изменение значения элемента
 
 submit — отправка формы
 
-В каких же случаях они нам помогут? Да всё просто – отслеживание change позволяет обрабатывать такие события как изменение selectbox&#039;а, или radiobutton&#039;а, что потребуется для динамического изменения формы. И самый простой пример тому – это на странице регистрации выбор страны, затем по выбранной стране должен быть подгружен список регионов, по региону – список городов и так далее. Отслеживание submit потребуется для проверки правильности заполнения формы, а так же для отправки формы посредством AJAX. Форму возьмём попроще:
+В каких же случаях они нам помогут? Да всё просто – отслеживание change позволяет обрабатывать такие события как изменение selectbox'а, или radiobutton'а, что потребуется для динамического изменения формы. И самый простой пример тому – это на странице регистрации выбор страны, затем по выбранной стране должен быть подгружен список регионов, по региону – список городов и так далее. Отслеживание submit потребуется для проверки правильности заполнения формы, а так же для отправки формы посредством AJAX. Форму возьмём попроще:
 
-&lt;form action=&quot;/save/&quot;&gt;
+<form action="/save/">
 
-&lt;input type=&quot;text&quot; name=&quot;name&quot; value=&quot;Ivan&quot;/&gt;
+<input type="text" name="name" value="Ivan"/>
 
-&lt;select name=&quot;role&quot;&gt;
+<select name="role">
 
-&lt;option&gt;User&lt;/option&gt;
+<option>User</option>
 
-&lt;option&gt;Admin&lt;/option&gt;
+<option>Admin</option>
 
-&lt;/select&gt;
+</select>
 
-&lt;input type=&quot;submit&quot;/&gt;
+<input type="submit"/>
 
-&lt;/form&gt;
+</form>
 
-А примеры будут идти в обратном порядке, вот отправка формы AJAX&#039;ом по ссылке из «action»:
+А примеры будут идти в обратном порядке, вот отправка формы AJAX'ом по ссылке из «action»:
 
-$(&#039;form&#039;).submit(function(){
+$('form').submit(function(){
 
 // чуть позже расскажу подробнее о AJAX
 
 $.post(
 
-$(this).attr(&#039;action&#039;), // ссылка куда отправляем данные
+$(this).attr('action'), // ссылка куда отправляем данные
 
 $(this).serialize() // данные формы
 
@@ -56,17 +56,17 @@ name=Ivan&amp;role=Admin
 
 {
 
-name:&quot;name&quot;,
+name:"name",
 
-value:&quot;Ivan&quot;
+value:"Ivan"
 
 },
 
 {
 
-name:&quot;role&quot;,
+name:"role",
 
-value:&quot;Admin&quot;
+value:"Admin"
 
 },
 
@@ -74,11 +74,11 @@ value:&quot;Admin&quot;
 
 Теперь стоит добавить в данный код немного проверки данных:
 
-$(&#039;form&#039;).submit(function(){
+$('form').submit(function(){
 
-if ($(this).find(&#039;input[name=name]&#039;).val() == &#039;&#039;) {
+if ($(this).find('input[name=name]').val() == '') {
 
-alert(&#039;Введите имя пользователя&#039;);
+alert('Введите имя пользователя');
 
 return false;
 
@@ -96,49 +96,49 @@ val() – получение значения первого элемента ф
 
 val(_value_) – установка значение всем элементам формы из выборки
 
-Данный метод отлично работает практически со всеми элементами формы, вот только с radiobutton&#039;ами установить значение таким образом не получится, тут потребуется небольшой workaround:
+Данный метод отлично работает практически со всеми элементами формы, вот только с radiobutton'ами установить значение таким образом не получится, тут потребуется небольшой workaround:
 
-$(&#039;input[type=radio][name=choose][value=2]&#039;).prop(&#039;checked&#039;, true)
+$('input[type=radio][name=choose][value=2]').prop('checked', true)
 
 _Можно конечно же использовать и метод «.click()», дабы эмулировать выбор необходимо пункта, но это вызовет все обработчики события «click», что не желательно_
 
-С checkbox&#039;ами чуть-чуть попроще:
+С checkbox'ами чуть-чуть попроще:
 
-$(&#039;input[name=check] &#039;).prop(&#039;checked&#039;, true)
+$('input[name=check] ').prop('checked', true)
 
 Проверяем «чекнутость» простым скриптом:
 
-$(&#039;input[name=check] &#039;).prop(&#039;checked&#039;)
+$('input[name=check] ').prop('checked')
 
 // или чуть более наглядным способом
 
-$(&#039;input[name=check] &#039;).is(&#039;:checked&#039;)
+$('input[name=check] ').is(':checked')
 
-Проверять и отправлять форму AJAX&#039;ом теперь умеем, теперь осталось решить вопрос с динамическим изменением формы, и для этого у нас уже есть все необходимые знания, вот, к примеру, добавление выпадающего списка:
+Проверять и отправлять форму AJAX'ом теперь умеем, теперь осталось решить вопрос с динамическим изменением формы, и для этого у нас уже есть все необходимые знания, вот, к примеру, добавление выпадающего списка:
 
-$(&#039;form&#039;).append(&#039;&lt;select name=&quot;some&quot;&gt;&lt;/select&gt;&#039;);
+$('form').append('<select name="some"></select>');
 
 А если потребуется изменить список? Есть на все случаи жизни:
 
 // возьмём список заранее, поберегу чернила
 
-var $select = $(&#039;form select[name=Role]&#039;);
+var $select = $('form select[name=Role]');
 
 // добавить новый элемент в выпадающий список
 
-$select.append(&#039;&lt;option&gt;Manager&lt;/option&gt;&#039;);
+$select.append('<option>Manager</option>');
 
 // выбрать необходимый элемент
 
-$select.val(&#039;Value 1&#039;);
+$select.val('Value 1');
 
 // или по порядковому номеру, начиная с 0
 
-$select.find(&#039;option:eq(2)&#039;).prop(&#039;selected&#039;, true);
+$select.find('option:eq(2)').prop('selected', true);
 
 // очищаем список
 
-$select.remove(&#039;option&#039;);
+$select.remove('option');
 
 // преобразуем в multiple
 
@@ -146,21 +146,21 @@ $select.remove(&#039;option&#039;);
 
 // myselect[], иначе сервер получит, лишь одно значение
 
-$(&#039;select&#039;).attr(&#039;size&#039;,
+$('select').attr('size',
 
-$(&#039;select option&#039;).length
+$('select option').length
 
 )
 
-$(&#039;select&#039;).attr(&#039;multiple&#039;, true)
+$('select').attr('multiple', true)
 
 Хорошо, работать с формой теперь можем, осталось прикрутить более вменяемый вывод ошибок (да-да, за «alert()» да по рукам):
 
-if ($(this).find(&#039;input[name=user]&#039;).val() == &#039;&#039;) {
+if ($(this).find('input[name=user]').val() == '') {
 
-$(this).find(&#039;input[name=user]&#039;)
+$(this).find('input[name=user]')
 
-.before(&#039;&lt;div class=&quot;error&quot;&gt;Введите имя&lt;/div&gt;&#039;);
+.before('<div class="error">Введите имя</div>');
 
 return false;
 
@@ -168,23 +168,23 @@ return false;
 
 При повторной отправки формы не забудьте убрать сообщения оставшиеся от предыдущей проверки:
 
-$(this).find(&#039;.error&#039;).remove()
+$(this).find('.error').remove()
 
 Теперь можно объединить кусочки кода и получить следующий вариант:
 
-$(&#039;form&#039;).submit(function(){
+$('form').submit(function(){
 
 // чистим ошибки
 
-$(this).find(&#039;.error&#039;).remove();
+$(this).find('.error').remove();
 
 // проверяем поля формы
 
-if ($(this).find(&#039;input[type=name]&#039;).val() == &#039;&#039;) {
+if ($(this).find('input[type=name]').val() == '') {
 
-$(this).find(&#039;input[name=user]&#039;)
+$(this).find('input[name=user]')
 
-.before(&#039;&lt;div class=&quot;error&quot;&gt;Введите имя&lt;/div&gt;&#039;);
+.before('<div class="error">Введите имя</div>');
 
 return false;
 
@@ -194,7 +194,7 @@ return false;
 
 $.post(
 
-$(this).attr(&#039;action&#039;), // ссылка куда отправляем данные
+$(this).attr('action'), // ссылка куда отправляем данные
 
 $(this).serialize() // данные формы
 

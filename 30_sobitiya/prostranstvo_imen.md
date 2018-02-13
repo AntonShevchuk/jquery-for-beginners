@@ -4,7 +4,7 @@
 
 // создаем свой обработчик
 
-$(&#039;.class&#039;).on(&#039;click&#039;, function(){
+$('.class').on('click', function(){
 
 // что-то делаем
 
@@ -12,13 +12,13 @@ $(&#039;.class&#039;).on(&#039;click&#039;, function(){
 
 // удаляем все обработчики
 
-$(&#039;.class&#039;).off();
+$('.class').off();
 
 Но, как всегда, есть ситуации, когда нам необходимо отключить не все обработчики (как пример, надо отключить обработку какого-то контрола определенным плагином). В этом случае нам на помощь приходят пространства имен, и использовать их достаточно легко:
 
 // создаём обработчик
 
-$(&#039;.class&#039;).on(&#039;click.namespace&#039;, function(){
+$('.class').on('click.namespace', function(){
 
 // что-то делаем
 
@@ -26,39 +26,39 @@ $(&#039;.class&#039;).on(&#039;click.namespace&#039;, function(){
 
 // вызываем обработчик
 
-$(&#039;.class&#039;).trigger(&#039;click.namespace&#039;);
+$('.class').trigger('click.namespace');
 
 // вызываем все обработчики без пространства имён
 
-$(&#039;.class&#039;).trigger(&#039;click!&#039;);
+$('.class').trigger('click!');
 
 // удаляем все обработчики click в данном пространстве имён
 
-$(&#039;.class&#039;).off(&#039;click.namespace&#039;);
+$('.class').off('click.namespace');
 
 Ещё примерчик, вешаем обработчик, который выводит текст в консоль:
 
-$(&#039;.class&#039;).on(&#039;click.namespace&#039;, function(){
+$('.class').on('click.namespace', function(){
 
-console.log(&#039;bang&#039;);
+console.log('bang');
 
 });
 
 // вызываем событие, наш обработчик сработает
 
-$(&#039;.class&#039;).trigger(&#039;click.namespace&#039;);
+$('.class').trigger('click.namespace');
 
 // тоже работает
 
-$(&#039;.class&#039;).trigger(&#039;click&#039;);
+$('.class').trigger('click');
 
 // событие из другого пространства имён, наш обработчик не будет вызван
 
-$(&#039;.class&#039;).trigger(&#039;click.other&#039;);
+$('.class').trigger('click.other');
 
 Также есть поддержка нескольких пространств имён:
 
-$(&#039;.class&#039;).on(&#039;click.a.b&#039;, function(){
+$('.class').on('click.a.b', function(){
 
 // для пространства имён a и b
 
@@ -66,24 +66,24 @@ $(&#039;.class&#039;).on(&#039;click.a.b&#039;, function(){
 
 // вызываем обработчик из пространства a
 
-$(&#039;.class&#039;).trigger(&#039;click.a&#039;);
+$('.class').trigger('click.a');
 
 // отменяем обработчик click для пространства b
 
-$(&#039;.class&#039;).off(&#039;click.b&#039;);
+$('.class').off('click.b');
 
 Можно одним махом удалить все обработчики из определённого пространства имён:
 
 // обработчик клика
 
-$(&#039;.class&#039;).on(&#039;click.namespace&#039;, function(){});
+$('.class').on('click.namespace', function(){});
 
 // обработчик фокус
 
-$(&#039;.class&#039;).on(&#039;blur.namespace&#039;, function(){});
+$('.class').on('blur.namespace', function(){});
 
 // передумали, и все отменили
 
-$(&#039;.class&#039;).off(&#039;.namespace&#039;);
+$('.class').off('.namespace');
 
 [Официальная документация](http://api.jquery.com/event.namespace/) скудна на этот счёт, и я надеюсь, мой пример поможет лучше разобраться в данном вопросе ([events.namespace.html](http://anton.shevchuk.name/book/code/events.namespace.html)).

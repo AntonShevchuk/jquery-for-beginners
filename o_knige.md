@@ -8,21 +8,16 @@
 
 `<html>` — исходный код в тексте выделяется monotype шрифтом
 
-`// листинг исходного кода будет набран monotype шрифтом с отступом`
-
-`// также будет использоваться элементарная подсветка синтаксиса`
-
-`function () {`
-
-`setTimeOut("alert('Hello World!')", 5000);`
-
-`}`
+```javascript
+// листинг исходного кода будет набран monotype шрифтом с отступом
+// также будет использоваться элементарная подсветка синтаксиса
+function () {
+  setTimeOut("alert('Hello World!')", 5000);
+}
+```
 
 > информация, которую стоит принять к сведению,
->
 > или, возможно, лишь прочитать и улыбнуться,
->
 > будет оформлена в блок текста с отступом и выделена курсивом
 
 Примеры кода вы сможете найти в репозитории автора в GitHub'е — [https://github.com/AntonShevchuk/jquery-for-beginners](https://github.com/AntonShevchuk/jquery-for-beginners), вживую пощупать — в персональном блоге [http://anton.shevchuk.name/book/code/](http://anton.shevchuk.name/book/code/)
-

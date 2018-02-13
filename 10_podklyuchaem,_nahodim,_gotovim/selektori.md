@@ -2,121 +2,121 @@
 
 Как я уже говорил ранее, в поиске элементов на странице заключается практически половина успешной работы с jQuery. Так что приступим к поискам по документу (чтобы не листать, пусть пример HTML будет и тут):
 
-&lt;!DOCTYPE html&gt;
+<!DOCTYPE html>
 
-&lt;html dir=&quot;ltr&quot; lang=&quot;en-US&quot;&gt;
+<html dir="ltr" lang="en-US">
 
-&lt;head&gt;
+<head>
 
-&lt;meta charset=&quot;UTF-8&quot;/&gt;
+<meta charset="UTF-8"/>
 
-&lt;title&gt;Page Title&lt;/title&gt;
+<title>Page Title</title>
 
-&lt;/head&gt;
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;header&gt;
+<header>
 
-&lt;h1&gt;Page Title&lt;/h1&gt;
+<h1>Page Title</h1>
 
-&lt;p&gt;Page Description&lt;/p&gt;
+<p>Page Description</p>
 
-&lt;/header&gt;
+</header>
 
-&lt;div id=&quot;content&quot; class=&quot;wrapper box&quot;&gt;
+<div id="content" class="wrapper box">
 
-&lt;article&gt;
+<article>
 
-&lt;h2&gt;Article Title&lt;/h2&gt;
+<h2>Article Title</h2>
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing.
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing.
 
-Nunc urna metus, ultricies eu, congue, laoreet...&lt;/p&gt;
+Nunc urna metus, ultricies eu, congue, laoreet...</p>
 
-&lt;/article&gt;
+</article>
 
-&lt;hr id=&quot;stick&quot;/&gt;
+<hr id="stick"/>
 
-&lt;article&gt;
+<article>
 
-&lt;h2&gt;Article Title&lt;/h2&gt;
+<h2>Article Title</h2>
 
-&lt;p&gt;Morbi malesuada, ante at feugiat tincidunt, enim
+<p>Morbi malesuada, ante at feugiat tincidunt, enim
 
-gravida metus, lacinia massa diam vel eros...&lt;/p&gt;
+gravida metus, lacinia massa diam vel eros...</p>
 
-&lt;/article&gt;
+</article>
 
-&lt;/div&gt;
+</div>
 
-&lt;footer&gt;&amp;copy;copyright 2014&lt;/footer&gt;
+<footer>&amp;copy;copyright 2014</footer>
 
-&lt;/body&gt;
+</body>
 
-&lt;/html&gt;
+</html>
 
 А теперь приступим к выборкам — выбор элементов по «id» либо «className» аналогично используемым в CSS:
 
-$(&quot;#content&quot;) // выбираем элемент с id=content
+$("#content") // выбираем элемент с id=content
 
-$(&quot;div#content&quot;) // выбираем div с id=content (хотя и без div работает)
+$("div#content") // выбираем div с id=content (хотя и без div работает)
 
-$(&quot;.wrapper&quot;) // выбираем элементы с class=wrapper
+$(".wrapper") // выбираем элементы с class=wrapper
 
-$(&quot;div.wrapper&quot;) // выбираем div&#039;ы с class=wrapper
+$("div.wrapper") // выбираем div'ы с class=wrapper
 
-$(&quot;.wrapper.box&quot;) // выбираем элементы с class=wrapper и box
+$(".wrapper.box") // выбираем элементы с class=wrapper и box
 
-$(&quot;h2&quot;) // выбираем все теги h2
+$("h2") // выбираем все теги h2
 
-$(&quot;h1, h2&quot;) // выбираем все теги h1 и h2
+$("h1, h2") // выбираем все теги h1 и h2
 
 _Используйте валидные имена классов и идентификаторов_
 
 Теперь вспомним, что мы в DOMе не одни, это-таки иерархическая структура:
 
-$(&quot;article h2&quot;) // выбираем все теги h2 внутри тега article
+$("article h2") // выбираем все теги h2 внутри тега article
 
-$(&quot;div article h2&quot;) // выбираем все теги h2 внутри тега article
+$("div article h2") // выбираем все теги h2 внутри тега article
 
 // внутри тега div, в доме который построил Джек
 
-$(&quot;article&quot;).find(&quot;h2&quot;) // аналогично примерам выше
+$("article").find("h2") // аналогично примерам выше
 
-$(&quot;div&quot;).find(&quot;article&quot;).find(&quot;h2&quot;) //
+$("div").find("article").find("h2") //
 
 У нас есть соседи:
 
-$(&quot;h1 + p&quot;) // выбор всех p элементов, перед которыми есть h1
+$("h1 + p") // выбор всех p элементов, перед которыми есть h1
 
 // элементы (у нас только один такой)
 
-$(&quot;#stick ~ article&quot;) // выбор всех article элементов после элемента
+$("#stick ~ article") // выбор всех article элементов после элемента
 
 // c id=stick
 
-$(&quot;#stick&quot;).prev() // выбор предыдущего элемента от найденного
+$("#stick").prev() // выбор предыдущего элемента от найденного
 
-$(&quot;#stick&quot;).next() // выбор следующего элемента от найденного
+$("#stick").next() // выбор следующего элемента от найденного
 
 Родственные связи:
 
-$(&quot;*&quot;) // выбор всех элементов
+$("*") // выбор всех элементов
 
-$(&quot;article &gt; h2&quot;) // выбираем все теги h2 которые являются
+$("article > h2") // выбираем все теги h2 которые являются
 
 // непосредственными потомками тега article
 
-$(&quot;article &gt; *&quot;) // выбор всех потомков элементов article
+$("article > *") // выбор всех потомков элементов article
 
-$(&quot;article&quot;).children()
+$("article").children()
 
-$(&quot;p&quot;).parent() // выбор всех прямых предков элементов p
+$("p").parent() // выбор всех прямых предков элементов p
 
-$(&quot;p&quot;).parents() // выбор всех предков элементов p (не понадобится)
+$("p").parents() // выбор всех предков элементов p (не понадобится)
 
-$(&quot;p&quot;).parents(&quot;div&quot;) // выбор всех предков элемента p которые есть div
+$("p").parents("div") // выбор всех предков элемента p которые есть div
 
 // parents принимает в качестве параметра селектор
 
@@ -136,13 +136,13 @@ a[hreflang|=en] — все ссылки, для которых hreflang начи
 
 a[href^=http] — ссылки, начинающиеся с «http»
 
-a[href*=&quot;google.com&quot;] — ссылки на погуглить
+a[href*="google.com"] — ссылки на погуглить
 
 a[href$=.pdf] — ссылки на PDF-файлы (по идее)
 
 _Заглянув внутрь jQuery, вы, скорей всего, найдёте то место, где ваше выражение будет анализироваться с помощью регулярных выражений, по этой причине в селекторах необходимо экранировать специальные символы, используя двойной обратный слеш «_\\_»:_
 
-$(&quot;a[href^=\\/]&quot;).addClass(&quot;internal&quot;);
+$("a[href^=\\/]").addClass("internal");
 
 ### Поиск по дочерним элементам {#-1}
 
@@ -160,4 +160,4 @@ $(&quot;a[href^=\\/]&quot;).addClass(&quot;internal&quot;);
 
 Но поскольку не все браузеры знакомы с CSS3-селекторами, то мы можем использовать jQuery для назначения стилей:
 
-$(&quot;div:last-child&quot;).addClass(&quot;last-paragraph&quot;);
+$("div:last-child").addClass("last-paragraph");

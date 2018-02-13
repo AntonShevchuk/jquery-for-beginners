@@ -24,15 +24,15 @@ ajaxComplete — глобальное событие, аналогичное com
 
 ajaxStop — данное событие возникает в случае, когда больше нету активных AJAX запросов
 
-Пример для отображения элемента с «id=&quot;loading&quot;» во время выполнения любого AJAX запроса (т.е. мы обрабатываем глобальное событие):
+Пример для отображения элемента с «id="loading"» во время выполнения любого AJAX запроса (т.е. мы обрабатываем глобальное событие):
 
-$(document).on(&quot;ajaxSend&quot;, function(){
+$(document).on("ajaxSend", function(){
 
-$(&quot;#loading&quot;).show(); // показываем элемент
+$("#loading").show(); // показываем элемент
 
-}).on(&quot;ajaxStop&quot;, function(){
+}).on("ajaxStop", function(){
 
-$(&quot;#loading&quot;).hide(); // скрываем элемент
+$("#loading").hide(); // скрываем элемент
 
 });
 

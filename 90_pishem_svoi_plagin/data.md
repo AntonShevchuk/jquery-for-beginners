@@ -4,7 +4,7 @@
 
 function() { // функция init
 
-var init = $(this).data(&#039;mySimplePlugin&#039;);
+var init = $(this).data('mySimplePlugin');
 
 if (init) {
 
@@ -12,11 +12,11 @@ return this;
 
 } else {
 
-$(this).data(&#039;mySimplePlugin&#039;, true);
+$(this).data('mySimplePlugin', true);
 
-return this.on(&#039;click.mySimplePlugin&#039;, function(){
+return this.on('click.mySimplePlugin', function(){
 
-$(this).css(&#039;color&#039;, options.color);
+$(this).css('color', options.color);
 
 });
 
@@ -26,22 +26,22 @@ $(this).css(&#039;color&#039;, options.color);
 
 По стечению обстоятельств, в HTML5 появились data-атрибуты, и для доступа к ним jQuery использует тот же метод «.data()», но вот дела, «jQuery.data()» – не манипулирует атрибутами HTML, а работает со своим реестром, и лишь при отсутствии там данных пытается заполучить атрибут «data-*», не попадитесь:
 
-&lt;div id=&quot;my&quot; data-foo=&quot;bar&quot;&gt;&lt;/div&gt;
+<div id="my" data-foo="bar"></div>
 
-$(&quot;#my&quot;).data(&quot;foo&quot;); // &gt;&gt;&gt; bar
+$("#my").data("foo"); // >>> bar
 
-$(&quot;#my&quot;).attr(&quot;data-foo&quot;); // &gt;&gt;&gt; bar
+$("#my").attr("data-foo"); // >>> bar
 
-$(&quot;#my&quot;).data(&quot;foo&quot;, &quot;xyz&quot;);
+$("#my").data("foo", "xyz");
 
-$(&quot;#my&quot;).data(&quot;foo&quot;); // &gt;&gt;&gt; xyz
+$("#my").data("foo"); // >>> xyz
 
-$(&quot;#my&quot;).attr(&quot;data-foo&quot;); // &gt;&gt;&gt; bar
+$("#my").attr("data-foo"); // >>> bar
 
-$(&quot;#my&quot;).attr(&quot;data-foo&quot;, &quot;def&quot;);
+$("#my").attr("data-foo", "def");
 
-$(&quot;#my&quot;).data(&quot;foo&quot;); // &gt;&gt;&gt; xyz
+$("#my").data("foo"); // >>> xyz
 
-$(&quot;#my&quot;).attr(&quot;data-foo&quot;); // &gt;&gt;&gt; def
+$("#my").attr("data-foo"); // >>> def
 
-&lt;div id=&quot;my&quot; data-foo=&quot;def&quot;&gt;&lt;/div&gt;
+<div id="my" data-foo="def"></div>

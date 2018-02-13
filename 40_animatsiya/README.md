@@ -4,11 +4,11 @@
 
 // скроем все картинки
 
-$(&#039;img&#039;).hide();
+$('img').hide();
 
 // теперь вернём их на место
 
-$(&#039;img&#039;).show();
+$('img').show();
 
 Данные вызовы оперируют лишь CSS атрибутом «display» и переключают его из текущего состояния в «none» и обратно. В качестве первого параметра можно задать скорость анимации, для этого можно использовать одно из зарезервированных слов «slow» или «fast», либо же указывать скорость в миллисекундах (1000 мс = 1 сек):
 
@@ -18,11 +18,11 @@ $(&#039;img&#039;).show();
 
 // **fast == 200**
 
-$(&#039;img&#039;).hide(&#039;slow&#039;);
+$('img').hide('slow');
 
 // теперь вернём их на место, чуть быстрее
 
-$(&#039;img&#039;).show(400);
+$('img').show(400);
 
 В таком случае, исчезновение элементов будет сопровождаться анимацией атрибутов «width», «height», «opacity» и прочих (см. пример в [hide.html](http://anton.shevchuk.name/book/code/hide.html)). В довесок к этим двум методам есть ещё метод «.toggle()», он работает как переключатель «hide → show» или «show → hide».
 
@@ -30,11 +30,11 @@ $(&#039;img&#039;).show(400);
 
 // скрываем все картинки
 
-$(&#039;img&#039;).hide(&#039;slow&#039;, function(){
+$('img').hide('slow', function(){
 
 // опосля отображаем alert
 
-alert(&quot;Images was hidden&quot;);
+alert("Images was hidden");
 
 });
 
@@ -62,17 +62,17 @@ fadeTo(_duration, opacity, callback_) – изменяет значение «op
 
 // fadeOut()
 
-$(&#039;article img&#039;).animate({
+$('article img').animate({
 
-&#039;opacity&#039;:&#039;hide&#039;
+'opacity':'hide'
 
 })
 
 // fadeIn()
 
-$(&#039;article img&#039;).animate({
+$('article img').animate({
 
-&#039;opacity&#039;:&#039;show&#039;
+'opacity':'show'
 
 })
 
@@ -82,13 +82,13 @@ $(&#039;article img&#039;).animate({
 
 // от текущих до заданных
 
-$(&#039;article img&#039;).animate({
+$('article img').animate({
 
-&#039;opacity&#039;:0.5,
+'opacity':0.5,
 
-&#039;height&#039;:&#039;50px&#039;,
+'height':'50px',
 
-&#039;width&#039;:&#039;250px&#039;
+'width':'250px'
 
 })
 
@@ -96,11 +96,11 @@ $(&#039;article img&#039;).animate({
 
 // изменяем, шаг за шагом
 
-$(&#039;article img&#039;).animate({
+$('article img').animate({
 
-&#039;opacity&#039;:&#039;-=0.1&#039;,
+'opacity':'-=0.1',
 
-&#039;height&#039;:&#039;+=10px&#039;
+'height':'+=10px'
 
 })
 
