@@ -1,4 +1,4 @@
-# 0% Об HTML, CSS и JavaScript {#html-css-javascript}
+# 0% Об HTML, CSS и JavaScript {#0}
 
 Начнём знакомство с jQuery с повторения (или изучения) основ правильного употребления связки HTML и CSS с небольшой примесью JavaScript.
 

@@ -1,4 +1,4 @@
-# 80% Объект Deferred и побратимы {#80-deferred}
+# 80% Объект Deferred и побратимы {#80}
 
 С jQuery версии 3.x, Deferred объект стал совместим с Promise из ES-2015 (т.н. ES6), так что практически всё, что относится к[_Promise_](https://learn.javascript.ru/promise) верно и для Deferred.
 

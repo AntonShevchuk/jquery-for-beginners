@@ -11,6 +11,6 @@ _Данный фреймворк хорошо подходит для созда
 
 _Для jQMobile существует свой собственный ThemeRoller:_
 
-[_http://jquerymobile.com/themeroller/_](http://jquerymobile.com/themeroller/)
+[http://jquerymobile.com/themeroller/](http://jquerymobile.com/themeroller/)
 
 И ещё, посоветую обратить внимание на API данного фреймворка, без изучения оного вам будет затруднительно создать действительно интересные приложения.

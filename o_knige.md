@@ -1,7 +1,6 @@
 # О книге
 
-Данный учебник подойдёт как для начинающих web-разработчиков, так и для продвинутых JavaScript-программистов,
-желающих освоить новую для себя библиотеку.
+Данный учебник подойдёт как для начинающих web-разработчиков, так и для продвинутых JavaScript-программистов, желающих освоить новую для себя библиотеку.
 
 В учебнике принято следующее форматирование:
 
@@ -20,6 +19,4 @@ function () {
 или, возможно, лишь прочитать и улыбнуться,
 будет оформлена в блок текста с отступом и выделена курсивом_
 
-Примеры кода вы сможете найти в репозитории автора в GitHub'е — 
-[https://github.com/AntonShevchuk/jquery-for-beginners](https://github.com/AntonShevchuk/jquery-for-beginners),
-вживую пощупать — в персональном блоге [http://anton.shevchuk.name/book/code/](http://anton.shevchuk.name/book/code/)
+Примеры кода вы сможете найти в репозитории автора в GitHub'е — [https://github.com/AntonShevchuk/jquery-for-beginners](https://github.com/AntonShevchuk/jquery-for-beginners), вживую пощупать — в персональном блоге [http://anton.shevchuk.name/book/code/](http://anton.shevchuk.name/book/code/)
