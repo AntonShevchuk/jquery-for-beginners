@@ -6,22 +6,23 @@
 
 **важно** — запомни, запиши, и всегда применяй
 
-&lt;html&gt; — исходный код в тексте выделяется monotype шрифтом
+`<html>` — исходный код в тексте выделяется monotype шрифтом
 
-// листинг исходного кода будет набран monotype шрифтом с отступом
+`// листинг исходного кода будет набран monotype шрифтом с отступом`
 
-// также будет использоваться элементарная подсветка синтаксиса
+`// также будет использоваться элементарная подсветка синтаксиса`
 
-function () {
+`function () {`
 
-setTimeOut(&quot;alert(&#039;Hello World!&#039;)&quot;, 5000);
+`setTimeOut("alert('Hello World!')", 5000);`
 
-}
+`}`
 
-информация, которую стоит принять к сведению,
+> информация, которую стоит принять к сведению,
+>
+> или, возможно, лишь прочитать и улыбнуться,
+>
+> будет оформлена в блок текста с отступом и выделена курсивом
 
-или, возможно, лишь прочитать и улыбнуться,
+Примеры кода вы сможете найти в репозитории автора в GitHub'е — [https://github.com/AntonShevchuk/jquery-for-beginners](https://github.com/AntonShevchuk/jquery-for-beginners), вживую пощупать — в персональном блоге [http://anton.shevchuk.name/book/code/](http://anton.shevchuk.name/book/code/)
 
-будет оформлена в блок текста с отступом и выделена курсивом
-
-Примеры кода вы сможете найти в репозитории автора в GitHub&#039;е — [https://github.com/AntonShevchuk/jquery-for-beginners](https://github.com/AntonShevchuk/jquery-for-beginners), вживую пощупать — в персональном блоге [http://anton.shevchuk.name/book/code/](http://anton.shevchuk.name/book/code/)
