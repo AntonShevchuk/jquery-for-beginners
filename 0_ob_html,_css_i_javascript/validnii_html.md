@@ -14,9 +14,9 @@
         Nunc urna metus, ultricies eu, congue vel, laoreet id, justo.
         Aliquam fermentum adipiscing pede. Suspendisse dapibus ornare
         quam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<p>
-        <a href="/index.php?mod=default&amp;act=image"><img src="/img001.jpg"></a>
+        <a href="/index.php?mod=default&act=image"><img src="/img001.jpg"></a>
     </body>
 </html>
 ```
 
-_Если сомневаетесь в своих знаниях, то проверьте данный код на странице [https://validator.w3.org/nu/#textarea](https://validator.w3.org/nu/)
+_Если сомневаетесь в своих знаниях, то проверьте данный код на странице [https://validator.w3.org/nu/#textarea](https://validator.w3.org/nu/)_

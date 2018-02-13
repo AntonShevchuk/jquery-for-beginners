@@ -1,15 +1,16 @@
 ## Немного о JavaScript {#javascript}
 
-_В данный раздел я вынес ту информацию о JavaScript, которую необходимо знать, чтобы у вас не возникало «детских» проблем с использованием jQuery. Если у вас есть опыт работы с JavaScript, то листайте далее._
+В данный раздел я вынес ту информацию о JavaScript, которую необходимо знать, чтобы у вас не возникало
+«детских» проблем с использованием jQuery. Если у вас есть опыт работы с JavaScript, то листайте далее.
 
-Изучать хотите JavaScript и jQuery? Так силу познайте инструмента истинного:
+_Изучать хотите JavaScript и jQuery? Так силу познайте инструмента истинного:_
 
-*   [Developer Tools](http://www.html5rocks.com/en/tutorials/developertools/part1/) - для Chrome, Safari и других webkit-based браузеров
-*   [FireBug](http://getfirebug.com/) - для FireFox
-*   [DragonFly](http://www.opera.com/dragonfly/) - для Opera
-*   [Developer Tools](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/) - для Microsoft Edge
+* [Developer Tools](http://www.html5rocks.com/en/tutorials/developertools/part1/) - для Chrome, Safari и других webkit-based браузеров
+* [Developer Tools](https://developer.mozilla.org/ru/docs/Tools) - для FireFox
+* [Developer Tools](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/) - для Microsoft Edge
+* [DragonFly](http://www.opera.com/dragonfly/) - для Opera
 
-> Список не полон, но [console](https://developers.google.com/chrome-developer-tools/docs/console) там есть, применять её надо уметь
+_Список не полон, но [console](https://developers.google.com/chrome-developer-tools/docs/console) там есть, применять её надо уметь_
 
 ### О форматировании
 
@@ -35,19 +36,6 @@ var age = 32;
 ```
 
 Всё просто, объявляем переменную, используя ключевое слово «var».
-
-{% exercise %}
-Define a variable `x` equal to 10.
-
-{% initial %}
-
-{% solution %}
-var x = 10;
-
-{% validation %}
-assert(x == 10);
-
-{% endexercise %}
 
 _Можно, конечно же, и без «var», но делать я вам это настоятельно не рекомендую, т.к. могут возникнуть непредвиденные проблемы в коде, о чём чуть позже расскажу._
 
