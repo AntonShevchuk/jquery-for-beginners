@@ -1,5 +1,6 @@
 {
   "title":"jQuery для начинающих",
   "author":"Anton Shevchuk",
-  "language":"ru"
+  "language":"ru",
+  "plugins": ["exercises"]
 }

@@ -54,6 +54,15 @@ var company = "Facebook";
 var Company = "Google";
 ```
 
+{% exercise %}
+Создайте переменную `x` и присвойте ей значение 10.
+{% initial %}
+{% solution %}
+var x = 10;
+{% validation %}
+assert(x == 10);
+{% endexercise %}
+
 Хочу также вас познакомить с таким нововведением ECMAScript-2015 (в дальнейшем ES-2015), как объявление переменных с использованием конструкции «let»:
 
 ```javascript
