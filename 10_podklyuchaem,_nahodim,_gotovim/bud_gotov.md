@@ -18,12 +18,12 @@
 
 ```html
 <script>
-// ждём загрузки всего документа
-// после этого будет выполнена анонимная функция
-// которую мы передали в качестве параметра
-jQuery(document).ready(function(){
-    jQuery("h2").css("color", "red");
-});
+    // ждём загрузки всего документа
+    // после этого будет выполнена анонимная функция
+    // которую мы передали в качестве параметра
+    jQuery(document).ready(function(){
+        jQuery("h2").css("color", "red");
+    });
 </script>
 ```
 
@@ -31,9 +31,9 @@ jQuery(document).ready(function(){
 
 ```html
 <script>
-$(function(){
-    $("h2").css("color", "red");
-});
+    $(function(){
+        $("h2").css("color", "red");
+    });
 </script>
 ```
 

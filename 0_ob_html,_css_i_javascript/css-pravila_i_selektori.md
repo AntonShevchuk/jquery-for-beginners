@@ -152,7 +152,15 @@ _40% задач, которые вы будете решать с помощью
 Вот ещё кусочек CSS для тренировки, напишите соответствующий ему HTML (это тоже вопрос с собеседования ;):_
 
 ```css
-#my p.announce, .tt.pm li li a:hover+span { 
+#my p.announce, .tt.pm li li a:hover + span { 
     color: #f00;
+}
+```
+
+Вот ещё одна задачка для тренировки:
+
+```css
+#my > li, dd.dd.tt ~ span {
+    text-decoration: underline;
 }
 ```

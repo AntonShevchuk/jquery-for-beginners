@@ -21,7 +21,7 @@ _Пропустите это раздел, и вернитесь к нему т�
 
 ```javascript
 if (document.querySelectorAll) (function(){
-    var oldSelect = select
+    var oldSelect = select;
     /* ... */
     select = function( selector, context, results, seed, xml ) {
 
@@ -112,4 +112,4 @@ _Не обращайте внимание на RegExp – это внутрен�
 
 Официальная документация по библиотеке Sizzle доступна на GitHub'е проекта:
 
-* «Sizzle Documentation» [https://github.com/jquery/sizzle/wiki/Sizzle-Documentation](https://github.com/jquery/sizzle/wiki/Sizzle-Documentation)
+* [Sizzle Documentation](https://github.com/jquery/sizzle/wiki/Sizzle-Documentation)
