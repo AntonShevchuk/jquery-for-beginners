@@ -2,5 +2,8 @@
   "title":"jQuery для начинающих",
   "author":"Anton Shevchuk",
   "language":"ru",
-  "plugins": ["exercises"]
+  "plugins": ["exercises"],
+  "styles": {
+    "website": "styles/website.css"
+  }
 }
