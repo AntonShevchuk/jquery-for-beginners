@@ -5,6 +5,7 @@
   "language":"ru",
   "plugins": ["exercises"],
   "styles": {
-    "website": "styles/website.css"
+    "website": "styles/website.css",
+    "pdf": "styles/pdf.css"
   }
 }

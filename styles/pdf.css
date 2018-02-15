@@ -1,0 +1,13 @@
+/* exercise */
+.book .book-body .page-wrapper .page-inner .exercise {
+  border: 0;
+}
+
+.page-inner .exercise .header {
+  background: none;
+  color: inherit;
+}
+
+.page-inner .exercise .editor {
+  min-height: 40px;
+}
