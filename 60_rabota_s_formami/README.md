@@ -43,16 +43,16 @@ name=Ivan&amp;role=Admin
 
 Так же есть метод «.serializeArray()» – он собранные данные представляет в виде объекта:
 
-```javascript
+```json
 [
   {
-    name:"name",
-    value:"Ivan"
+    "name":"name",
+    "value":"Ivan"
   },
   {
-    name:"role",
-    value:"Admin"
-  },
+    "name":"role",
+    "value":"Admin"
+  }
 ]
 ```
 

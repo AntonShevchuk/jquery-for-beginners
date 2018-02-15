@@ -49,71 +49,65 @@ _Все виджеты и плагины завязаны на ядро jQuery U
 
 За анимацию цвета отвечает компонент «Effects Core», который позволяет анимировать изменения цвета посредством использования функции «.animate()»:
 
+```javascript
 $("#my").animate({ backgroundColor: "black" }, 1000);
+```
 
 Да-да, jQuery из коробки не умеет этого делать, а вот jQuery UI позволяет анимировать следующие параметры:
 
-* backgroundColor
-* borderBottomColor
-* borderLeftColor
-* borderRightColor
-* borderTopColor
-* color
-* outlineColor
+* `backgroundColor`
+* `borderBottomColor`
+* `borderLeftColor`
+* `borderRightColor`
+* `borderTopColor`
+* `color`
+* `outlineColor`
 
 Ещё одной возможностью заключенной в «Effects Core» является анимация изменений класса DOM элемента, т.е. когда вы будете присваивать новый класс элементу, то вместо обычного моментального применения новых CSS свойств вы будете наблюдать анимацию этих свойств от текущих до заданных в присваиваемом классе. Для использования данного функционала нам потребуются старые знакомые – методы «.addClass()», «.toggleClass()» и «.removeClass()», с одной лишь разницей – при вызове метода вторым параметром должна быть указана скорость анимации:
 
+```javascript
 $("#my").addClass("active", 1000);
 
 $("#my").toggleClass("active", 1000);
 
 $("#my").removeClass("active", 1000);
+```
 
 Если из предыдущего абзаца у вас не возникло понимания сути происходящего, то этот код для вас:
 
+```html
 <style>
-
 #my {
-
-font-size:14px;
-
+    font-size:14px;
 }
-
 #my.active {
-
-font-size:20px;
-
+    font-size:20px;
 }
-
 </style>
-
 <script>
-
-$(function (){
-
-$("#my").addClass("active", 1000);
-
-// тут получается аналогично следующему вызову
-
-$("#my").animate({"font-size":"20px"}, 1000);
-
+$(function () {
+    $("#my").addClass("active", 1000);
+    // тут получается аналогично следующему вызову
+    $("#my").animate({"font-size":"20px"}, 1000);
 });
-
 </script>
+```
 
 _А ещё появляется метод «.switchClass()», который заменяет один класс другим, но мне он ни разу не пригодился._
 
 О наборе эффектов я не буду долго рассказывать, их лучше посмотреть в действии на странице [http://jqueryui.com/effect/](http://jqueryui.com/effect/). Для работы с эффектами появляется метод «.effect()», но сам по себе его лучше не использовать, ведь UI расширил функционал встроенных методов «.show()», «.hide()» и «.toggle()», теперь, передав в качестве параметра скорости анимации названия эффекта вы получите необходимый результат:
 
+```javascript
 $("#my").hide("puff");
 
 $("#my").show("transfer");
 
 $("#my").toggle("explode");
+```
 
 _Приведу список эффектов, может кто запомнит: blind, bounce, clip, drop, explode, fold, highlight, puff, pulsate, scale, shake, size, slide, transfer._
 
-Помните, я в главе о [анимации](../30_sobitiya/touch_sobitiya.md#445091657886621-_40%_Анимация) рассказывал о easing и одноименном плагине для jQuery? Так вот UI тоже расширяет easing, так что подключив его можно отключать плагин. И да, этот функционал завязан лишь на «Effects Core».
+Помните, я в главе о [анимации](40_animatsiya/README.md) рассказывал о easing и одноименном плагине для jQuery? Так вот UI тоже расширяет easing, так что подключив его можно отключать плагин. И да, этот функционал завязан лишь на «Effects Core».
 
 ### Темы
 
@@ -127,77 +121,57 @@ _Если в какой-то момент времени потребуется 
 
 Первое, о чём стоит рассказать, это то, что правила написания плагинов для jQuery слишком вальяжны, что не способствует их качеству. При создании jQuery UI, походу, решили пойти путём стандартизации процесса написания плагинов и виджетов, я не могу сказать насколько задумка удалась, но стало явно лучше чем было. Начну с описания каркаса для вашего виджета:
 
+```javascript
 $.widget("book.expose", {
-
-// настройки по умолчанию
-
-options: {
-
-color: "red"
-
-},
-
-// инициализация widget
-
-// вносим изменения в DOM и вешаем обработчики
-
-_create: function() {
-
-this.element; // искомый объект в jQuery обёртке
-
-this.name; // имя - expose
-
-this.namespace; // пространство – book
-
-_this.element_.on("click."+this.eventNamespace, function(){
-
-console.log("click");
-
-}_)_
-
-},
-
-// метод отвечает за применение настроек
-
-_setOption: function( key, value ) {
-
-// применяем изменения настроек
-
-this._super("_setOption", key, value );
-
-},
-
-// метод _destroy должен быть антиподом к _create
-
-// он должен убрать все изменения внесенные изменения в DOM
-
-// и убрать все обработчики, если таковые были
-
-_destroy: function() {
-
-this.element.off('.'+this.eventNamespace);
-
-}
-
+    // настройки по умолчанию
+    options: {
+        color: "red"
+    },
+    // инициализация widget
+    // вносим изменения в DOM и вешаем обработчики
+    _create: function() {
+        this.element;    // искомый объект в jQuery обёртке
+        this.name;       // имя - expose
+        this.namespace;  // пространство – book
+        this.element.on("click."+this.eventNamespace, function(){
+            console.log("click");
+        });
+    },
+    // метод отвечает за применение настроек
+    _setOption: function( key, value ) {
+        // применяем изменения настроек
+        this._super("_setOption", key, value );
+    },
+    // метод _destroy должен быть антиподом к _create
+    // он должен убрать все изменения внесенные изменения в DOM
+    // и убрать все обработчики, если таковые были
+    _destroy: function() {
+        this.element.off('.'+this.eventNamespace);
+    }
 });
+```
 
 Поясню для тех кто не прочёл комментарии:
 
-options – хранилище настроек виджета для конкретного элемента
+`options` – хранилище настроек виджета для конкретного элемента
 
-_create() – отвечает за инициализацию виджета – тут должны происходить изменения в DOM'е, и «вешаться» обработчики событий
+`_create()` – отвечает за инициализацию виджета – тут должны происходить изменения в DOM'е, и «вешаться» обработчики событий
 
-_destroy() – антипод для «_create()» – должен подчистить всё, что мы намусорили
+`_destroy()` – антипод для «_create()» – должен подчистить всё, что мы намусорили
 
-_setOption(key, value) – данный метод будет вызван при попытке изменить какие-либо настройки:
+`_setOption(key, value)` – данный метод будет вызван при попытке изменить какие-либо настройки:
 
+```javascript
 $("#my").expose({key:value})
+```
 
 _Наблюдательный глаз заметит, что все перечисленные методы начинаются со знака подчёркивания – это такой способ выделить «приватные» методы, которые недоступны для запуска, и если мы попытаемся запустить «$('#my').expose('_destroy')», то получим ошибку. Но учтите – это лишь договорённость, соблюдайте, её!_
 
 _Для обхода договорённости о приватности можно использовать метод «data()»:_
 
-_$("#my").data("expose")._destroy() // место для смайла «(evil)»_
+```javascript
+$("#my").data("expose")._destroy() // место для смайла «(evil)»
+```
 
 В данном примере, я постарался задать хороший тон написания виджетов – я «повесил» обработчики событий в namespace, это даст в дальнейшем возможность контролировать происходящее без необходимости залазить в код виджета, это «true story».
 
@@ -210,158 +184,133 @@ _Код описанный в методе «_destroy()» – избыточен
 
 Все перечисленные события будут «висеть» в пространстве «eventNamespace», т.е. результат будет предположительно одинаковым:
 
+```javascript
 this._on(this.element, {
-
-mouseover:function(event) {
-
-console.log("Hello mouse");
-
-},
-
-mouseout:function(event) {
-
-console.log("Bye mouse");
-
-}
-
+    mouseover:function(event) {
+        console.log("Hello mouse");
+    },
+    mouseout:function(event) {
+        console.log("Bye mouse");
+    }
 });
+```
 
 Второй метод – «_off()» – позволяет выборочно отключать обработчики:
 
+```javascript
 this._off(this.element, "mouseout click");
+```
 
 Ну каркас баркасом, пора переходить к функционалу – добавим произвольную функцию с произвольным функционалом:
 
-callMe:function(){
-
-console.log("Allo?");
-
+```javascript
+callMe:function() {
+    console.log("Allo?");
 }
+```
 
 К данной функции мы легко сможем обращаться как из других методов виджета так и извне:
 
+```javascript
 // изнутри
-
 this.callMe()
-
 // извне
-
 $("#my").expose("callMe")
+```
 
 Если ваша функция принимает параметры, то передача оных осуществляется следующим способом:
 
+```javascript
 $("#my").expose("callMe", "Hello!")
+```
 
 Если вы хотите достучаться в обработчике событий до метода виджета, то не забудьте про область видимости переменных, и сделайте следующий манёвр:
 
-_create: function() {
-
-var self = this; // вот он!
-
-this.element.on("click."+this.eventNamespace, function(){
-
-// тут используем self, т.к. this уже указывает на
-
-// элемент по которому кликаем
-
-self.callMe();
-
-})
-
-},
+```javascript
+{
+    _create: function() {
+        var self = this; // вот он!
+        this.element.on("click."+this.eventNamespace, function() {
+            // тут используем self, т.к. this уже указывает на
+            // элемент по которому кликаем
+            self.callMe();
+        })
+    }
+}
+```
 
 Хорошо идём, теперь поговорим о событиях – для более гибкой разработки и внедрения виджетов предусмотрен функционал по созданию произвольных событий и их «прослушиванию»:
 
+```javascript
 // инициируем событие
-
 this._trigger("incomingCall");
 
 // подписываемся на событие при инициализации виджета
-
 $("#my").expose({
-
-incommingCall: function(ev) {
-
-console.log("din-don");
-
-}
-
+    incommingCall: function(ev) {
+        console.log("din-don");
+    }
 })
 
 // или после, используя в качестве имени события
-
 // имя виджета + имя события
-
-$("#my").on("exposeincomingCall", function(){
-
-console.log("tru-lya-lya")
-
+$("#my").on("exposeincomingCall", function() {
+    console.log("tru-lya-lya")
 });
+```
 
 Материала много, я понимаю, но ещё добавлю описание нескольких методов которые можно вызвать из самого виджета:
 
-_delay() – данная функция работает как «setTimeout()», вот только контекст переданной функции будет указывать на сам виджет (это чтобы не заморачиваться с областью видимости)
+`_delay()` – данная функция работает как «setTimeout()», вот только контекст переданной функции будет указывать на сам виджет (это чтобы не заморачиваться с областью видимости)
 
-_hoverable() и _focusable() – данным методам необходимо скармливать элементы для которых необходимо отслеживать события «hover» и «focus», чтобы автоматически добавит к ним классы «ui-state-hover» и «ui-state-focus» при наступлении оных
+`_hoverable()` и `_focusable()` – данным методам необходимо скармливать элементы для которых необходимо отслеживать события «hover» и «focus», чтобы автоматически добавит к ним классы «ui-state-hover» и «ui-state-focus» при наступлении оных
 
-_hide() и _show() – эти два метода появились в версии 1.9.0, они созданы дабы стандартизировать поведение виджетов при использовании методов анимации, настройки принято прятать в опциях под ключами «hide» и «show» соответственно. Использовать методы следует следующим образом:
+`_hide()` и `_show()` – эти два метода появились в версии 1.9.0, они созданы дабы стандартизировать поведение виджетов при использовании методов анимации, настройки принято прятать в опциях под ключами «hide» и «show» соответственно. Использовать методы следует следующим образом:
 
-options: {
-
-hide: {
-
-effect: "slideDown", // настройки эквиваленты вызову
-
-duration: 500 // .slideDown( 500)
-
+```javascript
+{
+    options: {
+        hide: {
+            effect: "slideDown", // настройки эквиваленты вызову
+            duration: 500        // .slideDown( 500)
+        }
+    }
 }
-
-}
-
 // внутри виджета следует использовать вызовы _hide() и _show()
-
 this._hide( this.element, this.options.hide, function() {
-
-// это наша функция обратного вызова
-
-console.log('спрятали');
-
+    // это наша функция обратного вызова
+    console.log('спрятали');
 });
+```
 
 Существует ещё пару методов, которые реализованы за нас:
 
-enable: function() {
-
-return this._setOption( "disabled", false );
-
-},
-
-disable: function() {
-
-return this._setOption( "disabled", true );
-
-},
+```javascript
+{
+    enable: function() {
+        return this._setOption( "disabled", false );
+    },
+    disable: function() {
+        return this._setOption( "disabled", true );
+    }
+}
+```
 
 Фактически, данный функции создают синоним для вызова:
 
+```javascript
 $("#my").expose({ "disabled": true }) // или false
+```
 
 Наша задача сводится лишь к отслеживанию данного флага в методе «_setOption()».
 
 Примеру быть – [widget.html](http://anton.shevchuk.name/book/code/widget.html), возможно этот виджет и не будет популярен, зато он наглядно демонстрирует как создавать виджеты для jQuery UI.
 
-_Будьте внимательны, с выходом jQuery UI версии 1.9.0 были внесены правки в Widget API, следовательно, большинство доступной инфор-мации устарело, так что читайте официальную документацию [_[_http://wiki.jqueryui.com/w/page/12138135/Widget%20factory_](http://wiki.jqueryui.com/w/page/12138135/Widget%20factory)_], а ещё лучше – заглядывайте в код готовых виджетов «от производителя»_
+_Будьте внимательны, с выходом jQuery UI версии 1.9.0 были внесены правки в Widget API, следовательно, большинство доступной инфор-мации устарело, так что читайте  [официальную документацию](http://wiki.jqueryui.com/w/page/12138135/Widget%20factory)], а ещё лучше – заглядывайте в код готовых виджетов «от производителя»_
 
 Информация по теме разработки виджетов:
 
-* «The jQuery UI Widget Factory. WAT?» – эта документации актуальна 
-[http://ajpiano.com/widgetfactory/](http://ajpiano.com/widgetfactory/)
-
-* «Understanding jQuery UI widgets: A tutorial»
-[http://bililite.com/blog/understanding-jquery-ui-widgets-a-tutorial/](http://bililite.com/blog/understanding-jquery-ui-widgets-a-tutorial/)
-
-* «Tips for Developing jQuery UI 1.8 Widgets»
-[http://www.erichynds.com/jquery/tips-for-developing-jquery-ui-widgets/](http://www.erichynds.com/jquery/tips-for-developing-jquery-ui-widgets/)
-
-* «Coding your First jQuery UI Plugin»
-[http://net.tutsplus.com/tutorials/javascript-ajax/coding-your-first-jquery-ui-plugin/](http://net.tutsplus.com/tutorials/javascript-ajax/coding-your-first-jquery-ui-plugin/)
+* [The jQuery UI Widget Factory. WAT?](http://ajpiano.com/widgetfactory/) – эта документации актуальна 
+* [Understanding jQuery UI widgets: A tutorial](http://bililite.com/blog/understanding-jquery-ui-widgets-a-tutorial/)
+* [Tips for Developing jQuery UI 1.8 Widgets](http://www.erichynds.com/jquery/tips-for-developing-jquery-ui-widgets/)
+* [Coding your First jQuery UI Plugin](http://net.tutsplus.com/tutorials/javascript-ajax/coding-your-first-jquery-ui-plugin/)
