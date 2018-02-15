@@ -1,6 +1,7 @@
 {
   "title":"jQuery для начинающих",
-  "author":"Anton Shevchuk",
+  "author":"Антон Шевчук",
+  "isbn": "978-617-7150-93-9",
   "language":"ru",
   "plugins": ["exercises"],
   "styles": {

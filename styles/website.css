@@ -1,0 +1,9 @@
+/* exercise */
+.exercise {
+  border: 0 !important;
+}
+
+.exercise .header {
+  background: none !important;
+  color: inherit !important;
+}

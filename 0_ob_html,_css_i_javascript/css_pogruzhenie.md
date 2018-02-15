@@ -39,9 +39,11 @@ _Когда станете матёрыми front-end разработчикам
 «b-service-list__column b-service-list__column_right» и это будет круто, и «must be» – но лишь в рамках действительно
 больших проектов. Собственно, чего я распинаюсь? Дам исходную точку для изучения – информации там ещё на одну книгу ;):
 
-* «Что такое БЭМ» — [https://ru.bem.info/methodology/](https://ru.bem.info/methodology/)
+* [Что такое БЭМ](https://ru.bem.info/methodology/)
 
-Обязательно ознакомьтесь с принципами БЭМ – это полезно для расширения кругозора и прокачки скиллов
+Обязательно ознакомьтесь с принципами БЭМ – это полезно для расширения кругозора и прокачки скиллов.
+
+> _Никогда не ровняйтесь на классы которые вы встретите в [Twitter Bootstrap](https://getbootstrap.com/)! Большинство из них следует использовать только совместно с [SASS препроцессором](http://sass-lang.com/) (это я про классы вида `pt-X`, `m-X` и тому подобные)_
 
 ### О цветах {#css-colors}
 
@@ -73,11 +75,11 @@ p { color: rgba(255, 0, 0, 0.5) } /* полупрозрачный текст */
 (hue saturation lightness – тон, насыщенность и светлота) и [HSLA](http://www.w3.org/TR/css3-color/) (HSL + α-канал):
 
 ```css
-p { color: hsl( 0, 100%, 50%) } /* красный */
+p { color: hsl( 0, 100%, 50%) }   /* красный */
 
-p { color: hsl(120, 100%, 50%) } /* зелёный */
+p { color: hsl(120, 100%, 50%) }  /* зелёный */
 
-p { color: hsl(240, 100%, 50%) } /* синий */
+p { color: hsl(240, 100%, 50%) }  /* синий */
 
 p { color: hsla( 0, 100%, 50%, 0.5) } /* полупрозрачный красный */
 ```
@@ -102,14 +104,9 @@ _Опять я буду ссылаться на чей-то учебник — �
 
 По теме:
 
-* «Inline Elements List and What’s New in HTML5»
-[http://www.tutorialchip.com/tutorials/inline-elements-list-whats-new-in-html5/](http://www.tutorialchip.com/tutorials/inline-elements-list-whats-new-in-html5/)
-
-* «HTML5 Block Level Elements: Complete List»
-[http://www.tutorialchip.com/tutorials/html5-block-level-elements-complete-list/](http://www.tutorialchip.com/tutorials/html5-block-level-elements-complete-list/)
-
-* «Раскладка в CSS: поток»
-[http://softwaremaniacs.org/blog/2005/08/27/css-layout-flow/](http://softwaremaniacs.org/blog/2005/08/27/css-layout-flow/)
+* [Inline Elements List and What’s New in HTML5](http://www.tutorialchip.com/tutorials/inline-elements-list-whats-new-in-html5/)
+* [HTML5 Block Level Elements: Complete List](http://www.tutorialchip.com/tutorials/html5-block-level-elements-complete-list/)
+* [Раскладка в CSS: поток](http://softwaremaniacs.org/blog/2005/08/27/css-layout-flow/)
 
 ### О размерах блочных элементов {#size}
 
@@ -121,11 +118,8 @@ _Такая блочная модель была свойственна IE6 в �
 
 Полезные статьи по теме:
 
-* «Блочные элементы»
-[http://htmlbook.ru/content/blochnye-elementy](http://htmlbook.ru/content/blochnye-elementy)
-
-* «Встроенные элементы»
-[http://htmlbook.ru/content/vstroennye-elementy](http://htmlbook.ru/content/vstroennye-elementy)
+* [Блочные элементы](http://htmlbook.ru/content/blochnye-elementy)
+* [Встроенные элементы](http://htmlbook.ru/content/vstroennye-elementy)
 
 ### Плавающие элементы {#float}
 
@@ -140,8 +134,7 @@ _Такая блочная модель была свойственна IE6 в �
 
 Жизненно необходимая информация для верстальщиков:
 
-* «Раскладка в CSS: float»
-[http://softwaremaniacs.org/blog/2005/12/01/css-layout-float/](http://softwaremaniacs.org/blog/2005/12/01/css-layout-float/)
+* [Раскладка в CSS: float](http://softwaremaniacs.org/blog/2005/12/01/css-layout-float/)
 
 ### Позиционирование {#position}
 
@@ -154,5 +147,4 @@ _Такая блочная модель была свойственна IE6 в �
 
 Для самостоятельного изучения:
 
-*   «Раскладка в CSS: позиционирование»
-[http://softwaremaniacs.org/blog/2005/08/03/css-layout-positioning/](http://softwaremaniacs.org/blog/2005/08/03/css-layout-positioning/)
+* [Раскладка в CSS: позиционирование](http://softwaremaniacs.org/blog/2005/08/03/css-layout-positioning/)
