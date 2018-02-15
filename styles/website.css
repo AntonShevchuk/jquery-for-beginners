@@ -1,9 +1,13 @@
 /* exercise */
-.exercise {
-  border: 0 !important;
+.book .book-body .page-wrapper .page-inner .exercise {
+  border: 0;
 }
 
-.exercise .header {
-  background: none !important;
-  color: inherit !important;
+.page-inner .exercise .header {
+  background: none;
+  color: inherit;
+}
+
+.page-inner .exercise .editor {
+  min-height: 40px;
 }
