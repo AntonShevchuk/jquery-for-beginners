@@ -117,18 +117,19 @@ $("a[href^=\\/]").addClass("internal");
 
 ### Поиск по дочерним элементам
 
-Хотелось бы ещё обратить внимание на селекторы из спецификации CSS3 [[http://www.w3.org/TR/css3-selectors/](http://www.w3.org/TR/css3-selectors/)] — много интересных:
+Хотелось бы ещё обратить внимание на селекторы из спецификации [CSS3](http://www.w3.org/TR/css3-selectors/) — много интересных:
 
 `:first-child` — первый дочерний элемент
 
 `:last-child` — последний дочерний элемент
 
 `:nth-child(2n+1)` — выборка элементов по несложному уравнению
+  подробнее можно прочитать в статье «[Как работает nth-child](http://web-standards.ru/articles/nth-child/)»
 
-подробнее можно прочитать в статье «Как работает nth-child» [[http://web-standards.ru/articles/nth-child/](http://web-standards.ru/articles/nth-child/)]
-
-:not(…) — выбрать те, что не подпадают под вложенную выборку
+`:not(…)` — выбрать те, что не подпадают под вложенную выборку
 
 Но поскольку не все браузеры знакомы с CSS3-селекторами, то мы можем использовать jQuery для назначения стилей:
 
+```javascript
 $("div:last-child").addClass("last-paragraph");
+```
