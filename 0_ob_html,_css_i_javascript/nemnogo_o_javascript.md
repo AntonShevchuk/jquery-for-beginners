@@ -80,7 +80,7 @@ if (true) {
     var a = 1000;
     alert(a); // 1000
 }
-alert(a); // 1000
+alert(a);     // 1000
 ```
 
 А теперь сравните с поведением «let»:
@@ -91,15 +91,15 @@ if (true) {
     let a = 1000;
     alert(a); // 1000
 }
-alert(a); // 0
+alert(a);     // 0
 ```
 
 *   переменная «let» видна только после объявления:
 
 ```javascript
-alert(a); // undefined
+alert(a);  // undefined
 var a = 0;
-alert(b); // error: 'b' is not defined
+alert(b);  // error: 'b' is not defined
 let b = 0;
 ```
 
@@ -117,6 +117,7 @@ let b; // error: 'b' has already been declared
 ```javascript
 for (var i = 0; i < 10; i++) { /* … */ }
 alert(i); // 10
+
 for (let j = 0; j < 10; j++) { /* … */ }
 alert(j); // error: 'j' is not defined
 ```
