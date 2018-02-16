@@ -1,8 +1,8 @@
 # 80% Объект Deferred и побратимы {#80}
 
-С jQuery версии 3.x, Deferred объект стал совместим с Promise из ES-2015 (т.н. ES6), так что практически всё, что относится к[Promise](https://learn.javascript.ru/promise) верно и для Deferred.
-
 Работа с объектом «Deferred» это уже высший пилотаж, это «mad skills» заставлять асинхронный JavaScript работать так, как нам хочется. Давайте посмотрим как он работает (данный код можно скопировать в консоль и выполнить на любой странице, где подключен jQuery 3.x):
+
+> _С jQuery версии 3.x, Deferred объект стал совместим с Promise из ES-2015 (т.н. ES6), так что практически всё, что относится к [Promise](https://learn.javascript.ru/promise) верно и для [Deferred](http://api.jquery.com/category/deferred-object/)._
 
 ```javascript
 // инициализация Deferred объекта
@@ -126,7 +126,7 @@ D.progress(function($){
 });
 
 // тратим деньги
-setTimeout(function(){ D.notify(40); }, 500); // покупка 1
+setTimeout(function(){ D.notify(40); }, 500);  // покупка 1
 setTimeout(function(){ D.notify(50); }, 1000); // покупка 2
 setTimeout(function(){ D.notify(30); }, 1500); // покупка 3
 
