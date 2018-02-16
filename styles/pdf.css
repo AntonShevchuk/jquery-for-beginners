@@ -6,6 +6,7 @@
 .page-inner .exercise .header {
   background: none;
   color: inherit;
+  display: none;
 }
 
 .page-inner .exercise .editor {
