@@ -77,6 +77,9 @@ D.catch(function() { console.log("again fail") });
 
 Чтобы не путаться в перечисленных методах приведу блок-схему:
 
+<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#FFFFFF&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;url&quot;:&quot;https://raw.githubusercontent.com/AntonShevchuk/jquery-book/master/assets/deferred.xml&quot;}"></div>
+<script type="text/javascript" src="https://www.draw.io/embed2.js?&fetch=https%3A%2F%2Fraw.githubusercontent.com%2FAntonShevchuk%2Fjquery-book%2Fmaster%2Fassets%2Fdeferred.xml"></script>
+
 При вызове «[.resolve()](http://api.jquery.com/deferred.resolve/)» и «[.reject()](http://api.jquery.com/deferred.reject/)» можно передать произвольные данные в зарегистрированные callback-функции для дальнейшей работы. Кроме того, существуют ещё методы «[.resolveWith()](http://api.jquery.com/deferred.resolveWith/)» и «[.rejectWith()](http://api.jquery.com/deferred.rejectWith/)», они позволяют изменять контекст вызываемых callback-функции (т.е. внутри них «this» будет смотреть на указанный контекст).
 
 Отдельно хотел отметить, что если вы собираетесь передать Deferred объект «на сторону», чтобы «там» могли повесить свои обработчики событий, но не хотите потерять контроль, то возвращайте не сам объект, а результат выполнения метода «.promise()» – это фактически будет искомый объект в режиме «read only».
