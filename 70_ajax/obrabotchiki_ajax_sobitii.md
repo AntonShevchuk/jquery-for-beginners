@@ -2,6 +2,9 @@
 
 Для удобства разработки, AJAX запросы бросают несколько событий, и их естественно можно и нужно обрабатывать. jQuery позволяет обрабатывать эти события для каждого AJAX запроса в отдельности, либо глобально. Приведу схемку на которой наглядно видно порядок возникновения событий в jQuery:
 
+<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#FFFFFF&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;url&quot;:&quot;https://raw.githubusercontent.com/AntonShevchuk/jquery-book/master/assets/jQuery%20AJAX%20Events.xml&quot;}"></div>
+<script type="text/javascript" src="https://www.draw.io/embed2.js?&fetch=https%3A%2F%2Fraw.githubusercontent.com%2FAntonShevchuk%2Fjquery-book%2Fmaster%2Fassets%2FjQuery%2520AJAX%2520Events.xml"></script>
+
 Вот и полный список событий с небольшими ремарками:
 
 `ajaxStart` — данное событие возникает в случае когда побежал первый AJAX запрос, и при этом других активных AJAX запросов в данный момент нет

@@ -5,7 +5,7 @@
 
 1. Скачиваем jQuery с домашней страницы проекта [http://jquery.com/](http://jquery.com/) и положим рядышком с нашей HTML-страничкой (советую скачать development-версию — всегда интересно покопаться в исходном коде :):
 
-  ```javascript
+  ```html
 <head>
     <script type="text/javascript" src="js/jquery.js"></script>
 </head>
@@ -17,7 +17,7 @@
 2. Используем [CDN](http://ru.wikipedia.org/wiki/Content_Delivery_Network). 
   Я предпочитаю сервис от компании [Google](https://developers.google.com/speed/libraries/), но есть ещё [Microsoft](https://docs.microsoft.com/en-us/aspnet/ajax/cdn/overview) и [Яндекс](https://tech.yandex.ru/jslibs/), а так же универсальный [http://cdnjs.com/](http://cdnjs.com/), последний, кстати, размещает много популярных плагинов, за что им отдельное спасибо:
 
-  ```javascript
+  ```html
 <head>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
