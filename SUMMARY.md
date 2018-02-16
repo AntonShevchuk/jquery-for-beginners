@@ -37,7 +37,7 @@
 * [80% Объект Deferred и побратимы](80_obekt_deferred_i_pobratimi/README.md)
   * [Callbacks](80_obekt_deferred_i_pobratimi/callbacks.md)
 * [90% Пишем свой плагин](90_pishem_svoi_plagin/README.md)
-  * [jQuery плагин](90_pishem_svoi_plagin/jquery_plagin.md)
+  * [jQuery плагин](90_pishem_svoi_plagin/jquery_plugin.md)
   * [Data](90_pishem_svoi_plagin/data.md)
   * [Animate](90_pishem_svoi_plagin/animate.md)
   * [Easing](90_pishem_svoi_plagin/easing.md)

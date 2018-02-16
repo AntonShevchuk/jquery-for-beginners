@@ -69,8 +69,10 @@ $.extend({name:"Anton", location:"Kharkiv"}, {location:"Kyiv"});
 
 Получим следующие производные функции:
 
-| **heartIn** | **heartOut** | **heartInOut** |
-| --- | --- | --- |
+  **heartIn**                   |  **heartOut**                      | **heartInOut**
+:------------------------------:|:----------------------------------:|:-------------------------------------:
+![heartIn](/assets/heartIn.png) |  ![heartOut](/assets/heartOut.png) |  ![heartInOut](/assets/heartInOut.png)
+
 
 Работать с данным творением надо следующим образом:
 

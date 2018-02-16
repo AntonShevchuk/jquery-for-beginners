@@ -6,11 +6,16 @@ _Данный фреймворк хорошо подходит для созда
 
 Я не буду рассматривать все компоненты данного фреймворка, приведу лишь некоторые скриншоты (взяты с официального сайта [http://jquerymobile.com/](http://jquerymobile.com/)):
 
-|  |  |
-| --- | --- |
+<table border="0">
+    <tr>
+        <td width="50%"><img src="/assets/jquery-mobile-dialog.png" alt="jQuery Mobile Dialog"/></td>
+        <td width="50%">
+            <img src="/assets/jquery-mobile-tabs.png" alt="jQuery Mobile Tabs"/>
+            <img src="/assets/jquery-mobile-checkboxes.png" alt="jQuery Mobile Form"/>
+        </td>
+    </tr>
+</table>
 
-_Для jQMobile существует свой собственный ThemeRoller:_
-
-[http://jquerymobile.com/themeroller/](http://jquerymobile.com/themeroller/)
+_Для jQMobile существует свой собственный [ThemeRoller](http://jquerymobile.com/themeroller/)_
 
 И ещё, посоветую обратить внимание на API данного фреймворка, без изучения оного вам будет затруднительно создать действительно интересные приложения.

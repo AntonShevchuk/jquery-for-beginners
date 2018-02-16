@@ -16,13 +16,12 @@ _Большинство приведенных изменений касаетс
 
 *   Метод «jQuery.ajax()» теперь совместим с Promise, и вы можете использовать методы «.then()» и «.catch()»:
 
-_$._ajax_({url:_ "/get-my-page.html"/* и т.д. */ _})_
-
-_._then_(_function_() {_ /* всё ОК */ _})_
-
-_._catch_(_function_() {_ /* ошибка */ _})_
-
-_;_
+  ```javascript
+$.ajax({url:"/get-my-page.html" /* и т.д. */ })
+ .then(function() { /* всё ОК */ })
+ .catch(function() { /* ошибка */ })
+;
+```
 
 *   Добавлена новая сигнатура для вызова двух AJAX-методов «$.get(settings)» и «$.post(settings)», теперь настройки совместимы с «$.ajax(settings)».
 *   При подключении скриптов с другого домена теперь в обязательном порядке требует указания «dataType: "script"»
@@ -32,8 +31,9 @@ _;_
 
 *   Раньше метод «.removeAttr()» для true-false атрибутов, таких как «checked», «selected» и «readonly», втихую выставлял соответсвующее свойство DOM элемента в «false», теперь извольте делать сие ручками:
 
+  ```javascript
 $("input[type=email]").removeAttr("readonly").prop("readonly", false)
-
+```
 *   Если вызовите метод «.val()» для мультиселекта, в котором ничего не выбрано, то получите в ответ пустой массив, а раньше был «null»
 *   Для SVG заработали методы по манипуляции с классами (хотя полноценной поддержки SVG в jQuery нет).
 
@@ -45,15 +45,13 @@ $("input[type=email]").removeAttr("readonly").prop("readonly", false)
 *   Методы «.width()», «.height()» и так далее, раньше вызвав их для пустой коллекции объектов мы получали «null», теперь «undefined».
 *   Официально добавлен promise «jQuery.ready», который очень удобно заюзать вместе с «$.when()»:
 
+  ```javascript
 $.when($.ready, $.getScript("script.js") ).then(function() {
-
-// документ готов, и скрипт script.js подгружен
-
+    // документ готов, и скрипт script.js подгружен
 }).catch( function() {
-
-// ошибка
-
+    // ошибка
 });
+```
 
 *   Метод «jQuery.unique()» переименован в «jQuery.uniqueSort()»
 *   Метод «jQuery.parseJSON()» устарел, переходите на «JSON.parse()»
@@ -65,21 +63,17 @@ $.when($.ready, $.getScript("script.js") ).then(function() {
 
 Второй важный момент — callback-функции, согласно спецификации ES-2015, должны принимать только один аргумент: для успешного выполнения это некий результат выполнения, в случае возникновения ошибки функция это будет сама ошибка. Если у вас не получается так сделать, то старые функции «.done()» и «.fail()» всё ещё остаются с нами, хоть чую и их скоро выпилят:
 
-_// было_
+```javascript
+// было
+$.get("/get-my-page.html")
+ .done(function(data, textStatus, jqXHR) { /* всё ОК */ })
+ .fail(function(jqXHR, textStatus, errorThrown) { /* ошибка */ });
 
-_$._get_(_"/get-my-page.html"_)_
-
-_._done_(_function_(data, textStatus, jqXHR) {_ /* всё ОК */ _})_
-
-_._fail_(_function_(jqXHR, textStatus, errorThrown) {_ /* ошибка */ _});_
-
-_// стало_
-
-_$._get_(_"/get-my-page.html"_)_
-
-_._then_(_function_(data) {_ /* всё ОК */ _})_
-
-_._catch_(_function_(error) {_ /* ошибка */ _});_
+// стало
+$.get("/get-my-page.html")
+ .then(function(data) { /* всё ОК */ })
+ .catch(function(error) { /* ошибка */ });
+```
 
 ### Размеры {#size}
 
@@ -99,29 +93,29 @@ _._catch_(_function_(error) {_ /* ошибка */ _});_
 
 Удалены shorthand-методы для следующих событий: «.load()», «.unload()» и «.error()», связано данное изменение с конфликтами возникающие при использовании данных методов, так что переписывайте на «.on()»:
 
+```javascript
 // было
-
-$("img").load(fn)
+$("img").load(fn);
 
 // стало
-
-$("img").on("load", fn).
+$("img").on("load", fn);
+```
 
 Удалено синтетическое событие «ready», так что «.on("ready", fn)» более не работает, используйте синтаксис «$(fn)».
 
 Делегированные события, в случае если их пытаются повесить c использованием неправильных селекторов теперь будут сразу ругаться и выбрасывать ошибку. Дебажить станет легче:
 
+```javascript
 // пример сломанного селектора div:not
-
 $("body").on("click", "div:not", e => false);
+```
 
 ### Селекторы {#selectors}
 
-За селекторы «:hidden» и «:visible» теперь отвечает «getClientRects()», если у запрашиваемого элемента есть layout box, значит он считается видимым, как результат пустой <span> или <br/> теперь считаются видимыми.
+За селекторы «:hidden» и «:visible» теперь отвечает «getClientRects()», если у запрашиваемого элемента есть layout box, значит он считается видимым, как результат пустой `<span>` или `<br/>` теперь считаются видимыми.
 
 Кривые селекторы «$("#")» и «.find("#")» теперь будут вызывать ошибку.
 
 Описал многое, но не всё, полное руководство доступно на официальном сайте:
 
-*   «jQuery Core 3.0 Upgrade Guide»
-[https://jquery.com/upgrade-guide/3.0/](https://jquery.com/upgrade-guide/3.0/)
+* [jQuery Core 3.0 Upgrade Guide](https://jquery.com/upgrade-guide/3.0/)
