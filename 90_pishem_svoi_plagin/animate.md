@@ -30,7 +30,7 @@ $.Tween.propHooks.color = {
         tween.start;   // начальные значения
         tween.now;     // текущее значение
         tween.end;     // желаемое результирующие значения
-        tween.unit;    // еденицы измерения
+        tween.unit;    // единицы измерения
     }
 };
 ```

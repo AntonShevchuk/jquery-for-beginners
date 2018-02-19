@@ -7,9 +7,9 @@ _Данный фреймворк хорошо подходит для созда
 Я не буду рассматривать все компоненты данного фреймворка, приведу лишь некоторые скриншоты (взяты с официального сайта [http://jquerymobile.com/](http://jquerymobile.com/)):
 
 <table border="0">
-    <tr>
-        <td width="50%"><img src="/assets/jquery-mobile-dialog.png" alt="jQuery Mobile Dialog"/></td>
-        <td width="50%">
+    <tr style="border:0">
+        <td width="50%" style="border:0"><img src="/assets/jquery-mobile-dialog.png" alt="jQuery Mobile Dialog"/></td>
+        <td width="50%" style="border:0">
             <img src="/assets/jquery-mobile-tabs.png" alt="jQuery Mobile Tabs"/>
             <img src="/assets/jquery-mobile-checkboxes.png" alt="jQuery Mobile Form"/>
         </td>
