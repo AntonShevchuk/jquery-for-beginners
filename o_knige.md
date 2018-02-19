@@ -19,4 +19,4 @@ function () {
 или, возможно, лишь прочитать и улыбнуться,
 будет оформлена в блок текста с отступом и выделена курсивом_
 
-Примеры кода вы сможете найти в репозитории автора в GitHub'е — [https://github.com/AntonShevchuk/jquery-for-beginners](https://github.com/AntonShevchuk/jquery-for-beginners), вживую пощупать — в персональном блоге [http://anton.shevchuk.name/book/code/](http://anton.shevchuk.name/book/code/)
+Примеры кода вы сможете найти в [репозитории автора](https://github.com/AntonShevchuk/jquery-for-beginners) в GitHub'е, вживую пощупать — в [персональном блоге](http://anton.shevchuk.name/book/code/)
