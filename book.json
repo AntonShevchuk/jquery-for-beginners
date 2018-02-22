@@ -1,11 +1,20 @@
 {
-  "title":"jQuery для начинающих",
-  "author":"Антон Шевчук",
+  "title": "jQuery для начинающих",
+  "author": "Антон Шевчук",
   "isbn": "978-617-7150-93-9",
-  "language":"ru",
-  "plugins": ["exercises"],
+  "language": "ru",
+  "plugins": [
+    "ga",
+    "exercises",
+    "jquery-book@git+https://github.com/AntonShevchuk/gitbook-plugin-jquery-book.git#0.0.2"
+  ],
+  "pluginsConfig": {
+    "ga": {
+      "token": "UA-114378149-1"
+    }
+  },
   "styles": {
-    "website": "styles/website.css",
-    "pdf": "styles/pdf.css"
+    "website": "./assets/css/website.css",
+    "pdf": "./assets/css/pdf.css"
   }
 }

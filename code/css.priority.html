@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Page Title</title>
+  <link rel="shortcut icon" href="/favicon.ico"/>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    h1, h2, h3 {
+      color: #333333;
+    }
+
+    header, section, footer {
+      position: relative;
+      max-width: 800px;
+      margin: 16px auto;
+    }
+
+    article {
+      padding: 8px 16px;
+      margin-bottom: 16px;
+    }
+
+    .news {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 0 2px #ccc;
+    }
+
+    span {
+      font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+      padding: .2em;
+      margin: 0;
+      font-size: .85em;
+      background-color: #f7f7f7;
+    }
+
+    span::before {
+      content: "<"
+    }
+
+    span::after {
+      content: ">"
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1><span>H1</span> Page Title <span>/H1</span></h1>
+</header>
+<section id="content" class="wrapper">
+  <h2><span>H2</span> Section Title <span>/H2</span></h2>
+  <article id="top" class="news">
+    <span>ARTICLE id="top" class="news"</span>
+    <h3><span>H3</span> Article Title <span>/H3</span></h3>
+    <p id="pinned" class="intro"><span>P id="pinned" class="intro"</span> Lorem ipsum dolor sit amet, consectetuer adipiscing.
+      Nunc urna metus, ultricies eu, congue, laoreet...<span>/P</span></p>
+    <span>/ARTICLE</span>
+  </article>
+  <article class="news">
+    <span>ARTICLE class="news"</span>
+    <h3><span>H3</span> Article Title <span>/H3</span></h3>
+    <p class="intro" style="color:#333"><span>P class="intro" style="color:#333"</span> Morbi malesuada, ante at feugiat tincidunt, enim
+      gravida metus, lacinia massa diam vel eros...<span>/P</span></p>
+    <span>/ARTICLE</span>
+  </article>
+</section>
+</body>
+</html>

@@ -20,95 +20,92 @@ _— Почему же она называется каскадной?_ — эт
 * за каждый идентификатор элемента — `[0:1:0:0]` (`#id`)
 * за каждый класс, либо псевдо класс — `[0:0:1:0]` (`.my`, `:pseudo`)
 * за каждый тег — `[0:0:0:1]` (`<div>`, `<a>`)
-* при этом `[1:0:0:0]` > `[0:x:y:z]` > `[0:0:x:y]` > `[0:0:0:x]`.
+* при этом `[1:0:0:0]` > `[0:x:y:z]` > `[0:0:x:y]` > `[0:0:0:x]`
+* при равенстве счета — последний главный
 
-Пример селекторов, выстроенных по приоритету (первые важнее):
+Пример селекторов, выстроенных по возростанию приоритета (последний - самый важный):
 
-селектор | приоритет
---- | ---
-`#my p#id` | `[0:2:0:1]`
-`#my #id` | `[0:2:0:0]`
-`#my p` | `[0:1:0:1]`
-`#id` | `[0:1:0:0]`
-`.wrapper .content p` | `[0:0:2:1]`
-`.content div p` | `[0:0:1:2]`
-`.content p` | `[0:0:1:1]`
-`p` | `[0:0:0:1]`
+ приоритет  |  селектор (кликабельно)                                                                                              | комментарий 
+----------- | -------------------------------------------------------------------------------------------------------------------- | -------------  
+`[0:0:0:1]` | <a class="jqbook" href="#html-example" data-type="append-style"><code>p { color: orange }</code></a>                 | просто тег, имеет наименьший приоритет 
+`[0:0:1:1]` | <a class="jqbook" href="#html-example" data-type="append-style"><code>p.intro { color: green }</code></a>            | добавляем к тегу класс «.intro»
+`[0:0:1:2]` | <a class="jqbook" href="#html-example" data-type="append-style"><code>article p.intro { color: blue }</code></a>     | ещё тег уровнем выше
+`[0:0:2:2]` | <a class="jqbook" href="#html-example" data-type="append-style"><code>article.news p.intro { color: red }</code></a> | ... нам нужно больше классов
+`[0:1:0:0]` | <a class="jqbook" href="#html-example" data-type="append-style"><code>#pinned { color: darkblue }</code></a>         | а вот идентификатор «id="pinned"» даже сам по себе важней всех тегов и классов вместе взятых
+`[0:1:0:1]` | <a class="jqbook" href="#html-example" data-type="append-style"><code>p#pinned { color: darkcyan }</code></a>        | добавляем тег `<p>`, и специфичность увеличивается
+`[0:2:0:1]` | <a class="jqbook" href="#html-example" data-type="append-style"><code>#top p#pinned { color: darkgreen }</code></a>  | добавляем ещё один идентификатор «id="top"»
 
-HTML-код для иллюстрации специфичности из предыдущего примера (см. [css.priority.html](http://anton.shevchuk.name/book/code/css.priority.html)):
+> Не имеет значение в каком порядке вы будете добавлять данные стили на страницу, тут имеет вес только специфичность CSS-селектора.
 
-```html
-<div class="wrapper">
-    <div id="my" class="content">
-        <p id="id">
-            Lorem ipsum dolor sit amet, consectetuer...
-        </p>
-    </div>
-</div>
-```
+> Во втором параграфе прописан «style="color:#333"», именно поэтому он не изменяет свой цвет, так как его приоритет наивысший `[1:0:0:0]`  
 
-При равенстве счета — последний главный.
+<iframe class="jqbook" id="html-example" width="100%" height="460px" border="0" src="/code/css.priority.html"></iframe>
 
 > Говорят, что правило с 255 классами будет выше по приоритету, нежели правило с одним «id», но я надеюсь, такого кода в реальности не существует
 
-Вот такое краткое вступительное слово, но пора вернуться к jQuery. Так вот, работая с jQuery, вы должны «на отлично» читать правила CSS, а также уметь составлять CSS-селекторы для поиска необходимых элементов на странице. Но давайте обо всём по порядку, возьмём следующий простенький пример вполне семантического HTML (см. [html.example.html](http://anton.shevchuk.name/book/code/html.example.html)):
+Вот такое краткое вступительное слово, но пора вернуться к jQuery. Так вот, работая с jQuery, вы должны «на отлично» читать правила CSS, а также уметь составлять CSS-селекторы для поиска необходимых элементов на странице. Но давайте обо всём по порядку, возьмём следующий простенький пример вполне семантического HTML (см. [html.example.html](/code/html.example.html)):
 
 ```html
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Page Title</title>
-        <link rel="profile" href="http://gmpg.org/xfn/11"/>
-        <style type="text/css">
-            body {
-                font: 62.5%/1.6 Verdana, Tahoma, sans-serif;
-                color: #333333;
-            }
-            
-            h1, h2 {
-                color: #ff6600;
-            }
-            
-            header, main, footer {
-                margin: 30px auto;
-                width: 600px;
-            }
-            
-            #content {
-                padding: 8px;
-            }
-            
-            .box {
-                border:1px solid #ccc;
-                border-radius:4px;
-                box-shadow:0 0 2px #ccc;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>Page Title</h1>
-            <p>Page Description</p>
-        </header>
-        <main id="content" class="wrapper box">
-            <article>
-                <h2>Article Title</h2>
-                <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscin.
-                Nunc urna metus, ultricies eu, congue vel, laoreet...
-                </p>
-            </article>
-            <article>
-                <h2>Article Title</h2>
-                <p>
-                Morbi malesuada, ante at feugiat tincidunt, enim massa
-                gravida metus, commodo lacinia massa diam vel eros...
-                </p>
-            </article>
-        </main>
-        <footer>&copy;copyright 2018</footer>
-    </body>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Page Title</title>
+  <link rel="shortcut icon" href="/favicon.ico"/>
+  <style>
+    body {
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 14px;
+    }
+
+    h1, h2, h3 {
+      color: #333333;
+    }
+
+    header, section, footer {
+      position: relative;
+      max-width: 800px;
+      margin: 16px auto;
+    }
+
+    article {
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    #content {
+      padding-bottom: 16px;
+    }
+
+    .box {
+      border:1px solid #ccc;
+      border-radius:4px;
+      box-shadow:0 0 2px #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Page Title</h1>
+    <p>Page Description</p>
+  </header>
+  <section id="content">
+    <h2>Section Title</h2>
+    <article class="box">
+      <h3>Article Title</h3>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing.
+        Nunc urna metus, ultricies eu, congue, laoreet...</p>
+    </article>
+    <article class="box">
+      <h3>Article Title</h3>
+      <p>Morbi malesuada, ante at feugiat tincidunt, enim
+        gravida metus, lacinia massa diam vel eros...</p>
+    </article>
+  </section>
+  <footer>
+      &copy;copyright 2018
+  </footer>
+</body>
 </html>
 ```
 
@@ -116,7 +113,7 @@ HTML-код для иллюстрации специфичности из пре
 (я умышленно не выносил CSS в отдельный файл, ибо так наглядней):
 
 * `body` — данные правила будут применены к тегу `<body>` и всем его потомкам, запомните: настройки шрифтов распространяются вниз «по каскаду»
-* `h1,h2` — мы выбираем теги `<h1>` и `<h2>`, и устанавливаем цвет шрифта для данных тегов и их потомков
+* `h1,h2,h3` — мы выбираем теги `<h1>`, `<h2>` и `<h3>`, и устанавливаем цвет шрифта для данных тегов и их потомков
 * `#content` — выбираем элемент с «id="content"», настройки отступов не распространяются на потомков, они будут изменяться тольки для данного элемента
 * `.box` — выбираем элементы с «class="box"», и изменяем внешний вид границ элементов с заданным классом
 
