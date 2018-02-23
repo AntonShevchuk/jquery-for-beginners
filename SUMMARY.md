@@ -1,9 +1,9 @@
 # Summary
 
 * [jQuery для начинающих](README.md)
-* [Об авторе](ob_avtore.md)
-* [О книге](o_knige.md)
-* [Условия распространения](usloviya_rasprostraneniya.md)
+* [Об авторе](author.md)
+* [О книге](about.md)
+* [Условия распространения](license.md)
 * [0% Об HTML, CSS и JavaScript](0_ob_html,_css_i_javascript/README.md)
   * [Семантическая вёрстка](0_ob_html,_css_i_javascript/semanticheskaya_vyorstka.md)
   * [Валидный HTML](0_ob_html,_css_i_javascript/validnii_html.md)
@@ -52,4 +52,4 @@
   * [Обновление на версию 2.х](dopolnenie/obnovlenie_na_versiyu_2h.md)
   * [Обновление на версию 3.х](dopolnenie/obnovlenie_na_versiyu_3h.md)
 * [История изменений](changelog.md)
-* [Благодарности](blagodarnosti.md)
+* [Благодарности](thanks.md)
