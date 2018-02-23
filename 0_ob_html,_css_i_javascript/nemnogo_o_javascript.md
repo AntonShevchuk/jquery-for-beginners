@@ -596,7 +596,7 @@ function myLog() {
 
 * контекст «this» можно изменить, используя функции «[bind()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)», «[call()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call)», и «[apply()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)»
 
-_Всё, что касается «window», относится лишь к браузерам, но поскольку книга о jQuery, то иное поведение я и не рассматриваю, но вот так прозрачно намекаю, что оно есть ;)_
+_Всё, что касается «window», относится лишь к браузерам, но поскольку книга о jQuery, то иное поведение я и не рассматриваю, но вот так прозрачно намекаю, что есть альтернативная реальность со своим «jQuery», и звать её там [cheerio](https://www.npmjs.com/package/cheerio) ;)_
 
 ### Замыкания {#closures}
 
