@@ -22,7 +22,7 @@
   * [Пространство имен](30_sobitiya/prostranstvo_imen.md)
   * [«Живые» события](30_sobitiya/zhivie_sobitiya.md)
   * [Оптимизация](30_sobitiya/optimizatsiya.md)
-  * [Touch события](30_sobitiya/touch_sobitiya.md)
+  * [Touch-события](30_sobitiya/touch_sobitiya.md)
 * [40% Анимация](40_animatsiya/README.md)
   * [Step-by-step](40_animatsiya/step-by-step.md)
   * [В очередь…©](40_animatsiya/v_ochered.md)
