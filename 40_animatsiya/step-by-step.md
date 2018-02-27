@@ -20,4 +20,4 @@ var customStep = function(now, obj) {
 $("#box").animate({height: "+=10px"}, {step: customStep});
 ```
 
-_Мне ни разу не приходилось использовать step-функции, лишь только для [примера](http://anton.shevchuk.name/book/code/animate.step.html)_
+> _Мне ни разу не приходилось использовать step-функции, лишь только для [примера](http://anton.shevchuk.name/book/code/animate.step.html)._
