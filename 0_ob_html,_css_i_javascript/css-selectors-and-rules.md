@@ -1,4 +1,4 @@
-## CSS-правила и селекторы {#css}
+ ## CSS-правила и селекторы {#css}
 
 Теперь приступим к CSS, и начнём, пожалуй, с расшифровки аббревиатуры CSS. Это Cascading Style Sheets, дословно «каскадная таблица стилей», но:
 
@@ -119,17 +119,24 @@ _Это отнюдь не весь список, описание же всех 
 * при этом `[1:0:0:0]` > `[0:x:y:z]` > `[0:0:x:y]` > `[0:0:0:x]`
 * при равенстве счета — снова тапки у того, кто объявлен последним
 
-Пример селекторов, выстроенных по возростанию приоритета (последний – самый важный):
+Пример селекторов, выстроенных по возростанию приоритета (все селекторы кликабельны, результат работы можно посмотреть [чуть ниже](#html-example)):
 
- приоритет  |  селектор (кликабельно)                                                                                              | комментарий 
------------ | -------------------------------------------------------------------------------------------------------------------- | -------------  
-`[0:0:0:1]` | <a class="jqbook" href="#html-example" data-type="append-style"><code>p { color: orange }</code></a>                 | просто тег, имеет наименьший приоритет 
-`[0:0:1:1]` | <a class="jqbook" href="#html-example" data-type="append-style"><code>p.intro { color: green }</code></a>            | добавляем к тегу класс «.intro»
-`[0:0:1:2]` | <a class="jqbook" href="#html-example" data-type="append-style"><code>article p.intro { color: blue }</code></a>     | ещё тег уровнем выше
-`[0:0:2:2]` | <a class="jqbook" href="#html-example" data-type="append-style"><code>article.news p.intro { color: red }</code></a> | ... нам нужно больше классов
-`[0:1:0:0]` | <a class="jqbook" href="#html-example" data-type="append-style"><code>#pinned { color: darkblue }</code></a>         | а вот идентификатор «id="pinned"» даже сам по себе важней всех тегов и классов вместе взятых
-`[0:1:0:1]` | <a class="jqbook" href="#html-example" data-type="append-style"><code>p#pinned { color: darkcyan }</code></a>        | добавляем тег `<p>`, и специфичность увеличивается
-`[0:2:0:1]` | <a class="jqbook" href="#html-example" data-type="append-style"><code>#top p#pinned { color: darkgreen }</code></a>  | добавляем ещё один идентификатор «id="top"»
+селектор с описанием | приоритет
+----------- | ---------------------
+тег имеет наименьший приоритет  | `[0:0:0:1]` 
+<a class="jqbook" href="#html-example" data-type="append-style"><code>p { color: orange }</code></a> | 
+добавляем к тегу класс «.intro» | `[0:0:1:1]` 
+<a class="jqbook" href="#html-example" data-type="append-style"><code>p.intro { color: green }</code></a> | 
+добавляем ещё тег               | `[0:0:1:2]` 
+<a class="jqbook" href="#html-example" data-type="append-style"><code>article p.intro { color: blue }</code></a> | 
+... нам нужно больше классов    | `[0:0:2:2]`
+<a class="jqbook" href="#html-example" data-type="append-style"><code>article.news p.intro { color: red }</code></a> | 
+идентификатор «id="pinned"» даже сам по себе важней всех тегов и классов вместе взятых | `[0:1:0:0]`
+<a class="jqbook" href="#html-example" data-type="append-style"><code>#pinned { color: darkblue }</code></a> | 
+добавляем тег `<p>`, и специфичность увеличивается | `[0:1:0:1]`
+<a class="jqbook" href="#html-example" data-type="append-style"><code>p#pinned { color: darkcyan }</code></a> | 
+добавляем ещё один идентификатор «id="top"» | `[0:2:0:1]`
+<a class="jqbook" href="#html-example" data-type="append-style"><code>#top p#pinned { color: darkgreen }</code></a> | 
 
 <iframe class="jqbook" id="html-example" width="100%" height="460px" border="0" src="../code/css.priority.html"></iframe>
 
