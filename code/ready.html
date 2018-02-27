@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Ready to go</title>
+  <link rel="shortcut icon" href="/favicon.ico"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    // nothing, tag h2 is not exists
+    $("article h2").css("font-size", "24px");
+
+    // it's working
+    // deprecated
+    $(document).ready(function(){
+      jQuery("article h2").css("background-color", "green");
+    });
+
+    // it's working too
+    $(function(){
+      $("article h3").css("color", "#fff");
+    });
+
+    $.ready.then(function(){
+      $("article p").css("font-size", "8px");
+    });
+
+    // anonymous function - best practices
+    (function($, undefined){
+      $(function(){
+        $("p").css("color", "#966");
+      });
+    })(jQuery);
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Page Title</h1>
+    <p>Page Description</p>
+  </header>
+  <section id="content">
+    <h2>Section Title</h2>
+    <article class="box">
+      <h3>Article Title</h3>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing.
+        Nunc urna metus, ultricies eu, congue, laoreet...</p>
+    </article>
+    <article class="box">
+      <h3>Article Title</h3>
+      <p>Morbi malesuada, ante at feugiat tincidunt, enim
+        gravida metus, lacinia massa diam vel eros...</p>
+    </article>
+  </section>
+  <footer>
+      &copy;jQuery for beginners
+  </footer>
+</body>
+</html>

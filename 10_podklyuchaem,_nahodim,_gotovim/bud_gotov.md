@@ -52,4 +52,4 @@ _«$()» — это синоним для «jQuery()». Чтобы у вас н�
 })(jQuery);
 ```
 
-_Наглядный код в [ready.html](http://anton.shevchuk.name/book/code/ready.html)_
+_Наглядный код в [ready.html](../code/ready.html)_
