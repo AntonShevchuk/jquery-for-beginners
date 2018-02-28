@@ -8,4 +8,4 @@
 
 О том, как с ними работать, можно разузнать из отличной статьи на английском языке — «[Touching and Gesturing on iPhone, Android, and More](http://www.sitepen.com/blog/?p=3425)» (хотя там рассказ и о Dojo Toolkit).
 
-В [jQuery Mobile](/dopolnenie/jquery_mobile.md) работа с touch-событиями идёт «из коробки». Чтобы jQuery UI заставить работать с touch-событиями, следует использовать библиотеку [jQuery UI Touch Punch](http://touchpunch.furf.com/). Пробуйте, но учтите, теоретическая разработка интерфейсов для подобных устройств – нонсенс (_англ. nonsense_), соответствующее touch-устройство должно быть доступно для тестирования.
+В [jQuery Mobile](/appendix/jquery_mobile.md) работа с touch-событиями идёт «из коробки». Чтобы jQuery UI заставить работать с touch-событиями, следует использовать библиотеку [jQuery UI Touch Punch](http://touchpunch.furf.com/). Пробуйте, но учтите, теоретическая разработка интерфейсов для подобных устройств – нонсенс (_англ. nonsense_), соответствующее touch-устройство должно быть доступно для тестирования.
