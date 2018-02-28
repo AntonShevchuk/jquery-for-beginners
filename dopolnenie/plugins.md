@@ -5,7 +5,7 @@
 [https://github.com/jquery/jquery-color](https://github.com/jquery/jquery-color)
 * cookie — удобная работа с «печеньками» в браузере –
 [https://plugins.jquery.com/cookie/](https://plugins.jquery.com/cookie/)
-* easing — расширяем стандартный набор функций easing (об этом я рассказывал в главе [анимация](../30_sobitiya/touch_sobitiya.md#445091657886621-_40%_Анимация)) –
+* easing — расширяем стандартный набор функций easing (об этом я рассказывал в главе [анимация](../30_events/touch_sobitiya.md#445091657886621-_40%_Анимация)) –
 [http://gsgd.co.uk/sandbox/jquery/easing/](http://gsgd.co.uk/sandbox/jquery/easing/)
 * form — упрощает работу с формами, сам уже давно не пользуюсь, но для быстрого старта самое оно –
 [http://malsup.com/jquery/form/](http://malsup.com/jquery/form/)
