@@ -16,10 +16,27 @@ header, section, footer {
 article {
   padding: 8px 16px;
   margin-bottom: 16px;
+  overflow: hidden;
 }
 
 #content {
   padding-bottom: 16px;
+}
+
+code {
+  font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+  padding: .2em;
+  margin: 0;
+  font-size: .85em;
+  background-color: #f7f7f7;
+}
+
+code::before {
+  content: "<"
+}
+
+code::after {
+  content: ">"
 }
 
 .box {
