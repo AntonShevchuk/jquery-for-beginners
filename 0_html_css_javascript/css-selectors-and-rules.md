@@ -20,26 +20,21 @@ _— Зачем мне всё это?_ — работая с jQuery, вы дол
       font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
       font-size: 14px;
     }
-
     h1, h2, h3 {
       color: #333333;
     }
-
     header, section, footer {
       position: relative;
       max-width: 800px;
       margin: 16px auto;
     }
-
     article {
       padding: 16px;
       margin-bottom: 16px;
     }
-
     #content {
       padding-bottom: 16px;
     }
-
     .box {
       border:1px solid #ccc;
       border-radius:4px;
@@ -56,13 +51,11 @@ _— Зачем мне всё это?_ — работая с jQuery, вы дол
     <h2>Section Title</h2>
     <article class="box">
       <h3>Article Title</h3>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing.
-        Nunc urna metus, ultricies eu, congue, laoreet...</p>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing...</p>
     </article>
     <article class="box">
       <h3>Article Title</h3>
-      <p>Morbi malesuada, ante at feugiat tincidunt, enim
-        gravida metus, lacinia massa diam vel eros...</p>
+      <p>Morbi malesuada, ante at feugiat tincidunt...</p>
     </article>
   </section>
   <footer>
@@ -124,27 +117,27 @@ _Это отнюдь не весь список, описание же всех 
 селектор с описанием | приоритет
 ----------- | ---------------------
 тег имеет наименьший приоритет  | `[0:0:0:1]` 
-<a class="jqbook" href="#html-example" data-type="append-style"><code>p { color: orange }</code></a> | 
+<a class="jqbook" href="#" data-target="#html-example"data-type="append-style"><code>p { color: orange }</code></a> | 
 добавляем к тегу класс «.intro» | `[0:0:1:1]` 
-<a class="jqbook" href="#html-example" data-type="append-style"><code>p.intro { color: green }</code></a> | 
+<a class="jqbook" href="#" data-target="#html-example"data-type="append-style"><code>p.intro { color: green }</code></a> | 
 добавляем ещё тег               | `[0:0:1:2]` 
-<a class="jqbook" href="#html-example" data-type="append-style"><code>article p.intro { color: blue }</code></a> | 
+<a class="jqbook" href="#" data-target="#html-example"data-type="append-style"><code>article p.intro { color: blue }</code></a> | 
 ... нам нужно больше классов    | `[0:0:2:2]`
-<a class="jqbook" href="#html-example" data-type="append-style"><code>article.news p.intro { color: red }</code></a> | 
+<a class="jqbook" href="#" data-target="#html-example"data-type="append-style"><code>article.news p.intro { color: red }</code></a> | 
 идентификатор «id="pinned"» даже сам по себе важней всех тегов и классов вместе взятых | `[0:1:0:0]`
-<a class="jqbook" href="#html-example" data-type="append-style"><code>#pinned { color: darkblue }</code></a> | 
+<a class="jqbook" href="#" data-target="#html-example"data-type="append-style"><code>#pinned { color: darkblue }</code></a> | 
 добавляем тег `<p>`, и специфичность увеличивается | `[0:1:0:1]`
-<a class="jqbook" href="#html-example" data-type="append-style"><code>p#pinned { color: darkcyan }</code></a> | 
+<a class="jqbook" href="#" data-target="#html-example"data-type="append-style"><code>p#pinned { color: darkcyan }</code></a> | 
 добавляем ещё один идентификатор «id="top"» | `[0:2:0:1]`
-<a class="jqbook" href="#html-example" data-type="append-style"><code>#top p#pinned { color: darkgreen }</code></a> | 
+<a class="jqbook" href="#" data-target="#html-example"data-type="append-style"><code>#top p#pinned { color: darkgreen }</code></a> | 
 
-<iframe class="jqbook" id="html-example" width="100%" height="460px" border="0" src="../code/css.priority.html"></iframe>
+<iframe class="jqbook" id="html-example" width="100%" height="750px" border="0" src="../code/css.priority.html"></iframe>
 
 Не имеет значение в каком порядке вы будете добавлять данные стили на страницу, тут имеет вес только специфичность CSS-селектора.
 
 > Во втором параграфе прописан «style="color:#333"», именно поэтому он не изменяет свой цвет, так как его приоритет наивысший `[1:0:0:0]`
 
-> Метка `!important` - страшная вещь, использовать следует лишь в крайнем случае, вот посмотрите что она творит - <a class="jqbook" href="#html-example" data-type="append-style"><code>p { color: darkred !important }</code></a> 
+> Метка `!important` - страшная вещь, использовать следует лишь в крайнем случае, вот посмотрите что она творит - <a class="jqbook" href="#" data-target="#html-example"data-type="append-style"><code>p { color: darkred !important }</code></a> 
 
 > Говорят, что правило с 255 классами будет выше по приоритету, нежели правило с одним «id», но я надеюсь, такого кода в реальности не существует
 

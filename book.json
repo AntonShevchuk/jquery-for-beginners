@@ -6,7 +6,7 @@
   "plugins": [
     "ga",
     "exercises",
-    "jquery-book@git+https://github.com/AntonShevchuk/gitbook-plugin-jquery-book.git#0.0.2"
+    "jquery-book@git+https://github.com/AntonShevchuk/gitbook-plugin-jquery-book.git#0.0.3"
   ],
   "pluginsConfig": {
     "ga": {

@@ -9,53 +9,70 @@
       src="https://code.jquery.com/jquery-3.3.1.js"
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    // nothing, tag h2 is not exists
-    $("article h2").css("font-size", "24px");
+  <script>
+    // nothing, tag <article> is not exists
+    $("article").css("color", "red");
 
     // it's working
-    // deprecated
+    // but deprecated
     $(document).ready(function(){
-      jQuery("article h2").css("background-color", "green");
+      $("article").css("background-color", "lightgreen");
     });
 
     // it's working too
     $(function(){
-      $("article h3").css("color", "#fff");
+      $("article p").css({
+        "border": "1px solid green",
+        "border-radius": "4px",
+        "padding": "4px"
+      });
     });
 
+    // another method
     $.ready.then(function(){
-      $("article p").css("font-size", "8px");
+      $("article p").css("background-color", "white");
     });
 
     // anonymous function - best practices
     (function($, undefined){
       $(function(){
-        $("p").css("color", "#966");
+        $("article p").css("color", "green");
       });
     })(jQuery);
   </script>
 </head>
 <body>
   <header>
-    <h1>Page Title</h1>
-    <p>Page Description</p>
+    <h1>Document is ready</h1>
+    <p>Open page source</p>
   </header>
   <section id="content">
-    <h2>Section Title</h2>
     <article class="box">
       <h3>Article Title</h3>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing.
-        Nunc urna metus, ultricies eu, congue, laoreet...</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper imperdiet felis, sit amet imperdiet
+        arcu varius et. Donec condimentum pulvinar sollicitudin. Nunc facilisis erat vel nunc mollis, dapibus consequat
+        justo finibus. Donec suscipit rhoncus nisl eu scelerisque. Curabitur semper urna ac ante aliquam sollicitudin.
+        Ut eu lacus ipsum. Suspendisse potenti. Maecenas sed dictum nulla, vel imperdiet lacus. Cras aliquet semper
+        ipsum, at rutrum tellus.
+      </p>
     </article>
     <article class="box">
       <h3>Article Title</h3>
-      <p>Morbi malesuada, ante at feugiat tincidunt, enim
-        gravida metus, lacinia massa diam vel eros...</p>
+      <p>
+        Sed rutrum accumsan ultricies. Nunc iaculis enim vel augue porta pellentesque. Nunc efficitur ex non
+        ullamcorper ultricies. Nunc tempus vulputate enim, non egestas orci sodales eget. Morbi congue mi ac vehicula
+        egestas. Ut imperdiet metus lectus, in elementum quam viverra vel. Suspendisse egestas cursus nibh,
+        vitae lobortis ipsum congue sit amet.
+      </p>
     </article>
   </section>
   <footer>
       &copy;jQuery for beginners
   </footer>
+  <script>
+    // is working
+    $("article").css("font-size", "18px");
+  </script>
 </body>
 </html>

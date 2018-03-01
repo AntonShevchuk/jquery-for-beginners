@@ -2,37 +2,109 @@
 <html dir="ltr" lang="en-US">
 <head>
   <meta charset="UTF-8"/>
-  <title>CSS Priority</title>
+  <title>Page Title</title>
   <link rel="shortcut icon" href="/favicon.ico"/>
-  <link rel="stylesheet" href="styles.css"/>
   <style>
-    .news {
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-shadow: 0 0 2px #ccc;
+    body {
+      font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 24px;
+      background: rgb(247, 247, 247);
+      max-width: 800px;
+    }
+
+    header, section, footer, article {
+      position: relative;
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      display: inline;
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      font-size: inherit;
+      font-weight: normal;
+    }
+
+    p {
+      display: inline;
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      font-size: inherit;
+      font-weight: normal;
+    }
+
+    code {
+      padding: .2em;
+      margin: 0;
+      color: rgb(200, 40, 41);
+    }
+
+    code::before {
+      content: "<";
+      color: rgb(200, 40, 41);
+    }
+
+    code::after {
+      content: ">";
+      color: rgb(200, 40, 41);
+    }
+
+    code span {
+      color: rgb(113, 140, 0);
     }
   </style>
 </head>
 <body>
+&lt;!DOCTYPE html&gt;<br/>
+<code>html dir=<span>"ltr"</span> lang=<span>"en-US"</span></code><br/>
+<code>head</code><br/>
+&nbsp;&nbsp;<code>meta charset=<span>"UTF-8"</span>/</code><br/>
+&nbsp;&nbsp;<code>title</code>Page Title<code>/title</code><br/>
+<code>/head</code><br/>
+<code>body</code><br/>
 <header>
-  <h1><code>H1</code> Page Title <code>/H1</code></h1>
+&nbsp;&nbsp;<code>header</code><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<h1><code>h1</code>Page Title<code>/h1</code></h1><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<p><code>p</code>Page Description<code>/p</code></p><br/>
+&nbsp;&nbsp;<code>/header</code>
 </header>
+<br/>
 <section id="content" class="wrapper">
-  <h2><code>H2</code> Section Title <code>/H2</code></h2>
+  &nbsp;&nbsp;<code>section id=<span>"content"</span> class=<span>"wrapper"</span></code><br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;<h2><code>h2</code>Section Title<code>/h2</code></h2><br/>
   <article id="top" class="news">
-    <code>ARTICLE id="top" class="news"</code>
-    <h3><code>H3</code> Article Title <code>/H3</code></h3>
-    <p id="pinned" class="intro"><code>P id="pinned" class="intro"</code> Lorem ipsum dolor sit amet, consectetuer adipiscing.
-      Nunc urna metus, ultricies eu, congue, laoreet...<code>/P</code></p>
-    <code>/ARTICLE</code>
+    &nbsp;&nbsp;&nbsp;&nbsp;<code>article id=<span>"top"</span> class=<span>"news"</span></code><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3><code>h3</code>Article Title<code>/h3</code></h3><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p id="pinned" class="intro"><code>p id=<span>"pinned"</span> class=<span>"intro"</span></code>        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper imperdiet felis, sit amet imperdiet arcu
+    varius et. Donec condimentum pulvinar sollicitudin. Nunc facilisis erat vel nunc mollis, dapibus consequat justo
+    finibus. Donec suscipit rhoncus nisl eu scelerisque. Curabitur semper urna ac ante aliquam sollicitudin. Ut eu lacus
+    ipsum. Suspendisse potenti. Maecenas sed dictum nulla, vel imperdiet lacus. Cras aliquet semper ipsum, at rutrum tellus.<code>/p</code></p><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<code>/article</code><br/>
   </article>
   <article class="news">
-    <code>ARTICLE class="news"</code>
-    <h3><code>H3</code> Article Title <code>/H3</code></h3>
-    <p class="intro" style="color:#333"><code>P class="intro" style="color:#333"</code> Morbi malesuada, ante at feugiat tincidunt, enim
-      gravida metus, lacinia massa diam vel eros...<code>/P</code></p>
-    <code>/ARTICLE</code>
+    &nbsp;&nbsp;&nbsp;&nbsp;<code>article class=<span>"news"</span></code><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3><code>h3</code>Article Title<code>/h3</code></h3><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="intro" style="color:#333"><code>p class=<span>"intro"</span> style=<span>"color:#333"</span></code>Sed rutrum accumsan ultricies. Nunc iaculis enim vel augue porta pellentesque. Nunc efficitur ex non
+    ullamcorper ultricies. Nunc tempus vulputate enim, non egestas orci sodales eget. Morbi congue mi ac vehicula
+    egestas. Ut imperdiet metus lectus, in elementum quam viverra vel. Suspendisse egestas cursus nibh,
+    vitae lobortis ipsum congue sit amet.<code>/p</code></p><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<code>/article</code><br/>
   </article>
+  &nbsp;&nbsp;<code>/section</code>
 </section>
+<br/>
+<footer>
+  &nbsp;&nbsp;<code>footer</code><br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&copy;copyright 2018<br/>
+  &nbsp;&nbsp;<code>/footer</code>
+</footer>
+<br/>
+<code>/body</code><br/>
+<code>/html</code>
 </body>
 </html>

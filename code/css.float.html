@@ -2,66 +2,111 @@
 <html dir="ltr" lang="en-US">
 <head>
   <meta charset="UTF-8"/>
-  <title>CSS Float</title>
+  <title>Page Title</title>
   <link rel="shortcut icon" href="/favicon.ico"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    body {
+      font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 14px;
+      line-height: 24px;
+      background: rgb(247, 247, 247);
+      max-width: 800px;
+    }
+
+    header, section, footer, article {
+      position: relative;
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      display: inline;
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      font-size: inherit;
+      font-weight: normal;
+    }
+
+    p {
+      margin: 0 0 0 32px;
+      padding: 0;
+      line-height: inherit;
+      font-size: inherit;
+      font-weight: normal;
+    }
+
+    code {
+      padding: .2em;
+      margin: 0;
+      color: rgb(200, 40, 41);
+    }
+
+    code::before {
+      content: "<";
+      color: rgb(200, 40, 41);
+    }
+
+    code::after {
+      content: ">";
+      color: rgb(200, 40, 41);
+    }
+
+    code span {
+      color: rgb(113, 140, 0);
+    }
+
+    div.img {
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      padding: 8px;
+      margin: 8px;
+      position: relative;
+      float: right;
+      height: 160px;
+    }
+
+    div.img::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #fff;
+      background: #333333;
+      padding: 16px;
+      height: 144px;
+      opacity: 0.7;
+      font-weight: bold;
+      content: '<img style="float:right" src="..." />';
+    }
+
+  </style>
 </head>
 <body>
-<header>
-  <h1>Page Title</h1>
-  <p>Page Description</p>
-</header>
-<section id="content">
-  <h2>Section Title</h2>
-  <article class="box">
-    <h3><code>H3</code> Article Title <code>/H3</code></h3>
-    <img style="float:right" src="img/photo-maple-leaf-tumb.jpg">
-    Duis in vestibulum sem. Cras euismod tincidunt dui, et scelerisque tellus condimentum vel.
-    Maecenas et urna sit amet risus fermentum rhoncus nec porttitor ligula. Maecenas sit amet
-    turpis enim, ut iaculis est. Duis feugiat, lacus id placerat porttitor, lorem augue gravida
-    nisi, eu porta eros risus et lectus. Maecenas vestibulum nunc vel ipsum tincidunt sit amet
-    blandit sapien bibendum. Proin vel vulputate nisl. Duis tempor imperdiet placerat. Pellentesque
-    faucibus consequat magna, et bibendum nisl egestas non. Pellentesque sit amet mattis augue.
-    Aenean at diam tincidunt purus sollicitudin gravida non in nisi. Fusce bibendum, magna in
-    adipiscing mattis, sem risus fringilla mi, nec gravida lectus lectus at nibh. Suspendisse
-    adipiscing elementum laoreet. Suspendisse sem erat, varius quis aliquet vitae, dapibus sed
-    nibh. Nullam iaculis sem at mauris faucibus in vestibulum libero pretium. Aliquam eu turpis
-    libero. Fusce et ultrices lectus.
+<section id="content" class="wrapper">
+  <code>section id=<span>"content"</span> class=<span>"wrapper"</span></code><br/>
+  &nbsp;&nbsp;<h2><code>h2</code>Section Title<code>/h2</code></h2><br/>
+  <article>
+    &nbsp;&nbsp;<code>article</code><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<h3><code>h3</code>Article Title<code>/h3</code></h3><br/>
+    <div class="img"><img src="img/photo-bumblebee-tumb.jpg" alt="Bumblebee" width="200" height="160"/></div>
+    <p><code>p</code>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper imperdiet felis, sit amet imperdiet arcu
+      varius et. Donec condimentum pulvinar sollicitudin. Nunc facilisis erat vel nunc mollis, dapibus consequat justo
+      finibus. Donec suscipit rhoncus nisl eu scelerisque. Curabitur semper urna ac ante aliquam sollicitudin. Ut eu lacus
+      ipsum. Suspendisse potenti. Maecenas sed dictum nulla, vel imperdiet lacus. Cras aliquet semper ipsum, at rutrum tellus.<code>/p</code></p>
+    &nbsp;&nbsp;<code>/article</code><br/>
   </article>
-  <article class="box">
-    <h3><code>H3</code> Article Title <code>/H3</code></h3>
-    <img style="float:right" src="img/photo-bumblebee-tumb.jpg">
-    <p><code>P</code>Duis in vestibulum sem. Cras euismod tincidunt dui, et scelerisque tellus condimentum vel.
-      Maecenas et urna sit amet risus fermentum rhoncus nec porttitor ligula. Maecenas sit amet
-      turpis enim, ut iaculis est. Duis feugiat, lacus id placerat porttitor, lorem augue gravida
-      nisi, eu porta eros risus et lectus. Maecenas vestibulum nunc vel ipsum tincidunt sit amet
-      blandit sapien bibendum. Proin vel vulputate nisl. Duis tempor imperdiet placerat. Pellentesque
-      faucibus consequat magna, et bibendum nisl egestas non. Pellentesque sit amet mattis augue.
-      Aenean at diam tincidunt purus sollicitudin gravida non in nisi. Fusce bibendum, magna in
-      adipiscing mattis, sem risus fringilla mi, nec gravida lectus lectus at nibh. Suspendisse
-      adipiscing elementum laoreet. Suspendisse sem erat, varius quis aliquet vitae, dapibus sed
-      nibh. Nullam iaculis sem at mauris faucibus in vestibulum libero pretium. Aliquam eu turpis
-      libero. Fusce et ultrices lectus.<code>/P</code></p>
+  <article>
+    &nbsp;&nbsp;<code>article</code><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<h3><code>h3</code>Article Title<code>/h3</code></h3><br/>
+    <div class="img"><img src="img/photo-maple-leaf-tumb.jpg" alt="Maple Leaf" width="200" height="160" /></div>
+    <p style="clear:both"><code>p style=<span>"clear:both"</span></code>Sed rutrum accumsan ultricies.
+      Nunc iaculis enim vel augue porta pellentesque. Nunc efficitur ex non ullamcorper ultricies. Nunc tempus
+      vulputate enim, non egestas orci sodales eget. Morbi congue mi ac vehicula egestas.<code>/p</code></p>
+    &nbsp;&nbsp;<code>/article</code><br/>
   </article>
-  <article class="box">
-    <h3><code>H3</code> Article Title <code>/H3</code></h3>
-    <img style="float:right" src="img/photo-chamomile-tumb.jpg">
-    <p style="clear:both"><code>P style="clear:both"</code>Duis in vestibulum sem. Cras euismod tincidunt dui, et
-      scelerisque tellus condimentum vel.
-      Maecenas et urna sit amet risus fermentum rhoncus nec porttitor ligula. Maecenas sit amet
-      turpis enim, ut iaculis est. Duis feugiat, lacus id placerat porttitor, lorem augue gravida
-      nisi, eu porta eros risus et lectus. Maecenas vestibulum nunc vel ipsum tincidunt sit amet
-      blandit sapien bibendum. Proin vel vulputate nisl. Duis tempor imperdiet placerat. Pellentesque
-      faucibus consequat magna, et bibendum nisl egestas non. Pellentesque sit amet mattis augue.
-      Aenean at diam tincidunt purus sollicitudin gravida non in nisi. Fusce bibendum, magna in
-      adipiscing mattis, sem risus fringilla mi, nec gravida lectus lectus at nibh. Suspendisse
-      adipiscing elementum laoreet. Suspendisse sem erat, varius quis aliquet vitae, dapibus sed
-      nibh. Nullam iaculis sem at mauris faucibus in vestibulum libero pretium. Aliquam eu turpis
-      libero. Fusce et ultrices lectus.<code>/P</code></p>
-  </article>
+  <code>/section</code>
 </section>
-<footer>
-  &copy;jQuery for beginners
-</footer>
+
 </body>
 </html>
