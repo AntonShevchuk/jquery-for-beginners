@@ -131,7 +131,7 @@ _Это отнюдь не весь список, описание же всех 
 добавляем ещё один идентификатор «id="top"» | `[0:2:0:1]`
 <a class="jqbook" href="#" data-target="#html-example"data-type="append-style"><code>#top p#pinned { color: darkgreen }</code></a> | 
 
-<iframe class="jqbook" id="html-example" width="100%" height="750px" border="0" src="../code/css.priority.html"></iframe>
+<iframe class="jqbook" id="html-example" width="100%" height="520px" border="0" src="../code/css.priority.html"></iframe>
 
 Не имеет значение в каком порядке вы будете добавлять данные стили на страницу, тут имеет вес только специфичность CSS-селектора.
 
