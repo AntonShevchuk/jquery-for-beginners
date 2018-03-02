@@ -71,7 +71,7 @@ $.extend({name:"Anton", location:"Kharkiv"}, {location:"Kyiv"});
 
   **heartIn**                   |  **heartOut**                      | **heartInOut**
 :------------------------------:|:----------------------------------:|:-------------------------------------:
-![heartIn](/assets/heartIn.png) |  ![heartOut](/assets/heartOut.png) |  ![heartInOut](/assets/heartInOut.png)
+![heartIn](/assets/img/heartIn.png) |  ![heartOut](/assets/img/heartOut.png) |  ![heartInOut](/assets/img/heartInOut.png)
 
 
 Работать с данным творением надо следующим образом:

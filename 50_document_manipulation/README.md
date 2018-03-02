@@ -146,7 +146,7 @@ $(document).height(); // высота HTML документа
 
 Для наглядности различий между методами «.height()», «.innerHeight()» и «.outerHeight()» я создал страничку [height.html](http://anton.shevchuk.name/book/code/height.html), а ещё переделал несколько картинок из официальной документации в одну полноценную иллюстрацию:
 
-![блочная модель](/assets/box.png)
+![блочная модель](/assets/img/box.png)
 
 Ну и последняя пара методов:
 

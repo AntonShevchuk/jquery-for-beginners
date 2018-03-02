@@ -8,10 +8,10 @@
 
 <table border="0">
     <tr style="border:0">
-        <td width="50%" style="border:0"><img src="/assets/jquery-mobile-dialog.png" alt="jQuery Mobile Dialog"/></td>
+        <td width="50%" style="border:0"><img src="/assets/img/jquery-mobile-dialog.png" alt="jQuery Mobile Dialog"/></td>
         <td width="50%" style="border:0">
-            <img src="/assets/jquery-mobile-tabs.png" alt="jQuery Mobile Tabs"/>
-            <img src="/assets/jquery-mobile-checkboxes.png" alt="jQuery Mobile Form"/>
+            <img src="/assets/img/jquery-mobile-tabs.png" alt="jQuery Mobile Tabs"/>
+            <img src="/assets/img/jquery-mobile-checkboxes.png" alt="jQuery Mobile Form"/>
         </td>
     </tr>
 </table>

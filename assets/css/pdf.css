@@ -12,3 +12,7 @@
 .page-inner .exercise .editor {
   min-height: 40px;
 }
+
+iframe {
+  border: 1px solid #ddd;
+}

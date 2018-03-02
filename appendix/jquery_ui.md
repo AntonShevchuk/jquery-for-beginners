@@ -17,23 +17,23 @@ jQuery UI представляет из себя набор виджетов и 
 
 Виджеты – это уже комплексное решение, содержащее не только код JavaScript, но и некую реализацию HTML и CSS:
 *   Accordion – данный виджет следует использовать, если у вас в проекте уже используется jQuery UI; сам по себе основной его функционал можно реализовать в несколько строк (посмотреть можно в [accordion.html](http://anton.shevchuk.name/book/code/accordion.html))
-  ![jQuery UI Accordion](/assets/accordion.png)
+  ![jQuery UI Accordion](/assets/img/accordion.png)
 *   Autocomplete – как и следует из названиz, данный виджет отвечает за добавление функции автодополнения к полям ввода, естественно, с поддержкой AJAX
 *   Button – создание кнопок с помощью JavaScript – ещё тот моветон, но, возможно, пригодится, если вы сильно завязались на jQuery UI:
-  ![jQuery UI Buttons](/assets/buttons.png)
+  ![jQuery UI Buttons](/assets/img/buttons.png)
 *   Datepicker – если ваш браузер не поддерживает в полной мере спецификацию HTML 5 и `<input type="date"/>` в частности, то потребуется эмуляция данной возможности с помощью этого виджета:
-  ![jQuery UI Datepicker](/assets/datepicker.png)
+  ![jQuery UI Datepicker](/assets/img/datepicker.png)
 *   Dialog – виджет, предназначенный для создания слегка неуклюжих диалоговых окон:
-  ![jQuery UI Dialog](/assets/dialog.png)
+  ![jQuery UI Dialog](/assets/img/dialog.png)
 *   Menu – создание меню из списка, с поддержкой вложенности
 *   Progressbar – название говорит само за себя, но в HTML 5 он тоже включён:
-  ![jQuery UI ProgressBar](/assets/progressbar.png)
+  ![jQuery UI ProgressBar](/assets/img/progressbar.png)
 *   Slider – ещё один виджет для устаревших браузеров:
-  ![jQuery UI Slider](/assets/slider.png)
+  ![jQuery UI Slider](/assets/img/slider.png)
 *   Spinner – ещё один удобный контрол для форм, опять же, в HTML 5 уже есть:
-  ![jQuery UI Spinner](/assets/spinner.png)
+  ![jQuery UI Spinner](/assets/img/spinner.png)
 *   Tabs – они же табы, достаточно популярный элемент в web-разработке, и так же, как и «Accordion», вполне заменяем простым кодом (см. [tabs.html](http://anton.shevchuk.name/book/code/tabs.html)):
-  ![jQuery UI Tabs](/assets/tabs.png)
+  ![jQuery UI Tabs](/assets/img/tabs.png)
 *   Tooltip – вот и последний виджет, всплывающие подсказки; простой и должен быть востребован, ну а там жизнь покажет
 
 На этом обзор виджетов можно считать законченным, вернёмся к плагинам.
@@ -119,7 +119,7 @@ $("#my").toggle("explode");
 
 Одной из самых замечательных особенностей jQuery UI является возможность менять «шкурки» всех виджетов разом, и для этого даже предусмотрена специальная утилита – [ThemeRoller](http://jqueryui.com/themeroller/):
 
-![jQuery UI Theme Roller](/assets/theme-roller.png)
+![jQuery UI Theme Roller](/assets/img/theme-roller.png)
 
 > _Если в какой-то момент времени потребуется внести изменения в тему, откройте файл «jquery-ui-#.#.##-custom.css» и найдите строчку начинающуюся с текста «To view and modify this theme, visit http:...». Пройдите по указанной ссылке и, используя ThemeRoller, внесите необходимые изменения._
 
