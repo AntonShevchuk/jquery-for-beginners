@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="UTF-8"/>
+  <title>CSS Manipulation</title>
+  <link rel="shortcut icon" href="../favicon.ico"/>
+  <link rel="stylesheet" href="code.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <style>
+    .active p {
+      color: darkred;
+    }
+    .notice p {
+      background: lightyellow;
+    }
+    .active > code span:last-child::before {
+      content: "active";
+      margin: 0 2px;
+    }
+    .notice > code span:last-child::after {
+      content: "notice";
+      margin: 0 2px;
+    }
+  </style>
+</head>
+<body>
+<section class="wrapper">
+  <code>section  class="<span>wrapper</span>"</code><br/>
+  &nbsp;&nbsp;<h2><code>h2</code>Section Title<code>/h2</code></h2><br/>
+  <article id="my" class="">
+    &nbsp;&nbsp;<code>article id="<span>my</span>" class="<span></span>"</code><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<h3><code>h3</code>Article Title<code>/h3</code></h3><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<p><code>p</code>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper imperdiet felis, sit amet imperdiet arcu
+    varius et. Donec condimentum pulvinar sollicitudin. Nunc facilisis erat vel nunc mollis, dapibus consequat justo
+    finibus. Donec suscipit rhoncus nisl eu scelerisque. Curabitur semper urna ac ante aliquam sollicitudin. Ut eu lacus
+    ipsum. Suspendisse potenti. Maecenas sed dictum nulla, vel imperdiet lacus. Cras aliquet semper ipsum, at rutrum tellus.<code>/p</code></p><br/>
+    &nbsp;&nbsp;<code>/article</code><br/>
+  </article>
+  <code>/section</code>
+</section>
+</body>
+</html>

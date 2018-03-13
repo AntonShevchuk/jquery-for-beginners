@@ -2,75 +2,90 @@
 <html dir="ltr" lang="en-US">
 <head>
   <meta charset="UTF-8"/>
-  <title>Ready to go</title>
+  <title>Be Ready</title>
   <link rel="shortcut icon" href="../favicon.ico"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="code.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
           integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <style>
+    .redFont {
+      color: red;
+      font-weight: bold;
+    }
+    .redBorder {
+      border: 1px solid red;
+      border-radius: 4px;
+    }
+  </style>
   <script>
     // nothing, tag <article> is not exists
-    $("article").css("color", "red");
+    $("h1").addClass("redFont");
 
     // it's working
     // but deprecated
     $(document).ready(function(){
-      $("article").css("background-color", "lightgreen");
+      $("h2").addClass("redFont");
     });
 
     // it's working too
     $(function(){
-      $("article p").css({
-        "border": "1px solid green",
-        "border-radius": "4px",
-        "padding": "4px"
-      });
+      $("h1").addClass("redBorder");
     });
 
     // another method
     $.ready.then(function(){
-      $("article p").css("background-color", "white");
+      $("h2").addClass("redBorder");
     });
 
     // anonymous function - best practices
     (function($, undefined){
       $(function(){
-        $("article p").css("color", "green");
+        $("h3").addClass("redBorder");
       });
     })(jQuery);
   </script>
 </head>
 <body>
-  <header>
-    <h1>Document is ready</h1>
-    <p>Open page source</p>
-  </header>
-  <section id="content">
-    <article class="box">
-      <h3>Article Title</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper imperdiet felis, sit amet imperdiet
-        arcu varius et. Donec condimentum pulvinar sollicitudin. Nunc facilisis erat vel nunc mollis, dapibus consequat
-        justo finibus. Donec suscipit rhoncus nisl eu scelerisque. Curabitur semper urna ac ante aliquam sollicitudin.
-        Ut eu lacus ipsum. Suspendisse potenti. Maecenas sed dictum nulla, vel imperdiet lacus. Cras aliquet semper
-        ipsum, at rutrum tellus.
-      </p>
-    </article>
-    <article class="box">
-      <h3>Article Title</h3>
-      <p>
-        Sed rutrum accumsan ultricies. Nunc iaculis enim vel augue porta pellentesque. Nunc efficitur ex non
-        ullamcorper ultricies. Nunc tempus vulputate enim, non egestas orci sodales eget. Morbi congue mi ac vehicula
-        egestas. Ut imperdiet metus lectus, in elementum quam viverra vel. Suspendisse egestas cursus nibh,
-        vitae lobortis ipsum congue sit amet.
-      </p>
-    </article>
-  </section>
-  <footer>
-      &copy;jQuery for beginners
-  </footer>
-  <script>
-    // is working
-    $("article").css("font-size", "18px");
-  </script>
+<header>
+  <code>header</code><br/>
+  &nbsp;&nbsp;<h1><code>h1</code>Page Title<code>/h1</code></h1><br/>
+  &nbsp;&nbsp;<p><code>p</code>Page Description<code>/p</code></p><br/>
+  <code>/header</code>
+</header>
+<br/>
+<section id="content" class="wrapper">
+  <code>section id=<span>"content"</span> class=<span>"wrapper"</span></code><br/>
+  &nbsp;&nbsp;<h2><code>h2</code>Section Title<code>/h2</code></h2><br/>
+  <article id="stick" class="news">
+    &nbsp;&nbsp;<code>article id=<span>"stick"</span> class=<span>"news"</span></code><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3><code>h3</code>Article Title<code>/h3</code></h3><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="intro pinned"><code>p class=<span>"intro pinned"</span></code>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur semper imperdiet felis, sit amet imperdiet arcu
+    varius et. Donec condimentum pulvinar sollicitudin. Nunc facilisis erat vel nunc mollis, dapibus consequat justo
+    finibus. Donec suscipit rhoncus nisl eu scelerisque. Curabitur semper urna ac ante aliquam sollicitudin. Ut eu lacus
+    ipsum. Suspendisse potenti. Maecenas sed dictum nulla, vel imperdiet lacus. Cras aliquet semper ipsum, at rutrum tellus.<code>/p</code></p><br/>
+    &nbsp;&nbsp;<code>/article</code><br/>
+  </article>
+  <article class="news">
+    &nbsp;&nbsp;<code>article class=<span>"news"</span></code><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3><code>h3</code>Article Title<code>/h3</code></h3><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="intro"><code>p class=<span>"intro"</span></code>Sed rutrum accumsan ultricies. Nunc iaculis enim vel augue porta pellentesque. Nunc efficitur ex non
+    ullamcorper ultricies. Nunc tempus vulputate enim, non egestas orci sodales eget. Morbi congue mi ac vehicula
+    egestas. Ut imperdiet metus lectus, in elementum quam viverra vel. Suspendisse egestas cursus nibh,
+    vitae lobortis ipsum congue sit amet.<code>/p</code></p><br/>
+    &nbsp;&nbsp;<code>/article</code><br/>
+  </article>
+  <code>/section</code>
+</section>
+<br/>
+<footer>
+  <code>footer</code><br/>
+  &nbsp;&nbsp;&copy;copyright 2018<br/>
+  <code>/footer</code>
+</footer>
+<script>
+  // it's working too
+  $("h3").addClass("redFont");
+</script>
 </body>
 </html>

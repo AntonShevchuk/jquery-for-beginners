@@ -1,10 +1,10 @@
 ## Селекторы
 
 Как я уже говорил ранее, в поиске элементов на странице заключается практически половина успешной работы с jQuery.
-Так что приступим к поискам по документу (чтобы не листать, пусть пример HTML будет и тут):
+Так что приступим к поискам по документу (данный пример кода вы можете закрепить с помощью кнопки «📌»):
 
 <div class="jqbook">
-<button class="jqbook">📌</button>
+<button class="jqbook sticky">📌</button>
 <iframe class="jqbook" id="html-example" width="100%" height="700px" border="0" src="../code/css.selectors.html"></iframe>
 </div>
 
@@ -12,7 +12,7 @@
 
 <a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("#content")</a> – выбираем элемент с «id="content"»
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("section#content")</a> – выбираем `<section>` с «id="content"» (хотя и без «section работает)
+<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("section#content")</a> – выбираем `<section>` с «id="content"»
 
 <a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$(".intro")</a> – выбираем элементы с «class="intro"»
 
