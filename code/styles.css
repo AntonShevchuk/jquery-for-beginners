@@ -31,14 +31,6 @@ code {
   background-color: #f7f7f7;
 }
 
-code::before {
-  content: "<"
-}
-
-code::after {
-  content: ">"
-}
-
 .box {
   border:1px solid #ccc;
   border-radius:4px;

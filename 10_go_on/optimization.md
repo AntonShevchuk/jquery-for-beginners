@@ -75,7 +75,11 @@ $(".content div").find("input:disabled");
 
 > _Есть ещё один пункт – выбирать самый быстрый селектор из возможных, но тут без хорошего багажа знаний не обойтись, так что дерзайте, пробуйте и присылайте ваши примеры._
 
-Для наглядности лучше всего взглянуть на сравнительный тест [sizzle.html](http://anton.shevchuk.name/book/code/sizzle.html) (данный тест был изначально разработан Ильёй Кантором для [мастер-класса по JavaScript и jQuery](http://javascript.ru/mk))
+Для наглядности лучше всего взглянуть на сравнительный тест [sizzle.html](../code/sizzle.html):
+
+<iframe class="jqbook" id="html-example" width="100%" height="320px" border="0" src="../code/sizzle.html"></iframe>
+
+> _Данный тест выполняет поиск элементов несколькими способами и был изначально разработан Ильёй Кантором для [мастер-класса по JavaScript и jQuery](http://javascript.ru/mk)_
 
 > _Маленькая хитрость от создателей jQuery – запросы по id элемента не доходят до Sizzle, а скармливаются «document.getElementById()» в качестве параметра:_
 
@@ -112,6 +116,6 @@ $("div#content");
 
 * пример с использованием «.filter()» работает быстрее в браузерах Chrome, Firefox и IE9.0+
 * оба способа работают наравне в браузерах IE8.0 и мобильном Safari
-* второй пример работает в два раза быстрее в старых версиях Opera на движке [Presto](https://ru.wikipedia.org/wiki/Presto_(Opera))
+* второй пример работает в два раза быстрее в старых версиях Opera на движке <a href="https://ru.wikipedia.org/wiki/Presto_(Opera)">Presto</a>
 
 Выводы делаем сами.
