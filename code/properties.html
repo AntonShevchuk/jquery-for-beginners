@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Свойства элементов</title>
+  <link rel="shortcut icon" href="../favicon.ico"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    dt {
+      width: 240px;
+    }
+    dd {
+      min-width: 280px;
+    }
+    dd code {
+      display: inline-block;
+      width: 280px;
+      text-align: left;
+    }
+    /* button */
+    button {
+      display: block;
+      margin: 8px auto;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      text-decoration: underline;
+      font-size: 2em;
+    }
+    button:hover {
+      color: #4183c4;
+      text-decoration: underline;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>
+    $(function(){
+      $('#target').submit(function () {
+        $('#form').text($(this).serialize());
+        return false;
+      });
+
+      let $checkbox1 = $('#checkbox');
+      let $checkbox1AttrChecked = $('#checkbox1-attr-checked');
+      let $checkbox1PropChecked = $('#checkbox1-prop-checked');
+
+      let $checkbox2 = $('#checkbox-two');
+      let $checkbox2AttrChecked = $('#checkbox2-attr-checked');
+      let $checkbox2PropChecked = $('#checkbox2-prop-checked');
+
+      let $radio1 = $('#radio-one');
+      let $radio1AttrDisabled = $('#radio1-attr-disabled');
+      let $radio1PropDisabled = $('#radio1-prop-disabled');
+
+      let $radio2 = $('#radio-two');
+      let $radio2AttrDisabled = $('#radio2-attr-disabled');
+      let $radio2PropDisabled = $('#radio2-prop-disabled');
+
+      setInterval(function () {
+        $checkbox1AttrChecked.text($checkbox1.attr('checked') ? 'checked' : 'false');
+        $checkbox1PropChecked.text($checkbox1.prop('checked'));
+
+        $checkbox2AttrChecked.text($checkbox2.attr('checked') ? 'checked' : 'false');
+        $checkbox2PropChecked.text($checkbox2.prop('checked'));
+
+        $radio1AttrDisabled.text($radio1.attr('disabled') ? 'disabled' : 'false');
+        $radio1PropDisabled.text($radio1.prop('disabled'));
+
+        $radio2AttrDisabled.text($radio2.attr('disabled') ? 'disabled' : 'false');
+        $radio2PropDisabled.text($radio2.prop('disabled'));
+      }, 300)
+    });
+  </script>
+</head>
+<body>
+  <section id="content">
+    <article class="box">
+      <h3>Форма проб и ошибок</h3>
+      <form id="target" action="">
+        <fieldset>
+          <label><input id="checkbox" type="checkbox" name="checkbox" value="1"/> чекбокс</label>
+          <label><input id="checkbox-two" type="checkbox" name="checkbox-two" value="1" checked="checked"/> ещё один</label>
+        </fieldset>
+        <fieldset>
+          <label><input id="radio-one" type="radio" name="radio" value="1" checked/> радио один</label>
+          <label><input id="radio-two" type="radio" name="radio" value="2" disabled/> второе радио</label>
+        </fieldset>
+        <button type="submit">Как оно там?</button>
+      </form>
+    </article>
+    <article class="box">
+      <h3>Состояние формы</h3>
+      <dl>
+        <dt>Чекбокс</dt>
+        <dt>— первый</dt>
+        <dd><code>
+          attr('checked') == <span id="checkbox1-attr-checked">?</span><br/>
+          prop('checked') == <span id="checkbox1-prop-checked">?</span>
+        </code></dd>
+        <dt>— второй</dt>
+        <dd><code>
+          attr('checked') == <span id="checkbox2-attr-checked">?</span><br/>
+          prop('checked') == <span id="checkbox2-prop-checked">?</span>
+        </code></dd>
+
+        <dt>Радиобаттон</dt>
+        <dt>— первый</dt>
+        <dd><code>
+          attr('disabled') == <span id="radio1-attr-disabled">?</span><br/>
+          prop('disabled') == <span id="radio1-prop-disabled">?</span>
+        </code></dd>
+        <dt>— второй</dt>
+        <dd><code>
+          attr('disabled') == <span id="radio2-attr-disabled">?</span><br/>
+          prop('disabled') == <span id="radio2-prop-disabled">?</span>
+        </code></dd>
+
+        <dt>Форма</dt>
+        <dd><code id="form">?</code></dd>
+      </dl>
+    </article>
+  </section>
+</body>
+</html>

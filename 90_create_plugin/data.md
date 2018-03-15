@@ -38,3 +38,5 @@ $("#my").attr("data-foo", "def");
 
     $("#my").attr("data-foo"); // >>> def
 ```
+
+Надо бы не забыть рассказать про `obj[jQuery.expando] = uuid` и `jQuery._data(element)`, а так же про [утечки памяти](https://learn.javascript.ru/memory-leaks-jquery)

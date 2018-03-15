@@ -75,9 +75,9 @@ $(".content div").find("input:disabled");
 
 > _Есть ещё один пункт – выбирать самый быстрый селектор из возможных, но тут без хорошего багажа знаний не обойтись, так что дерзайте, пробуйте и присылайте ваши примеры._
 
-Для наглядности лучше всего взглянуть на сравнительный тест [sizzle.html](../code/sizzle.html):
+Для наглядности лучше всего взглянуть на сравнительный тест [benchmark.html](../code/benchmark.html):
 
-<iframe class="jqbook" id="html-example" width="100%" height="320px" border="0" src="../code/sizzle.html"></iframe>
+<iframe class="jqbook" width="100%" height="320px" border="0" src="../code/benchmark.html"></iframe>
 
 > _Данный тест выполняет поиск элементов несколькими способами и был изначально разработан Ильёй Кантором для [мастер-класса по JavaScript и jQuery](http://javascript.ru/mk)_
 

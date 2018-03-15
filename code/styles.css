@@ -1,13 +1,18 @@
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
+  background: #fff;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #333333;
 }
 
-header, section, footer {
+header,
+section,
+footer {
   position: relative;
   max-width: 800px;
   margin: 16px auto;
@@ -19,8 +24,10 @@ article {
   /*overflow: hidden;*/
 }
 
-#content {
-  padding-bottom: 16px;
+.box {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 2px #ccc;
 }
 
 code {
@@ -31,8 +38,56 @@ code {
   background-color: #f7f7f7;
 }
 
-.box {
-  border:1px solid #ccc;
-  border-radius:4px;
-  box-shadow:0 0 2px #ccc;
+/* def list */
+dl {
+  overflow: hidden;
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+dt {
+  float: left;
+  clear: both;
+  width: 520px;
+  margin-bottom: 8px;
+}
+
+dt:hover, dt:hover + dd {
+  color: #4183c4;
+}
+
+dd {
+  float: right;
+  clear: right;
+  min-width: 80px;
+  margin-bottom: 8px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+dt > div {
+  display: inline-block;
+  width: 120px;
+  float: left;
+}
+
+/* form */
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+label {
+  display: inline-block;
+  width: 160px;
+  padding: 2px;
+}
+
+select {
+  width: 160px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px;
 }

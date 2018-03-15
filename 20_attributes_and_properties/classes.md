@@ -24,7 +24,10 @@
 
 Но хватит заниматься переводом официальной документации, перейдём к наглядным примерам:
 
+<div class="jqbook">
+<button class="jqbook sticky">📌</button>
 <iframe class="jqbook" id="class-example" width="100%" height="320px" border="0" src="../code/class.html"></iframe>
+</div>
 
 <a class="jqbook" href="#" data-target="#class-example" data-type="append-script">$("#my").addClass('active')</a> - добавляем класс «active»
 
