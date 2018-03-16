@@ -22,6 +22,7 @@
   * [Атрибуты](20_attributes_and_properties/attributes.md)
   * [Свойства](20_attributes_and_properties/properties.md)
 * [30% События](30_events/README.md)
+  * [Простейшие обработчики](30_events/handlers.md)
   * [Учимся рулить](30_events/trigger-events.md)
   * [Пространство имен](30_events/namespaces.md)
   * [«Живые» события](30_events/live-events.md)
