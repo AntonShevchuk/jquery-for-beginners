@@ -12,10 +12,16 @@ $('table').on('click', 'td', function() {
 
 Случай второй, надуманный – необходимо записывать действия пользователя на странице, т.е. отслеживать клики по бессчётному количеству объектов:
 
+<button class="jqbook run" data-target="#html-example">▷</button>
+
 ```javascript
 $('body').on('click', '*', function() {
     console.info("Click on "+this.tagName);
 });
 ```
 
-Пример работы данного «надуманного» варианта можно посмотреть на странице [events.optimization.html](http://anton.shevchuk.name/book/code/events.optimization.html)
+Для демонстрации работы данного «надуманного» варианта откройте web-консоль разработчика (обычно это F12), и кликните мышкой по элементам:
+
+<iframe class="jqbook" id="html-example" width="100%" height="700px" border="0" src="../code/css.selectors.html"></iframe>
+
+Попробуйте объяснить суть происходящего.
