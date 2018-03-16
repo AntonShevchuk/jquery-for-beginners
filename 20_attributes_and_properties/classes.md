@@ -29,13 +29,13 @@
 <iframe class="jqbook" id="class-example" width="100%" height="320px" border="0" src="../code/class.html"></iframe>
 </div>
 
-<a class="jqbook" href="#" data-target="#class-example" data-type="append-script">$("#my").addClass('active')</a> - добавляем класс «active»
+<a class="jqbook" href="#" data-target="#class-example" data-type="append-script">$("#my").addClass("active")</a> - добавляем класс «active»
 
-<a class="jqbook" href="#" data-target="#class-example" data-type="append-script">$("#my").addClass('active notice')</a> - добавляем несколько классов за раз
+<a class="jqbook" href="#" data-target="#class-example" data-type="append-script">$("#my").addClass("active notice")</a> - добавляем несколько классов за раз
 
-<a class="jqbook" href="#" data-target="#class-example" data-type="append-script">$("#my").toggleClass('active')</a> - переключаем класс «active»
+<a class="jqbook" href="#" data-target="#class-example" data-type="append-script">$("#my").toggleClass("active")</a> - переключаем класс «active»
 
-<a class="jqbook" href="#" data-target="#class-example" data-type="append-script">$("#my").toggleClass('active notice')</a> - переключаем несколько классов
+<a class="jqbook" href="#" data-target="#class-example" data-type="append-script">$("#my").toggleClass("active notice")</a> - переключаем несколько классов
 
 Работает переключение классов следующим образом (это похоже на классовый XOR):
 ```html
@@ -46,6 +46,6 @@
 <div id="my" class=""> → <div id="my" class="active notice">
 ```
 
-<a class="jqbook" href="#" data-target="#class-example" data-type="append-script">$("#my").removeClass('active')</a> - удаляем класс «active»
+<a class="jqbook" href="#" data-target="#class-example" data-type="append-script">$("#my").removeClass("active")</a> - удаляем класс «active»
 
-<a class="jqbook" href="#" data-target="#class-example" data-type="append-script">$("#my").removeClass('active notice')</a> - удаляем несколько классов
+<a class="jqbook" href="#" data-target="#class-example" data-type="append-script">$("#my").removeClass("active notice")</a> - удаляем несколько классов

@@ -21,7 +21,7 @@
 
 Теперь приступим к серии экспериментов (не забудьте обновить страничку):
 
-1. Ставим галочку на чекбоксе посредством метода «.attr()» — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#checkbox").attr('checked', 'checked')</a>
+1. Ставим галочку на чекбоксе посредством метода «.attr()» — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#checkbox").attr("checked", "checked")</a>
 2. Теперь снимите галочку мышкой — значение «.attr()» осталось без изменений, значение «.prop()» изменилось
 3. Попробуйте ещё раз поставить галочку, используя метод «.attr()»
 
@@ -31,14 +31,14 @@
 
 1. Поставьте мышкой галочку на чекбоксе
 2. Снимите галочку — значение «.attr()» не изменяется
-3. Попробуйте установить значение посредством вызова <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#checkbox").attr('checked', 'checked')</a>
+3. Попробуйте установить значение посредством вызова <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#checkbox").attr("checked", "checked")</a>
 
 > _В данном эксперименте интересен следующий момент: вызов метода «.attr("checked", "checked")» не срабатывает после того, как пользователь изменял статус чекбокса_
 
 Ну и ещё один эксперимент со вторым чекбоксом:
 
-1. Удаляем галочку — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#checkbox-two").removeAttr('checked')</a>
-2. Ставим галочку — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#checkbox-two").attr('checked', 'checked')</a>
+1. Удаляем галочку — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#checkbox-two").removeAttr("checked")</a>
+2. Ставим галочку — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#checkbox-two").attr("checked", "checked")</a>
 3. Опять удаляем галочку, используя метод «.attr()»
 4. Повторяем до упаду 
 
@@ -46,22 +46,22 @@
 
 Сравните с поведением метода «.prop()»:
 
-1. Удаляем галочку — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#checkbox-two").prop('checked', false)</a>
-2. Ставим галочку — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#checkbox-two").prop('checked', true)</a>
+1. Удаляем галочку — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#checkbox-two").prop("checked", false)</a>
+2. Ставим галочку — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#checkbox-two").prop("checked", true)</a>
 3. Можем кликать мышкой по чекбоксу и повторять предыдущие пункты в произвольном порядке, всё будет работать как часы
 
 > _Надеюсь, я достаточно наглядно дал понять, когда надо использовать «.attr()», а когда «.prop()»_
 
 Это ещё не всё, у нас же есть ещё свойство «disabled»! Но не волнуйтесь, его поведение более предсказуемо, т.к. пользователь не может вмешиваться в его состояние:
 
-1. Включаем радио-кнопку — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#radio-two").attr('disabled', false)</a>
-2. Выключаем — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#radio-two").attr('disabled', true)</a>
+1. Включаем радио-кнопку — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#radio-two").attr("disabled", false)</a>
+2. Выключаем — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#radio-two").attr("disabled", true)</a>
 3. Повторяем
 
 Аналогичное поведение при использовании метода «.prop()»:
 
-1. Включаем — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#radio-two").prop('disabled', false)</a>
-2. Выключаем — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#radio-two").prop('disabled', true)</a>
+1. Включаем — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#radio-two").prop("disabled", false)</a>
+2. Выключаем — <a class="jqbook" href="#" data-target="#properties-example" data-type="append-script">$("#radio-two").prop("disabled", true)</a>
 3. Повторяем
 
 > _Ну, как бы, можно использовать «.attr()», но нет!_

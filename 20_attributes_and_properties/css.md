@@ -23,9 +23,9 @@
 
 Начнём наши эксперименты (жмите «▷» где возможно):
 
-<a class="jqbook" href="#" data-target="#css-example" data-type="append-script">$("#my").css('color', 'red')</a> — устанавливаем значение цвета шрифта
+<a class="jqbook" href="#" data-target="#css-example" data-type="append-script">$("#my").css("color", "red")</a> — устанавливаем значение цвета шрифта
 
-<a class="jqbook" href="#" data-target="#css-example" data-type="append-script">$("#my").css('background-color', 'yellow')</a> — меняем цвет фона
+<a class="jqbook" href="#" data-target="#css-example" data-type="append-script">$("#my").css("background-color", "yellow")</a> — меняем цвет фона
 
 Для изменения нескольких параметров передаём объект в формате ключ-значение (это фактически JSON):
 
@@ -33,9 +33,9 @@
 
 ```javascript
 $("#my").css({
-    'color': 'red',
-    'font-size': '18px',
-    'background-color': 'white'
+    "color": "red",
+    "font-size": "18px",
+    "background-color": "white"
 })
 ```
 
@@ -45,9 +45,9 @@ $("#my").css({
 
 ```javascript
 $("#my").css({
-    color: 'black',
-    fontSize: '12px',
-    backgroundColor: 'transparent'
+    color: "black",
+    fontSize: "12px",
+    backgroundColor: "transparent"
 })
 ```
 
@@ -56,7 +56,7 @@ $("#my").css({
 <button class="jqbook run" data-target="#css-example">▷</button>
 
 ```javascript
-$("#my").css('font-size', function(i, value){
+$("#my").css("font-size", function(i, value){
     return parseFloat(value) * 1.5;
 })
 ```

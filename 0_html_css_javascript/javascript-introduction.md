@@ -100,7 +100,7 @@ var a = 0;
 
   «let»:
   ```javascript
-alert(b);  // error: 'b' is not defined
+alert(b);  // error: "b" is not defined
 let b = 0;
 ```
 
@@ -115,7 +115,7 @@ var a; // ок
   «let»:
   ```javascript
 let b;
-let b; // error: 'b' has already been declared
+let b; // error: "b" has already been declared
 ```
 
 *   внутри цикла переменная «let» будет объявлена новая для каждой итерации:
@@ -129,7 +129,7 @@ alert(i); // 10
   «let»:
   ```javascript
 for (let j = 0; j < 10; j++) { /* … */ }
-alert(j); // error: 'j' is not defined
+alert(j); // error: "j" is not defined
 ```
 
 Вот вам следующее задание - угадайте значение `x` и `y` в следующем примере:
@@ -265,16 +265,16 @@ var result = null;
 
 ```javascript
 let x;
-x = 42 + 'x' + 42;
+x = 42 + "x" + 42;
 x = x/2 || x;
 ```
 {% exercise %}
 {% initial %}
 x = 
 {% solution %}
-x = '42x42'
+x = "42x42"
 {% validation %}
-assert(x == '42x42');
+assert(x == "42x42");
 {% context %}
 var x;
 {% endexercise %}
@@ -353,10 +353,10 @@ var sidorov = users.shift(); // удаляем и возращаем первы�
  
 ```javascript
 var users = new Array;
-users.push('Anton');
-users.push('Andrey');
-users[100] = 'Bogdan';
-users.push('Boris');
+users.push("Anton");
+users.push("Andrey");
+users[100] = "Bogdan";
+users.push("Boris");
 ```
 
 {% exercise %}
@@ -373,10 +373,10 @@ assert(length == 102);
 var length;
 var Andrey;
 var users = new Array;
-users.push('Anton');
-users.push('Andrey');
-users[100] = 'Bogdan';
-users.push('Boris');
+users.push("Anton");
+users.push("Andrey");
+users[100] = "Bogdan";
+users.push("Boris");
 {% endexercise %}
 
 
@@ -545,7 +545,7 @@ function Cat(breed, color) {
     
 }
 
-var cat = new Cat('British Shorthair', 'silver');
+var cat = new Cat("British Shorthair", "silver");
 cat.breed;
 cat.color;
 {% solution %}
@@ -554,12 +554,12 @@ function Cat(breed, color) {
     this.color = color;
 }
 
-var cat = new Cat('British Shorthair', 'silver');
+var cat = new Cat("British Shorthair", "silver");
 cat.breed;
 cat.color;
 {% validation %}
-assert(cat.breed == 'British Shorthair'); 
-assert(cat.color == 'silver');
+assert(cat.breed == "British Shorthair"); 
+assert(cat.color == "silver");
 {% context %}
 {% endexercise %}
 

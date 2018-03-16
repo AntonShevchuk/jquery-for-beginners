@@ -19,17 +19,17 @@
 
 ```javascript
 // получение адреса ссылки
-$('a').attr('href');
+$("a").attr("href");
 
 // изменение адреса и заголовка ссылки
-$('a').attr({
-    'href': 'http://anton.shevchuk.name',
-    'title': 'My Personal Blog'
+$("a").attr({
+    "href": "http://anton.shevchuk.name",
+    "title": "My Personal Blog"
 });
 
 // получение альтернативного текста картинки
-$('img').attr('alt');
+$("img").attr("alt");
 
 // изменение адреса картинки
-$('img').attr('src', '/images/default.png');
+$("img").attr("src", "/images/default.png");
 ```

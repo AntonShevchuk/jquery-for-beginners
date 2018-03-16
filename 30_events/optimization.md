@@ -5,7 +5,7 @@
 Случай первый, банальный – представьте себе таблицу на тысячу строк да десяток столбцов, а теперь попытайтесь подсчитать, сколько памяти скушают обработчики события «click» для каждой ячейки? Вот-вот, стоит это переписать в один обработчик:
 
 ```javascript
-$('table').on('click', 'td', function() { 
+$("table").on("click", "td", function() { 
   /* ... */
 });
 ```
@@ -15,7 +15,7 @@ $('table').on('click', 'td', function() {
 <button class="jqbook run" data-target="#html-example">▷</button>
 
 ```javascript
-$('body').on('click', '*', function() {
+$("body").on("click", "*", function() {
     console.info("Click on "+this.tagName);
 });
 ```
