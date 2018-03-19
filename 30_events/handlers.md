@@ -16,11 +16,11 @@
 // вешаем обработчик
 $("p").on("click", function() {
     // что-то делаем
-    alert("Hello!");
+    alert("Click!");
 });
 ```
 
-Запустите данный код, и попробуйте кликнуть по параграфу:
+Запустите код выше, и попробуйте кликнуть по параграфу:
 
 <iframe class="jqbook" id="handlers-example" width="100%" height="200px" border="0" src="../code/events.handlers.html"></iframe>
 

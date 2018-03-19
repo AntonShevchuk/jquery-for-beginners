@@ -28,7 +28,7 @@
   * [«Живые» события](30_events/live.md)
   * [Touch-события](30_events/touch.md)
   * [Оптимизация](30_events/optimization.md)
-  * [Немного подробностей](30_events/inside.md)
+  * [Немного деталей](30_events/inside.md)
 * [40% Анимация](40_animation/README.md)
   * [Step-by-step](40_animation/step-by-step.md)
   * [В очередь…©](40_animation/v_ochered.md)
