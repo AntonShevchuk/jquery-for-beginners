@@ -26,7 +26,7 @@ jQuery работает практически со всеми событиям�
 
 Вот вам пример с [событиями мышки](http://anton.shevchuk.name/book/code/events.mouse.html):
 
-<iframe class="jqbook" width="100%" height="620px" border="0" src="../code/events.mouse.html"></iframe>
+{% jqbFrame "mouse-example", "../code/events.mouse.html", height="620px" %}{% endjqbFrame %}
 
 Идём дальше. Вот ещё десяток событий, по большей части они относятся лишь к элементам форм:
 
@@ -52,7 +52,7 @@ jQuery работает практически со всеми событиям�
 
 Вдогонку [наглядный пример](http://anton.shevchuk.name/book/code/events.form.html):
 
-<iframe class="jqbook" width="100%" height="740px" border="0" src="../code/events.form.html"></iframe> 
+{% jqbFrame "form-example", "../code/events.form.html", height="740px" %}{% endjqbFrame %}
 
 Так же стоит упомянуть ещё парочку популярных событий:
 

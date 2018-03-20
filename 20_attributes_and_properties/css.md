@@ -16,20 +16,19 @@
 
 Вот наш подопытный HTML:
 
-<div class="jqbook">
-<button class="jqbook sticky">📌</button>
-<iframe class="jqbook" id="css-example" width="100%" height="320px" border="0" src="../code/css.html"></iframe>
-</div>
+{% jqbFrame "css-example", "../code/css.html", height="320px" %}
+{% sticky %}
+{% endjqbFrame %}
 
 Начнём наши эксперименты (жмите «▷» где возможно):
 
-<a class="jqbook" href="#" data-target="#css-example" data-type="append-script">$("#my").css("color", "red")</a> — устанавливаем значение цвета шрифта
+{% jqbScript "#css-example" %}$("#my").css("color", "red"){% endjqbScript %} — устанавливаем значение цвета шрифта
 
-<a class="jqbook" href="#" data-target="#css-example" data-type="append-script">$("#my").css("background-color", "yellow")</a> — меняем цвет фона
+{% jqbScript "#css-example" %}$("#my").css("background-color", "yellow"){% endjqbScript %} — меняем цвет фона
 
 Для изменения нескольких параметров передаём объект в формате ключ-значение (это фактически JSON):
 
-<button class="jqbook run" data-target="#css-example">▷</button>
+{% jqbRun "#css-example" %}{% endjqbRun %}
 
 ```javascript
 $("#my").css({
@@ -41,7 +40,7 @@ $("#my").css({
 
 Для именования свойств можно использовать как CSS-нотацию (см. пример выше), так и JavaScript вариант:
 
-<button class="jqbook run" data-target="#css-example">▷</button>
+{% jqbRun "#css-example" %}{% endjqbRun %}
 
 ```javascript
 $("#my").css({
@@ -53,7 +52,7 @@ $("#my").css({
 
 А вот перед нами экзотический способ изменения шрифта с использованием функции обратного вызова:
 
-<button class="jqbook run" data-target="#css-example">▷</button>
+{% jqbRun "#css-example" %}{% endjqbRun %}
 
 ```javascript
 $("#my").css("font-size", function(i, value){

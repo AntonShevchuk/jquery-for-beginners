@@ -77,7 +77,7 @@ $(".content div").find("input:disabled");
 
 Для наглядности лучше всего взглянуть на сравнительный тест [benchmark.html](../code/benchmark.html):
 
-<iframe class="jqbook" width="100%" height="320px" border="0" src="../code/benchmark.html"></iframe>
+{% jqbFrame "benchmark", "../code/benchmark.html", height="160px" %}{% endjqbFrame %}
 
 > _Данный тест выполняет поиск элементов несколькими способами и был изначально разработан Ильёй Кантором для [мастер-класса по JavaScript и jQuery](http://javascript.ru/mk)_
 

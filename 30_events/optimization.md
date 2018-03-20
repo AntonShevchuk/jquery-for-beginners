@@ -20,7 +20,7 @@ $("table").on("click", "td", function() {
 
 Случай второй, надуманный – необходимо записывать действия пользователя на странице, т.е. отслеживать клики по бессчётному количеству объектов:
 
-<button class="jqbook run" data-target="#html-example">▷</button>
+{% jqbRun "#html-example" %}{% endjqbRun %}
 
 ```javascript
 $("body").on("click", "*", function() {
@@ -30,6 +30,6 @@ $("body").on("click", "*", function() {
 
 Для демонстрации работы данного «надуманного» варианта откройте web-консоль разработчика (обычно это F12), и кликните мышкой по элементам:
 
-<iframe class="jqbook" id="html-example" width="100%" height="700px" border="0" src="../code/css.selectors.html"></iframe>
+{% jqbFrame "html-example", "../code/css.selectors.html", height="700px" %}{% endjqbFrame %}
 
 Попробуйте объяснить суть происходящего.

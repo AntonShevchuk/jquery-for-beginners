@@ -3,72 +3,72 @@
 Как я уже говорил ранее, в поиске элементов на странице заключается практически половина успешной работы с jQuery.
 Так что приступим к поискам по документу (данный пример кода вы можете закрепить с помощью кнопки «📌»):
 
-<div class="jqbook">
-<button class="jqbook sticky">📌</button>
-<iframe class="jqbook" id="html-example" width="100%" height="700px" border="0" src="../code/css.selectors.html"></iframe>
-</div>
+{% jqbFrame "html-example", "../code/css.selectors.html", height="700px" %}
+{% sticky %}
+{% endjqbFrame %}
 
 А теперь приступим к выборкам — выбор элементов по «id» либо имени класса, аналогично используемым в CSS:
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("#content")</a> – выбираем элемент с «id="content"»
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("section#content")</a> – выбираем `<section>` с «id="content"»
+{% jqbHighlight "#html-example" %}$("#content"){% endjqbHighlight %} – выбираем элемент с «id="content"»
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$(".intro")</a> – выбираем элементы с «class="intro"»
+{% jqbHighlight "#html-example" %}$("section#content"){% endjqbHighlight %} – выбираем `<section>` с «id="content"»
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("p.intro")</a> – выбираем всё «p» с «class="intro"»
+{% jqbHighlight "#html-example" %}$(".intro"){% endjqbHighlight %} – выбираем элементы с «class="intro"»
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$(".intro.pinned")</a> – выбираем элементы с классами «intro» и «pinned»
+{% jqbHighlight "#html-example" %}$("p.intro"){% endjqbHighlight %} – выбираем всё «p» с «class="intro"»
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("h3")</a> – выбираем все теги `<h3>`
+{% jqbHighlight "#html-example" %}$(".intro.pinned"){% endjqbHighlight %} – выбираем элементы с классами «intro» и «pinned»
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("h1, h2")</a> – выбираем все теги `<h1>` и `<h2>`
+{% jqbHighlight "#html-example" %}$("h3"){% endjqbHighlight %} – выбираем все теги `<h3>`
+
+{% jqbHighlight "#html-example" %}$("h1, h2"){% endjqbHighlight %} – выбираем все теги `<h1>` и `<h2>`
 
 _Используйте валидные имена классов и идентификаторов_
 
 Теперь вспомним, что мы в DOMе не одни, это-таки иерархическая структура:
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("article h3")</a> – выбираем все теги `<h2>` внутри тега `<article>`
+{% jqbHighlight "#html-example" %}$("article h3"){% endjqbHighlight %} – выбираем все теги `<h2>` внутри тега `<article>`
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("article").find("h3")</a> – аналогично примеру выше
+{% jqbHighlight "#html-example" %}$("article").find("h3"){% endjqbHighlight %} – аналогично примеру выше
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("section article h3")</a> – выбираем все теги `<h3>` внутри тега `<article>`, которые находятся внутри тега `<section>`, _в DOMе который построил Джек_
+{% jqbHighlight "#html-example" %}$("section article h3"){% endjqbHighlight %} – выбираем все теги `<h3>` внутри тега `<article>`, которые находятся внутри тега `<section>`, _в DOMе который построил Джек_
   
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("section").find("article").find("h3")</a> – и ещё раз, но на другой лад
+{% jqbHighlight "#html-example" %}$("section").find("article").find("h3"){% endjqbHighlight %} – и ещё раз, но на другой лад
 
 У нас есть соседи, и у нас с ними налажен контакт. Вот вам несколько способов как найти один и тот же элемент:
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("article + article")</a> – выбор всех элементов `<article>`, перед которыми есть тег `<article>`
+{% jqbHighlight "#html-example" %}$("article + article"){% endjqbHighlight %} – выбор всех элементов `<article>`, перед которыми есть тег `<article>`
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("#stick ~ article")</a> – выбор всех элементов `<article>` после элемента с «id="stick"»
+{% jqbHighlight "#html-example" %}$("#stick ~ article"){% endjqbHighlight %} – выбор всех элементов `<article>` после элемента с «id="stick"»
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("#stick").next()</a> – выбор следующего элемента после элемента с «id="stick"»
+{% jqbHighlight "#html-example" %}$("#stick").next(){% endjqbHighlight %} – выбор следующего элемента после элемента с «id="stick"»
 
 Родственные связи:
 
 `$("*")` – выбор всех элементов; **никогда не используйте!**
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("article > h3")</a> – выбираем все теги `<h3>`, которые являются непосредственными потомками тега `<article>`
+{% jqbHighlight "#html-example" %}$("article > h3"){% endjqbHighlight %} – выбираем все теги `<h3>`, которые являются непосредственными потомками тега `<article>`
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("article > *")</a> – выбор всех потомков элементов `<article>`
+{% jqbHighlight "#html-example" %}$("article > *"){% endjqbHighlight %} – выбор всех потомков элементов `<article>`
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("article").children()</a> – аналогично примеру выше
+{% jqbHighlight "#html-example" %}$("article").children(){% endjqbHighlight %} – аналогично примеру выше
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("p").parent()</a> – выбор всех прямых предков элементов `<p>`
+{% jqbHighlight "#html-example" %}$("p").parent(){% endjqbHighlight %} – выбор всех прямых предков элементов `<p>`
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("p").parents()</a> – выбор всех предков элементов `<p>`; очень экзотичная задача, вряд ли понадобится
+{% jqbHighlight "#html-example" %}$("p").parents(){% endjqbHighlight %} – выбор всех предков элементов `<p>`; очень экзотичная задача, вряд ли понадобится
 
-<a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("p").parents("section")</a> – выбор всех предков элемента `<p>`, которые есть `<section>` (`parents()` принимает в качестве параметра селектор)
+{% jqbHighlight "#html-example" %}$("p").parents("section"){% endjqbHighlight %} – выбор всех предков элемента `<p>`, которые есть `<section>` (`parents()` принимает в качестве параметра селектор)
 
 _Если хотите поиграться с селекторами от души, то откройте соответствующую страничку [css.selectors.html](../code/css.selectors.html) в новой вкладке, и с использованием консоли запустите скрипт `$("p").effect("highlight")`_
 
-Когда с помощью перечисленных запросов вы нашли (или не нашли) DOM-элементы, вам вернётся jQuery-объект, который будет содержать массив этих элементов. Вот так это будет выглядеть для запроса <a class="jqbook" href="#" data-target="#html-example" data-type="highlight">$("p")</a>:
+Когда с помощью перечисленных запросов вы нашли (или не нашли) DOM-элементы, вам вернётся jQuery-объект, который будет содержать массив этих элементов. Вот так это будет выглядеть для запроса {% jqbHighlight "#html-example" %}$("p"){% endjqbHighlight %}:
 
 ![jQuery length](/assets/img/jquery-length.png)
 
 Возможно, вы заметили свойство `length`. Да-да, именно так, это количество найденных элементов. Так что мы можем легко получить оное число с помощью следующего кода:
 
-<button class="jqbook run" data-target="#html-example">▷</button>
+{% jqbRun "#html-example" %}{% endjqbRun %}
 
 ```javascript
 alert( $("p").length )
@@ -76,7 +76,7 @@ alert( $("p").length )
 
 Если перед вами стоит задача достать найденный DOM-элемент, то вы сможете это сделать, зная его индекс. По сути, это выглядит как обращение к элементу массива:
 
-<button class="jqbook run" data-target="#html-example">▷</button>
+{% jqbRun "#html-example" %}{% endjqbRun %}
 
 ```javascript
 // мы ищем все параграфы
@@ -88,7 +88,7 @@ alert( $("p")[0].innerText.length )
 
 Если вам не нравится данный способ из эстетических соображений, то вы можете воспользоваться методом «.get()»:
 
-<button class="jqbook run" data-target="#html-example">▷</button>
+{% jqbRun "#html-example" %}{% endjqbRun %}
 
 ```javascript
 alert( $("p").get(0).innerText.length )

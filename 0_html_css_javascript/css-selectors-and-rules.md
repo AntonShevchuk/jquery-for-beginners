@@ -114,33 +114,33 @@ _Это отнюдь не весь список, описание же всех 
 
 Пример селекторов, выстроенных по возростанию приоритета (все селекторы кликабельны, результат работы можно посмотреть [чуть ниже](#html-example)):
 
-селектор с описанием | приоритет
------------ | ---------------------
+селектор с описанием            | приоритет
+------------------------------- | ---------------------
 тег имеет наименьший приоритет  | `[0:0:0:1]` 
-<a class="jqbook" href="#" data-target="#html-example" data-type="append-style">p { color: orange }</a> | 
+{% jqbStyle "#html-example" %}p { color: orange }{% endjqbStyle %} | 
 добавляем к тегу класс «.intro» | `[0:0:1:1]` 
-<a class="jqbook" href="#" data-target="#html-example" data-type="append-style">p.intro { color: green }</a> | 
+{% jqbStyle "#html-example" %}p.intro { color: green }{% endjqbStyle %} | 
 добавляем ещё тег               | `[0:0:1:2]` 
-<a class="jqbook" href="#" data-target="#html-example" data-type="append-style">article p.intro { color: blue }</a> | 
+{% jqbStyle "#html-example" %}article p.intro { color: blue }{% endjqbStyle %} | 
 ... нам нужно больше классов    | `[0:0:2:2]`
-<a class="jqbook" href="#" data-target="#html-example" data-type="append-style">article.news p.intro { color: red }</a> | 
+{% jqbStyle "#html-example" %}article.news p.intro { color: red }{% endjqbStyle %} | 
 идентификатор «id="pinned"» даже сам по себе важней всех тегов и классов вместе взятых | `[0:1:0:0]`
-<a class="jqbook" href="#" data-target="#html-example" data-type="append-style">#pinned { color: darkblue }</a> | 
+{% jqbStyle "#html-example" %}#pinned { color: darkblue }{% endjqbStyle %} | 
 добавляем тег `<p>`, и специфичность увеличивается | `[0:1:0:1]`
-<a class="jqbook" href="#" data-target="#html-example" data-type="append-style">p#pinned { color: darkcyan }</a> | 
+{% jqbStyle "#html-example" %}p#pinned { color: darkcyan }{% endjqbStyle %} | 
 добавляем ещё один идентификатор «id="top"» | `[0:2:0:1]`
-<a class="jqbook" href="#" data-target="#html-example" data-type="append-style">#top p#pinned { color: darkgreen }</a> | 
+{% jqbStyle "#html-example" %}#top p#pinned { color: darkgreen }{% endjqbStyle %} | 
 
-<div class="jqbook">
-<button class="jqbook sticky">📌</button>
-<iframe class="jqbook" id="html-example" width="100%" height="520px" border="0" src="../code/css.priority.html"></iframe>
-</div>
+{% jqbFrame "html-example", "../code/css.priority.html", height="520px" %}
+{% sticky %}
+{% reload %}
+{% endjqbFrame %}
 
 Не имеет значение в каком порядке вы будете добавлять данные стили на страницу, тут имеет вес только специфичность CSS-селектора.
 
 > Во втором параграфе прописан «style="color:#333"», именно поэтому он не изменяет свой цвет, так как его приоритет наивысший `[1:0:0:0]`
 
-> Метка `!important` - страшная вещь, использовать следует лишь в крайнем случае, вот посмотрите что она творит - <a class="jqbook" href="#" data-target="#html-example" data-type="append-style">p { color: darkred !important }</a> 
+> Метка `!important` - страшная вещь, использовать следует лишь в крайнем случае, вот посмотрите что она творит - {% jqbStyle "#html-example" %}p { color: darkred !important }{% endjqbStyle %} 
 
 > Говорят, что правило с 255 классами будет выше по приоритету, нежели правило с одним «id», но я надеюсь, такого кода в реальности не существует
 

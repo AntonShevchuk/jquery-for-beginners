@@ -10,7 +10,7 @@
 
 Давайте рассмотрим метод «.on()»:
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 // вешаем обработчик
@@ -22,11 +22,11 @@ $("p").on("click", function() {
 
 Запустите код выше, и попробуйте кликнуть по параграфу:
 
-<iframe class="jqbook" id="handlers-example" width="100%" height="200px" border="0" src="../code/events.handlers.html"></iframe>
+{% jqbFrame "handlers-example", "../code/events.handlers.html", height="200px" %}{% endjqbFrame %}
 
 Можете данный обработчик запустить программно:
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 $("p").trigger("click");
@@ -34,7 +34,7 @@ $("p").trigger("click");
 
 Когда наиграетесь, можете отключить обработчик с помощью метода «.off()»:
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 $("p").off("click");
@@ -43,7 +43,7 @@ $("p").off("click");
 Хотя я ещё хотел упомянуть один важный момент – внутри обработчика вы можете получить доступ к DOM-элементу используя ключевое слово `this`. Если же надо будет воспользоваться jQuery-инструментами, то используйте конструкцию «$(this)»: 
 
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 $("p").on("click", function() {

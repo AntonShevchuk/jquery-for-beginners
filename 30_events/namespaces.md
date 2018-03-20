@@ -2,7 +2,7 @@
 
 Как вы уже узнали, когда мы хотим создать свой обработчик событий, мы пишем вот такой код:
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 // создаем свой обработчик
@@ -14,7 +14,7 @@ $("p").on("click", function() {
 
 Когда нам надо удалить обработчики, используем следующий код:
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 // удаляем все обработчики
@@ -26,16 +26,15 @@ $("p").off("click");
 
 Для экспериментов воспользуемся уже знакомым примером:
 
-<div class="jqbook">
-<button class="jqbook sticky">📌</button>
-<iframe class="jqbook" id="handlers-example" width="100%" height="200px" border="0" src="../code/events.handlers.html"></iframe>
-</div>
+{% jqbFrame "handlers-example", "../code/events.handlers.html", height="200px" %}
+{% sticky %}
+{% endjqbFrame %}
 
 Но, как всегда, есть ситуации, когда нам необходимо задействовать или отключить не все обработчики (как пример, надо отключить обработку какого-то контрола определённым плагином). В этом случае нам на помощь приходят пространства имён, и использовать их достаточно легко.
 
 При создании обработчика события добавляем «namespace» через точку:
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 // создаём обработчик
@@ -47,7 +46,7 @@ $("p").on("click.namespace", function(event){
 
 Когда нам надо вызвать обработчик события привязанный только к нашему «namespace» используем следующий синтаксис:
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 $("p").trigger("click.namespace");
@@ -55,7 +54,7 @@ $("p").trigger("click.namespace");
 
 Когда вызываем событие из другого пространства имён, наш обработчик не будет вызван:
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 $("p").trigger("click.other");
@@ -63,7 +62,7 @@ $("p").trigger("click.other");
 
 Когда вызываем все-все обработчики событий:
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 // вызываем все обработчики события click
@@ -72,7 +71,7 @@ $("p").trigger("click");
 
 Когда вызываем все обработчики без пространства имён:
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 // вызываем все обработчики без пространства имён
@@ -83,7 +82,7 @@ $("p").trigger("click.$");
 
 И последний случай — удаление обработчика событий привязанного к нашему «namespace»:
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 // удаляем все обработчики click в данном пространстве имён
@@ -92,7 +91,7 @@ $("p").off("click.namespace");
 
 Хот можно одним махом удалить все обработчики из определённого пространства имён:
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 // обработчик клика
@@ -106,7 +105,7 @@ $("p").on("mouseenter.color", function() {
 });
 ```
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 // передумали, и все отменили
@@ -115,7 +114,7 @@ $("p").off(".namespace");
 
 Ещё полезный пример хитрого обработчика — он может ловить и обрабатывать данные:
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 // создаём обработчик
@@ -126,7 +125,7 @@ $("p").on("click.data", function(event, one, two, three) {
 
 Иницируем обработку события, в качестве данных передаём массив аргументов: 
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 $("p").trigger("click.data", [1, 2, 3]);
@@ -134,7 +133,7 @@ $("p").trigger("click.data", [1, 2, 3]);
 
 Так же хотел обратить внимание на поддержку нескольких пространств имён:
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 // создаём обработчик для a
@@ -154,21 +153,21 @@ $("p").on("click.a.b", function(event) {
 });
 ```
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 // вызываем обработчик из пространства a
 $("p").trigger("click.a");
 ```
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 // вызываем обработчик из пространства b
 $("p").trigger("click.b");
 ```
 
-<button class="jqbook run" data-target="#handlers-example">▷</button>
+{% jqbRun "#handlers-example" %}{% endjqbRun %}
 
 ```javascript
 // отменяем обработчик click для пространства b
