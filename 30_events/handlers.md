@@ -11,7 +11,6 @@
 Давайте рассмотрим метод «.on()»:
 
 {% jqbRun "#handlers-example" %}{% endjqbRun %}
-
 ```javascript
 // вешаем обработчик
 $("p").on("click", function() {
@@ -27,7 +26,6 @@ $("p").on("click", function() {
 Можете данный обработчик запустить программно:
 
 {% jqbRun "#handlers-example" %}{% endjqbRun %}
-
 ```javascript
 $("p").trigger("click");
 ```
@@ -35,7 +33,6 @@ $("p").trigger("click");
 Когда наиграетесь, можете отключить обработчик с помощью метода «.off()»:
 
 {% jqbRun "#handlers-example" %}{% endjqbRun %}
-
 ```javascript
 $("p").off("click");
 ```
@@ -44,7 +41,6 @@ $("p").off("click");
 
 
 {% jqbRun "#handlers-example" %}{% endjqbRun %}
-
 ```javascript
 $("p").on("click", function() {
     $(this).css("color", "red");

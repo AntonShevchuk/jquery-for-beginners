@@ -21,7 +21,6 @@ $("table").on("click", "td", function() {
 Случай второй, надуманный – необходимо записывать действия пользователя на странице, т.е. отслеживать клики по бессчётному количеству объектов:
 
 {% jqbRun "#html-example" %}{% endjqbRun %}
-
 ```javascript
 $("body").on("click", "*", function() {
     console.info("Click on "+this.tagName);

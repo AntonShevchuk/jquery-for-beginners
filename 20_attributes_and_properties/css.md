@@ -29,7 +29,6 @@
 Для изменения нескольких параметров передаём объект в формате ключ-значение (это фактически JSON):
 
 {% jqbRun "#css-example" %}{% endjqbRun %}
-
 ```javascript
 $("#my").css({
     "color": "red",
@@ -41,7 +40,6 @@ $("#my").css({
 Для именования свойств можно использовать как CSS-нотацию (см. пример выше), так и JavaScript вариант:
 
 {% jqbRun "#css-example" %}{% endjqbRun %}
-
 ```javascript
 $("#my").css({
     color: "black",
@@ -53,7 +51,6 @@ $("#my").css({
 А вот перед нами экзотический способ изменения шрифта с использованием функции обратного вызова:
 
 {% jqbRun "#css-example" %}{% endjqbRun %}
-
 ```javascript
 $("#my").css("font-size", function(i, value){
     return parseFloat(value) * 1.5;
