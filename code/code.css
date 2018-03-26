@@ -39,6 +39,10 @@ p {
   font-weight: normal;
 }
 
+hr {
+  margin: 0;
+}
+
 code {
   padding: .2em;
   margin: 0;

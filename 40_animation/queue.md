@@ -98,7 +98,7 @@ $('#player').show()
 ```
 
 <div style="position:relative">
-<div id="player" style="position:absolute;width:200px;right:24px;display:none">
+<div id="player" style="position:absolute;width:200px;top:24px;right:24px;display:none">
 <svg version="1.1" id="Mario" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 703.9 761.5" style="enable-background:new 0 0 703.9 761.5;" xml:space="preserve">
 <style type="text/css">
