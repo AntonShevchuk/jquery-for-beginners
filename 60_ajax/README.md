@@ -1,4 +1,4 @@
-# 70% AJAX {#70}
+# 60% AJAX {#70}
 
 Что такое AJAX, я, думаю, рассказывать не стоит, ибо с приходом веб-два-нуля большинство пользователей уже воротят носом от перезагрузок страниц целиком, а с появлением jQuery реализация упростилась в разы…
 
@@ -12,14 +12,14 @@
 
 Теперь на примерах. 
 
-Подгрузим на подопытную страницу учебника информацию со странички [html.example.html](../code/html.example.html):
+Подгрузим на подопытную страницу информацию со странички [html.example.html](../code/html.example.html):
 
-{% jqbFrame "html-example", "../code/html.empty.html", height="320px" %}
+{% jqbFrame "html-example", "../code/ajax.target.html", height="320px" %}
 {% sticky %}
 {% reload %}
 {% endjqbFrame %}
 
-С помощью следующего запроса, в элемент с id="content" будет вставлен весь HTML с указанной страницы:
+С помощью следующего запроса, в элемент с «id="content"» будет вставлен весь HTML с указанной страницы:
 
 {% jqbRun "#html-example" %}{% endjqbRun %}
 ```javascript

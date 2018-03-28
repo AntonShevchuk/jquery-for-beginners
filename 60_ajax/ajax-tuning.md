@@ -189,41 +189,62 @@ $.ajaxTransport( "script", function( options, originalOptions, jqXHR ) {
 });
 ```
 
-А теперь мега-напряг – пример транспорта «image»:
+А теперь мега-напряг – добавим транспорт «image» на данную страницу:
+
+{% jqbEval %}{% endjqbEval %}
 
 ```javascript
-$.ajaxTransport( "image", function( options ) {
-    if (options.type === "GET" && options.async ) {
+// регистрируем его для типа image
+$.ajaxTransport("image", function (options) {
+    // отслеживаем лишь GET AJAX-запросы
+    if (options.type === "GET" && options.async) {
         var image;
         return {
-            send: function( _ , callback ) {
+            // 
+            send:function (_, callback) {
                 image = new Image();
-                function done( status ) { // подготовим
-                    if ( image ) {
+                // подготовим функцию done
+                function done(status) {
+                    if (image) {
                         var statusText = ( status == 200 ) ? "success" : "error", tmp = image;
                         image = image.onreadystatechange = image.onerror = image.onload = null;
-                        callback( status, statusText, { image: tmp } );
+                        callback(status, statusText, { image:tmp });
                     }
                 }
-                image.onreadystatechange = image.onload = function() {
-                    done( 200 );
+                image.onreadystatechange = image.onload = function () {
+                    done(200);
                 };
-                image.onerror = function() {
-                    done( 404 );
+                image.onerror = function () {
+                    done(404);
                 };
                 image.src = options.url;
             },
-            abort: function() {
-                if ( image ) {
+            abort:function () {
+                if (image) {
                     image = image.onreadystatechange = image.onerror = image.onload = null;
                 }
             }
-        }; // /return
-    } // /if
-}); // /ajaxTransport
+        };
+    }
+});
 ```
 
-Рабочий пример вы можете найти в файле [ajax.transport.html](http://anton.shevchuk.name/book/code/ajax.transport.html), но я хотел бы ещё раз напомнить, что это «advanced level», и данный раздел лишний в учебнике «для начинающих».
+Теперь можно воспользоваться данным транспортом:
+
+{% jqbEval %}{% endjqbEval %}
+
+```javascript
+$.ajax('../code/img/photo-cat.jpg', {
+    dataType:'image',
+    success: function(data) {
+        $('#image').html(data);
+    }
+})
+```
+
+<div id="image"></div>
+
+> _Я хотел бы ещё раз напомнить, что это «advanced level», и данный раздел лишний в учебнике «для начинающих»._
 
 По следам официальной документации:
 * [Extending Ajax: Prefilters, Converters, and Transports](http://api.jquery.com/extending-ajax/)

@@ -1,8 +1,12 @@
-# 80% Объект Deferred и побратимы {#80}
+# 70% Объект Deferred и побратимы {#80}
 
 Работа с объектом «Deferred» – это уже высший пилотаж. Это «mad skills» – заставлять асинхронный JavaScript работать так, как нам хочется. Давайте посмотрим, как он работает (данный код можно скопировать в консоль и выполнить на любой странице, где подключен jQuery 3.x):
 
 > _С jQuery версии 3.x, Deferred объект стал совместим с Promise из ES-2015 (т.н. ES6), так что практически всё, что относится к [Promise](https://learn.javascript.ru/promise) верно и для [Deferred](http://api.jquery.com/category/deferred-object/)._
+
+Откройте консоль, и запустите скрипт: 
+
+{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 // инициализация Deferred объекта
@@ -30,6 +34,8 @@ D.then(function() { console.log("third") });
 * ~~если~~ всё хорошо, выполняем функцию и выводим «third»
 
 Кроме сценариев с «happy end», есть ещё и грустные истории, когда всё пошло не так, как нам бы хотелось:
+
+{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 // инициализация Deferred объекта
@@ -85,30 +91,63 @@ D.catch(function() { console.log("again fail") });
 
 А ещё кроме поведения «ждём чуда» с помощью Deferred можно выстраивать цепочки вызовов – «живые очереди»:
 
+{% jqbRun "#animation" %}{% endjqbRun %}
+
 ```javascript
-$.ajax('ajax/example.json')
-  .then(function() {
-      // подождём окончания AJAX-запроса
-      return $('article img').slideUp(2000).promise()
-  })
-  .then(function(){
-      // подождём, пока спрячутся картинки
-      return $('article p').slideUp(2000).promise()
-  })
-  .then(function(){
-      // подождём, пока спрячутся параграфы
-      return $('article').hide(2000).promise()
-  })
-  .then(function(){
-      // всё сделано, шеф
-  });
+var D = $.Deferred();
+ 
+D.then(function() {
+  // подождём окончания AJAX-запроса
+  return $('article img').slideUp(2000).promise()
+})
+.then(function(){
+  // подождём, пока спрячутся картинки
+  return $('article p').slideUp(2000).promise()
+})
+.then(function(){
+  // подождём, пока спрячутся параграфы
+  return $('article').hide(2000).promise()
+})
+.then(function(){
+  // всё сделано, шеф
+});
+
+D.resolve();
 ```
 
-Подобное поведение можно воспроизвести, используя лишь animate, но нам же хочется заглянуть чуть-чуть поглубже — [deferred.pipe.html](http://anton.shevchuk.name/book/code/deferred.pipe.html) (до jQuery 1.8 тут шла речь о методе «.pipe()», а теперь о «.then()»).
+Подобное поведение мы уже реализовывали используя метод `animate()`, но нам же хочется заглянуть чуть-чуть поглубже (до jQuery 1.8 тут шла речь о методе «.pipe()», а теперь о «.then()»):
 
-В данном примере мы вызываем метод «.then()», которому скормлена callback-функция, которая должна возвращать объект Promise. Это необходимо для соблюдения порядка в очереди – попробуйте убрать в примере один «return», и вы заметите, что следующая анимация наступит не дождавшись завершения предыдущей.
+{% jqbFrame "animation", "../code/animation.html", height="400px" %}
+{% sticky %}
+{% reload %}
+{% endjqbFrame %}
 
-На этом возможности Deferred ещё не завершились. Есть ещё связка методов «.notify()» и «.progress()» – первый шлёт послания в callback-функции, которые зарегистрированы с помощью второго. Приведу наглядный код для демонстрации (скопируйте в консоль и посмотрите, что получается):
+В данном примере мы вызываем метод «.then()», которому скормлена callback-функция, которая должна возвращать объект Promise. Это необходимо для соблюдения порядка в очереди – попробуйте убрать в примере один «return», и вы заметите, что следующая анимация наступит не дождавшись завершения предыдущей:
+
+{% jqbRun "#animation" %}{% endjqbRun %}
+
+```javascript
+var D = $.Deferred();
+ 
+D.then(function() {
+  // подождём окончания AJAX-запроса
+  $('article img').slideUp(2000).promise()
+})
+.then(function(){
+  // подождём, пока спрячутся картинки
+  $('article p').slideUp(2000).promise()
+})
+.then(function(){
+  // подождём, пока спрячутся параграфы
+  return $('article').hide(2000).promise()
+});
+
+D.resolve();
+```
+
+На этом возможности Deferred ещё не завершились. Есть ещё связка методов «.notify()» и «.progress()» – первый шлёт послания в callback-функции, которые зарегистрированы с помощью второго. Приведу наглядный код для демонстрации (откройте консоль и посмотрите, что получается):
+
+{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 var D = $.Deferred();
@@ -133,14 +172,97 @@ D.then(function(){ console.info("All Ok") });
 D.catch(function(){ console.error("Insufficient Funds") });
 ```
 
-Испытайте всю мощь Deferred в примере [deferred.html](http://anton.shevchuk.name/book/code/deferred.html).
+Испытайте всю мощь Deferred. Вот перед нами уже знакомая страница иллюстрирующая работу с Flickr JSONP API:
+
+{% jqbFrame "html-example", "../code/ajax.jsonp.html", height="320px" %}
+{% sticky %}
+{% reload %}
+{% endjqbFrame %}
+
+Создадим объект, который будет отвечать лишь за загрузку данных с Flickr:
+
+{% jqbRun "#html-example" %}{% endjqbRun %}
+
+```javascript
+var Flickr = {
+	search:function(query) {
+		return $.getJSON(
+            "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+            {
+                tags: query,
+                tagmode: "any",
+                format: "json"
+            }
+		);
+	}
+};
+```
+
+Теперь всё готово к поиску, осталось только обработать ответ сервера:
+
+{% jqbRun "#html-example" %}{% endjqbRun %}
+
+```javascript
+// контейнер, куда будем складывать картинки
+var $images = $('#images').hide();
+
+// прогресс-бар отображающий процесс загрузки картинок
+var $progress = $('#progress').find('div');
+
+Flickr
+    // запускаем поиск по ключевому слову
+    .search('apple')
+    // когда вернулся AJAX-ответ, добавляем картинки и ждём их загрузку
+    .then(function (data) {
+        var D = $.Deferred();
+        var total = data.items.length;
+        var loaded = 0;
+    
+        $.each(data.items, function(i, item){
+            // создаём картинку
+            var img = new Image();
+            img.onload = img.onerror = function() {
+                // изменяем прогресс загрузки
+                D.notify(1)
+            };
+            img.src = item.media.m;
+            $(img).prependTo($images);
+        });
+    
+        D.progress(function() {
+            // инкрементим кол-во загруженных картинок
+            loaded ++;
+            
+            // обновляем прогресс-бар
+            $progress.width(100/total*loaded + '%');
+            
+            // когда все картинки загрузились
+            if (total === loaded) {
+                D.resolve();
+            }
+        });
+        return D.promise();
+    })
+    // когда все картинки загрузились
+    .then(function() {
+        // прячем прогресс-бар      
+        $progress.width(0);
+        // отображаем контейнер со всеми картинками
+        $images.show("slow");
+    })
+```
 
 Теперь покажу хитрый метод «$.when()»:
 
+{% jqbRun "#html-example" %}{% endjqbRun %}
+
 ```javascript
 $.when(
-    $.ajax("/ajax/example.json"),
-    $("article").slideUp(200)
+    $images.children().eq(0).hide(400),
+    $images.children().eq(1).hide(800),
+    $images.children().eq(2).hide(1200),
+    $images.children().eq(3).hide(1600),
+    $images.children().eq(4).hide(2000),
 ).then(function() {
     alert("All done");
 }, function(){
@@ -148,6 +270,6 @@ $.when(
 })
 ```
 
-Поясню происходящее – AJAX-запрос и анимация стартуют одновременно, а когда и тот и другой завершат свою работу, будет вызвана функция, которую мы передаём в качестве аргумента в метод «.then()» (одна из двух, в зависимости от исхода происходящего). Для обеспечения работы этой «магии» методы «$.when()», «$.ajax()» и «.animate()» реализуют интерфейс Deferred. Пример работы на странице [when.html](http://anton.shevchuk.name/book/code/when.html).
+Поясню происходящее – все анимации стартуют одновременно, и когда каждая из них завершит свою работу, будет вызвана функция, которую мы передаём в качестве аргумента в метод «.then()» (одна из двух, в зависимости от исхода происходящего). Для обеспечения работы этой «магии» методы «$.when()», «$.ajax()» и «.animate()» реализуют интерфейс Deferred.
 
 > _Теперь можно и заумно – метод «.when()» возвращает проекцию Deferred объекта, принимает в качестве параметров произвольное множество Deferred объектов, когда все они отработают, объект «when» изменит своё состояние в «выполнено», с последующим вызовом всех подписавшихся._
