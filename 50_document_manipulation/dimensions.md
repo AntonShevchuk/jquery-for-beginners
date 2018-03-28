@@ -30,7 +30,35 @@ $(document).height(); // высота HTML документа
 
 `outerHeight(true)` и `outerWidth(true)` – возвращают высоту и ширину элемента, включая «padding», «border» и «margin»
 
-Для наглядности различий между методами «.height()», «.innerHeight()» и «.outerHeight()» я создал страничку [height.html](http://anton.shevchuk.name/book/code/height.html), а ещё переделал несколько картинок из официальной документации в одну полноценную иллюстрацию:
+Для наглядности различий между методами «.height()», «.innerHeight()» и «.outerHeight()» я создал следующий пример:
+
+{% jqbFrame "html-example", "../code/css.dimensions.html", height="320px" %}
+{% endjqbFrame %}
+
+В данном примере для центрального элемента `<article>` заданы следующие стили:
+
+```css
+article {
+  height:40px;
+  margin:40px;
+  padding:40px;
+  border:40px solid #777;
+}
+```
+
+Теперь посмотрим на то, что будет возвращать каждая из перечисленных функций:
+
+{% jqbRun "#html-example" %}{% endjqbRun %}
+```javascript
+alert(
+  "height() = " + $('article').height() + "\n" +
+  "innerHeight() = " + $('article').innerHeight() + "\n" +
+  "outerHeight() = " + $('article').outerHeight() + "\n" +
+  "outerHeight(true) = " + $('article').outerHeight(true)
+);
+```
+
+Чтобы легче понять происходящее, я ещё немного заморочился и переделал несколько картинок из официальной документации в одну полноценную иллюстрацию:
 
 ![блочная модель](/assets/img/box.png)
 
@@ -44,6 +72,25 @@ $(document).height(); // высота HTML документа
 
 `scrollTop(value)` – устанавливает значение вертикального скролла для каждого элемента из выборки
 
-> _Значения «scrollTop» и «scrollLeft» поддаются анимации и не работают для спрятанных элементов DOM._
+Вот таким образом мы можем узнать «расстояние» пройденное от начала страницы:
+
+{% jqbEval %}{% endjqbEval %}
+```javascript
+alert($('.body-inner').scrollTop());
+```
+
+Или можем «прыгнуть» в самое начало страницы:
+
+{% jqbEval %}{% endjqbEval %}
+```javascript
+$('.body-inner').scrollTop(0);
+```
+
+> _Значения «scrollTop» и «scrollLeft» поддаются анимации и не работают для спрятанных элементов DOM:_
+
+{% jqbEval %}{% endjqbEval %}
+  ```javascript
+$('.body-inner').animate({ scrollTop: '-=200px' });
+```
 
 Методов реально много, я и сам не всегда помню что и для чего (особенно это касается wrap-семейства), так что не утруждайте себя запоминанием всего перечисленного, главное помнить, что таковые имеются, и держать под рукой [документацию](http://api.jquery.com/category/manipulation/).
