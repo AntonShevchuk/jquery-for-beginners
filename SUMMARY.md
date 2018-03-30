@@ -47,6 +47,7 @@
 * [70% Объект Deferred и побратимы](70_deferred_and_callbacks/README.md)
   * [Callbacks](70_deferred_and_callbacks/callbacks.md)
 * [80% Работа с формами](80_forms/README.md)
+  * [Манипуляциия над элементами](80_forms/manipulation.md)
 * [90% Пишем свой плагин](90_create_plugin/README.md)
   * [jQuery плагин](90_create_plugin/jquery_plugin.md)
   * [Data](90_create_plugin/data.md)
