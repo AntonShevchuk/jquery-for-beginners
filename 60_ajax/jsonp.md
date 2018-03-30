@@ -56,7 +56,7 @@ $.ajax({
 
 ```javascript
 $.getJSON(
-    "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+    "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
     {
         tags: "orange",
         tagmode: "any",

@@ -38,7 +38,7 @@ $('form').submit(function(){
 Вот и первый метод – «.serialize()» – он в ответе за «сбор» данных с формы в удобном для передачи данных формате:
 
 ```
-name=Ivan&amp;role=Admin
+name=Ivan&role=Admin
 ```
 
 Также есть метод «.serializeArray()» – он представляет собранные данные в виде объекта:
@@ -60,7 +60,7 @@ name=Ivan&amp;role=Admin
 
 ```javascript
 $('form').submit(function(){
-    if ($(this).find('input[name=name]').val() == '') {
+    if ($(this).find('input[name=name]').val() === '') {
         alert('Введите имя пользователя');
         return false;
     }
@@ -75,7 +75,7 @@ $('form').submit(function(){
 
 `val(value)` – установка значения всем элементам формы из выборки
 
-Данный метод отлично работает практически со всеми элементами формы, вот только с radiobutton установить значение таким образом не получится, тут потребуется небольшой workaround:
+Данный метод отлично работает практически со всеми элементами формы, вот только с `<input type="radio">` установить значение таким образом не получится, тут потребуется небольшой workaround:
 
 ```javascript
 $('input[type=radio][name=choose][value=2]').prop('checked', true)
@@ -83,18 +83,19 @@ $('input[type=radio][name=choose][value=2]').prop('checked', true)
 
 > _Можно, конечно же, использовать и метод «.click()», дабы эмулировать выбор необходимого пункта, но это вызовет все обработчики события «click», что не желательно._
 
-С checkbox чуть-чуть попроще:
+С `<input type="checkbox">` чуть-чуть попроще:
 
 ```javascript
-$('input[name=check] ').prop('checked', true)
+$('input[type=checkbox] ').prop('checked', true)
 ```
 
 Проверяем «чекнутость» простым скриптом:
 
 ```javascript
-$('input[name=check] ').prop('checked')
+// 
+$('input[type=checkbox] ').prop('checked')
 // или чуть более наглядным способом
-$('input[name=check] ').is(':checked')
+$('input[type=checkbox] ').is(':checked')
 ```
 
 Проверять и отправлять форму через AJAX теперь умеем, осталось решить вопрос с динамическим изменением формы. И для этого у нас уже есть все необходимые знания. Вот, к примеру, добавление выпадающего списка:
@@ -108,14 +109,19 @@ $('form').append('<select name="some"></select>');
 ```javascript
 // возьмём список заранее, поберегу чернила
 var $select = $('form select[name=Role]');
+
 // добавить новый элемент в выпадающий список
 $select.append('<option>Manager</option>');
+
 // выбрать необходимый элемент
 $select.val('Value 1');
+
 // или по порядковому номеру, начиная с 0
 $select.find('option:eq(2)').prop('selected', true);
+
 // очищаем список
 $select.remove('option');
+
 // преобразуем в multiple
 // не забываем, что имя такого селекта должно быть с [], т.е.
 // myselect[], иначе сервер получит лишь одно значение
@@ -129,7 +135,7 @@ $('select').attr('multiple', true)
 Хорошо, работать с формой теперь можем, осталось прикрутить более вменяемый вывод ошибок (да-да, за «alert()» бьём по рукам):
 
 ```javascript
-if ($(this).find('input[name=user]').val() == '') {
+if ($(this).find('input[name=user]').val() === '') {
     $(this).find('input[name=user]')
       .before('<div class="error">Введите имя</div>');
     return false;
@@ -145,20 +151,28 @@ $(this).find('.error').remove()
 Теперь можно объединить кусочки кода и получить следующий вариант:
 
 ```javascript
-$('form').submit(function(){
+$('form').submit(function() {
+    // для читаемости кода
+    var $form = $(this);
+
     // чистим ошибки
-    $(this).find('.error').remove();
-    // проверяем поля формы
-    if ($(this).find('input[type=name]').val() == '') {
+    $form.find('.error').remove();
+
+    // проверяем поле с именем пользователя
+    if ($(this).find('input[name=user]').val() === '') {
+        // добавляем текст ошибки
         $(this).find('input[name=user]')
           .before('<div class="error">Введите имя</div>');
+        // прерываем дальнейшую обработку
         return false;
     }
+
     // всё хорошо – отправляем запрос на сервер
     $.post(
-        $(this).attr('action'), // ссылка куда отправляем данные
-        $(this).serialize()     // данные формы
+        $form.attr('action'), // ссылка куда отправляем данные
+        $form.serialize()     // данные формы
     );
+
     // отключаем действие по умолчанию
     return false;
 });
@@ -174,6 +188,6 @@ $('form').submit(function(){
 
 `submit` — отправка формы + метод «.submit()»; этот метод будете использовать частенько
 
-> _Примеры работы данных методов доступны на странице [form.html](http://anton.shevchuk.name/book/code/form.html)._
+> _Примеры работы данных методов доступны на странице [events.form.html](http://anton.shevchuk.name/book/code/events.form.html)._
 
 Вот так мы и расправились с «ужасными» формами. Возможно, я ещё приведу несколько примеров из реальной жизни, но это будет уже в последующих версиях данного учебника :)

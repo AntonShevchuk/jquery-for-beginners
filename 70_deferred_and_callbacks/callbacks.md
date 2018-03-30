@@ -25,7 +25,7 @@ Go first
 Go second
 ```
 
-> _— А в чём сила, брат?_
+> _— А в чём сила, брат?_  
 > _— В аргументах._
 
 По умолчанию вы можете прямо из консоли вызывать метод «.fire()» снова и снова, и будете получать один и тот же результат раз за разом. А можно задать поведение Callbacks через флаги:
@@ -98,7 +98,7 @@ Again second
 var C = $.Callbacks("unique");
 
 var func = function(msg) {
-    console.log(msg+" first")
+    console.log(msg + " first")
 };
 
 C.add(func);
@@ -120,12 +120,12 @@ Go first
 var C = $.Callbacks("stopOnFalse");
 
 C.add(function(msg) {
-    console.log(msg+" first");
+    console.log(msg + " first");
     return false; // вот он – роковой false
 });
 
 C.add(function(msg) { 
-    console.log(msg+" second"); 
+    console.log(msg + " second"); 
 });
 
 C.fire("Go"); // только Go first
@@ -136,7 +136,78 @@ C.fire("Go"); // только Go first
 Go first
 ```
 
-Перечисленные флаги можно комбинировать и получать интересные результаты, а можно не получать, а лишь посмотреть на пример [callbacks.html](http://anton.shevchuk.name/book/code/callbacks.html)
+Перечисленные флаги можно комбинировать и получать интересные результаты, а можно не получать, а лишь посмотреть на следующий пример. Вот заготовка для работы:
+
+<div style="position:relative">
+<div id="car" style="position:absolute;width:200px;height:200px;top:-100px;right:24px;display:none">
+<img src="../assets/img/car.svg" alt="Car"/>
+</div>
+</div>
+
+{% jqbEval %}{% endjqbEval %}
+
+```javascript
+// машинка
+var $car = $('#car').show();
+// наш стек команд
+var C = $.Callbacks();
+```
+
+Добавьте команды по передвижению автомобиля в произвольном порядке и количестве. Для этого следует запустить перечисленные ниже скрипты (никаких изменений с машинкой до запуска метода «fire()» не будет):
+
+{% jqbEval %}{% endjqbEval %}
+
+```javascript
+C.add(function(speed) {
+    $car.queue(function() { // поворот вниз, ставим в очередь с анимацией
+        $(this).css("transform", "rotate(-90deg)").dequeue();
+    });
+    $car.animate({top:"+=800"}, speed); // едем вниз
+});
+```
+
+{% jqbEval %}{% endjqbEval %}
+
+```javascript
+C.add(function(speed) {
+    $car.queue(function() { // поворот налево, ставим в очередь с анимацией
+        $(this).css("transform", "rotate(0deg)").dequeue();
+    });
+    $car.animate({left:"-=400"}, speed); // едем влево
+});
+```
+
+{% jqbEval %}{% endjqbEval %}
+
+```javascript
+C.add(function(speed) {
+    $car.queue(function() { // поворот вправо, ставим в очередь с анимацией
+        $(this).css("transform", "rotate(180deg)").dequeue();
+    });
+    $car.animate({left:"+=400"}, speed); // едем вправо
+});
+```
+
+{% jqbEval %}{% endjqbEval %}
+
+```javascript
+C.add(function(speed) {
+    $car.queue(function() { // поворот наверх ставим в очередь с анимацией
+        $(this).css("transform", "rotate(90deg)").dequeue();
+    });
+    $car.animate({top:"-=400"}, speed); // едем вверх
+});
+```
+
+Поехали!
+
+{% jqbEval %}{% endjqbEval %}
+
+```javascript
+// запускаем «программу»
+// в качестве параметра передаём скорость движения
+C.fire(400);
+```
 
 > _Из истории: объект «Deferred» отпочковался от метода «$.ajax()» в результате рефакторинга jQuery версии 1.5. Шло время, появлялись новые версии jQuery, и вот новый виток рефакторинга – результатом стало отделение «Callbacks» от «Deferred» в версии 1.7, таким образом в текущей версии библиотеки метод «$.ajax()» работает с объектом «Deferred», который является надстройкой над «Callbacks». Дабы не вносить путаницу в терминологию, я использую определение «Deferred Callbacks» и при работе с «Callbacks», ибо колбэков много, и каждый раз уточнять, что я говорю именно «о том самом» — дело достаточно утомительное._
 

@@ -187,7 +187,7 @@ D.catch(function(){ console.error("Insufficient Funds") });
 var Flickr = {
 	search: function(query) {
 		return $.getJSON(
-            "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+            "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
             {
                 tags: query,
                 tagmode: "any",
