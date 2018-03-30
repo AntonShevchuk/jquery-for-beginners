@@ -113,7 +113,7 @@ $("#my").toggle("explode");
 
 > _Приведу список эффектов, может, кто запомнит: `blind`, `bounce`, `clip`, `drop`, `explode`, `fold`, `highlight`, `puff`, `pulsate`, `scale`, `shake`, `size`, `slide`, `transfer`._
 
-Помните, в главе об [анимации](40_animatsiya/README.md) я рассказывал об easing и одноименном плагине для jQuery? Так вот, UI тоже расширяет easing, так что подключив UI, можно отключать easing. И да, этот функционал завязан лишь на «Effects Core».
+Помните, в главе об [анимации](../40_animation/README.md) я рассказывал об easing и одноименном плагине для jQuery? Так вот, UI тоже расширяет easing, так что подключив UI, можно отключать easing. И да, этот функционал завязан лишь на «Effects Core».
 
 ### Темы
 
