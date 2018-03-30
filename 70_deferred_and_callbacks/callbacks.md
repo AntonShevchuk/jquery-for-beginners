@@ -2,20 +2,23 @@
 
 Callbacks – это крутой объект. Он позволяет составлять списки функций обратного вызова, а также даёт бразды правления над ними. Работать с ним проще нежели с Deferred, в нём нет разделения на позитивный и негативный сценарии. Лишь стек функций, который будет выполнен по команде «.fire()»:
 
+{% jqbEval %}{% endjqbEval %}
+
 ```javascript
 var C = $.Callbacks();
 
 C.add(function(msg) {
-    console.log(msg+" first")
+    console.log(msg + " first")
 });
 
 C.add(function(msg) {
-    console.log(msg+" second")
+    console.log(msg + " second")
 });
 
 C.fire("Go");
 ```
 
+Если открыть консоль и запустить скрипт выше, то в результате получите что-то типа такого:
 ```
 >>>
 Go first
@@ -37,15 +40,17 @@ Go second
 
 Наверное, будет лучше с примерами, вот «once»:
 
+{% jqbEval %}{% endjqbEval %}
+
 ```javascript
 var C = $.Callbacks("once");
 
 C.add(function(msg) {
-    console.log(msg+" first")
+    console.log(msg + " first")
 });
 
 C.add(function(msg) {
-    console.log(msg+" second")
+    console.log(msg + " second")
 });
 
 C.fire("Go");
@@ -60,17 +65,19 @@ Go second
 
 C «memory» посложнее, будьте внимательней:
 
+{% jqbEval %}{% endjqbEval %}
+
 ```javascript
 var C = $.Callbacks("memory");
 
 C.add(function(msg) {
-    console.log(msg+" first")
+    console.log(msg + " first")
 });
 
 C.fire("Go");
 
 C.add(function(msg) {
-  console.log(msg+" second")
+  console.log(msg + " second")
 });
 
 C.fire("Again");
@@ -84,6 +91,8 @@ Again second
 ```
 
 Пример с уникальностью прост до безобразия:
+
+{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 var C = $.Callbacks("unique");
@@ -104,6 +113,8 @@ Go first
 ```
 
 Флаг «stopOnFalse»:
+
+{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 var C = $.Callbacks("stopOnFalse");
