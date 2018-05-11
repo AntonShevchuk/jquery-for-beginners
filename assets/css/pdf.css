@@ -13,10 +13,6 @@
   min-height: 40px;
 }
 
-iframe {
-  border: 1px solid #ddd;
-}
-
 svg line {
   stroke: #bbb;
   stroke-width: 1px;
@@ -32,4 +28,14 @@ svg path {
   fill: rgba(255,255,255,0);
   stroke: #4183c4;
   stroke-width: 2px;
+}
+
+/* jQuery Book Plugin */
+button.jqbook {
+  display: none;
+}
+
+iframe.jqbook {
+  width: 100%;
+  border: 1px solid #ddd;
 }
