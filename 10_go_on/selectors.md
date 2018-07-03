@@ -28,7 +28,7 @@ _Используйте валидные имена классов и идент
 
 Теперь вспомним, что мы в DOMе не одни, это-таки иерархическая структура:
 
-{% jqbHighlight "#html-example" %}$("article h3"){% endjqbHighlight %} – выбираем все теги `<h2>` внутри тега `<article>`
+{% jqbHighlight "#html-example" %}$("article h3"){% endjqbHighlight %} – выбираем все теги `<h3>` внутри тега `<article>`
 
 {% jqbHighlight "#html-example" %}$("article").find("h3"){% endjqbHighlight %} – аналогично примеру выше
 
