@@ -136,7 +136,7 @@ alert(j); // error: "j" is not defined
 ```javascript
 var x;
 let y;
-for (let y = 0; y <= 10; y++) {
+for (let y = 0; y < 10; y++) {
     x = y;
 }
 y = y ? x : 5;
@@ -146,10 +146,10 @@ y = y ? x : 5;
 x = 
 y = 
 {% solution %}
-x = 10
+x = 9
 y = 5
 {% validation %}
-assert(x == 10);
+assert(x == 9);
 assert(y == 5);
 {% context %}
 var x;
