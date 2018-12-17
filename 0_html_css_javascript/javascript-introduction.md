@@ -136,7 +136,7 @@ alert(j); // error: "j" is not defined
 ```javascript
 var x;
 let y;
-for (let y = 0; y < 10; y++) {
+for (let y = 0; y <= 10; y++) {
     x = y;
 }
 y = y ? x : 5;
