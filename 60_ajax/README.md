@@ -32,7 +32,7 @@ $("#content").load("../code/html.example.html");
 {% jqbRun "#html-example" %}{% endjqbRun %}
 ```javascript
 // в элемент с id="content" будет вставлен HTML с указанной страницы,
-// но не весь, а только выбранный по указанному селектору id="wrapper"
+// но не весь, а только выбранный по указанному селектору id="intro"
 $("#content").load("../code/html.example.html #intro");
 ```
 
