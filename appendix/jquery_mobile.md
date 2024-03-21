@@ -1,4 +1,4 @@
-## jQuery Mobile {#jquery-mobile}
+# jQuery Mobile
 
 А вот это вполне самостоятельный продукт, и, как следует из названия, предназначен для создания интерфейсов для мобильных устройств с поддержкой «Touch Screen». Этот фреймворк хорошо документирован, с кучей примеров, которые можно пощупать на [http://jquerymobile.com/](http://jquerymobile.com/)
 
@@ -6,16 +6,9 @@
 
 Я не буду рассматривать все компоненты данного фреймворка, приведу лишь некоторые скриншоты (взяты с официального сайта [http://jquerymobile.com/](http://jquerymobile.com/)):
 
-<table border="0">
-    <tr style="border:0">
-        <td width="50%" style="border:0"><img src="/assets/img/jquery-mobile-dialog.png" alt="jQuery Mobile Dialog"/></td>
-        <td width="50%" style="border:0">
-            <img src="/assets/img/jquery-mobile-tabs.png" alt="jQuery Mobile Tabs"/>
-            <img src="/assets/img/jquery-mobile-checkboxes.png" alt="jQuery Mobile Form"/>
-        </td>
-    </tr>
-</table>
+| ![jQuery Mobile Dialog](../.gitbook/assets/jquery-mobile-dialog.png) |  ![jQuery Mobile Tabs](../.gitbook/assets/jquery-mobile-tabs.png) ![jQuery Mobile Form](../.gitbook/assets/jquery-mobile-checkboxes.png) |
+| -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 
-> _Для jQMobile существует свой собственный [ThemeRoller](http://jquerymobile.com/themeroller/)._
+> _Для jQMobile существует свой собственный_ [_ThemeRoller_](http://jquerymobile.com/themeroller/)_._
 
 И ещё советую обратить внимание на API данного фреймворка, без изучения оного вам будет затруднительно создать действительно интересные приложения.

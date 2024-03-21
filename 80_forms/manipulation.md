@@ -1,35 +1,25 @@
-## Манипуляции над элементами форм
+# Манипуляциия над элементами
 
 Мы уже познакомились с методом «.val()». Данный метод отлично работает практически со всеми элементами формы. Угу, практически, вот с `<input type="radio">` установить значение таким образом не получится, тут потребуется небольшой workaround:
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 $("input[type=radio][name=sex][value=male]").prop("checked", true)
 ```
 
-<form action="">
-  <label><input type="radio" name="sex" value="male"/> Male</label><br/>
-  <label><input type="radio" name="sex" value="female"/> Female</label>
-</form>
+&#x20; Male\
+&#x20; Female
 
 > _Можно, конечно же, использовать и метод «.click()», дабы эмулировать выбор необходимого пункта, но это вызовет все обработчики события «click», что не желательно._
 
 С `<input type="checkbox">` чуть-чуть попроще:
 
-{% jqbEval %}{% endjqbEval %}
-
 ```javascript
 $("input[type=checkbox]").prop("checked", true)
 ```
 
-<form action="">
-  <label><input type="checkbox" name="rememberme" value="1"/> remember me</label>
-</form>
+&#x20; remember me
 
 Проверяем «чекнутость» простым скриптом:
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 alert(
@@ -38,8 +28,6 @@ alert(
 ```
 
 Альтернативный, чуть более наглядный способ:
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 alert(
@@ -53,18 +41,11 @@ alert(
 $("form").append('<select name="some"></select>');
 ```
 
-А если потребуется изменить список? 
+А если потребуется изменить список?
 
-<form action="">
-  <select name="role">
-    <option>User</option>
-    <option>Admin</option>
-  </select>
-</form>
+&#x20;UserAdmin
 
 Есть на все случаи жизни:
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 // возьмём список заранее, поберегу чернила
@@ -77,14 +58,10 @@ $select.append("<option>Manager</option>");
 $select.val("Manager");
 ```
 
-{% jqbEval %}{% endjqbEval %}
-
 ```javascript
 // или по порядковому номеру, начиная с 0
 $select.find("option:eq(1)").prop("selected", true);
 ```
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 // преобразуем в multiple
@@ -95,8 +72,6 @@ $select.attr("size",
 );
 $select.attr('multiple', true);
 ```
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 // очищаем список

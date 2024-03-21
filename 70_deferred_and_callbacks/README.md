@@ -1,12 +1,10 @@
-# 70% Объект Deferred и побратимы {#80}
+# 70% Объект Deferred и побратимы
 
 Работа с объектом «Deferred» – это уже высший пилотаж. Это «mad skills» – заставлять асинхронный JavaScript работать так, как нам хочется. Давайте посмотрим, как он работает (данный код можно скопировать в консоль и выполнить на любой странице, где подключен jQuery 3.x):
 
-> _С jQuery версии 3.x, Deferred объект стал совместим с Promise из ES-2015 (т.н. ES6), так что практически всё, что относится к [Promise](https://learn.javascript.ru/promise) верно и для [Deferred](http://api.jquery.com/category/deferred-object/)._
+> _С jQuery версии 3.x, Deferred объект стал совместим с Promise из ES-2015 (т.н. ES6), так что практически всё, что относится к_ [_Promise_](https://learn.javascript.ru/promise) _верно и для_ [_Deferred_](http://api.jquery.com/category/deferred-object/)_._
 
-Откройте консоль, и запустите скрипт: 
-
-{% jqbEval %}{% endjqbEval %}
+Откройте консоль, и запустите скрипт:
 
 ```javascript
 // инициализация Deferred объекта
@@ -34,8 +32,6 @@ D.then(function() { console.log("third") });
 * ~~если~~ всё хорошо, выполняем функцию и выводим «third»
 
 Кроме сценариев с «happy end», есть ещё и грустные истории, когда всё пошло не так, как нам бы хотелось:
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 // инициализация Deferred объекта
@@ -82,20 +78,15 @@ D.catch(function() { console.log("again fail") });
 
 Чтобы не путаться в перечисленных методах, приведу блок-схему:
 
-<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#FFFFFF&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;url&quot;:&quot;https://raw.githubusercontent.com/AntonShevchuk/jquery-book/master/assets/deferred.xml&quot;}"></div>
-<script type="text/javascript" src="https://www.draw.io/embed2.js?&fetch=https%3A%2F%2Fraw.githubusercontent.com%2FAntonShevchuk%2Fjquery-book%2Fmaster%2Fassets%2Fdeferred.xml"></script>
-
 При вызове «[.resolve()](http://api.jquery.com/deferred.resolve/)» и «[.reject()](http://api.jquery.com/deferred.reject/)» можно передать произвольные данные в зарегистрированные callback-функции для дальнейшей работы. Кроме того, существуют ещё методы «[.resolveWith()](http://api.jquery.com/deferred.resolveWith/)» и «[.rejectWith()](http://api.jquery.com/deferred.rejectWith/)», они позволяют изменять контекст вызываемых callback-функций (т.е. внутри них «this» будет смотреть на указанный контекст).
 
 Отдельно отмечу, что если вы собираетесь передать Deferred объект «на сторону», чтобы «там» могли повесить свои обработчики событий, но не хотите потерять контроль, то возвращайте не сам объект, а результат выполнения метода «.promise()» – фактически это будет искомый объект в режиме «read-only».
 
 А ещё кроме поведения «ждём чуда» с помощью Deferred можно выстраивать цепочки вызовов – «живые очереди»:
 
-{% jqbRun "#animation" %}{% endjqbRun %}
-
 ```javascript
 var D = $.Deferred();
- 
+
 D.then(function() {
   // подождём окончания AJAX-запроса
   return $('article img').slideUp(2000).promise()
@@ -117,18 +108,11 @@ D.resolve();
 
 Подобное поведение мы уже реализовывали используя метод `animate()`, но нам же хочется заглянуть чуть-чуть поглубже (до jQuery 1.8 тут шла речь о методе «.pipe()», а теперь о «.then()»):
 
-{% jqbFrame "animation", "../code/animation.html", height="400px" %}
-{% sticky %}
-{% reload %}
-{% endjqbFrame %}
-
 В данном примере мы вызываем метод «.then()», которому скормлена callback-функция, которая должна возвращать объект Promise. Это необходимо для соблюдения порядка в очереди – попробуйте убрать в примере один «return», и вы заметите, что следующая анимация наступит не дождавшись завершения предыдущей:
-
-{% jqbRun "#animation" %}{% endjqbRun %}
 
 ```javascript
 var D = $.Deferred();
- 
+
 D.then(function() {
   // подождём окончания AJAX-запроса
   $('article img').slideUp(2000).promise()
@@ -146,8 +130,6 @@ D.resolve();
 ```
 
 На этом возможности Deferred ещё не завершились. Есть ещё связка методов «.notify()» и «.progress()» – первый шлёт послания в callback-функции, которые зарегистрированы с помощью второго. Приведу наглядный код для демонстрации (откройте консоль и посмотрите, что получается):
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 var D = $.Deferred();
@@ -174,33 +156,24 @@ D.catch(function(){ console.error("Insufficient Funds") });
 
 Испытайте всю мощь Deferred. Вот перед нами уже знакомая страница иллюстрирующая работу с Flickr JSONP API:
 
-{% jqbFrame "html-example", "../code/ajax.jsonp.html", height="320px" %}
-{% sticky %}
-{% reload %}
-{% endjqbFrame %}
-
 Создадим объект, который будет отвечать лишь за загрузку данных с Flickr:
-
-{% jqbRun "#html-example" %}{% endjqbRun %}
 
 ```javascript
 var Flickr = {
-	search: function(query) {
-		return $.getJSON(
+    search: function(query) {
+        return $.getJSON(
             "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
             {
                 tags: query,
                 tagmode: "any",
                 format: "json"
             }
-		);
-	}
+        );
+    }
 };
 ```
 
 Теперь запустим поиск и обработаем ответ сервера:
-
-{% jqbRun "#html-example" %}{% endjqbRun %}
 
 ```javascript
 // контейнер, куда будем складывать картинки
@@ -219,7 +192,7 @@ Flickr
         var D = $.Deferred();
         var total = data.items.length;
         var loaded = 0;
-    
+
         $.each(data.items, function(i, item){
             // создаём картинку
             var img = new Image();
@@ -230,14 +203,14 @@ Flickr
             img.src = item.media.m;
             $(img).prependTo($images);
         });
-    
+
         D.progress(function() {
             // инкрементим кол-во загруженных картинок
             loaded ++;
-            
+
             // обновляем прогресс-бар
             $progress.width(100/total*loaded + '%');
-            
+
             // когда все картинки загрузились
             if (total === loaded) {
                 D.resolve();
@@ -255,8 +228,6 @@ Flickr
 ```
 
 Теперь на примере загруженных картинок покажу хитрый метод «$.when()»:
-
-{% jqbRun "#html-example" %}{% endjqbRun %}
 
 ```javascript
 $.when(

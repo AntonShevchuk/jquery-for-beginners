@@ -1,4 +1,4 @@
-# Метод `ajax()`
+# Метод ajax()
 
 Следующий метод, с которым я вас познакомлю будет «$.ajax()» – собственно, он тут главный, и все остальные AJAX-методы являются лишь обёрткой (и «.load()» в том же числе). Метод «$.ajax()» принимает в качестве параметра пачку настроек и URL цели. Приведу пример, аналогичный вызову «.load()»:
 
@@ -15,9 +15,9 @@ $.ajax({
 });
 ```
 
-> _Тут мы обрабатывали HTML-ответ от сервера – это хорошо когда нам полстраницы обновить надо, но данные лучше передавать в «правильном» формате. XML – это понятно, структурировано, но избыточно и как-то не совсем JavaScript-way, и поэтому наш выбор – это [JSON](http://ru.wikipedia.org/wiki/JSON):_
+> _Тут мы обрабатывали HTML-ответ от сервера – это хорошо когда нам полстраницы обновить надо, но данные лучше передавать в «правильном» формате. XML – это понятно, структурировано, но избыточно и как-то не совсем JavaScript-way, и поэтому наш выбор – это_ [_JSON_](http://ru.wikipedia.org/wiki/JSON)_:_
 
-```json
+```javascript
 {
   "note": {
     "time": "2012.09.21 13:11:15",
@@ -32,7 +32,7 @@ $.ajax({
 
 Для загрузки JSON существует быстрая функция-синоним – «jQuery.getJSON()» – в качестве обязательного параметра лишь ссылка, куда стучимся, опционально можно указать данные для передачи на сервер и функцию обратного вызова.
 
-> _Нельзя просто так взять и описать все возможные параметры для вызова «$.ajax()», таки стоит держать под рукой официальный мануал [http://api.jquery.com/jQuery.ajax/](http://api.jquery.com/jQuery.ajax/)._
+> _Нельзя просто так взять и описать все возможные параметры для вызова «$.ajax()», таки стоит держать под рукой официальный мануал_ [_http://api.jquery.com/jQuery.ajax/_](http://api.jquery.com/jQuery.ajax/)_._
 
 Ещё есть пара-тройка функций, которые стоит упомянуть:
 
@@ -46,24 +46,24 @@ $.ajax({
 
 ```javascript
 jQuery.each( [ "get", "post" ], function( i, method ) {
-	jQuery[ method ] = function( url, data, callback, type ) {
+    jQuery[ method ] = function( url, data, callback, type ) {
 
-		// Shift arguments if data argument was omitted
-		if ( isFunction( data ) ) {
-			type = type || callback;
-			callback = data;
-			data = undefined;
-		}
+        // Shift arguments if data argument was omitted
+        if ( isFunction( data ) ) {
+            type = type || callback;
+            callback = data;
+            data = undefined;
+        }
 
-		// The url can be an options object (which then must have .url)
-		return jQuery.ajax( jQuery.extend( {
-			url: url,
-			type: method,
-			dataType: type,
-			data: data,
-			success: callback
-		}, jQuery.isPlainObject( url ) && url ) );
-	};
+        // The url can be an options object (which then must have .url)
+        return jQuery.ajax( jQuery.extend( {
+            url: url,
+            type: method,
+            dataType: type,
+            data: data,
+            success: callback
+        }, jQuery.isPlainObject( url ) && url ) );
+    };
 } );
 ```
 

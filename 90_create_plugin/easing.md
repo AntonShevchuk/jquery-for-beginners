@@ -1,9 +1,6 @@
-## Easing {#easing}
+# Easing
 
 Теперь опять обратимся к easing – приведу пример произвольной функции, которой будет следовать анимация. Дабы особо не фантазировать, я взял пример из статьи на вездесущем Хабре oб [анимации в MooTools фреймворке](http://habrahabr.ru/post/43379/) – наглядный пример с сердцебиением, которое описывается следующими функциями:
-
-<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#FFFFFF&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;url&quot;:&quot;https://raw.githubusercontent.com/AntonShevchuk/jquery-book/master/assets/easing.xml&quot;}"></div>
-<script type="text/javascript" src="https://www.draw.io/embed2.js?&fetch=https%3A%2F%2Fraw.githubusercontent.com%2FAntonShevchuk%2Fjquery-book%2Fmaster%2Fassets%2Feasing.xml"></script>
 
 В расширении функционала easing нет ничего военного:
 
@@ -69,10 +66,9 @@ jQuery.easing = {
 
 Получим следующие производные функции:
 
-  **heartIn**                   |  **heartOut**                      | **heartInOut**
-:------------------------------:|:----------------------------------:|:-------------------------------------:
-![heartIn](/assets/img/heartIn.png) |  ![heartOut](/assets/img/heartOut.png) |  ![heartInOut](/assets/img/heartInOut.png)
-
+|                 **heartIn**                |                 **heartOut**                 |                  **heartInOut**                  |
+| :----------------------------------------: | :------------------------------------------: | :----------------------------------------------: |
+| ![heartIn](../.gitbook/assets/heartIn.png) | ![heartOut](../.gitbook/assets/heartOut.png) | ![heartInOut](../.gitbook/assets/heartInOut.png) |
 
 Работать с данным творением надо следующим образом:
 

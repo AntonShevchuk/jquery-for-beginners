@@ -1,8 +1,6 @@
-## Callbacks {#callbacks}
+# Callbacks
 
 Callbacks – это крутой объект. Он позволяет составлять списки функций обратного вызова, а также даёт бразды правления над ними. Работать с ним проще нежели с Deferred, в нём нет разделения на позитивный и негативный сценарии. Лишь стек функций, который будет выполнен по команде «.fire()»:
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 var C = $.Callbacks();
@@ -19,13 +17,14 @@ C.fire("Go");
 ```
 
 Если открыть консоль и запустить скрипт выше, то в результате получите что-то типа такого:
+
 ```
 >>>
 Go first
 Go second
 ```
 
-> _— А в чём сила, брат?_  
+> _— А в чём сила, брат?_\
 > _— В аргументах._
 
 По умолчанию вы можете прямо из консоли вызывать метод «.fire()» снова и снова, и будете получать один и тот же результат раз за разом. А можно задать поведение Callbacks через флаги:
@@ -39,8 +38,6 @@ Go second
 `stopOnFalse` — как только какая-нибудь функция вернёт «false», процесс запуска остановится
 
 Наверное, будет лучше с примерами, вот «once»:
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 var C = $.Callbacks("once");
@@ -57,6 +54,7 @@ C.fire("Go");
 
 C.fire("Again"); // не даст результата, только Go
 ```
+
 ```
 >>>
 Go first
@@ -64,8 +62,6 @@ Go second
 ```
 
 C «memory» посложнее, будьте внимательней:
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 var C = $.Callbacks("memory");
@@ -82,6 +78,7 @@ C.add(function(msg) {
 
 C.fire("Again");
 ```
+
 ```
 >>>
 Go first
@@ -91,8 +88,6 @@ Again second
 ```
 
 Пример с уникальностью прост до безобразия:
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 var C = $.Callbacks("unique");
@@ -113,8 +108,6 @@ Go first
 ```
 
 Флаг «stopOnFalse»:
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 var C = $.Callbacks("stopOnFalse");
@@ -138,13 +131,7 @@ Go first
 
 Перечисленные флаги можно комбинировать и получать интересные результаты, а можно не получать, а лишь посмотреть на следующий пример. Вот заготовка для работы:
 
-<div style="position:relative">
-<div id="car" style="position:absolute;width:200px;height:200px;top:-100px;right:24px;display:none">
-<img src="../assets/img/car.svg" alt="Car"/>
-</div>
-</div>
-
-{% jqbEval %}{% endjqbEval %}
+![Car](../.gitbook/assets/car.svg)
 
 ```javascript
 // машинка
@@ -155,8 +142,6 @@ var C = $.Callbacks();
 
 Добавьте команды по передвижению автомобиля в произвольном порядке и количестве. Для этого следует запустить перечисленные ниже скрипты (никаких изменений с машинкой до запуска метода «fire()» не будет):
 
-{% jqbEval %}{% endjqbEval %}
-
 ```javascript
 C.add(function(speed) {
     $car.queue(function() { // поворот вниз, ставим в очередь с анимацией
@@ -165,8 +150,6 @@ C.add(function(speed) {
     $car.animate({top:"+=800"}, speed); // едем вниз
 });
 ```
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 C.add(function(speed) {
@@ -177,8 +160,6 @@ C.add(function(speed) {
 });
 ```
 
-{% jqbEval %}{% endjqbEval %}
-
 ```javascript
 C.add(function(speed) {
     $car.queue(function() { // поворот вправо, ставим в очередь с анимацией
@@ -187,8 +168,6 @@ C.add(function(speed) {
     $car.animate({left:"+=400"}, speed); // едем вправо
 });
 ```
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 C.add(function(speed) {
@@ -200,8 +179,6 @@ C.add(function(speed) {
 ```
 
 Поехали!
-
-{% jqbEval %}{% endjqbEval %}
 
 ```javascript
 // запускаем «программу»

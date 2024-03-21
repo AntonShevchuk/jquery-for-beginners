@@ -1,8 +1,7 @@
-## Step-by-step {#step-by-step}
+# Step-by-step
 
 Хотелось бы отдельно остановиться на функции «step», и для наглядности приведу пример реализации подобной функции, которая отображает текущее значение анимированного параметра:
 
-{% jqbRun "#animation" %}{% endjqbRun %}
 ```javascript
 // элемент, который будет использоваться для вывода информации
 var $h2 = $('h2');
@@ -17,16 +16,11 @@ var customStep = function(now, obj) {
     obj.options; // опции настроек анимации
     now;         // текущее значение анимированного параметра, вычисляется как
                  // now = (obj.end - obj.start) * obj.pos
-    
+
     $h2.html(obj.prop +': '+now+obj.unit); // вывод текста
 };
 // вызываем анимацию с произвольной функцией
 $("img").animate({height: "-=10px"}, {step: customStep});
 ```
-
-{% jqbFrame "animation", "../code/animation.html", height="400px" %}
-{% sticky %}
-{% reload %}
-{% endjqbFrame %}
 
 > _Мне ни разу не приходилось использовать step-функции, лишь только для этого примера._
