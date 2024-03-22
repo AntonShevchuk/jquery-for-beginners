@@ -2,13 +2,23 @@
 
 Также, стоит вспомнить, что у DOM-элементов бывают атрибуты отличные от класса, и мы их тоже можем изменять. Для этого нам потребуются следующие методы:
 
-`attr(attrName)` — получение значения атрибута
 
-`attr(attrName, attrValue)` — установка значения атрибута (также можно использовать hash либо функцию обратного вызова)
 
-`removeAttr(attrName)` — удаление атрибута
+<table><thead><tr><th width="317">метод</th><th>описание</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">attr(attrName) 
+</code></pre></td><td>получение значения атрибута</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">attr(attrName, value)
+</code></pre></td><td>установка значения атрибута</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript"><strong>attr({
+</strong>  attribute:value,
+  attribute:value
+})
+</code></pre></td><td>установка нескольких значений</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">attr(attrName,
+  function(index, value) {
+    return value
+  }
+)
+</code></pre></td><td>используя функцию обратного вызова<br><code>index</code> это порядковый номер элемента в выборке<br><code>value</code> — текущее значение атрибута</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">removeAttr(attrName) 
+</code></pre></td><td>удаление атрибута</td></tr></tbody></table>
 
-Атрибуты – это всё то, что мы видим внутри угловых скобочек, когда пишем HTML-код:
+Атрибуты – это всё то, что мы видим внутри угловых скобок, когда пишем HTML-код:
 
 ```markup
 <!-- В данном примере это href, title, class -->

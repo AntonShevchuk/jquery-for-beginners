@@ -2,34 +2,53 @@
 
 Ну, вроде с CSS разобрались, хотя нет — стоит ещё описать манипуляции с классами, тоже из разряда первичных навыков:
 
-`addClass(className)` — добавление класса элементу
+<table data-header-hidden><thead><tr><th width="413">метод</th><th>описание</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">addClass(className)
+</code></pre></td><td>добавление класса элементу</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">addClass(function(index, currentClass){
+  return className
+})
+</code></pre></td><td>добавление класса с помощью функции обратного вызова</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">hasClass(className)
+</code></pre></td><td>проверка на причастность к определённому классу</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">removeClass(className)
+</code></pre></td><td>удаление класса</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">removeClass(function(index, currentClass){
+  return className
+})
+</code></pre></td><td>удаление класса с помощью функции обратного вызова</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">toggleClass(className)
+</code></pre></td><td>переключение класса</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">toggleClass(className, state)
+</code></pre></td><td>переключение класса по флагу <code>state</code></td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript"><strong>toggleClass(function(index, currentClass, state) {
+</strong>  return className
+}, state)
+</code></pre></td><td>переключение класса с помощью функции обратного вызова, флаг <code>state</code> опционален</td></tr></tbody></table>
 
-`addClass(function(index, currentClass){ return className })` — добавление класса с помощью функции обратного вызова
+{% hint style="info" %}
+В приведённых методах в качестве `className` может быть строка, содержащая список классов через пробел.
+{% endhint %}
 
-`hasClass(className)` — проверка на причастность к определённому классу
+> Мне ни разу не приходилось использовать данные методы с функциями обратного вызова, и лишь единожды пригодился флаг «state», так что не заморачивайтесь всё это запоминать, да и в дальнейшем, цитируя руководство по jQuery, я буду сознательно опускать некоторые «возможности».
 
-`removeClass(className)` — удаление класса
+Но хватит заниматься переводом официальной документации, перейдем к наглядным примерам.
 
-`removeClass(function(index, currentClass){ return className })` — удаление класса с помощью функции обратного вызова
+В первую очередь — добавление классов:
 
-`toggleClass(className)` — переключение класса
+```javascript
+// добавляем класс «active»
+$("#my").addClass("active")
 
-`toggleClass(className, switch)` — переключение класса по флагу switch
+// добавляем несколько классов за раз
+$("#my").addClass("active notice")
+```
 
-`toggleClass(function(index, currentClass, switch){ return className }, switch)` — переключение класса с помощью функции обратного вызова
+Переключение классов так же востребованный метод:
 
-> _В приведённых методах в качестве «className» может быть строка, содержащая список классов через пробел._
->
-> _Мне ни разу не приходилось использовать данные методы с функциями обратного вызова, и лишь единожды пригодился флаг «switch», так что не заморачивайтесь всё это запоминать, да и в дальнейшем, цитируя руководство по jQuery, я буду сознательно опускать некоторые «возможности»._
+```javascript
+// переключаем класс «active»:
+//  - удаляем класс, если он есть
+//  - добавляем, если его нет
+$("#my").toggleClass("active")
 
-Но хватит заниматься переводом официальной документации, перейдём к наглядным примерам:
+// переключаем несколько классов
+$("#my").toggleClass("active notice")
+```
 
-* добавляем класс «active»
-* добавляем несколько классов за раз
-* переключаем класс «active»
-* переключаем несколько классов
-
-Работает переключение классов следующим образом (это похоже на классовый XOR):
+Работает переключение нескольких классов следующим образом:
 
 ```markup
 <div id="my" class="active notice"> → <div id="my" class="">
@@ -39,5 +58,12 @@
 <div id="my" class=""> → <div id="my" class="active notice">
 ```
 
-* удаляем класс «active»
-* удаляем несколько классов
+Ну и примеры с удалением, для полного комплекта, так сказать:
+
+```javascript
+// удаляем класс «active»
+$("#my").removeClass("active") 
+
+// удаляем несколько классов за раз
+$("#my").removeClass("active notice")
+```

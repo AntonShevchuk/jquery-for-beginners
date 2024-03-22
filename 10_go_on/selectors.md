@@ -1,68 +1,74 @@
 # Селекторы
 
-Как я уже говорил ранее, в поиске элементов на странице заключается практически половина успешной работы с jQuery. Так что приступим к поискам по документу:
+Как я уже говорил ранее, в поиске элементов на странице заключается практически половина успешной работы с jQuery. Так что приступим к поискам по документу.
 
+### Идентификатор и классы
 
+Выбор элементов по `id` либо имени класса, аналогично используемым в CSS:
 
-А теперь приступим к выборкам — выбор элементов по «id» либо имени класса, аналогично используемым в CSS:
+<table data-header-hidden><thead><tr><th width="303">селектор</th><th></th></tr></thead><tbody><tr><td><code>$("#content")</code></td><td>выбираем элемент с <code>id="content"</code></td></tr><tr><td><code>$("section#content")</code></td><td>выбираем <code>&#x3C;section></code> с <code>id="content"</code></td></tr><tr><td><code>$(".intro")</code></td><td>выбираем элементы с <code>class="intro"</code></td></tr><tr><td><code>$(".intro.pinned")</code></td><td>выбираем элементы с классами <code>intro</code> и <code>pinned</code></td></tr><tr><td><code>$("h3")</code></td><td>выбираем все теги <code>&#x3C;h3></code></td></tr><tr><td><code>$("h1, h2")</code></td><td>выбираем все теги <code>&#x3C;h1></code> и <code>&#x3C;h2></code></td></tr></tbody></table>
 
-– выбираем элемент с «`id="content"`»
+{% hint style="info" %}
+Используйте валидные имена классов и идентификаторов
+{% endhint %}
 
-– выбираем `<section>` с «`id="content"`»
-
-– выбираем элементы с «`class="intro"`»
-
-– выбираем всё `<p>` с «`class="intro"`»
-
-– выбираем элементы с классами «`intro`» и «`pinned`»
-
-– выбираем все теги `<h3>`
-
-– выбираем все теги `<h1>` и `<h2>`
-
-_Используйте валидные имена классов и идентификаторов_
+### Дочерние элементы
 
 Теперь вспомним, что мы в DOMе не одни, это-таки иерархическая структура:
 
-– выбираем все теги `<h3>` внутри тега `<article>`
+<table data-header-hidden><thead><tr><th width="307">селектор</th><th></th></tr></thead><tbody><tr><td><code>$("article h3")</code></td><td>выбираем все теги <code>&#x3C;h3></code> внутри тега <code>&#x3C;article></code></td></tr><tr><td><code>$("article").find("h3")</code></td><td>аналогично примеру выше</td></tr><tr><td><code>$("section article h3")</code></td><td>выбираем все теги <code>&#x3C;h3></code> внутри тега <code>&#x3C;article></code>, которые находятся внутри тега <code>&#x3C;section></code>, <em>в DOMе который построил Джек</em></td></tr><tr><td><code>$("section")</code><br>  <code>.find("article")</code><br>  <code>.find("h3")</code></td><td>и ещё раз, но на другой лад, и под капотом работает иначе, но мы про это ещё поговорим</td></tr></tbody></table>
 
-– аналогично примеру выше
+### Соседние элементы
 
-– выбираем все теги `<h3>` внутри тега `<article>`, которые находятся внутри тега `<section>`, _в DOMе который построил Джек_
+У нас есть соседи, и у нас с ними налажен контакт. Вот вам несколько способов как найти их:
 
-– и ещё раз, но на другой лад
+<table data-header-hidden><thead><tr><th width="309">селектор</th><th></th></tr></thead><tbody><tr><td><code>$("article + article")</code></td><td>выбор всех элементов <code>&#x3C;article></code>, перед которыми есть тег <code>&#x3C;article></code></td></tr><tr><td><code>$("#stick ~ article")</code></td><td>выбор всех элементов <code>&#x3C;article></code> после элемента с <code>id="stick"</code></td></tr><tr><td><code>$("#stick").next()</code></td><td>выбор следующего элемента после элемента с <code>id="stick"</code></td></tr></tbody></table>
 
-У нас есть соседи, и у нас с ними налажен контакт. Вот вам несколько способов как найти один и тот же элемент:
+### Потомки и родители
 
-– выбор всех элементов `<article>`, перед которыми есть тег `<article>`
+Родственные связи решают:
 
-– выбор всех элементов `<article>` после элемента с «`id="stick"`»
+<table data-header-hidden><thead><tr><th width="306">селектор</th><th></th></tr></thead><tbody><tr><td><code>$("article > h3")</code></td><td>выбираем все теги <code>&#x3C;h3></code>, которые являются непосредственными потомками тега <code>&#x3C;article></code></td></tr><tr><td><code>$("article > *")</code></td><td>выбор всех потомков элементов <code>&#x3C;article></code></td></tr><tr><td><code>$("article").children()</code></td><td>аналогично примеру выше</td></tr><tr><td><code>$("p").parent()</code></td><td>выбор всех прямых предков элементов <code>&#x3C;p></code></td></tr><tr><td><code>$("p").parents()</code></td><td>выбор всех предков элементов <code>&#x3C;p></code><br>достаточно экзотичная задача</td></tr><tr><td><code>$("p").parents("section")</code></td><td>выбор всех предков элемента <code>&#x3C;p></code>, которые есть <code>&#x3C;section></code> (<code>parents()</code> принимает в качестве параметра селектор)</td></tr></tbody></table>
 
-– выбор следующего элемента после элемента с «`id="stick"`»
+{% hint style="info" %}
+`$("*")` – выбор всех элементов; следует использовать с огромной осторожностью
+{% endhint %}
 
-Родственные связи:
+### Поиск по атрибутам
 
-`$("*")` – выбор всех элементов; **никогда не используйте!**
+Ещё со времён CSS2 была возможность найти элемент с определёнными атрибутами, в [CSS3](https://www.w3.org/TR/selectors-3/) расширили возможности [поиска по атрибутам](https://www.w3.org/TR/selectors-3/#attribute-selectors):\`
 
-– выбираем все теги `<h3>`, которые являются непосредственными потомками тега `<article>`
+<table data-header-hidden><thead><tr><th width="306">селектор</th><th></th></tr></thead><tbody><tr><td><code>$("a[href]")</code></td><td>все ссылки с атрибутом <code>href</code></td></tr><tr><td><code>$("a[href=#]")</code></td><td>все ссылки с <code>href=#</code></td></tr><tr><td><code>$("a[href~=#]")</code></td><td>все ссылки с <code>#</code> где-то в <code>href</code></td></tr><tr><td><code>$("a[hreflang|=en]")</code></td><td><p>все ссылки, со словом <code>en</code> в <code>hreflang</code> </p><p>символ <code>-</code>  воспринимается как разделитель для слов:  <code>en</code>, <code>en-US</code>, <code>en-UK</code></p></td></tr><tr><td><code>$("a[href^=https]")</code></td><td>ссылки, начинающиеся с <code>https</code></td></tr><tr><td><code>$("a[href*='google.com']")</code></td><td>ссылки на «погуглить»</td></tr><tr><td><code>$("a[href$=.pdf]")</code></td><td>ссылки на PDF-файлы (по идее)</td></tr></tbody></table>
 
-– выбор всех потомков элементов `<article>`
+{% hint style="info" %}
+Если вы решите заглянуть внутрь jQuery, то вы, скорей всего, найдете то самое место, где ваше выражение будет анализироваться с помощью регулярных выражений, по этой причине в селекторах необходимо экранировать специальные символы, используя двойной обратный слеш «`\\`»:
 
-– аналогично примеру выше
+```javascript
+$("a[href^=\\/]").addClass("internal");
+```
+{% endhint %}
 
-– выбор всех прямых предков элементов `<p>`
+### Структурные псевдоклассы
 
-– выбор всех предков элементов `<p>`; очень экзотичная задача, вряд ли понадобится
+Хотелось бы ещё обратить внимание на [структурные псевдоклассы](https://www.w3.org/TR/selectors-3/#structural-pseudos) из спецификации [CSS3](https://www.w3.org/TR/selectors-3/), там много интересных и полезных, например:
 
-– выбор всех предков элемента `<p>`, которые есть `<section>` (`parents()` принимает в качестве параметра селектор)
+<table data-header-hidden><thead><tr><th width="321">селектор</th><th></th></tr></thead><tbody><tr><td><code>$("ul li:first-child")</code></td><td>первый дочерний элемент</td></tr><tr><td><code>$("ul li:last-child")</code></td><td>последний дочерний элемент</td></tr><tr><td><code>$("ul li:nth-child(2n+1)")</code></td><td><p>выборка элементов по несложному уравнению </p><p>подробнее можно прочитать в статье «<a href="https://web-standards.ru/articles/nth-child/">Как работает nth-child</a>»</p></td></tr></tbody></table>
 
-_Если хотите поиграться с селекторами от души, то откройте соответствующую страничку_ [_css.selectors.html_](https://anton.shevchuk.name/book/code/css.selectors.html) _в новой вкладке, и с использованием консоли запустите скрипт `$("p").effect("highlight")`_
+### Псевдокласс отрицания
+
+Псевдокласс отрицания `:not()` единственный в своём роде, он позволяет выбрать все элементы, что не подпадают под вложенную выборку в скобках
+
+<table data-header-hidden><thead><tr><th width="321">селектор</th><th></th></tr></thead><tbody><tr><td><code>$("a:not(.active)")</code></td><td>все ссылки <code>&#x3C;a></code> без класса <code>active</code></td></tr><tr><td><code>$("a").not(".active")</code></td><td>аналогичный результат, используя метод <code>.not()</code></td></tr></tbody></table>
+
+> Если хотите поиграться с селекторами от души, то откройте страничку [css.selectors.html](https://anton.shevchuk.name/book/code/css.selectors.html) в новой вкладке,  и там вы сможете потренироваться в написании селекторов используя меню справа
+
+### Результаты «выборов»
 
 Когда с помощью перечисленных запросов вы нашли (или не нашли) DOM-элементы, вам вернётся jQuery-объект, который будет содержать массив этих элементов. Вот так это будет выглядеть для запроса
 
 :
 
-![jQuery length](../.gitbook/assets/jquery-length.png)
+![jQuery length](../assets/img/jquery-length.png)
 
 Возможно, вы заметили свойство `length`. Да-да, именно так, это количество найденных элементов. Так что мы можем легко получить оное число с помощью следующего кода:
 
@@ -84,48 +90,4 @@ alert( $("p")[0].innerText.length )
 
 ```javascript
 alert( $("p").get(0).innerText.length )
-```
-
-## Поиск по атрибутам
-
-Ещё со времён CSS 2 была возможность найти элемент с определёнными атрибутами, в CSS 3 добавили ещё возможностей по поиску:
-
-`a[href]` — все ссылки с атрибутом «`href`»
-
-`a[href=#]` — все ссылки с «`href=#`»
-
-`a[href~=#]` — все ссылки с «`#`» где-то в «`href`»
-
-`a[hreflang|=en]` — все ссылки, для которых `hreflang` начинается с «`en`» и обрезается по символу «`-`» — «`en`», «`en-US`», «`en-UK`»
-
-`a[href^=https]` — ссылки, начинающиеся с «`https`»
-
-`a[href*="google.com"]` — ссылки на погуглить
-
-`a[href$=.pdf]` — ссылки на PDF-файлы (по идее)
-
-{% hint style="info" %}
-Заглянув внутрь jQuery, вы, скорей всего, найдёте то место, где ваше выражение будет анализироваться с помощью регулярных выражений, по этой причине в селекторах необходимо экранировать специальные символы, используя двойной обратный слеш «`\\`»:
-{% endhint %}
-
-```javascript
-$("a[href^=\\/]").addClass("internal");
-```
-
-## Поиск по дочерним элементам
-
-Хотелось бы ещё обратить внимание на селекторы из спецификации [CSS3](https://www.w3.org/TR/selectors-3/) — много интересных:
-
-`:first-child` — первый дочерний элемент
-
-`:last-child` — последний дочерний элемент
-
-`:nth-child(2n+1)` — выборка элементов по несложному уравнению подробнее можно прочитать в статье «[Как работает nth-child](https://web-standards.ru/articles/nth-child/)»
-
-`:not(…)` — выбрать те, что не подпадают под вложенную выборку
-
-Но поскольку не все браузеры знакомы с селекторами из CSS 3, то мы можем использовать jQuery для назначения стилей:
-
-```javascript
-$("div:last-child").addClass("last-paragraph")
 ```

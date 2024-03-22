@@ -1,12 +1,8 @@
 ---
-cover: .gitbook/assets/cover.jpg
-coverY: 133.2927308447937
+description: Антон Шевчук
 layout:
-  cover:
-    visible: true
-    size: full
   title:
-    visible: true
+    visible: false
   description:
     visible: false
   tableOfContents:
@@ -19,4 +15,4 @@ layout:
 
 # jQuery для начинающих
 
-Антон Шевчук
+<figure><img src=".gitbook/assets/cover.jpg" alt=""><figcaption></figcaption></figure>

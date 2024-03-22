@@ -1,6 +1,20 @@
 # Свойства
 
-Кроме атрибутов также есть свойства элементов, к ним относятся «selectedIndex», «tagName», «nodeName», «nodeType», «ownerDocument», «defaultChecked» и «defaultSelected». Ну, вроде бы, список невелик, можно и запомнить. Для работы со свойствами используем методы из семейства «.prop()»:
+Кроме атрибутов также есть свойства элементов, к ним относятся `selectedIndex`, `tagName`, `nodeName`, `nodeType`, `ownerDocument`, `defaultChecked` и `defaultSelected`. Ну, вроде бы, список невелик, можно и запомнить. Для работы со свойствами используем методы из семейства `prop()`:
+
+<table data-header-hidden><thead><tr><th width="305">метод</th><th>описание</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">prop(propertyName)
+</code></pre></td><td>получение значения свойства</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">prop(propertyName, value)
+</code></pre></td><td>установка значения свойства</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">prop({
+  propertyName:value,
+  propertyName:value
+})
+</code></pre></td><td>установка нескольких значений</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">prop(propName,
+  function(index, value) {
+    return value
+  }
+)
+</code></pre></td><td>используя функцию обратного вызова<br><code>index</code> это порядковый номер элемента в выборке<br><code>value</code> — текущее значение атрибута</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">removeProp(propName)
+</code></pre></td><td>удаление свойства (скорей всего, никогда не понадобится)</td></tr></tbody></table>
 
 `prop(propName)` — получение значения свойства
 

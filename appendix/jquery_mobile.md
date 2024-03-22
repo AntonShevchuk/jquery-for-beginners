@@ -6,8 +6,8 @@
 
 Я не буду рассматривать все компоненты данного фреймворка, приведу лишь некоторые скриншоты (взяты с официального сайта [http://jquerymobile.com/](http://jquerymobile.com/)):
 
-| ![jQuery Mobile Dialog](../.gitbook/assets/jquery-mobile-dialog.png) |  ![jQuery Mobile Tabs](../.gitbook/assets/jquery-mobile-tabs.png) ![jQuery Mobile Form](../.gitbook/assets/jquery-mobile-checkboxes.png) |
-| -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| ![jQuery Mobile Dialog](../assets/img/jquery-mobile-dialog.png) |  ![jQuery Mobile Tabs](../assets/img/jquery-mobile-tabs.png) ![jQuery Mobile Form](../assets/img/jquery-mobile-checkboxes.png) |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 
 > _Для jQMobile существует свой собственный_ [_ThemeRoller_](http://jquerymobile.com/themeroller/)_._
 

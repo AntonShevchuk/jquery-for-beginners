@@ -54,7 +54,7 @@
   * [Animate](90\_create\_plugin/animate.md)
   * [Easing](90\_create\_plugin/easing.md)
   * [Sizzle](90\_create\_plugin/sizzle.md)
-* [100% Последняя глава](100\_last\_chapter.md)
+* [100% Последняя глава](100\_last\_chapter/README.md)
 * [Дополнение](appendix/README.md)
   * [jQuery-inlog](appendix/jquery-inlog.md)
   * [jQuery UI](appendix/jquery\_ui.md)

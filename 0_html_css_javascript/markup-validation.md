@@ -16,4 +16,4 @@
 </html>
 ```
 
-_Если сомневаетесь в своих знаниях, проверьте данный код на странице_ [_https://validator.w3.org/nu/#textarea_](https://validator.w3.org/nu/#textarea)
+> Если сомневаетесь в своих знаниях, проверьте данный код на странице [https://validator.w3.org/nu/#textarea](https://validator.w3.org/nu/#textarea)
