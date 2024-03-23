@@ -4,7 +4,7 @@
 
 Копать начнём с более досконального изучения метода `.css()`:
 
-<table data-header-hidden><thead><tr><th width="318">метод</th><th>описание</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">css(property)
+<table data-header-hidden data-full-width="false"><thead><tr><th width="402">метод</th><th>описание</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">css(property)
 </code></pre></td><td>получение значения CSS-свойства</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">css(property, value)
 </code></pre></td><td>установка значения CSS-свойства</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript"><strong>css({
 </strong>  property:value,
