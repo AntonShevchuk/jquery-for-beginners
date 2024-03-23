@@ -66,9 +66,9 @@ jQuery.easing = {
 
 Получим следующие производные функции:
 
-|              **heartIn**              |               **heartOut**              |                **heartInOut**               |
-| :-----------------------------------: | :-------------------------------------: | :-----------------------------------------: |
-| ![heartIn](../assets/img/heartIn.png) | ![heartOut](../assets/img/heartOut.png) | ![heartInOut](../assets/img/heartInOut.png) |
+|                 **heartIn**                |                 **heartOut**                 |                  **heartInOut**                  |
+| :----------------------------------------: | :------------------------------------------: | :----------------------------------------------: |
+| ![heartIn](../.gitbook/assets/heartIn.png) | ![heartOut](../.gitbook/assets/heartOut.png) | ![heartInOut](../.gitbook/assets/heartInOut.png) |
 
 Работать с данным творением надо следующим образом:
 

@@ -68,7 +68,7 @@ $("a[href^=\\/]").addClass("internal");
 
 :
 
-![jQuery length](../assets/img/jquery-length.png)
+![jQuery length](../.gitbook/assets/jquery-length.png)
 
 Возможно, вы заметили свойство `length`. Да-да, именно так, это количество найденных элементов. Так что мы можем легко получить оное число с помощью следующего кода:
 
