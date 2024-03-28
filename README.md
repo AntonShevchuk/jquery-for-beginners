@@ -1,5 +1,5 @@
 ---
-description: Антон Шевчук
+description: Учебник на понятном языке
 layout:
   title:
     visible: false

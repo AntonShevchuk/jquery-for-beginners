@@ -565,7 +565,7 @@ class User {
 const me = new User("Anton");
 ```
 
-> Опять отправлю [читать учебники по JavaScript](https://learn.javascript.ru/class) :)&#x20;
+> Опять отправлю [читать учебник по JavaScript](https://learn.javascript.ru/class) :)&#x20;
 
 Простая задачка для закрепления материала:&#x20;
 

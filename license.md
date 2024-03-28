@@ -6,17 +6,17 @@
 
 — [https://antonshevchuk.gitbooks.io/jquery-for-beginners/](https://antonshevchuk.gitbooks.io/jquery-for-beginners/)
 
-Исходный код книги доступен на GitHub:
-
-— [https://github.com/antonshevchuk/jquery-book](https://github.com/AntonShevchuk/jquery-book)
-
-Исходный код всех примеров так же доступен на GitHub:
-
-— [https://github.com/antonshevchuk/jquery-for-beginners](https://github.com/AntonShevchuk/jquery-for-beginners)
-
 PDF и ePub версии доступны для загрузки на моём персональном блоге:
 
 — [https://anton.shevchuk.name/jquery-book/](https://anton.shevchuk.name/jquery-book/)
+
+Исходный код книги доступен на GitHub:
+
+— [https://github.com/AntonShevchuk/jquery-for-beginners](https://github.com/AntonShevchuk/jquery-for-beginners)
+
+Исходный код всех примеров так же доступен на GitHub:
+
+— [https://github.com/AntonShevchuk/jquery-for-beginners-code](https://github.com/AntonShevchuk/jquery-for-beginners-code)
 
 Если хотите поделиться книгой с другом — отправьте ему ссылку на мой блог, любые иные способы «поделиться» нежелательны.
 

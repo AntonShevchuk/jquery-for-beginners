@@ -7,8 +7,8 @@
 <table data-header-hidden data-full-width="false"><thead><tr><th width="402">метод</th><th>описание</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">css(property)
 </code></pre></td><td>получение значения CSS-свойства</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">css(property, value)
 </code></pre></td><td>установка значения CSS-свойства</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript"><strong>css({
-</strong>  property:value,
-  property:value
+</strong>  property1: value,
+  property2: value
 })
 </code></pre></td><td>установка нескольких значений</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">css(property,
   function(index, value) {
@@ -18,7 +18,7 @@
 </code></pre></td><td>тут для установки значения используется функция обратного вызова (в просторечии — callback-функция), <code>index</code> это порядковый номер элемента в выборке, <code>value</code> — текущее значение свойства</td></tr></tbody></table>
 
 {% hint style="info" %}
-Метод «.css()» возвращает текущее значение, а не прописанное в CSS-файле по указанному селектору.
+Метод `.css()` возвращает текущее значение, а не прописанное в CSS-файле по указанному селектору.
 {% endhint %}
 
 Приведу примеры использования:
@@ -58,3 +58,7 @@ $("#my").css("font-size", function(i, value){
     return parseFloat(value) * 1.5;
 })
 ```
+
+Наглядный интерактивный пример:
+
+{% embed url="https://anton.shevchuk.name/book/code/css.html" %}

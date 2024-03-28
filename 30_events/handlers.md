@@ -19,6 +19,8 @@ $("p").on("click", function() {
 
 Запустите код выше в [песочнице](https://anton.shevchuk.name/book/code/sandbox.html), и попробуйте кликнуть по параграфу.
 
+{% embed url="https://anton.shevchuk.name/book/code/sandbox.html" %}
+
 Можете данный обработчик запустить программно:
 
 ```javascript

@@ -153,7 +153,7 @@ p { color: hsla( 0, 100%, 50%, 0.5) } /* полупрозрачный красн
 {% hint style="info" %}
 Для самостоятельного изучения:
 
-— [Раскладка в CSS: позиционирование](http://softwaremaniacs.org/blog/2005/08/03/css-layout-positioning/) — слегка устаревшая статья, но всё же она тут
+— [Раскладка в CSS: позиционирование](https://softwaremaniacs.org/blog/2005/08/03/css-layout-positioning/) — слегка устаревшая статья, но всё же она тут
 
 — [CSS-position](https://developer.mozilla.org/ru/docs/Web/CSS/position) — мануалы на dev.mozilla.org всегда актуальны, не всегда с переводом
 

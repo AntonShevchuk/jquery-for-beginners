@@ -1,4 +1,4 @@
-# Оптимизируем выборки
+# Оптимизация
 
 {% hint style="danger" %}
 Ну, перво-наперво, вам следует запомнить, что&#x20;
@@ -33,8 +33,9 @@ $("a.button").addClass("active");
 $("a.button").click(function(){ /* ... */ });
 
 // стало
-$("a.button").addClass("active")
-    .click(function(){ /* ... */ });
+$("a.button")
+  .addClass("active")
+  .click(function(){ /* ... */ });
 ```
 
 * Использовать `context` (это такой второй параметр при выборе по селектору):
@@ -58,7 +59,7 @@ $(".content a.button");
 $(".content h3.title");
 
 // стало
-var $content = $(".content")
+let $content = $(".content")
 $content.find("a.button");
 $content.find("h3.title");
 ```
@@ -79,19 +80,25 @@ $(".content div").find("input:disabled");
 
 Для наглядности лучше всего взглянуть на сравнительный тест [benchmark.html](https://anton.shevchuk.name/book/code/benchmark.html):
 
-> Данный тест выполняет поиск элементов несколькими способами и был изначально разработан Ильёй Кантором для мастер-класса по JavaScript и jQuery
->
-> Маленькая хитрость от создателей jQuery – запросы по id элемента не доходят до Sizzle, а скармливаются `document.getElementById()` в качестве параметра:
+<figure><img src="../.gitbook/assets/benchmark.png" alt=""><figcaption></figcaption></figure>
 
+> Данный тест выполняет поиск элементов несколькими способами и был изначально разработан Ильёй Кантором для мастер-класса по JavaScript и jQuery
+
+{% hint style="info" %}
+Маленькая хитрость от создателей jQuery – запросы по id элемента не доходят до Sizzle, а скармливаются `document.getElementById()` в качестве параметра:
+
+{% code fullWidth="false" %}
 ```javascript
 $("#content");
 // -> 
 document.getElementById("content");
 ```
+{% endcode %}
+{% endhint %}
 
 ## Примеры оптимизаций
 
-Выбор по идентификатору элемента — самый быстрый из возможных, старайтесь использовать оный:
+Выбор по идентификатору элемента — самый быстрый из возможных, старайтесь использовать оный если есть такая возможность:
 
 ```javascript
 // внутри одна регулярочка + getElementById()
@@ -112,6 +119,17 @@ $("#content").filter("div");
 $("div#content");
 ```
 
-В результате [тестирования](https://jsperf.app/biwafe) получаем, что пример с использованием `.filter()` работает быстрее на 20-30%, но всё же, подобная тонкая оптимизация нужна далеко не всегда.
+Но и тут есть разница в производительности, в результате [тестирования](https://jsperf.app/biwafe) получаем, что пример с использованием `.filter()` работает быстрее на 20-30%:
 
+{% tabs %}
+{% tab title="Chrome" %}
+<figure><img src="../.gitbook/assets/chrome-benchmark.png" alt=""><figcaption><p>Testing in Chrome</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="Safari" %}
+<figure><img src="../.gitbook/assets/safari-benchmark.png" alt=""><figcaption><p>Testing in Safari</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+
+Но всё же, подобная тонкая оптимизация нужна далеко не всегда. \
 Выводы делаем сами.

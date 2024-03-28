@@ -172,10 +172,7 @@ _— Зачем мне всё это?_ — работая с jQuery, вы дол
     <p id="pinned" class="intro">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
       Curabitur semper imperdiet felis, sit amet imperdiet arcu
-      varius et. Donec condimentum pulvinar sollicitudin. 
-      Nunc facilisis erat vel nunc mollis, dapibus consequat justo
-      finibus. Donec suscipit rhoncus nisl eu scelerisque. 
-      Curabitur semper urna ac ante aliquam sollicitudin. 
+      varius et. Donec condimentum pulvinar sollicitudin.
     </p>
   </article>
   <article class="news">
@@ -184,9 +181,6 @@ _— Зачем мне всё это?_ — работая с jQuery, вы дол
       Sed rutrum accumsan ultricies. Nunc iaculis enim vel augue 
       porta pellentesque. Nunc efficitur ex non ullamcorper ultricies.
       Nunc tempus vulputate enim, non egestas orci sodales eget.
-      Morbi congue mi ac vehicula egestas. Ut imperdiet metus lectus,
-      in elementum quam viverra vel. Suspendisse egestas cursus nibh,
-      vitae lobortis ipsum congue sit amet.
     </p>
   </article>
 </section>

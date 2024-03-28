@@ -2,13 +2,11 @@
 
 Также, стоит вспомнить, что у DOM-элементов бывают атрибуты отличные от класса, и мы их тоже можем изменять. Для этого нам потребуются следующие методы:
 
-
-
-<table><thead><tr><th width="317">метод</th><th>описание</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">attr(attrName) 
+<table data-header-hidden><thead><tr><th width="317">метод</th><th>описание</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">attr(attrName) 
 </code></pre></td><td>получение значения атрибута</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">attr(attrName, value)
 </code></pre></td><td>установка значения атрибута</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript"><strong>attr({
-</strong>  attribute:value,
-  attribute:value
+</strong>  attribute1: value,
+  attribute2: value
 })
 </code></pre></td><td>установка нескольких значений</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">attr(attrName,
   function(index, value) {
@@ -43,3 +41,4 @@ $("img").attr("alt");
 // изменение адреса картинки
 $("img").attr("src", "/images/default.png");
 ```
+
