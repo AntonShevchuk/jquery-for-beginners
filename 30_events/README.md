@@ -1,63 +1,49 @@
-# 30% События {#30}
+# 30% События
 
 Прежде чем приступить к прочтению данной главы, стоит определиться, что же из себя представляют события web-страницы. Так вот, события – это любые действия пользователя, будь то ввод данных с клавиатуры, проматывание страницы или передвижения мышки, и, конечно же, «клики».
 
-> _А ещё существуют события, создаваемые скриптами, и их обработчики – триггеры и хэндлеры, но о них чуть позже._
+> А ещё существуют события, создаваемые скриптами, и их обработчики – триггеры и хэндлеры, но о них чуть позже.
 
 jQuery работает практически со всеми событиями в JavaScript, приведу список самых востребованных с небольшими пояснениями:
 
-`click` — клик по элементу (порядок событий: «mousedown» → «mouseup» → «click»)
+<table data-header-hidden><thead><tr><th width="210">событие</th><th>описание</th></tr></thead><tbody><tr><td><code>click</code></td><td>клик по элементу;<br>порядок событий: <code>mousedown</code> → <code>mouseup</code> → <code>click</code></td></tr><tr><td><code>dblclick</code></td><td>двойной щелчок мышки</td></tr><tr><td><code>mousedown</code></td><td>нажатие клавиши мыши</td></tr><tr><td><code>mouseup</code></td><td>отжатие клавиши мыши</td></tr><tr><td><code>mousemove</code></td><td>движение курсора</td></tr><tr><td><code>mouseenter</code></td><td>наведение курсора на элемент;<br>не срабатывает при переходе фокуса на дочерние элементы</td></tr><tr><td><code>mouseleave</code></td><td>вывод курсора из элемента;<br>не срабатывает при переходе фокуса на дочерние элементы</td></tr><tr><td><code>mouseover</code></td><td>наведение курсора на элемент</td></tr><tr><td><code>mouseout</code></td><td>вывод курсора из элемента</td></tr></tbody></table>
 
-`dblclick` — двойной щелчок мышки
+{% embed url="https://anton.shevchuk.name/book/code/events.mouse.html" %}
 
-`mousedown` — нажатие клавиши мыши
-
-`mouseup` — отжатие клавиши мыши
-
-`mousemove` — движение курсора
-
-`mouseenter` — наведение курсора на элемент; не срабатывает при переходе фокуса на дочерние элементы
-
-`mouseleave` — вывод курсора из элемента; не срабатывает при переходе фокуса на дочерние элементы
-
-`mouseover` — наведение курсора на элемент
-
-`mouseout` — вывод курсора из элемента
-
-Вот вам пример с [событиями мышки](http://anton.shevchuk.name/book/code/events.mouse.html):
-
-{% jqbFrame "mouse-example", "../code/events.mouse.html", height="620px" %}{% endjqbFrame %}
+***
 
 Идём дальше. Вот ещё десяток событий, по большей части они относятся лишь к элементам форм:
 
-`focus` — получение фокуса на элементе; актуально для «input\[type=text\]», но в современных браузерах работает и с другими элементами
+<table data-header-hidden><thead><tr><th width="221">событие</th><th>описание</th></tr></thead><tbody><tr><td><code>focus</code></td><td>получение фокуса на элементе; <br>актуально для <code>input[type=text]</code>, но в современных браузерах работает и с другими элементами</td></tr><tr><td><code>blur</code></td><td>фокус ушёл с элемента;<br>срабатывает при клике по другому элементу на странице или по событию клавиатуры (к примеру переключение по tab'у)</td></tr><tr><td><code>focusin</code></td><td>фокус на элементе; <br>данное событие аналогично <code>focus</code>, но при этом умеет «всплывать»</td></tr><tr><td><code>focusout</code></td><td>фокус ушёл с элемента;<br>данное событие аналогично <code>blur</code>, «всплывает» (подробнее про различия вы можете прочитать в статье «<a href="https://learn.javascript.ru/focus-blur">Фокусировка: focus/blur</a>»)</td></tr></tbody></table>
 
-`blur` — фокус ушёл с элемента; срабатывает при клике по другому элементу на странице или по событию клавиатуры (к примеру переключение по tab'у)
+{% hint style="info" %}
+Вплоть до 4-ой версии jQuery, порядок событий был следующим:
 
-`focusin` — фокус на элементе; данное событие аналогично `focus`, но при этом умеет «всплывать»
+* `focusout`
+* `blur`
+* `focusin`
+* `focus`
 
-`focusout` — фокус ушёл с элемента; данное событие аналогично `blur`, «всплывает» (подробнее про различия вы можете прочитать в статье «[Фокусировка: focus/blur](https://learn.javascript.ru/focus-blur)»)
+С jQuery версии 4.0 порядок событий будет соответствовать текущей спецификации [W3C](https://www.w3.org/TR/uievents/#events-focusevent-event-order):
 
-`change` — изменение значения элемента (значение при потере фокуса отличается от начального значения при получении фокуса)
+* `blur`
+* `focusout`
+* `focus`
+* `focusin`
 
-`keydown` — нажатие клавиши на клавиатуре
+Единственным браузером, который имеет иной порядок остаётся IE, но ирония заключается в том, что IE в своё время был единственным браузером, который следовал предыдущей спецификации W3C, а все остальные браузеры использовали свой порядок событий, который вот только в 2023-м году стал стандартом ¯\\\_(ツ)\_/¯
+{% endhint %}
 
-`keypress` — удержание клавиши на клавиатуре, последовательность «keydown → keypress → keyup» (только для буковок-циферок)
+<table data-header-hidden><thead><tr><th width="221">событие</th><th>описание</th></tr></thead><tbody><tr><td><code>change</code></td><td>изменение значения элемента (значение при потере фокуса отличается от начального значения при получении фокуса)</td></tr><tr><td><code>keydown</code></td><td>нажатие клавиши на клавиатуре</td></tr><tr><td><code>keypress</code></td><td>удержание клавиши на клавиатуре, последовательность <code>keydown</code> → <code>keypress</code> → <code>keyup</code> (только для буковок-циферок)</td></tr><tr><td><code>keyup</code></td><td>отжатие клавиши на клавиатуре</td></tr><tr><td><code>select</code></td><td>выбор текста для <code>input[type=text]</code> и <code>textarea</code></td></tr><tr><td><code>submit</code></td><td>отправка формы</td></tr></tbody></table>
 
-`keyup` — отжатие клавиши на клавиатуре
+{% embed url="https://anton.shevchuk.name/book/code/events.form.html" %}
 
-`select` — выбор текста для «input\[type=text\]» и «textarea»
+***
 
-`submit` — отправка формы
+Так же стоит упомянуть ещё парочку популярных событий с которыми доводится работать:
 
-Вдогонку [наглядный пример](http://anton.shevchuk.name/book/code/events.form.html):
+<table data-header-hidden><thead><tr><th width="223">событие</th><th>описание</th></tr></thead><tbody><tr><td><code>resize</code></td><td>изменение размеров документа</td></tr><tr><td><code>scroll</code></td><td>прокрутка элемента или окна</td></tr></tbody></table>
 
-{% jqbFrame "form-example", "../code/events.form.html", height="740px" %}{% endjqbFrame %}
-
-Так же стоит упомянуть ещё парочку популярных событий:
-
-`resize` — изменение размеров документа
-
-`scroll` — прокрутка элемента или окна
-
-> _Нет нужды запоминать все события: вы всегда найдёте их на страницах [MDN от Mozilla](https://developer.mozilla.org/ru/docs/Web/Events)._
+{% hint style="info" %}
+Нет нужды запоминать все события — вы всегда найдёте их на страницах [MDN от Mozilla](https://developer.mozilla.org/ru/docs/Web/Events).
+{% endhint %}

@@ -117,3 +117,5 @@ $("body").on("click", "div:not", e => false);
 Описал многое, но не всё, полное руководство доступно на официальном сайте:
 
 * [jQuery Core 3.0 Upgrade Guide](https://jquery.com/upgrade-guide/3.0/)
+* [jQuery Core 3.5 Upgrade Guide](https://jquery.com/upgrade-guide/3.5/)
+

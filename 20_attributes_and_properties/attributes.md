@@ -4,8 +4,8 @@
 
 <table data-header-hidden><thead><tr><th width="317">метод</th><th>описание</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">attr(attrName) 
 </code></pre></td><td>получение значения атрибута</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">attr(attrName, value)
-</code></pre></td><td>установка значения атрибута</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript"><strong>attr({
-</strong>  attribute1: value,
+</code></pre></td><td>установка значения атрибута</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">attr({
+  attribute1: value,
   attribute2: value
 })
 </code></pre></td><td>установка нескольких значений</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">attr(attrName,

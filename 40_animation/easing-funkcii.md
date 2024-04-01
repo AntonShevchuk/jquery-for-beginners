@@ -4,7 +4,7 @@ description: Функции для реалистичной анимации
 
 # Easing функции
 
-Поигрались и хватит, пора усложнить вам жизнь. У метода `animate()` может быть более одного параметра, и пора приступить к их разбору. Набор параметров может быть разным; приведу первый, тот, что попроще:
+Поигрались и хватит, пора усложнить вам жизнь. У метода `animate()` может быть более одного аргументов, и пора приступить к их разбору. Набор аргументов может быть разным; приведу первый, тот, что попроще:
 
 <table data-header-hidden><thead><tr><th width="243">параметр</th><th>назначение</th></tr></thead><tbody><tr><td><code>properties</code></td><td>CSS-свойства – с этим мы уже познакомились</td></tr><tr><td><code>duration</code></td><td>скорость анимации, уже упоминалась ранее, указывается в миллисекундах, или используя ключевые слова «<code>fast</code>» или «<code>slow</code>»</td></tr><tr><td><code>easing</code></td><td>указываем, какую функцию будем использовать для изменения значений</td></tr><tr><td><code>complete</code></td><td>функция, которая будет вызвана после окончания анимации</td></tr></tbody></table>
 
@@ -34,8 +34,10 @@ jQuery.easing = {
 `p` – коэффициент прохождения анимации, изменяется от 0 до 1.
 {% endhint %}
 
-> Сложно? Хотите больше и сразу? Тогда ищите easing plugin на странице [https://gsgd.co.uk/sandbox/jquery/easing/](https://gsgd.co.uk/sandbox/jquery/easing/), он действительно из разряда «must have».
->
+Хотите больше easing-функций? Тогда ищите easing plugin на странице [https://gsgd.co.uk/sandbox/jquery/easing/](https://gsgd.co.uk/sandbox/jquery/easing/), он действительно из разряда «must have».
+
 > В качестве путеводителя по easing-функциям можете использовать страничку [https://easings.net/](https://easings.net/).
+
+О том, как написать свою функцию для анимации я расскажу попозже.
 
 {% embed url="https://anton.shevchuk.name/book/code/animate.easing.html" %}
