@@ -60,7 +60,7 @@ _— Зачем мне всё это?_ — работая с jQuery, вы дол
     </article>
   </section>
   <footer>
-      © copyright 2018
+      © jQuery for beginners
   </footer>
 </body>
 </html>

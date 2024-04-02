@@ -8,7 +8,7 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     ```
 
-    > Данный способ хорош для работы в offline или при слишком медленном соединении с интернетом. Отдельно стоит обратить внимание на путь — скрипты собраны в отдельной папке «js». И это не случайно, нужно приучать себя к порядку.
+    > Данный способ хорош для работы в offline или при слишком медленном соединении с интернетом. Отдельно стоит обратить внимание на путь — скрипты собраны в отдельной папке «`js`». И это не случайно, нужно приучать себя к порядку.
 2.  Используем [CDN](https://ru.wikipedia.org/wiki/Content\_Delivery\_Network). Я предпочитаю сервис от компании [Google](https://developers.google.com/speed/libraries/#jquery), но есть ещё [Microsoft](https://docs.microsoft.com/en-us/aspnet/ajax/cdn/overview), а так же универсальные [https://cdnjs.com/](https://cdnjs.com/libraries/jquery) и [https://www.jsdelivr.com/](https://www.jsdelivr.com/package/npm/jquery), многие, кстати, размещают много популярных плагинов, за что им отдельное спасибо.
 
     > Так же есть CDN, предоставляемый и самими разработчиками jQuery, но он отнюдь не такой продвинутый, как у других, и на моей памяти у него были проблемы со стабильностью, так что будьте аккуратней при работе с ним – [https://releases.jquery.com/](https://releases.jquery.com/)
