@@ -2,7 +2,7 @@
 
 Для удобства разработки AJAX-запросы бросают несколько событий, и их, естественно, можно и нужно обрабатывать. jQuery позволяет обрабатывать эти события для каждого AJAX-запроса и в отдельности и глобально. Приведу схемку, на которой наглядно виден порядок возникновения событий в jQuery:
 
-<figure><img src="../.gitbook/assets/events.svg" alt=""><figcaption><p>Ajax Events</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/events.svg" alt=""><figcaption><p>AJAX Events</p></figcaption></figure>
 
 Вот и полный список событий с небольшими ремарками:
 

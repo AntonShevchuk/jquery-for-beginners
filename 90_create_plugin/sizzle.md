@@ -58,7 +58,7 @@ $("a:anchor");
 $("a:external");
 ```
 
-Поскольку «из коробки» данный функционал не доступен, мы напишем его сами. Для этого нам понадобится не так уж и много (пример лишь для последнего `:external`, рабочий код на странице [sizzle.filter.html](http://anton.shevchuk.name/book/code/sizzle.filter.html)):
+Поскольку «из коробки» данный функционал не доступен, мы напишем его сами. Для этого нам понадобится не так уж и много (пример лишь для последнего `:external`, рабочий код на странице [sizzle.filter.html](https://anton.shevchuk.name/book/code/sizzle.filter.html)):
 
 ```javascript
 $.extend($.expr.pseudos, {
@@ -90,7 +90,8 @@ $.extend($.expr.pseudos, {
 {% hint style="danger" %}
 ВСЕГДА используйте фильтр вместе с HTML-тегом, который ищете:
 
-<pre class="language-javascript"><code class="lang-javascript"><strong>$("tag:filter")
+<pre class="language-javascript"><code class="lang-javascript"><strong>// tag name + filter!
+</strong><strong>$("div:filter")
 </strong></code></pre>
 {% endhint %}
 
