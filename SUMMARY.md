@@ -56,6 +56,7 @@
   * [When](70\_deferred\_and\_callbacks/when.md)
   * [Callbacks](70\_deferred\_and\_callbacks/callbacks.md)
 * [80% Работа с формами](80\_forms/README.md)
+  * [События](80\_forms/sobytiya.md)
   * [Манипуляциия над элементами](80\_forms/manipulation.md)
 * [90% Пишем свой плагин](90\_create\_plugin/README.md)
   * [jQuery плагин](90\_create\_plugin/jquery\_plugin.md)
