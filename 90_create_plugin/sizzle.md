@@ -87,6 +87,8 @@ $.extend($.expr.pseudos, {
 });
 ```
 
+{% embed url="https://anton.shevchuk.name/book/code/sizzle.filter.html" %}
+
 {% hint style="danger" %}
 ВСЕГДА используйте фильтр вместе с HTML-тегом, который ищете:
 

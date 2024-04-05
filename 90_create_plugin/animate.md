@@ -61,7 +61,7 @@ unit: "px"
 
 В консоли у нас будет очень много данных, т.к. приведённый метод вызывается N раз в зависимости от продолжительности анимации, при этом «tween.pos» постепенно наращивает своё значение с 0 до 1. По умолчанию наращивание происходит линейно, если надо как-то иначе, то стоит посмотреть на easing плагин или дочитать раздел до конца (об этом я уже упоминал в главе [Анимация](../40\_animation/)).
 
-Даже при таком раскладе мы уже можем изменять выбранный элемент (путём манипуляций над `tween.elem`), но есть более удобный способ – можно установить свойство «run» объекта `tween`:
+Даже при таком раскладе мы уже можем изменять выбранный элемент (путём манипуляций над `tween.elem`), но есть более удобный способ – можно установить свойство «`run`» объекта `tween`:
 
 ```javascript
 $.Tween.propHooks.color = {
@@ -98,7 +98,7 @@ $.Tween.propHooks.color = {
 
 > Код функций `parseColor()` и `buildColor()` вы найдёте в листинге на странице [color.html](https://anton.shevchuk.name/book/code/color.html).
 
-Результатом станет плавное перетекание исходного цвета к красному (#F00 == #FF0000 == 255,0,0), вживую можно посмотреть на странице:
+Результатом станет плавное перетекание исходного цвета к красному (`#F00` == `#FF0000` == `(255, 0, 0)`), вживую можно посмотреть на странице [color.html](https://anton.shevchuk.name/book/code/color.html):
 
 {% embed url="https://anton.shevchuk.name/book/code/color.html" %}
 
@@ -121,7 +121,9 @@ jQuery.Animation.prefilter(function(element, props, opts) {
 });
 ```
 
-> Пример можно пощупать [animate.prefilter.html](http://anton.shevchuk.name/book/code/animate.prefilter.html).
+Пример можно пощупать на странице [animate.prefilter.html](http://anton.shevchuk.name/book/code/animate.prefilter.html):
+
+{% embed url="https://anton.shevchuk.name/book/code/animate.prefilter.html" %}
 
 Про `jQuery.Animation.tweener` также много не расскажешь, но пример получилось сделать чуток интересней – приведённый код позволяет анимировать ширину и высоту объекта по заданной диагонали:
 
@@ -149,6 +151,6 @@ jQuery.Animation.tweener( "diagonal", function( property, value ) {
 });
 ```
 
-Пример работы:
+Пример работы [animate.tweener.html](https://anton.shevchuk.name/book/code/animate.tweener.html):
 
 {% embed url="https://anton.shevchuk.name/book/code/animate.tweener.html" %}
