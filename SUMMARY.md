@@ -72,6 +72,6 @@
   * [Ещё плагины](appendix/plugins.md)
   * [Обновление на версию 2.х](appendix/update-to-version-2.md)
   * [Обновление на версию 3.х](appendix/update-to-version-3.md)
-  * [Обновление на версию 4.х](appendix/obnovlenie-na-versiyu-4.kh.md)
+  * [Обновление на версию 4.х](appendix/update-to-version-4.md)
 * [История изменений](changelog.md)
 * [Благодарности](thanks.md)
