@@ -81,6 +81,6 @@ jQuery.easing = {
 $("#my").animate({height:"+200px"}, 2000, "heartIn"); // вот оно
 ```
 
-Пример работы данной функции можно пощупать на соответствующей странице [easing.html](https://anton.shevchuk.name/book/code/easing.html):
+Пример работы данной функции можно пощупать на соответствующей странице [animate.easing.html](https://anton.shevchuk.name/book/code/animate.easing.html):
 
-{% embed url="https://anton.shevchuk.name/book/code/easing.html" %}
+{% embed url="https://anton.shevchuk.name/book/code/animate.easing.html" %}

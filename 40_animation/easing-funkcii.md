@@ -36,8 +36,8 @@ jQuery.easing = {
 
 Хотите больше easing-функций? Тогда ищите easing plugin на странице [https://gsgd.co.uk/sandbox/jquery/easing/](https://gsgd.co.uk/sandbox/jquery/easing/), он действительно из разряда «must have».
 
+{% embed url="https://anton.shevchuk.name/book/code/easing.html" %}
+
 > В качестве путеводителя по easing-функциям можете использовать страничку [https://easings.net/](https://easings.net/).
 
 О том, как написать свою функцию для анимации я расскажу попозже.
-
-{% embed url="https://anton.shevchuk.name/book/code/animate.easing.html" %}
