@@ -4,7 +4,7 @@
 
 Текст книги доступен онлайн на платформе GitBook:
 
-— [https://antonshevchuk.gitbooks.io/jquery-for-beginners/](https://antonshevchuk.gitbooks.io/jquery-for-beginners/)
+— [https://antonshevchuk.gitbook.io/jquery-for-beginners/](https://antonshevchuk.gitbook.io/jquery-for-beginners)
 
 PDF и ePub версии доступны для загрузки на моём персональном блоге:
 
