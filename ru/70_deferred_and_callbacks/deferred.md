@@ -88,7 +88,7 @@ D.catch(function() { console.error("again fail") });
 
 Чтобы не путаться в перечисленных методах, приведу блок-схему:
 
-<figure><img src="../.gitbook/assets/deferred.svg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/deferred.svg" alt=""><figcaption></figcaption></figure>
 
 При вызове [`resolve()`](https://api.jquery.com/deferred.resolve/) и [`reject()`](https://api.jquery.com/deferred.reject/) можно передать произвольные данные в зарегистрированные callback-функции для дальнейшей работы:
 

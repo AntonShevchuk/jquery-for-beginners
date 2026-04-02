@@ -80,7 +80,7 @@ $(".content div").find("input:disabled");
 
 Для наглядности лучше всего взглянуть на сравнительный тест [benchmark.html](https://anton.shevchuk.name/book/code/benchmark.html):
 
-<figure><img src="../.gitbook/assets/benchmark.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/benchmark.png" alt=""><figcaption></figcaption></figure>
 
 > Данный тест выполняет поиск элементов несколькими способами и был изначально разработан Ильёй Кантором для мастер-класса по JavaScript и jQuery
 
@@ -123,11 +123,11 @@ $("div#content");
 
 {% tabs %}
 {% tab title="Chrome" %}
-<figure><img src="../.gitbook/assets/chrome-benchmark.png" alt=""><figcaption><p>Testing in Chrome</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/chrome-benchmark.png" alt=""><figcaption><p>Testing in Chrome</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Safari" %}
-<figure><img src="../.gitbook/assets/safari-benchmark.png" alt=""><figcaption><p>Testing in Safari</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/safari-benchmark.png" alt=""><figcaption><p>Testing in Safari</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 

@@ -98,7 +98,7 @@ $("#box").stop("x") // останавливаем анимацию в очере
 $('#player').show()
 ```
 
-![Mario Player](../.gitbook/assets/mario.svg)
+![Mario Player](../../.gitbook/assets/mario.svg)
 
 Скрипт с обработчиком события `keydown` уже запущен, и вы можете заставить Марио бегать по странице используя «стрелочки» или клавиши `R`, `D`, `F` и `G`:
 

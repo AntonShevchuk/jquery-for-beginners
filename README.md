@@ -1,18 +1,5 @@
----
-description: Учебник на понятном языке
-layout:
-  title:
-    visible: false
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
+# jQuery for Beginners
 
-# jQuery для начинающих
+A multilingual textbook about jQuery.
 
-<figure><img src=".gitbook/assets/cover.jpg" alt=""><figcaption></figcaption></figure>
+Available in: [Русский](ru/) | [Українська](uk/) | [English](en/)

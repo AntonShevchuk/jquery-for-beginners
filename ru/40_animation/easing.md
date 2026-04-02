@@ -10,11 +10,11 @@ description: Функции для реалистичной анимации
 
 Из приведённых параметров нам только «`easing`» не встречался ранее – я его берёг для данного момента. Этот параметр указывает, какая функция будет использоваться для процесса анимации значений. Это могут быть линейные, квадратичные, кубические и любые другие функции. «Из коробки» мы можем выбрать лишь между «`linear`»:
 
-<figure><img src="../.gitbook/assets/linear.svg" alt="" width="563"><figcaption><p>linear</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/linear.svg" alt="" width="563"><figcaption><p>linear</p></figcaption></figure>
 
 и «`swing`»:
 
-<figure><img src="../.gitbook/assets/swing.svg" alt="" width="563"><figcaption><p>swing</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/swing.svg" alt="" width="563"><figcaption><p>swing</p></figcaption></figure>
 
 Заглянув в код jQuery, мы легко найдём соответствующий код:
 

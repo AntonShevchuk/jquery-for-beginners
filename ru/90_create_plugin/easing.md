@@ -6,7 +6,7 @@ description: Это не easy
 
 Теперь опять обратимся к `easing` – приведу пример произвольной функции, которой будет следовать анимация. Дабы особо не фантазировать, я взял пример из статьи на когда-то популярном Хабре oб анимации в MooTools фреймворке – наглядный пример с сердцебиением, которое описывается следующими функциями:
 
-<figure><img src="../.gitbook/assets/easing.svg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/easing.svg" alt=""><figcaption></figcaption></figure>
 
 В расширении функционала easing нет ничего военного:
 
@@ -73,7 +73,7 @@ $.extend(jQuery.easing, {
 
 |                 **heartIn**                |                 **heartOut**                 |                  **heartInOut**                  |
 | :----------------------------------------: | :------------------------------------------: | :----------------------------------------------: |
-| ![heartIn](../.gitbook/assets/heartIn.png) | ![heartOut](../.gitbook/assets/heartOut.png) | ![heartInOut](../.gitbook/assets/heartInOut.png) |
+| ![heartIn](../../.gitbook/assets/heartIn.png) | ![heartOut](../../.gitbook/assets/heartOut.png) | ![heartInOut](../../.gitbook/assets/heartInOut.png) |
 
 Работать с данным творением надо следующим образом:
 

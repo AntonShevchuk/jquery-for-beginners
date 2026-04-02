@@ -10,25 +10,25 @@ description: https://www.jqwidgets.com/
 
 
 
-    <figure><img src="../.gitbook/assets/jqxGrid.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/jqxGrid.png" alt=""><figcaption></figcaption></figure>
 *   jqxChart – виджет для построения разнообразных графиков с помощью HTML, CSS и JavaScript, сделано всё очень и очень культурно, особенно выделю функцию по сохранению графика как картинки, иногда очень её не хватает:
 
 
 
-    <figure><img src="../.gitbook/assets/jqxChart.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/jqxChart.png" alt=""><figcaption></figcaption></figure>
 *   jqxGauge – этот виджет не часто встретишь и в более именитых фреймворках, но по сути – это некий измеритель, т.е. с его помощью можно нарисовать спидометр, манометр, термометр или иной измерительный прибор с произвольной шкалой:
 
 
 
-    <figure><img src="../.gitbook/assets/jqxGauge.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/jqxGauge.png" alt=""><figcaption></figcaption></figure>
 *   jqxTreeMap – ещё один редкий вид, скорее даже уникальный, с его помощью можно построить связанное дерево в виде организованных прямоугольников. Если ничего не понятно, то лучше посмотреть [демку](https://www.jqwidgets.com/jquery-widgets-demo/demos/jqxtreemap/index.htm#demos/jqxtreemap/defaultfunctionality.htm), ну и скриншот прилагаю:
 
 
 
-    <figure><img src="../.gitbook/assets/jqxTreeMap.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/jqxTreeMap.png" alt=""><figcaption></figcaption></figure>
 *   jqxTree – это уже не столь экзотический виджет; как понятно из названия, будем сажать деревья: &#x20;
 
-    <img src="../.gitbook/assets/jqxTree.png" alt="jqxTree" data-size="original">
+    <img src="../../.gitbook/assets/jqxTree.png" alt="jqxTree" data-size="original">
 
 На этом обзор «крутых» виджетов можно заканчивать, углубляться в скучные и обыденные обёртки над элементами форм мне не хочется. Замечу лишь, что во многом данный фреймворк обходит jQuery UI, но не всё так радужно в этом королевстве:
 
