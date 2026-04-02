@@ -45,7 +45,7 @@ jQuery UI представляет из себя набор виджетов и 
 *   Spinner – ещё один удобный контрол для форм, опять же, в HTML 5 уже есть:
 
     ![jQuery UI Spinner](../../.gitbook/assets/spinner.png)
-*   Tabs – они же табы, достаточно популярный элемент в web-разработке, и так же, как и «Accordion», вполне заменяем простым кодом (см. [tabs.html](http://anton.shevchuk.name/book/code/tabs.html)):
+*   Tabs – они же табы, достаточно популярный элемент в web-разработке, и так же, как и «Accordion», вполне заменяем простым кодом (см. [tabs.html](https://anton.shevchuk.name/book/code/tabs.html)):
 
     ![jQuery UI Tabs](../../.gitbook/assets/tabs.png)
 * Tooltip – вот и последний виджет, всплывающие подсказки; простой и должен быть востребован, ну а там жизнь покажет

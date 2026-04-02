@@ -23,7 +23,7 @@ $.widget("book.expose", {
   // метод отвечает за применение настроек
   _setOption: function( key, value ) {
       // применяем изменения настроек
-      this._super("_setOption", key, value );
+      this._super( key, value );
   },
   // метод _destroy должен быть антиподом к _create
   // он должен убрать все изменения, внесенные в DOM, и убрать все обработчики, если таковые были
@@ -122,7 +122,7 @@ this._trigger("incomingCall");
 
 // подписываемся на событие при инициализации виджета
 $("#my").expose({
-  incommingCall: function(ev) {
+  incomingCall: function(ev) {
     console.log("din-don");
   }
 })
@@ -146,8 +146,8 @@ $("#my").on("exposeincomingCall", function() {
 {
   options: {
     hide: {
-      effect: "slideDown", // настройки эквиваленты вызову
-      duration: 500        // .slideDown( 500)
+      effect: "slide",     // настройки эквиваленты вызову
+      duration: 500        // .hide("slide", 500)
     }
   }
 }
@@ -190,4 +190,4 @@ $("#my").expose({ "disabled": true }) // или false
 Информация по теме разработки виджетов:
 
 * [Understanding jQuery UI widgets: A tutorial](https://bililite.com/blog/understanding-jquery-ui-widgets-a-tutorial/)
-* [Coding your First jQuery UI Plugin](http://net.tutsplus.com/tutorials/javascript-ajax/coding-your-first-jquery-ui-plugin/)
+* [Coding your First jQuery UI Plugin](https://net.tutsplus.com/tutorials/javascript-ajax/coding-your-first-jquery-ui-plugin/)

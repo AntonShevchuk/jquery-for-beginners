@@ -11,7 +11,7 @@
 > И ещё пару интересных ресурсов в нагрузку:
 >
 > * [https://doka.guide/](https://doka.guide/) — справочник для веб-разработчиков
-> * [https://web.dev/explore](https://web.dev/explore)[ ](https://web.dev/explore)— тут целое сообщество
+> * [https://web.dev/explore](https://web.dev/explore) — тут целое сообщество
 
 Старайтесь избегать избыточных элементов на странице, большинство HTML-страниц грешат лишними блочными элементами:
 

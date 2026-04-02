@@ -1,4 +1,4 @@
-# Манипуляциия над элементами
+# Манипуляция над элементами
 
 Мы уже познакомились с методом `val()`. Данный метод отлично работает практически со всеми элементами формы. Угу, практически, вот с `<input type="radio">` установить значение таким образом не получится, тут потребуется небольшой workaround:
 
@@ -63,7 +63,7 @@ $("form").append('<select name="some"></select>');
 let $select = $("form select[name=role]");
 
 // добавим новый элемент в выпадающий список
-$select.append("<option value="manager">Manager</option>");
+$select.append('<option value="manager">Manager</option>');
 
 // выберем необходимый элемент
 $select.val("manager");

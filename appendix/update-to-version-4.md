@@ -6,8 +6,18 @@
 
 *   избавились от «багажа» старых браузеров: Internet Explorer 10, Edge Legacy, iOS <11, Firefox <65 и Android Browser;
 
-    > от Internet Explorer 11 обещают избавится в jQuery 5.0
-* удалили с дюжину функций, которые в 3.x были объявлены устаревшими;
+    > от Internet Explorer 11 обещают избавиться в jQuery 5.0
+* удалили с дюжину функций, которые в 3.x были объявлены устаревшими:
+  * shorthand-методы событий: `click()`, `dblclick()`, `mouseenter()`, `mouseleave()`, `hover()`, `keydown()`, `keyup()`, `keypress()`, `focus()`, `blur()`, `change()`, `submit()` и другие — используйте `on()` и `trigger()` вместо них;
+  * событие `keypress` — используйте `keydown` / `keyup`;
+  * `$.isArray()` — используйте `Array.isArray()`;
+  * `$.type()` — используйте `typeof` или `instanceof`;
+  * `$.isFunction()` — используйте `typeof fn === "function"`;
+  * `$.isWindow()` — используйте `window === obj`;
+  * `$.now()` — используйте `Date.now()`;
+  * `$.proxy()` — используйте `Function.prototype.bind()`;
+  * `$.trim()` — используйте `String.prototype.trim()`;
+  * `$.parseJSON()` — используйте `JSON.parse()`;
 *   навели порядок с порядком в событиях `blur` → `focusout` → `focus` → `focusin`, теперь так, и только так, в соответствии с новой редакцией от W3C;
 
     > теперь только у IE остался другой порядок, а ирония заключается в том, что только IE следовал предыдущей редакции W3C, и лишь в 2023-м году спецификацию изменили под реализацию в современных браузерах&#x20;

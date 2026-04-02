@@ -208,12 +208,13 @@ var D = $.Deferred();
 var money = 100; // наш бюджет
 
 // съём денежки
-D.progress(function($){
-    console.log(`${money} - ${$} = ${money-$}`);
-    if (money < $) { // деньги закончились
+D.progress(function(cost){
+    console.log(`${money} - ${cost} = ${money-cost}`);
+    if (money < cost) { // деньги закончились
         D.reject();
+        return;
     }
-    money -= $;
+    money -= cost;
 });
 
 // тратим деньги

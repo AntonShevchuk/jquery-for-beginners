@@ -11,7 +11,7 @@
 ```javascript
 // для листинга исходного кода будет использоваться подсветка синтаксиса
 function () {
-  setTimeOut("alert('Hello World!')", 5000);
+  setTimeout("alert('Hello World!')", 5000);
 }
 ```
 

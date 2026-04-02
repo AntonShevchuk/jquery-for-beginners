@@ -55,7 +55,7 @@ $.extend({name:"Anton", location:"Kharkiv"}, {location:"Kyiv"});
 Результат, конечно, интересен, но его можно ещё чуть-чуть расширить дополнительными функциями (развернём и скомбинируем):
 
 ```javascript
-jQuery.easing = {
+$.extend(jQuery.easing, {
     heartIn: function (x) {
         return $.easing.heart(x);
     },
@@ -66,7 +66,7 @@ jQuery.easing = {
         if (x < 0.5) return $.easing.heartIn(x);
         return $.easing.heartOut(x);
     }
-}ж
+});
 ```
 
 Получим следующие производные функции:

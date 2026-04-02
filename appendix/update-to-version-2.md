@@ -11,4 +11,4 @@
 > Ну ладно, не всё так гладко с совместимостью, был этот путь тернист, и проблемы с обновлением будут. Вот только искать причину нужно будет в списке изменений версии 1.9, именно эта версия стала поворотной в вопросе совместимости веток.
 >
 > * [How to build your own jQuery](https://github.com/jquery/jquery/)
-> * [jQuery Core 1.9 Upgrade Guide](http://jquery.com/upgrade-guide/1.9/)
+> * [jQuery Core 1.9 Upgrade Guide](https://jquery.com/upgrade-guide/1.9/)

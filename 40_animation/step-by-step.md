@@ -12,7 +12,7 @@ let $h2 = $("h2");
 // наша step-функция
 let customStep = function(now, fx) {
 
-    fx.elem;    // объект анимации
+    fx.elem;    // DOM-элемент, который анимируется
     fx.prop;    // параметр, который анимируется
     fx.start;   // начальное значение
     fx.end;     // конечное значение
@@ -38,7 +38,7 @@ $("img").animate({ height: "-=10px" }, { step: customStep });
 // при значении 'left' меньшем или равным нулю
 let limitForLeft = function (now, fx) {
   if (fx.prop === "left" && fx.start > fx.end && now <= 0) {
-    $(this).stop() 
+    $(fx.elem).stop() 
   }
 }
 ```

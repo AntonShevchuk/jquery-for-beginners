@@ -229,7 +229,7 @@ $.ajaxTransport("image", function (options) {
 $.ajax('../code/img/photo-cat.jpg', {
     dataType:'image',
     success: function(data) {
-        $('#image').html(data);
+        $('#image').html(data.image);
     }
 })
 ```

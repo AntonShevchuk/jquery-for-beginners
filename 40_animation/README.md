@@ -61,14 +61,14 @@ $("img").hide("slow", function() {
 <table data-header-hidden><thead><tr><th width="281">метод</th><th>описание</th><th data-hidden data-type="rating" data-max="5"></th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">fadeOut()
 </code></pre></td><td>изменяет <code>opacity</code> от текущего до <code>0</code></td><td>null</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">fadeIn()
 </code></pre></td><td>изменяет <code>opacity</code> от <code>0</code> до предыдущего значения</td><td>null</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">fadeToggle()
-</code></pre></td><td>переключатель между <code>In</code> и <code>Out</code></td><td>null</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">fadeTo(0.5)
+</code></pre></td><td>переключатель между <code>In</code> и <code>Out</code></td><td>null</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">fadeTo(duration, opacity)
 </code></pre></td><td>изменяет значение <code>opacity</code> до требуемого значения</td><td>null</td></tr></tbody></table>
 
 {% embed url="https://anton.shevchuk.name/book/code/fade.html" %}
 
 ***
 
-А теперь самое сладкое – все эффекты анимации в jQuery крутятся вокруг метода `animate()`. Данная функция берёт один или несколько CSS-свойств элемента и изменяет их от исходного до заданного за N-ое количество итераций (количество итераций зависит от указанного времени, но не реже одной итерации в 13 мс, если я правильно накопал это значение). Ну что же, от слов к делу, попробуем реализовать функции `fadeIn()` и `fadeout()` с помощью `animate()`:
+А теперь самое сладкое – все эффекты анимации в jQuery крутятся вокруг метода `animate()`. Данная функция берёт один или несколько CSS-свойств элемента и изменяет их от исходного до заданного за N-ое количество итераций (количество итераций зависит от указанного времени, но не реже одной итерации в 13 мс, если я правильно накопал это значение). Ну что же, от слов к делу, попробуем реализовать функции `fadeIn()` и `fadeOut()` с помощью `animate()`:
 
 ```javascript
 // fadeOut()

@@ -41,7 +41,7 @@ $("form").submit(function(){
 firstname=Ivan&lastname=Ivanov
 ```
 
-Также есть метод `serializeArray()` — он представляет собранные данные в виде объекта:
+Также есть метод `serializeArray()` — он представляет собранные данные в виде массива объектов:
 
 ```javascript
 [

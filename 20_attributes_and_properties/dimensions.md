@@ -22,8 +22,8 @@ $(document).height(); // высота HTML документа
 Методы `width()` и `width(width)` – ведут себя аналогично методу `height()`, но работают с шириной элемента:
 
 <table data-header-hidden><thead><tr><th width="323">метод</th><th>описание</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">width()
-</code></pre></td><td>возвращает ширину элемента за вычетом отступов и границ; <br><br>если у нас несколько элементов в выборке, то вернётся первый; <br><br>значение возвращается без указания единиц измерения</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">width(height)
-</code></pre></td><td><p></p><p>устанавливает ширину всех элементов в выборке; <br><br>если значение высоты передано без указания единиц измерения, то это будут пиксели <code>px</code></p></td></tr></tbody></table>
+</code></pre></td><td>возвращает ширину элемента за вычетом отступов и границ; <br><br>если у нас несколько элементов в выборке, то вернётся первый; <br><br>значение возвращается без указания единиц измерения</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">width(width)
+</code></pre></td><td><p></p><p>устанавливает ширину всех элементов в выборке; <br><br>если значение ширины передано без указания единиц измерения, то это будут пиксели <code>px</code></p></td></tr></tbody></table>
 
 {% hint style="warning" %}
 Методы `height()` и `width()` **не изменяют** своего поведения в зависимости от выбранной блочной модели, т.е. они всегда возвращают параметры области внутри `margin`, `padding` и `border` элемента.

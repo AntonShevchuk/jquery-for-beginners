@@ -8,7 +8,7 @@
 
 | `getElementById(id)`            | поиск по `id="…"`                    |
 | ------------------------------- | ------------------------------------ |
-| `getElementsByName(name)`       | поиск по `name="name"` и `id="name"` |
+| `getElementsByName(name)`       | поиск по `name="name"` |
 | `getElementsByClassName(class)` | поиск по `class="class"`             |
 | `getElementsByTagName(tag)`     | поиск по имени тега                  |
 | `querySelectorAll(selector)`    | поиск по произвольному CSS-селектору |
@@ -101,6 +101,6 @@ $("thead > .active, tbody > .active")
 }
 ```
 
-> Ой, зачем я вас всем этим гружу? Почитайте лучше об оптимизации запросов в следующем главе.
+> Ой, зачем я вас всем этим гружу? Почитайте лучше об оптимизации запросов в следующей главе.
 
 Официальная документация по библиотеке Sizzle доступна на [GitHub'е проекта](https://github.com/jquery/sizzle/wiki/).

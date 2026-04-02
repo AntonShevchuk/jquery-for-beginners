@@ -103,14 +103,14 @@ $.Tween.propHooks.color = {
 {% embed url="https://anton.shevchuk.name/book/code/color.html" %}
 
 {% hint style="info" %}
-В плагине [jQuery Color](https://github.com/jquery/jquery-color) для решения поставленной задачи использовали [jQuery.cssHooks](http://api.jquery.com/jQuery.cssHooks/), но мы же не ищем лёгких путей.
+В плагине [jQuery Color](https://github.com/jquery/jquery-color) для решения поставленной задачи использовали [jQuery.cssHooks](https://api.jquery.com/jQuery.cssHooks/), но мы же не ищем лёгких путей.
 {% endhint %}
 
 Ещё хотел было рассказать про префильтры анимации, но документации нет, а как использовать «в жизни», я не догадался, но чуть-чуть информации-таки накопал (код можно найти в функции `Animation`):
 
 ```javascript
 jQuery.Animation.prefilter(function(element, props, opts) {
-    // deffered объект animate
+    // deferred объект animate
     element; // искомый элемент
     props;   // настройки анимации из animate()
     opts;    // опции анимации
@@ -121,7 +121,7 @@ jQuery.Animation.prefilter(function(element, props, opts) {
 });
 ```
 
-Пример можно пощупать на странице [animate.prefilter.html](http://anton.shevchuk.name/book/code/animate.prefilter.html):
+Пример можно пощупать на странице [animate.prefilter.html](https://anton.shevchuk.name/book/code/animate.prefilter.html):
 
 {% embed url="https://anton.shevchuk.name/book/code/animate.prefilter.html" %}
 
