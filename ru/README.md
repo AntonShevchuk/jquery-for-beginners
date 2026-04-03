@@ -15,4 +15,4 @@ layout:
 
 # jQuery для начинающих
 
-<figure><img src="../.gitbook/assets/cover.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/cover-ru.jpg" alt=""><figcaption></figcaption></figure>
