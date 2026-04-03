@@ -9,7 +9,7 @@ We've got the basics down, now it's time to move on to actually studying jQuery.
     ```
 
     > This approach is great for working offline or when you have a really slow internet connection. Pay special attention to the path — scripts are collected in a separate folder "`js`". And this is no accident, you need to train yourself to keep things organized.
-2.  Use a [CDN](https://en.wikipedia.org/wiki/Content_Delivery_Network). I prefer the service from [Google](https://developers.google.com/speed/libraries/#jquery), but there's also [Microsoft](https://docs.microsoft.com/en-us/aspnet/ajax/cdn/overview), as well as the universal [https://cdnjs.com/](https://cdnjs.com/libraries/jquery) and [https://www.jsdelivr.com/](https://www.jsdelivr.com/package/npm/jquery) — many of them also host lots of popular plugins, which is pretty nice of them.
+2.  Use a [CDN](https://en.wikipedia.org/wiki/Content_Delivery_Network). I prefer the service from [Google](https://developers.google.com/speed/libraries/#jquery), but there's also [Microsoft](https://learn.microsoft.com/en-us/aspnet/ajax/cdn/overview), as well as the universal [https://cdnjs.com/](https://cdnjs.com/libraries/jquery) and [https://www.jsdelivr.com/](https://www.jsdelivr.com/package/npm/jquery) — many of them also host lots of popular plugins, which is pretty nice of them.
 
     > There's also a CDN provided by the jQuery developers themselves, but it's far from as advanced as the others, and from my experience it's had stability issues, so be careful when working with it – [https://releases.jquery.com/](https://releases.jquery.com/)
 

@@ -9,7 +9,7 @@
     ```
 
     > Цей спосіб добрий для роботи в offline або при надто повільному з'єднанні з інтернетом. Окремо варто звернути увагу на шлях — скрипти зібрані в окремій теці «`js`». І це не випадково, треба привчати себе до порядку.
-2.  Використовуємо [CDN](https://ru.wikipedia.org/wiki/Content_Delivery_Network). Я віддаю перевагу сервісу від компанії [Google](https://developers.google.com/speed/libraries/#jquery), але є ще [Microsoft](https://docs.microsoft.com/en-us/aspnet/ajax/cdn/overview), а також універсальні [https://cdnjs.com/](https://cdnjs.com/libraries/jquery) та [https://www.jsdelivr.com/](https://www.jsdelivr.com/package/npm/jquery), багато хто, до речі, розміщує багато популярних плагінів, за що їм окрема подяка.
+2.  Використовуємо [CDN](https://ru.wikipedia.org/wiki/Content_Delivery_Network). Я віддаю перевагу сервісу від компанії [Google](https://developers.google.com/speed/libraries/#jquery), але є ще [Microsoft](https://learn.microsoft.com/en-us/aspnet/ajax/cdn/overview), а також універсальні [https://cdnjs.com/](https://cdnjs.com/libraries/jquery) та [https://www.jsdelivr.com/](https://www.jsdelivr.com/package/npm/jquery), багато хто, до речі, розміщує багато популярних плагінів, за що їм окрема подяка.
 
     > Також є CDN, що надається самими розробниками jQuery, але він аж ніяк не такий просунутий, як в інших, і на моїй пам'яті в нього були проблеми зі стабільністю, тож будьте обережні при роботі з ним – [https://releases.jquery.com/](https://releases.jquery.com/)
 

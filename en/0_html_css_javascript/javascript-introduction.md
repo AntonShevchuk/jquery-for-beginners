@@ -679,9 +679,9 @@ A great exercise that fully illustrates the essence of the problem: "[An Army of
 Recommended articles on the topic:
 
 * [Context binding and currying: "bind"](https://javascript.info/bind)
-* [Explicit this: "call", "apply"](https://javascript.info/call-apply)
-* [Functions "from the inside", closures](https://javascript.info/closures)
-* [Using closures](https://javascript.info/closures-usage)
+* [Explicit this: "call", "apply"](https://javascript.info/call-apply-decorators)
+* [Functions "from the inside", closures](https://javascript.info/closure)
+* [Using closures](https://javascript.info/closure)
 * [Closures: Front to Back](https://code.tutsplus.com/closures-front-to-back--net-24869t)
 
 This JavaScript intro has dragged on. You'd better not be lazy and study the entire [textbook by Ilya Kantor](https://javascript.info/).

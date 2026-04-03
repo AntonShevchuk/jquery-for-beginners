@@ -679,9 +679,9 @@ alert(anotherFunc()); // => 5
 Рекомендовані статті з теми:
 
 * [Привязка контекста и карринг: "bind"](https://uk.javascript.info/bind)
-* [Явное указание this: "call", "apply"](https://uk.javascript.info/call-apply)
-* [Функции "изнутри", замыкания](https://uk.javascript.info/closures)
-* [Использование замыканий](https://uk.javascript.info/closures-usage)
+* [Явное указание this: "call", "apply"](https://uk.javascript.info/call-apply-decorators)
+* [Функции "изнутри", замыкания](https://uk.javascript.info/closure)
+* [Использование замыканий](https://uk.javascript.info/closure)
 * [Closures: Front to Back](https://code.tutsplus.com/closures-front-to-back--net-24869t)
 
 Уступна по JavaScript затягнулась, краще не полінуйтеся, і вивчіть весь [підручник від Іллі Кантора](https://uk.javascript.info/).

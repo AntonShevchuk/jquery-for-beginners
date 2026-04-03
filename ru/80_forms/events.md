@@ -123,6 +123,6 @@ $('form').submit(function() {
 
 <table><thead><tr><th width="262">событие</th><th>описание</th></tr></thead><tbody><tr><td><code>focus</code></td><td>фокус на элементе, для работы с данным событием так же есть «shorthand» метод <code>focus()</code>; потребуется, если надо вывести подсказку к элементу формы при наведении</td></tr><tr><td><code>blur</code></td><td>фокус ушёл с элемента + метод <code>blur()</code>; пригодится при валидации формы по мере заполнения полей</td></tr><tr><td><code>select</code></td><td>выбор текста в «<code>textarea</code>» и «<code>input[type=text]</code>» + метод <code>select()</code>; если соберётесь разрабатывать свой WYSIWYG, то познакомитесь очень плотно</td></tr></tbody></table>
 
-Примеры отслеживания всех событий формы доступны на странице [events.form.html](https://anton.shevchuk.name/book/code/events.form.html):
+Примеры отслеживания всех событий формы доступны на странице [form.events.html](https://anton.shevchuk.name/book/code/form.events.html):
 
-{% embed url="https://anton.shevchuk.name/book/code/events.form.html" %}
+{% embed url="https://anton.shevchuk.name/book/code/form.events.html" %}

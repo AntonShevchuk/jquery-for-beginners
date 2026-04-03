@@ -36,7 +36,7 @@ The only browser that has a different order is IE, but the irony is that IE was 
 
 <table data-header-hidden><thead><tr><th width="221">event</th><th>description</th></tr></thead><tbody><tr><td><code>change</code></td><td>element value changed (the value on blur differs from the initial value on focus)</td></tr><tr><td><code>keydown</code></td><td>keyboard key pressed</td></tr><tr><td><code>keypress</code></td><td>keyboard key held down, sequence: <code>keydown</code> → <code>keypress</code> → <code>keyup</code> (only for letters and numbers)</td></tr><tr><td><code>keyup</code></td><td>keyboard key released</td></tr><tr><td><code>select</code></td><td>text selection for <code>input[type=text]</code> and <code>textarea</code></td></tr><tr><td><code>submit</code></td><td>form submission</td></tr></tbody></table>
 
-{% embed url="https://anton.shevchuk.name/book/code/events.form.html" %}
+{% embed url="https://anton.shevchuk.name/book/code/form.events.html" %}
 
 ***
 

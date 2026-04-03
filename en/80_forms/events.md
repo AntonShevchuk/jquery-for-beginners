@@ -123,6 +123,6 @@ I wanted to come back to the list of form events and mention the missing ones:
 
 <table><thead><tr><th width="262">event</th><th>description</th></tr></thead><tbody><tr><td><code>focus</code></td><td>focus on an element; there's also a shorthand method <code>focus()</code> for working with this event; you'll need it if you want to show a hint for a form element on focus</td></tr><tr><td><code>blur</code></td><td>focus left the element + the <code>blur()</code> method; useful for validating the form as fields are being filled in</td></tr><tr><td><code>select</code></td><td>text selection in "<code>textarea</code>" and "<code>input[type=text]</code>" + the <code>select()</code> method; if you ever set out to build your own WYSIWYG, you'll get to know this one really well</td></tr></tbody></table>
 
-Examples of tracking all form events are available on the [events.form.html](https://anton.shevchuk.name/book/code/events.form.html) page:
+Examples of tracking all form events are available on the [form.events.html](https://anton.shevchuk.name/book/code/form.events.html) page:
 
-{% embed url="https://anton.shevchuk.name/book/code/events.form.html" %}
+{% embed url="https://anton.shevchuk.name/book/code/form.events.html" %}

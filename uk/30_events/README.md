@@ -36,7 +36,7 @@ jQuery працює практично з усіма подіями в JavaScrip
 
 <table data-header-hidden><thead><tr><th width="221">подія</th><th>опис</th></tr></thead><tbody><tr><td><code>change</code></td><td>зміна значення елемента (значення при втраті фокуса відрізняється від початкового значення при отриманні фокуса)</td></tr><tr><td><code>keydown</code></td><td>натискання клавіші на клавіатурі</td></tr><tr><td><code>keypress</code></td><td>утримування клавіші на клавіатурі, послідовність <code>keydown</code> → <code>keypress</code> → <code>keyup</code> (тільки для літер-цифр)</td></tr><tr><td><code>keyup</code></td><td>відпускання клавіші на клавіатурі</td></tr><tr><td><code>select</code></td><td>вибір тексту для <code>input[type=text]</code> та <code>textarea</code></td></tr><tr><td><code>submit</code></td><td>відправлення форми</td></tr></tbody></table>
 
-{% embed url="https://anton.shevchuk.name/book/code/events.form.html" %}
+{% embed url="https://anton.shevchuk.name/book/code/form.events.html" %}
 
 ***
 

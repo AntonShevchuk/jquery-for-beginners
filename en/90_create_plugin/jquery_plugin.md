@@ -222,8 +222,8 @@ $('p').mySimplePlugin('reset');
 
 To understand this piece of code, you just need to wrap your head around the `arguments` variable and the `apply()` method. Here are some articles dedicated to them, go for it:
 
-* [https://javascript.info/arguments-pseudoarray](https://javascript.info/arguments-pseudoarray)
-* [https://javascript.info/call-apply](https://javascript.info/call-apply)
+* [https://javascript.info/arguments-pseudoarray](https://javascript.info/rest-parameters-spread)
+* [https://javascript.info/call-apply](https://javascript.info/call-apply-decorators)
 
 ## About Event Handlers <a href="#event-handlers" id="event-handlers"></a>
 
