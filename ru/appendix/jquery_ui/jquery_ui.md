@@ -190,4 +190,4 @@ $("#my").expose({ "disabled": true }) // или false
 Информация по теме разработки виджетов:
 
 * [Understanding jQuery UI widgets: A tutorial](https://bililite.com/blog/understanding-jquery-ui-widgets-a-tutorial/)
-* [Coding your First jQuery UI Plugin](https://net.tutsplus.com/tutorials/javascript-ajax/coding-your-first-jquery-ui-plugin/)
+* [Coding your First jQuery UI Plugin](https://code.tutsplus.com/tutorials/coding-your-first-jquery-ui-plugin--net-9460)
