@@ -1,6 +1,6 @@
 # CSS Styles
 
-In the [previous chapter](../10\_go\_on/be-ready.md) we already encountered the `.css()` method — we used it to change the font color, but its capabilities don't end there. Time to dig a bit deeper so we don't have to storm the forums with basic questions ;)
+In the [previous chapter](../10_go_on/be-ready.md) we already encountered the `.css()` method — we used it to change the font color, but its capabilities don't end there. Time to dig a bit deeper so we don't have to storm the forums with basic questions ;)
 
 Let's start digging with a more thorough look at the `.css()` method:
 

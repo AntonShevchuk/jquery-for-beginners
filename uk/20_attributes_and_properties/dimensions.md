@@ -3,7 +3,7 @@
 Переварили попередній розділ? Добре, тепер настала черга методів, які працюють з розмірами елементів.
 
 {% hint style="info" %}
-Але перш ніж продовжити, рекомендую освіжити в пам'яті інформацію про [обчислення висоти та ширини блокових елементів](../0\_html\_css\_javascript/advanced-css.md#size) ;)
+Але перш ніж продовжити, рекомендую освіжити в пам'яті інформацію про [обчислення висоти та ширини блокових елементів](../0_html_css_javascript/advanced-css.md#size) ;)
 {% endhint %}
 
 <table data-header-hidden><thead><tr><th width="323">метод</th><th>опис</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">height()

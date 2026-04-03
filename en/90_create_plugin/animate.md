@@ -59,7 +59,7 @@ start: "rgb(0, 0, 0)"
 unit: "px"
 ```
 
-There will be a lot of data in the console, because the method above gets called N times depending on the animation duration, with "tween.pos" gradually increasing its value from 0 to 1. By default, this increase is linear — if you need something different, check out the easing plugin or read on to the end of this section (I already mentioned this in the [Animation](../40\_animation/) chapter).
+There will be a lot of data in the console, because the method above gets called N times depending on the animation duration, with "tween.pos" gradually increasing its value from 0 to 1. By default, this increase is linear — if you need something different, check out the easing plugin or read on to the end of this section (I already mentioned this in the [Animation](../40_animation/) chapter).
 
 Even at this point we can already modify the selected element (by manipulating `tween.elem`), but there's a more convenient way — you can set the "`run`" property of the `tween` object:
 

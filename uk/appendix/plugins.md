@@ -8,7 +8,7 @@
 *   jQuery Cookie — зручна робота з «печеньками» в браузері –
 
     [https://plugins.jquery.com/cookie/](https://plugins.jquery.com/cookie/)
-*   jQuery.easing — розширюємо стандартний набір функцій easing (читай у главі [анімація](../40\_animation/)) –
+*   jQuery.easing — розширюємо стандартний набір функцій easing (читайте у главі [анімація](../40_animation/)) –
 
     [https://gsgd.co.uk/sandbox/jquery/easing/](https://gsgd.co.uk/sandbox/jquery/easing/)
 *   jQuery Form Plugin — спрощує роботу з формами, для швидкого старту саме те –

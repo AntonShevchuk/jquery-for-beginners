@@ -90,7 +90,7 @@ $.extend($.expr.pseudos, {
 {% embed url="https://anton.shevchuk.name/book/code/sizzle.filter.html" %}
 
 {% hint style="danger" %}
-ЗАВЖДИ використовуй фільтр разом з HTML-тегом, який шукаєш:
+ЗАВЖДИ використовуйте фільтр разом з HTML-тегом, який шукаєте:
 
 <pre class="language-javascript"><code class="lang-javascript"><strong>// tag name + filter!
 </strong><strong>$("div:filter")
@@ -98,7 +98,7 @@ $.extend($.expr.pseudos, {
 {% endhint %}
 
 {% hint style="info" %}
-Це один з пунктів оптимізації роботи з фільтрами jQuery, інакше твій фільтр оброблятиме всі DOM-елементи на сторінці, а це може дуже сильно позначитися на продуктивності. Якщо ж у тебе кілька тегів, то пиши вже краще так — `$("tag1:filter, tag2:filter, tag3:filter")`, або, ще краще, через виклик методу `filter()`.
+Це один з пунктів оптимізації роботи з фільтрами jQuery, інакше ваш фільтр оброблятиме всі DOM-елементи на сторінці, а це може дуже сильно позначитися на продуктивності. Якщо ж у вас кілька тегів, то пишіть вже краще так — `$("tag1:filter, tag2:filter, tag3:filter")`, або, ще краще, через виклик методу `filter()`.
 {% endhint %}
 
 * [Sizzle Documentation](https://github.com/jquery/sizzle/wiki/) — скупенька офіційна документація

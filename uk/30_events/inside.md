@@ -57,7 +57,7 @@ $._data(element, "events");
 ```
 
 {% hint style="warning" %}
-У коментарях до вихідного коду jQuery є ось така фраза «_Never expose "private" data to user code (TODO: Drop \_data, \_removeData)_».  Тож в один прекрасний момент цей розділ перестане бути актуальним.
+У коментарях до вихідного коду jQuery є ось така фраза «_Never expose "private" data to user code (TODO: Drop _data, _removeData)_».  Тож в один прекрасний момент цей розділ перестане бути актуальним.
 {% endhint %}
 
 > Раніше всі обробники подій були доступні в об'єкті `$.cache`, але в останніх версіях jQuery цього об'єкта немає :(

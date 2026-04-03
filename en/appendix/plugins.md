@@ -8,7 +8,7 @@ I'd like to recommend a few plugins that are worth always keeping handy:
 *   jQuery Cookie — convenient work with browser cookies —
 
     [https://plugins.jquery.com/cookie/](https://plugins.jquery.com/cookie/)
-*   jQuery.easing — extends the standard set of easing functions (read about it in the [animation](../40\_animation/) chapter) —
+*   jQuery.easing — extends the standard set of easing functions (read about it in the [animation](../40_animation/) chapter) —
 
     [https://gsgd.co.uk/sandbox/jquery/easing/](https://gsgd.co.uk/sandbox/jquery/easing/)
 *   jQuery Form Plugin — simplifies working with forms, perfect for a quick start —

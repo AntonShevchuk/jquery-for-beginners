@@ -1,6 +1,6 @@
 # The Power of JSONP
 
-JSONP is our old friend JSON with a callback function layer on top O\_o. \
+JSONP is our old friend JSON with a callback function layer on top O_o. \
 OK, let's look at examples. Here's what a server response in JSON format looks like:
 
 ```javascript

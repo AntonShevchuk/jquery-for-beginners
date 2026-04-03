@@ -129,7 +129,7 @@ $("#my").toggle("explode");
 
 > Here's the list of effects, maybe someone will remember them: `blind`, `bounce`, `clip`, `drop`, `explode`, `fold`, `highlight`, `puff`, `pulsate`, `scale`, `shake`, `size`, `slide`, `transfer`.
 
-Remember, in the chapter on [animation](../../40\_animation/) I talked about easing and the jQuery plugin of the same name? Well, UI also extends easing, so once you include UI, you can drop the easing plugin. And yes, this functionality is tied only to "Effects Core".
+Remember, in the chapter on [animation](../../40_animation/) I talked about easing and the jQuery plugin of the same name? Well, UI also extends easing, so once you include UI, you can drop the easing plugin. And yes, this functionality is tied only to "Effects Core".
 
 ## Themes
 

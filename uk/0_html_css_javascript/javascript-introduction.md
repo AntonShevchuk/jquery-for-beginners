@@ -4,9 +4,9 @@ description: Хоча кого я обманюю, вийшла досить ув
 
 # Трохи про JavaScript
 
-У цей розділ я виніс ту інформацію про JavaScript, яку необхідно знати, щоб у вас не виникало «дитячих» проблем з використанням jQuery. Якщо у вас є досвід роботи з JavaScript, то гортайте [далі](../10\_go\_on/).
+У цей розділ я виніс ту інформацію про JavaScript, яку необхідно знати, щоб у вас не виникало «дитячих» проблем з використанням jQuery. Якщо у вас є досвід роботи з JavaScript, то гортайте [далі](../10_go_on/).
 
-> Вивчати хочеш JavaScript та jQuery? Тоді силу пізнай інструмента справжнього:
+> Вивчати хочете JavaScript та jQuery? Тоді силу пізнайте інструмента справжнього:
 >
 > * [Developer Tools](https://developer.chrome.com/docs/devtools/) - для Chrome, Safari, Opera та інших webkit-based браузерів
 > * [Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) - для FireFox
@@ -41,11 +41,11 @@ var age = 32;
 Можна, звісно ж, і без `var`, але робити я вам це наполегливо не рекомендую, бо можуть виникнути непередбачені проблеми в коді, про що трохи пізніше розкажу.
 {% endhint %}
 
-Так, так, JavaScript належить до мов з динамічною типізацією, і нам немає потреби вказувати тип даних при оголошенні змінних, ви навіть можете улаштувати «holy war» із цього приводу, але роби це локально, не виходячи за рамки своєї черепної коробки.
+Так, так, JavaScript належить до мов з динамічною типізацією, і нам немає потреби вказувати тип даних при оголошенні змінних, ви навіть можете улаштувати «holy war» із цього приводу, але робіть це локально, не виходячи за рамки своєї черепної коробки.
 
 На імена змінних накладено два обмеження:
 
-* ім'я може складатися з букв, цифр, і символів «$» та «\_»
+* ім'я може складатися з букв, цифр, і символів «$» та «_»
 * перший символ не повинен бути цифрою
 
 Зверніть увагу, регістр букв має значення:
@@ -77,7 +77,7 @@ let company = "Facebook";
     alert(a);     // 1000
     ```
 
-    а тепер порівняй з поведінкою `let`:
+    а тепер порівняйте з поведінкою `let`:
 
     ```javascript
     let a = 0;
@@ -195,7 +195,7 @@ USER.status = USER_STATUS_ACTIVE; // ok
 USER = {name: "mr.Wesson"}; // error
 ```
 
-Ось і вийшов «читабельний» код, мотай на вус
+Ось і вийшов «читабельний» код, мотайте на вус
 
 ### Типи даних <a href="#types" id="types"></a>
 
@@ -647,7 +647,7 @@ function myLog() {
 }
 ```
 
-* контекст `this` можна змінити, використовуючи функції [`bind()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global\_Objects/Function/bind), [`call()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global\_Objects/Function/call), та [`apply()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global\_Objects/Function/apply)
+* контекст `this` можна змінити, використовуючи функції [`bind()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), [`call()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call), та [`apply()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
 
 > Все, що стосується «window», стосується лише браузерів, хоча оскільки книга про jQuery, то іншу поведінку я і не розглядаю, але ось так прозоро натякаю, що є альтернативна реальність зі своїм «jQuery», і звуть її там [cheerio](https://cheerio.js.org/) ;).
 

@@ -4,7 +4,7 @@ description: Although who am I kidding, this turned out to be quite a hefty chap
 
 # A Bit About JavaScript
 
-In this section, I've put together the JavaScript knowledge you need to avoid "beginner" problems when using jQuery. If you already have experience with JavaScript, feel free to skip [ahead](../10\_go\_on/).
+In this section, I've put together the JavaScript knowledge you need to avoid "beginner" problems when using jQuery. If you already have experience with JavaScript, feel free to skip [ahead](../10_go_on/).
 
 > Want to learn JavaScript and jQuery? Then first master the power of the true instrument:
 >
@@ -45,7 +45,7 @@ Yes, yes, JavaScript is a dynamically typed language, and we don't need to speci
 
 Two restrictions apply to variable names:
 
-* the name can consist of letters, digits, and the "$" and "\_" symbols
+* the name can consist of letters, digits, and the "$" and "_" symbols
 * the first character must not be a digit
 
 Keep in mind, letter case matters:
@@ -647,7 +647,7 @@ function myLog() {
 }
 ```
 
-* the `this` context can be changed using the [`bind()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Function/bind), [`call()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Function/call), and [`apply()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Function/apply) functions
+* the `this` context can be changed using the [`bind()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), [`call()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call), and [`apply()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) functions
 
 > Everything related to "window" only applies to browsers. And since this book is about jQuery, I'm not covering any other behavior. But I'm dropping a not-so-subtle hint that there's an alternative reality with its own "jQuery", and it goes by the name [cheerio](https://cheerio.js.org/) ;).
 

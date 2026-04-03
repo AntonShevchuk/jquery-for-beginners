@@ -57,7 +57,7 @@ $._data(element, "events");
 ```
 
 {% hint style="warning" %}
-In the jQuery source code comments there's this phrase: "_Never expose "private" data to user code (TODO: Drop \_data, \_removeData)_". So one fine day this section will become outdated.
+In the jQuery source code comments there's this phrase: "_Never expose "private" data to user code (TODO: Drop _data, _removeData)_". So one fine day this section will become outdated.
 {% endhint %}
 
 > Back in the day, all event handlers were available in the `$.cache` object, but in recent versions of jQuery this object no longer exists :(
