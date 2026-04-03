@@ -29,7 +29,7 @@ Widgets are comprehensive solutions that include not only JavaScript code, but a
 *   Button — creating buttons with JavaScript is quite the faux pas, but it might come in handy if you're heavily invested in jQuery UI:
 
     ![jQuery UI Buttons](../../../.gitbook/assets/buttons.png)
-*   Datepicker — if your browser doesn't fully support the HTML 5 specification, and `<input type="date"/>` in particular, you'll need to emulate this capability with this widget: &#x20;
+*   Datepicker — if your browser doesn't fully support the HTML 5 specification, and `<input type="date"/>` in particular, you'll need to emulate this capability with this widget: 
 
     ![jQuery UI Datepicker](../../../.gitbook/assets/datepicker.png)
 *   Dialog — a widget designed for creating slightly clunky dialog windows:

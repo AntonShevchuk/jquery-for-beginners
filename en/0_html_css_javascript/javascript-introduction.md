@@ -22,7 +22,7 @@ I'd like to immediately draw your attention to JavaScript code formatting. My ex
 * [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) -- best practices for JavaScript developers
 * [How to write unmaintainable code?](https://javascript.info/ninja-code) -- bad advice from Ilya
 
-> As a bonus, here's a small tip: all variables containing a jQuery object are best named starting with the "$" symbol. Trust me, this little trick saves a lot of time.&#x20;
+> As a bonus, here's a small tip: all variables containing a jQuery object are best named starting with the "$" symbol. Trust me, this little trick saves a lot of time.
 
 ## JavaScript Basics
 
@@ -35,7 +35,7 @@ var name = "Ivan";
 var age = 32;
 ```
 
-Pretty simple -- we declare a variable using the `var` keyword.&#x20;
+Pretty simple -- we declare a variable using the `var` keyword.
 
 {% hint style="info" %}
 You can skip the `var`, of course, but I strongly advise against it, because unexpected problems may arise in your code, which I'll tell you about a bit later.
@@ -165,7 +165,7 @@ var USER_STATUS_BANNED = 2;
 ```
 
 {% hint style="info" %}
-Such constants are needed to avoid "magic numbers".&#x20;
+Such constants are needed to avoid "magic numbers".
 
 Look at this code `if(status==2)` -- what it's about is hardly clear to anyone, but `if(status==USER_STATUS_BANNED)` is already much more informative.
 {% endhint %}
@@ -541,7 +541,7 @@ The behavior of the `User()` function when using `new` changes slightly:
 
 The result of executing the code will be the following object:
 
-```javascript
+```json
 {
     "name": "Anton",
     "status": "active"
@@ -565,9 +565,9 @@ class User {
 const me = new User("Anton");
 ```
 
-> Off you go again to [read the JavaScript textbook](https://javascript.info/class) :)&#x20;
+> Off you go again to [read the JavaScript textbook](https://javascript.info/class) :)
 
-A simple task to reinforce the material:&#x20;
+A simple task to reinforce the material:
 
 > Write a class for a cat, so we can find out its breed and color.
 
@@ -592,10 +592,10 @@ class Cat {
 }
 
 // either way, we'd use it like this
-const cat = new Cat("British Shorthair", "silver");
+let cat = new Cat("British Shorthair", "silver");
 
 // and the result will be an object
-{
+cat = {
     "breed": "British Shorthair",
     "color": "silver"
 }

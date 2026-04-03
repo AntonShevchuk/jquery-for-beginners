@@ -10,7 +10,7 @@
 
 ```javascript
 // для листинга исходного кода будет использоваться подсветка синтаксиса
-function () {
+function hello() {
   setTimeout("alert('Hello World!')", 5000);
 }
 ```

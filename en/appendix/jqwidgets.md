@@ -26,7 +26,7 @@ description: https://www.jqwidgets.com/
 
 
     <figure><img src="../../.gitbook/assets/jqxTreeMap.png" alt=""><figcaption></figcaption></figure>
-*   jqxTree — this one is not as exotic; as the name suggests, we'll be planting trees: &#x20;
+*   jqxTree — this one is not as exotic; as the name suggests, we'll be planting trees: 
 
     <img src="../../.gitbook/assets/jqxTree.png" alt="jqxTree" data-size="original">
 

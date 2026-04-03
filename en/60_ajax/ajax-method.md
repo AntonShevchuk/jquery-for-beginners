@@ -1,6 +1,6 @@
 # The ajax() Method
 
-The next method I'll introduce you to is `$.ajax()` — it's the main one here, and all other AJAX methods are just wrappers around it (including `load()`). The `$.ajax()` method accepts a bunch of settings and a URL as parameters.&#x20;
+The next method I'll introduce you to is `$.ajax()` — it's the main one here, and all other AJAX methods are just wrappers around it (including `load()`). The `$.ajax()` method accepts a bunch of settings and a URL as parameters.
 
 Here's an example analogous to a `load()` call:
 

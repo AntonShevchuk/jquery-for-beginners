@@ -250,7 +250,7 @@ $('p').off(".mySimplePlugin");
 {% hint style="info" %}
 Here's a bit more food for thought:
 
-&#x20;— [Essential jQuery Plugin Patterns](https://www.smashingmagazine.com/2011/10/essential-jquery-plugin-patterns/)
+— [Essential jQuery Plugin Patterns](https://www.smashingmagazine.com/2011/10/essential-jquery-plugin-patterns/)
 {% endhint %}
 
 That's all about regular plugins. Thanks for your attention, everyone.

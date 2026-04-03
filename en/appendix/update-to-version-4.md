@@ -20,7 +20,7 @@ The highlights:
   * `$.parseJSON()` — use `JSON.parse()`;
 *   sorted out the event order: `blur` -> `focusout` -> `focus` -> `focusin` — now it's this way and only this way, in accordance with the new W3C edition;
 
-    > now only IE has a different order, and the irony is that only IE followed the previous W3C edition, and only in 2023 was the spec changed to match the implementation in modern browsers&#x20;
+    > now only IE has a different order, and the irony is that only IE followed the previous W3C edition, and only in 2023 was the spec changed to match the implementation in modern browsers
 * added binary data support in `$.ajax()`;
 * removed automatic JSON-as-JSONP processing — now for such requests you need to explicitly specify that you want a JSONP response from the server;
 * the framework has fully migrated from AMD to ES modules;

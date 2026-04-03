@@ -30,7 +30,7 @@ $("a").on("click", function(event) {
 ```
 
 {% hint style="info" %}
-For the most common events there are "shorthand" methods — for tracking `click` there's `click()`, for `hover` there's `hover()`, and so on :)&#x20;
+For the most common events there are "shorthand" methods — for tracking `click` there's `click()`, for `hover` there's `hover()`, and so on :)
 
 In all the following examples I'll be using the `click()` method
 {% endhint %}

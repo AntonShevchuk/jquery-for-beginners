@@ -99,7 +99,7 @@ You might not know this yet, but HTML tags are divided into block-type and inlin
 
 If you want your HTML to stay valid, make sure block elements are not placed inside inline elements. Inside inline tags, there can only be text or other inline elements.
 
-> One of the most common mistakes I see is people trying to stuff a list `<ul>` or a button `<button>` inside a paragraph `<p>`. Don't do that.&#x20;
+> One of the most common mistakes I see is people trying to stuff a list `<ul>` or a button `<button>` inside a paragraph `<p>`. Don't do that.
 
 Useful articles on the topic:
 

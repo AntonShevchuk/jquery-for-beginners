@@ -1,6 +1,6 @@
 # CSS класи
 
-Ну, наче з CSS розібралися, хоча ні — варто ще описати маніпуляції з класами, теж з розряду первинних навичок:
+Ну, наче з CSS розібралися, хоча ні — варто ще описати маніпуляції з класами, теж із розряду первинних навичок:
 
 <table data-header-hidden><thead><tr><th width="413">метод</th><th>опис</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">addClass(className)
 </code></pre></td><td>додавання класу елементу</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">addClass(function(index, currentClass){

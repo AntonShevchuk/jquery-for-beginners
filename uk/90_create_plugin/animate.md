@@ -1,6 +1,6 @@
 # Animate
 
-> Інформація в цьому розділі актуальна для jQuery версії 1.8 і вище. Якщо тебе зацікавлять можливості розширення для старіших версій, читай мою статтю «[Пишем плагины анимации](https://anton.shevchuk.name/javascript/jquery-for-beginners-write-animation-plugins/)».
+> Інформація в цьому розділі актуальна для jQuery версії 1.8 і вище. Якщо вас зацікавлять можливості розширення для старіших версій, читайте мою статтю «[Пишем плагины анимации](https://anton.shevchuk.name/javascript/jquery-for-beginners-write-animation-plugins/)».
 
 Для початку затравка – метод [`animate()`](https://api.jquery.com/animate/) маніпулює об'єктом `jQuery.Animation`, який передбачає наступні точки для розширення функціоналу:
 
@@ -96,7 +96,7 @@ $.Tween.propHooks.color = {
 };
 ```
 
-> Код функцій `parseColor()` та `buildColor()` ти знайдеш у лістингу на сторінці [color.html](https://anton.shevchuk.name/book/code/color.html).
+> Код функцій `parseColor()` та `buildColor()` ви знайдете у лістингу на сторінці [color.html](https://anton.shevchuk.name/book/code/color.html).
 
 Результатом стане плавне перетікання вихідного кольору до червоного (`#F00` == `#FF0000` == `(255, 0, 0)`), наживо можна подивитися на сторінці [color.html](https://anton.shevchuk.name/book/code/color.html):
 

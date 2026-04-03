@@ -16,7 +16,7 @@ We've got the basics down, now it's time to move on to actually studying jQuery.
     <pre class="language-html"><code class="lang-html"><strong>&#x3C;script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js">&#x3C;/script>
     </strong></code></pre>
 
-    > CDN is a pretty clever thing — when you request the jQuery library this way, you'll get HTTP headers back saying that this file won't "expire" for a whole year.&#x20;
+    > CDN is a pretty clever thing — when you request the jQuery library this way, you'll get HTTP headers back saying that this file won't "expire" for a whole year.
     >
     > If you request the file at `jquery@3.7/dist/jquery.min.js`, you'll get the latest available version from the 3.7.x branch — at the time of writing, that was version 3.7.1, and the headers will indicate that this file will be cached on the browser side for 7 days.
     >

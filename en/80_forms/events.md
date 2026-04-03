@@ -4,7 +4,7 @@ First things first, let's memorize the events you'll most often work with:
 
 <table data-header-hidden><thead><tr><th width="262">event</th><th>description</th></tr></thead><tbody><tr><td><code>change</code></td><td>change of an element's value</td></tr><tr><td><code>submit</code></td><td>form submission</td></tr></tbody></table>
 
-When will these come in handy? It's simple — tracking `change` lets you handle events like changes to `<select>`, `<input type="radio">`, and others. You'll need this for dynamically modifying a form or validating an entered value.&#x20;
+When will these come in handy? It's simple — tracking `change` lets you handle events like changes to `<select>`, `<input type="radio">`, and others. You'll need this for dynamically modifying a form or validating an entered value.
 
 Tracking `submit` is necessary for validating that all form fields are filled in correctly, as well as for submitting the form via AJAX.
 

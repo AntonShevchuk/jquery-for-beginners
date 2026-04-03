@@ -1,7 +1,7 @@
 # Data Registry
 
 {% hint style="info" %}
-If for some reason you're not yet familiar with `data()`, I recommend re-reading the [Data Attributes](../20\_attributes\_and\_properties/data-attributes.md) chapter and checking out the [official documentation](https://api.jquery.com/data/).&#x20;
+If for some reason you're not yet familiar with `data()`, I recommend re-reading the [Data Attributes](../20\_attributes\_and\_properties/data-attributes.md) chapter and checking out the [official documentation](https://api.jquery.com/data/).
 {% endhint %}
 
 In the context of plugin development, here's what we need to remember — the `$.data()` method lets you maintain a data registry tied to a specific element. So it's best to store all plugin data in this registry. If you need to save the plugin state — use `data()`, if you need a cache — use `data()`, if you need to save ... well, I think you get the picture. Here's another little example related to initialization:

@@ -65,7 +65,7 @@ And one more experiment with the second checkbox:
     $("#checkbox").attr("checked", "checked")
     ```
 3. Remove the check again using `attr()`
-4. Repeat until you drop&#x20;
+4. Repeat until you drop
 
 > If it works — don't touch it, you'll break everything with the mouse :)
 

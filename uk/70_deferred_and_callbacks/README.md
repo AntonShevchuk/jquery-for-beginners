@@ -14,4 +14,4 @@ description: Або синхронність, коли як
 З jQuery версії 3.x, Deferred об'єкт став сумісним з Promise з ES-2015 (т.зв. ES6), тож практично все, що стосується [Promise](https://uk.javascript.info/promise), справедливо і для [Deferred](https://api.jquery.com/category/deferred-object/).
 {% endhint %}
 
-Давай на кожному прикладі зупинимось детальніше.
+Давайте на кожному прикладі зупинимось детальніше.

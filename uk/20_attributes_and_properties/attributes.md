@@ -1,6 +1,6 @@
 # Атрибути
 
-Також варто згадати, що у DOM-елементів бувають атрибути відмінні від класу, і ми їх теж можемо змінювати. Для цього нам знадобляться наступні методи:
+Також варто згадати, що у DOM-елементів бувають атрибути, відмінні від класу, і ми їх теж можемо змінювати. Для цього нам знадобляться наступні методи:
 
 <table data-header-hidden><thead><tr><th width="317">метод</th><th>опис</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">attr(attrName) 
 </code></pre></td><td>отримання значення атрибута</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">attr(attrName, value)

@@ -2,7 +2,7 @@
 
 Now let's get to CSS, and we'll start, perhaps, with decoding the abbreviation. CSS stands for Cascading Style Sheets, but:
 
-_-- Why is it called "cascading"?_ -- this is a question I often ask candidates during interviews. The answer is an analogy, and it's a pretty good one: imagine a cascade of waterfalls, and you're standing on one of the steps holding an inkwell, pouring its contents into the water -- all the water below will be colored by the ink. Same with CSS: if you set a style at a certain level, it flows down the "cascade" to the web page elements, coloring them with the "ink" of your style.&#x20;
+_-- Why is it called "cascading"?_ -- this is a question I often ask candidates during interviews. The answer is an analogy, and it's a pretty good one: imagine a cascade of waterfalls, and you're standing on one of the steps holding an inkwell, pouring its contents into the water -- all the water below will be colored by the ink. Same with CSS: if you set a style at a certain level, it flows down the "cascade" to the web page elements, coloring them with the "ink" of your style.
 
 _-- Why do I need all this?_ -- when working with jQuery, you need to be able to read CSS rules fluently and compose CSS selectors to find the elements you need on the page. Practically every task you'll solve with jQuery starts with finding the right element on the page, so **knowing CSS selectors is mandatory**.
 
@@ -121,7 +121,7 @@ Going back to our waterfall analogy, imagine that on the next step someone pours
          This paragraph will still be red!
        </p>
        ```
-   *   to override such a style, the only option left is to write inline styles with the `!important` flag:&#x20;
+   *   to override such a style, the only option left is to write inline styles with the `!important` flag:
 
        ```html
        <style>
@@ -146,7 +146,7 @@ If your head isn't hurting yet, I'll also mention that when calculating whose ru
 * for each element identifier (`#id`) -- `[1:0:0]`
 * for each class (`.class`) or pseudo-class (`:pseudo`) -- `[0:1:0]`
 * for each tag (`<a>`, `<div>`, etc.) -- `[0:0:1]`
-* where `[1:0:0]` > `[0:x:y]` > `[0:0:x]`&#x20;
+* where `[1:0:0]` > `[0:x:y]` > `[0:0:x]`
 * when the score is tied -- again, the last one declared wins
 
 Here are selectors arranged by ascending priority (the corresponding HTML code will follow):

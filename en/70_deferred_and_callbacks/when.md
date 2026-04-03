@@ -20,7 +20,7 @@ $.when(
 )
 ```
 
-Let me explain what's happening — all animations start simultaneously, and when they all finish, the function we pass as an argument to the `then()` method gets called (one of two, depending on the outcome).&#x20;
+Let me explain what's happening — all animations start simultaneously, and when they all finish, the function we pass as an argument to the `then()` method gets called (one of two, depending on the outcome).
 
 To make this "magic" work, `$.when()`, `$.ajax()`, and `animate()` all implement the Deferred interface. That's why we can use all the methods we explored in the previous chapter.
 

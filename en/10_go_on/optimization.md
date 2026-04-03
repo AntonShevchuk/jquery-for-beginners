@@ -1,7 +1,7 @@
 # Optimization
 
 {% hint style="danger" %}
-First and foremost, you should remember that&#x20;
+First and foremost, you should remember that
 
 **search results are not cached — every time you query elements by selector, you're triggering the element search all over again**
 {% endhint %}

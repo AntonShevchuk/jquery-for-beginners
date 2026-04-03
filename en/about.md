@@ -10,7 +10,7 @@ The following formatting conventions are used throughout the book:
 
 ```javascript
 // syntax highlighting will be used for code listings
-function () {
+function hello() {
   setTimeout("alert('Hello World!')", 5000);
 }
 ```

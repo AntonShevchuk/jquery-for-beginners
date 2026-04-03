@@ -250,7 +250,7 @@ $('p').off(".mySimplePlugin");
 {% hint style="info" %}
 Дам ещё чуток информации к размышлению, но на английском:
 
-&#x20;— [Essential jQuery Plugin Patterns](https://www.smashingmagazine.com/2011/10/essential-jquery-plugin-patterns/)
+— [Essential jQuery Plugin Patterns](https://www.smashingmagazine.com/2011/10/essential-jquery-plugin-patterns/)
 {% endhint %}
 
 На этом об обычных плагинах всё. Всем спасибо за внимание.

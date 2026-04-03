@@ -26,7 +26,7 @@ description: https://www.jqwidgets.com/
 
 
     <figure><img src="../../.gitbook/assets/jqxTreeMap.png" alt=""><figcaption></figcaption></figure>
-*   jqxTree – це вже не такий екзотичний віджет; як зрозуміло з назви, будемо саджати дерева: &#x20;
+*   jqxTree – це вже не такий екзотичний віджет; як зрозуміло з назви, будемо саджати дерева: 
 
     <img src="../../.gitbook/assets/jqxTree.png" alt="jqxTree" data-size="original">
 
