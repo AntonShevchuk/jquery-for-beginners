@@ -59,7 +59,7 @@ Go first
 Go second
 ```
 
-З `memory` складніше, будь уважний:
+З `memory` складніше, будьте уважні:
 
 ```javascript
 var C = $.Callbacks("memory");
