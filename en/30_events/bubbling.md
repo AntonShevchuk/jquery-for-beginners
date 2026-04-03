@@ -61,7 +61,7 @@ As a result, we'll get two messages — but why? If you're asking this question,
 > But things aren't so smooth — we've got the "immortal" IE, which fundamentally doesn't work with "capturing", so everyone decided to take the path of least resistance and handle events only during the "bubbling" phase.
 
 {% hint style="info" %}
-I recommend reading the article "[Bubbling and Capturing](https://learn.javascript.ru/bubbling-and-capturing)" from the already mentioned Kantor's tutorial.
+I recommend reading the article "[Bubbling and Capturing](https://javascript.info/bubbling-and-capturing)" from the already mentioned Kantor's tutorial.
 {% endhint %}
 
 Alright, that seems clear. Now let's get back to our example and try to understand what's happening. There's a click handler on the link and a handler on the menu containing this link. When clicking the link, the handler on the link fires, then the event bubbles up to the menu, and its "click" handler fires. But this isn't quite what we want, and to fight this mischief we need to stop event "bubbling":

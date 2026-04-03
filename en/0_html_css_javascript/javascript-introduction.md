@@ -20,7 +20,7 @@ I'd like to immediately draw your attention to JavaScript code formatting. My ex
 
 * [jQuery Core Style Guidelines](https://contribute.jquery.org/style-guide/js/) -- guidelines from the jQuery developers
 * [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) -- best practices for JavaScript developers
-* [How to write unmaintainable code?](https://learn.javascript.ru/ninja-code) -- bad advice from Ilya
+* [How to write unmaintainable code?](https://javascript.info/ninja-code) -- bad advice from Ilya
 
 > As a bonus, here's a small tip: all variables containing a jQuery object are best named starting with the "$" symbol. Trust me, this little trick saves a lot of time.&#x20;
 
@@ -270,7 +270,7 @@ JavaScript doesn't have all that many data types:
     > In the second example, a surprise may await us if something defines a variable named "undefined"; I'll tell you how to work around this "unpleasantness" later.
 
 {% hint style="info" %}
-I also want to draw your attention to type coercion in JavaScript. This is a topic that causes many questions for beginner developers, and bugs related to it will haunt you for the first six months of work. Open the tutorial page about [operator quirks](https://learn.javascript.ru/javascript-specials#%D0%BE%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BE%D0%B2), study it, and when you're ready, move on to the next exercise.
+I also want to draw your attention to type coercion in JavaScript. This is a topic that causes many questions for beginner developers, and bugs related to it will haunt you for the first six months of work. Open the tutorial page about [operator quirks](https://javascript.info/javascript-specials#%D0%BE%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BE%D0%B2), study it, and when you're ready, move on to the next exercise.
 {% endhint %}
 
 Take a careful look at the code and tell me -- what will the result be:
@@ -459,7 +459,7 @@ var sum = (a, b) => a+b;
 This syntax is convenient, of course, but don't overdo it -- if you go too far, your code becomes unreadable, and you might end up hearing some rather unflattering words directed at you.
 
 {% hint style="info" %}
-Arrow functions have some other peculiarities too, but this isn't a [JavaScript textbook](https://learn.javascript.ru/arrow-functions-basics) after all ;)
+Arrow functions have some other peculiarities too, but this isn't a [JavaScript textbook](https://javascript.info/arrow-functions-basics) after all ;)
 {% endhint %}
 
 Solve a simple FizzBuzz problem:
@@ -565,7 +565,7 @@ class User {
 const me = new User("Anton");
 ```
 
-> Off you go again to [read the JavaScript textbook](https://learn.javascript.ru/class) :)&#x20;
+> Off you go again to [read the JavaScript textbook](https://javascript.info/class) :)&#x20;
 
 A simple task to reinforce the material:&#x20;
 
@@ -674,14 +674,14 @@ alert(anotherFunc()); // => 5
 
 What's happening here? A function declared inside another function has access to the parent function's variables. Stare at the code until it clicks.
 
-A great exercise that fully illustrates the essence of the problem: "[An Army of Functions](https://learn.javascript.ru/task/make-army)"
+A great exercise that fully illustrates the essence of the problem: "[An Army of Functions](https://javascript.info/task/make-army)"
 
 Recommended articles on the topic:
 
-* [Context binding and currying: "bind"](https://learn.javascript.ru/bind)
-* [Explicit this: "call", "apply"](https://learn.javascript.ru/call-apply)
-* [Functions "from the inside", closures](https://learn.javascript.ru/closures)
-* [Using closures](https://learn.javascript.ru/closures-usage)
+* [Context binding and currying: "bind"](https://javascript.info/bind)
+* [Explicit this: "call", "apply"](https://javascript.info/call-apply)
+* [Functions "from the inside", closures](https://javascript.info/closures)
+* [Using closures](https://javascript.info/closures-usage)
 * [Closures: Front to Back](https://code.tutsplus.com/closures-front-to-back--net-24869t)
 
-This JavaScript intro has dragged on. You'd better not be lazy and study the entire [textbook by Ilya Kantor](https://learn.javascript.ru/).
+This JavaScript intro has dragged on. You'd better not be lazy and study the entire [textbook by Ilya Kantor](https://javascript.info/).

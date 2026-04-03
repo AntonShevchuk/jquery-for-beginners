@@ -222,8 +222,8 @@ $('p').mySimplePlugin('reset');
 
 Для розуміння цього шматочка коду тобі треба розібратися лише зі змінною `arguments` та методом `apply()`. Тут їм цілі статті присвятили, тож вперед:
 
-* [https://learn.javascript.ru/arguments-pseudoarray](https://learn.javascript.ru/arguments-pseudoarray)
-* [https://learn.javascript.ru/call-apply](https://learn.javascript.ru/call-apply)
+* [https://uk.javascript.info/arguments-pseudoarray](https://uk.javascript.info/arguments-pseudoarray)
+* [https://uk.javascript.info/call-apply](https://uk.javascript.info/call-apply)
 
 ## Про обробники подій <a href="#event-handlers" id="event-handlers"></a>
 

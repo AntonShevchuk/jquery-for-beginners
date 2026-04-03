@@ -36,7 +36,7 @@ Beyond that, many changes were introduced that break backward compatibility with
 
 ## Core <a href="#core" id="core"></a>
 
-* The jQuery core now runs in [strict mode](https://learn.javascript.ru/strict-mode).
+* The jQuery core now runs in [strict mode](https://javascript.info/strict-mode).
 * The `document-ready` event handlers now run asynchronously — if one handler fails, it won't affect the execution of other handlers.
 * The `$.isNumeric()` method no longer tries to cast the `toString()` method on arbitrary objects (who needed that anyway?).
 * The `width()`, `height()` methods and others — previously, calling them on an empty object collection would return `null`, now it returns `undefined`.

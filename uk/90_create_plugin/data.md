@@ -27,5 +27,5 @@ function() { // функція init
 {% embed url="https://anton.shevchuk.name/book/code/data.html" %}
 
 {% hint style="info" %}
-Треба б не забути розповісти про `obj[jQuery.expando] = uuid` та `jQuery._data(element)`, а також про [витоки пам'яті](https://learn.javascript.ru/memory-leaks-jquery), але мабуть не сьогодні.
+Треба б не забути розповісти про `obj[jQuery.expando] = uuid` та `jQuery._data(element)`, а також про [витоки пам'яті](https://uk.javascript.info/memory-leaks-jquery), але мабуть не сьогодні.
 {% endhint %}

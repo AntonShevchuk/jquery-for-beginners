@@ -20,7 +20,7 @@ description: Хоча кого я обманюю, вийшла досить ув
 
 * [jQuery Core Style Guidelines](https://contribute.jquery.org/style-guide/js/) — керівництво від розробників jQuery
 * [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) — бест практікс для JavaScript-розробників
-* [Как писать неподдерживаемый код?](https://learn.javascript.ru/ninja-code) — шкідливі поради від Іллі
+* [Как писать неподдерживаемый код?](https://uk.javascript.info/ninja-code) — шкідливі поради від Іллі
 
 > На додачу поділюся невеличкою порадою: всі змінні, що містять об'єкт jQuery, найкраще іменувати, починаючи з символу «$». Повір, така невеличка хитрість економить багато часу.&#x20;
 
@@ -270,7 +270,7 @@ USER = {name: "mr.Wesson"}; // error
     > У другому прикладі нас може чекати сюрприз, якщо щось визначить змінну «undefined»; як обійти таку «неприємність», я ще розкажу.
 
 {% hint style="info" %}
-Хотів ще акцентувати твою увагу на приведення типів в JavaScript. Цей момент викликає багато питань у початківців розробників, а помилки пов'язані з ним будуть переслідувати тебе перші півроку роботи. Відкрий сторінку підручника про [особливості операторів](https://learn.javascript.ru/javascript-specials#%D0%BE%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BE%D0%B2), вивчи її, а коли будеш готовий переходь до виконання наступного завдання.
+Хотів ще акцентувати твою увагу на приведення типів в JavaScript. Цей момент викликає багато питань у початківців розробників, а помилки пов'язані з ним будуть переслідувати тебе перші півроку роботи. Відкрий сторінку підручника про [особливості операторів](https://uk.javascript.info/javascript-specials#%D0%BE%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BE%D0%B2), вивчи її, а коли будеш готовий переходь до виконання наступного завдання.
 {% endhint %}
 
 Подивись уважно на код, і скажи — яким буде результат обчислення:
@@ -459,7 +459,7 @@ var sum = (a, b) => a+b;
 Цей запис, звісно ж, зручний, але не варто захоплюватись, бо якщо перестаратись, то твій код стане нечитабельним, і в підсумку ти можеш почути багато несхвальних висловлювань на свою адресу.
 
 {% hint style="info" %}
-Функції-стрілки мають ще деякі особливості, але це все ж не [підручник з JavaScript](https://learn.javascript.ru/arrow-functions-basics) ;)
+Функції-стрілки мають ще деякі особливості, але це все ж не [підручник з JavaScript](https://uk.javascript.info/arrow-functions-basics) ;)
 {% endhint %}
 
 Розв'яжи просту FizzBuzz-задачку:
@@ -565,7 +565,7 @@ class User {
 const me = new User("Anton");
 ```
 
-> Знову відправлю [читати підручник з JavaScript](https://learn.javascript.ru/class) :)&#x20;
+> Знову відправлю [читати підручник з JavaScript](https://uk.javascript.info/class) :)&#x20;
 
 Проста задачка для закріплення матеріалу:&#x20;
 
@@ -674,14 +674,14 @@ alert(anotherFunc()); // => 5
 
 Що ж тут відбувається? Функція, оголошена всередині іншої функції, має доступ до змінних батьківської функції. Повтикай в код, поки тебе не осінить, про що я тут товкую.
 
-Гарна задачка, яка повною мірою дає розуміння суті проблеми: «[Армия функций](https://learn.javascript.ru/task/make-army)»
+Гарна задачка, яка повною мірою дає розуміння суті проблеми: «[Армия функций](https://uk.javascript.info/task/make-army)»
 
 Рекомендовані статті з теми:
 
-* [Привязка контекста и карринг: "bind"](https://learn.javascript.ru/bind)
-* [Явное указание this: "call", "apply"](https://learn.javascript.ru/call-apply)
-* [Функции "изнутри", замыкания](https://learn.javascript.ru/closures)
-* [Использование замыканий](https://learn.javascript.ru/closures-usage)
+* [Привязка контекста и карринг: "bind"](https://uk.javascript.info/bind)
+* [Явное указание this: "call", "apply"](https://uk.javascript.info/call-apply)
+* [Функции "изнутри", замыкания](https://uk.javascript.info/closures)
+* [Использование замыканий](https://uk.javascript.info/closures-usage)
 * [Closures: Front to Back](https://code.tutsplus.com/closures-front-to-back--net-24869t)
 
-Вступна по JavaScript затягнулась, краще не полінуйся, і вивчи весь [підручник від Іллі Кантора](https://learn.javascript.ru/).
+Вступна по JavaScript затягнулась, краще не полінуйся, і вивчи весь [підручник від Іллі Кантора](https://uk.javascript.info/).
