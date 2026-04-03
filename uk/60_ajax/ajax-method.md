@@ -19,7 +19,7 @@ $.ajax({
 
 {% embed url="https://anton.shevchuk.name/book/code/ajax.html" %}
 
-Тут ми обробляли HTML-відповідь від сервера — це добре коли нам півсторінки оновити треба, але дані краще передавати в «правильному» форматі. XML — це зрозуміло, структуровано, але надлишково і якось не зовсім JavaScript-way, і тому наш вибір — це [JSON](https://uk.wikipedia.org/wiki/JSON):
+Тут ми обробляли HTML-відповідь від сервера — це добре, коли нам пів сторінки оновити треба, але дані краще передавати в «правильному» форматі. XML — це зрозуміло, структуровано, але надлишково і якось не зовсім JavaScript-way, і тому наш вибір — це [JSON](https://uk.wikipedia.org/wiki/JSON):
 
 ```json
 {
@@ -30,15 +30,15 @@ $.ajax({
 }
 ```
 
-Фактично, це і є JavaScript-код як є (JavaScript Object Notation, якщо бути прискіпливо точним). При цьому формат вже поширений настільки, що робота з даними в іншому форматі вже не вітається.
+Фактично, це і є JavaScript-код як є (JavaScript Object Notation, якщо бути прискіпливо точним). При цьому формат уже поширений настільки, що робота з даними в іншому форматі вже не вітається.
 
-> Життя не стоїть на місці, є й зручніші формати, але не в JavaScript :)\
+> Життя не стоїть на місці, є і зручніші формати, але не в JavaScript :)\
 > Ми ж задовольняємося малим — [текст, HTML, JSON або XML](https://anton.shevchuk.name/book/code/ajax.datatype.html).
 
 Для завантаження JSON існує швидка функція-синонім — `$.getJSON()` — як обов'язковий параметр лише посилання, куди стукаємось, опціонально можна вказати дані для передачі на сервер та функцію зворотного виклику.
 
 {% hint style="info" %}
-Не можна просто так взяти й описати всі можливі параметри для виклику `$.ajax()`, таки варто тримати під рукою офіційний мануал [https://api.jquery.com/jQuery.ajax/](https://api.jquery.com/jQuery.ajax/).
+Не можна просто так узяти й описати всі можливі параметри для виклику `$.ajax()`, таки варто тримати під рукою офіційний мануал [https://api.jquery.com/jQuery.ajax/](https://api.jquery.com/jQuery.ajax/).
 {% endhint %}
 
 Ще є пара-трійка методів, які варто згадати:
@@ -46,9 +46,9 @@ $.ajax({
 <table data-header-hidden><thead><tr><th width="361">метод</th><th>опис</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">get(url, data, success, dataType)
 </code></pre></td><td>завантажує дані методом GET</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">post(url, data, success, dataType)
 </code></pre></td><td>завантажує дані методом POST</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">getScript(url, success)
-</code></pre></td><td>завантажує JavaScript з сервера методом GET</td></tr></tbody></table>
+</code></pre></td><td>завантажує JavaScript із сервера методом GET</td></tr></tbody></table>
 
-Всі вони, як я вже казав раніше, лише обгортки над викликом `$.ajax()`, в чому нескладно переконатися, зазирнувши в [вихідний код бібліотеки](https://github.com/jquery/jquery/blob/32b00373b3f42e5cdcb709df53f3b08b7184a944/src/ajax.js#L834). І там ви знайдете реалізацію методів `$.get()` та `$.post()` :)
+Усі вони, як я вже казав раніше, лише обгортки над викликом `$.ajax()`, в чому нескладно переконатися, зазирнувши в [вихідний код бібліотеки](https://github.com/jquery/jquery/blob/32b00373b3f42e5cdcb709df53f3b08b7184a944/src/ajax.js#L834). І там ви знайдете реалізацію методів `$.get()` та `$.post()` :)
 
 ```javascript
 jQuery.each( [ "get", "post" ], function( i, method ) {
@@ -73,6 +73,6 @@ jQuery.each( [ "get", "post" ], function( i, method ) {
 } );
 ```
 
-Метод `getScript()` в свою чергу це лише обгортка над `$.get()`:
+Метод `getScript()` своєю чергою це лише обгортка над `$.get()`:
 
 {% embed url="https://anton.shevchuk.name/book/code/ajax.script.html" %}

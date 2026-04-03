@@ -27,5 +27,5 @@ Just a reminder that the `jQuery.data()` method doesn't manipulate HTML attribut
 {% embed url="https://anton.shevchuk.name/book/code/data.html" %}
 
 {% hint style="info" %}
-I should remember to tell you about `obj[jQuery.expando] = uuid` and `jQuery._data(element)`, and also about [memory leaks](https://javascript.info/memory-leaks-jquery), but probably not today.
+I should remember to tell you about `obj[jQuery.expando] = uuid` and `jQuery._data(element)`, and also about [memory leaks](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Memory_management), but probably not today.
 {% endhint %}

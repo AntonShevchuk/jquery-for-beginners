@@ -41,7 +41,7 @@ outerWidth(true)
 
 {% embed url="https://anton.shevchuk.name/book/code/height.html" %}
 
-У цьому прикладі для центрального елемента з `id=block` задані наступні стилі:
+У цьому прикладі для центрального елемента з `id=block` вказані наступні стилі:
 
 ```css
 #block {

@@ -1,6 +1,6 @@
 # Animate
 
-> Інформація в цьому розділі актуальна для jQuery версії 1.8 і вище. Якщо вас зацікавлять можливості розширення для старіших версій, читайте мою статтю «[Пишем плагины анимации](https://anton.shevchuk.name/javascript/jquery-for-beginners-write-animation-plugins/)».
+> Інформація в цьому розділі актуальна для jQuery версії 1.8 і вище. Якщо вас зацікавлять можливості розширення для старіших версій, читайте мою статтю «[Пишемо плагини анімациї](https://anton.shevchuk.name/javascript/jquery-for-beginners-write-animation-plugins/)».
 
 Для початку затравка – метод [`animate()`](https://api.jquery.com/animate/) маніпулює об'єктом `jQuery.Animation`, який передбачає наступні точки для розширення функціоналу:
 
@@ -8,7 +8,7 @@
 * `jQuery.Animation.preFilter`
 * `jQuery.Animation.tweener`
 
-Почну розповідь з `jQuery.Tween.propHooks`, оскільки вже є плагіни, в код яких можна зазирнути :) Для більшої наочності я візьму досить тривіальну задачу – змусимо плавно змінити колір шрифту для заданого набору елементів:
+Почну розповідь з `jQuery.Tween.propHooks`, оскільки вже є плагіни, у код яких можна зазирнути :) Для більшої наочності я візьму досить тривіальну задачу – змусимо плавно змінити колір шрифту для заданого набору елементів:
 
 ```javascript
 $('p').animate({color:'#ff0000'});
@@ -96,14 +96,14 @@ $.Tween.propHooks.color = {
 };
 ```
 
-> Код функцій `parseColor()` та `buildColor()` ви знайдете у лістингу на сторінці [color.html](https://anton.shevchuk.name/book/code/color.html).
+> Код функцій `parseColor()` та `buildColor()` ви знайдете в лістингу на сторінці [color.html](https://anton.shevchuk.name/book/code/color.html).
 
 Результатом стане плавне перетікання вихідного кольору до червоного (`#F00` == `#FF0000` == `(255, 0, 0)`), наживо можна подивитися на сторінці [color.html](https://anton.shevchuk.name/book/code/color.html):
 
 {% embed url="https://anton.shevchuk.name/book/code/color.html" %}
 
 {% hint style="info" %}
-У плагіні [jQuery Color](https://github.com/jquery/jquery-color) для вирішення поставленої задачі використали [jQuery.cssHooks](https://api.jquery.com/jQuery.cssHooks/), але ми ж не шукаємо легких шляхів.
+У плагіні [jQuery Color](https://github.com/jquery/jquery-color) для розв'язання поставленої задачі використали [jQuery.cssHooks](https://api.jquery.com/jQuery.cssHooks/), але ми ж не шукаємо легких шляхів.
 {% endhint %}
 
 Ще хотів було розповісти про префільтри анімації, але документації немає, а як використовувати «в житті», я не здогадався, але трішки інформації таки накопав (код можна знайти у функції `Animation`):
@@ -125,9 +125,9 @@ jQuery.Animation.prefilter(function(element, props, opts) {
 
 {% embed url="https://anton.shevchuk.name/book/code/animate.prefilter.html" %}
 
-Про `jQuery.Animation.tweener` також багато не розкажеш, але приклад вдалося зробити трішки цікавішим – наведений код дозволяє анімувати ширину та висоту об'єкта за заданою діагоналлю:
+Про `jQuery.Animation.tweener` також багато не розкажеш, але приклад удалося зробити трішки цікавішим – наведений код дозволяє анімувати ширину та висоту об'єкта за заданою діагоналлю:
 
-> Обережно, для розуміння того, що відбувається, знадобляться знання геометрії за 8-й клас.
+> Обережно, для розуміння того, що відбувається, знадобляться знання геометрії за восьмий клас.
 
 ```javascript
 // створюємо підтримку нової властивості для анімації – diagonal

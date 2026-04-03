@@ -1,6 +1,6 @@
 # Смуга прокрутки
 
-Ну і остання пара методів про які я хотів би розповісти:
+Ну й остання пара методів, про які я хотів би розповісти:
 
 <table data-header-hidden><thead><tr><th width="271">метод</th><th>опис</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">scrollLeft()
 </code></pre></td><td>повертає значення «проскроленості» по горизонталі для першого елемента з вибірки</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">scrollLeft(value)
@@ -20,7 +20,7 @@ $('html').scrollTop();
 $('html').scrollTop(0);
 ```
 
-Значення `scrollTop` та `scrollLeft` піддаються анімації і не працюють для прихованих елементів DOM:
+Значення `scrollTop` та `scrollLeft` піддаються анімації та не працюють для прихованих елементів DOM:
 
 ```javascript
 $('html').animate({ scrollTop: '+=200px' });
@@ -30,4 +30,4 @@ $('html').animate({ scrollTop: '+=200px' });
 
 ***
 
-Методів реально багато, я й сам не завжди пам'ятаю що і для чого (особливо це стосується wrap-сімейства), тож не обтяжуйте себе запам'ятовуванням усього перерахованого, головне пам'ятати, що такі є, і тримати під рукою [документацію](https://api.jquery.com/category/manipulation/).
+Методів реально багато, я і сам не завжди пам'ятаю що та для чого (особливо це стосується wrap-сімейства), тож не обтяжуйте себе запам'ятовуванням усього перерахованого, головне пам'ятати, що такі є, і тримати під рукою [документацію](https://api.jquery.com/category/manipulation/).

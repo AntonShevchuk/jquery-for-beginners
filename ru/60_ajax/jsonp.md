@@ -33,7 +33,7 @@ alertMe({
 
 ```javascript
 $.ajax({
-  url: "http://domain.com/getUsers/?callback=?", // указываем URL
+  url: "https://domain.com/getUsers/?callback=?", // указываем URL
   dataType: "jsonp",
   success: function (data) {
     // обрабатываем данные

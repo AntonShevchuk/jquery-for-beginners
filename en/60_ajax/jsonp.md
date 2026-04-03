@@ -33,7 +33,7 @@ Well, that was the backstory — now let's get back to jQuery and the `ajax()` m
 
 ```javascript
 $.ajax({
-  url: "http://domain.com/getUsers/?callback=?", // specify the URL
+  url: "https://domain.com/getUsers/?callback=?", // specify the URL
   dataType: "jsonp",
   success: function (data) {
     // process the data

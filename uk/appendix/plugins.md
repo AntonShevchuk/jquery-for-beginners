@@ -2,13 +2,13 @@
 
 Хотілося б порекомендувати кілька плагінів, які варто завжди тримати під рукою:
 
-*   jQuery Color — якщо знадобиться анімація кольору фону, або шрифту, або ще чого-небудь –
+*   jQuery Color — якщо знадобиться, анімація кольору фону, або шрифту, або ще чого-небудь –
 
     [https://github.com/jquery/jquery-color](https://github.com/jquery/jquery-color)
-*   jQuery Cookie — зручна робота з «печеньками» в браузері –
+*   jQuery Cookie — зручна робота з «печивом» в браузері –
 
     [https://plugins.jquery.com/cookie/](https://plugins.jquery.com/cookie/)
-*   jQuery.easing — розширюємо стандартний набір функцій easing (читайте у главі [анімація](../40_animation/)) –
+*   jQuery.easing — розширюємо стандартний набір функцій easing (читайте у главі [анімація](../40_animation/README.md)) –
 
     [https://gsgd.co.uk/sandbox/jquery/easing/](https://gsgd.co.uk/sandbox/jquery/easing/)
 *   jQuery Form Plugin — спрощує роботу з формами, для швидкого старту саме те –

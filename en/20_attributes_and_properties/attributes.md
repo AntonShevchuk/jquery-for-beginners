@@ -31,7 +31,7 @@ $("a").attr("href");
 
 // change the link's URL and title
 $("a").attr({
-    "href": "http://anton.shevchuk.name",
+    "href": "https://anton.shevchuk.name",
     "title": "My Personal Blog"
 });
 

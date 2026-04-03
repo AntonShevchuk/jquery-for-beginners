@@ -31,7 +31,7 @@ $("a").attr("href");
 
 // зміна адреси та заголовку посилання
 $("a").attr({
-    "href": "http://anton.shevchuk.name",
+    "href": "https://anton.shevchuk.name",
     "title": "My Personal Blog"
 });
 

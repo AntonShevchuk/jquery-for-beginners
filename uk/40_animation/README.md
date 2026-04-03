@@ -1,6 +1,6 @@
 # 40% Анімація
 
-Бібліотека jQuery дозволяє дуже легко анімувати DOM-елементи, для цього передбачено кілька функцій. Але про все по порядку. Почнемо з простих `hide()` та `show()`, ці два методи, відповідно, приховують або відображають елементи:
+Бібліотека jQuery дозволяє дуже легко анімувати DOM-елементи, для цього передбачено кілька функцій. Але про все за порядком. Почнемо з простих `hide()` та `show()`, ці два методи, відповідно, приховують або відображають елементи:
 
 <table data-header-hidden><thead><tr><th width="282">метод</th><th>опис</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">hide()
 </code></pre></td><td>приховаємо елементи</td></tr><tr><td><pre class="language-javascript"><code class="lang-javascript">show()

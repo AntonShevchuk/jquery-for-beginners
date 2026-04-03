@@ -136,6 +136,6 @@ $("p").trigger("click.b");
 $("p").off("click.b");
 ```
 
-[Офіційна документація](https://api.jquery.com/event.namespace/) скупа щодо цього, і я сподіваюся, мої приклади допомогли вам краще розібратися у цьому питанні. Ну і ще один комплексний приклад роботи з `namespace`:
+[Офіційна документація](https://api.jquery.com/event.namespace/) скупа щодо цього, і я сподіваюся, мої приклади допомогли вам краще розібратись у цьому питанні. Ну й ще один комплексний приклад роботи з `namespace`:
 
 {% embed url="https://anton.shevchuk.name/book/code/events.namespace.html" %}
