@@ -3,7 +3,7 @@
 Переварили попередній розділ? Добре, тепер настала черга методів, які працюють з розмірами елементів.
 
 {% hint style="info" %}
-Але перш ніж продовжити, рекомендую освіжити в пам'яті інформацію про [обчислення висоти та ширини блочних елементів](../0\_html\_css\_javascript/advanced-css.md#size) ;)
+Але перш ніж продовжити, рекомендую освіжити в пам'яті інформацію про [обчислення висоти та ширини блокових елементів](../0\_html\_css\_javascript/advanced-css.md#size) ;)
 {% endhint %}
 
 <table data-header-hidden><thead><tr><th width="323">метод</th><th>опис</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">height()
@@ -26,7 +26,7 @@ $(document).height(); // висота HTML документа
 </code></pre></td><td><p></p><p>встановлює ширину всіх елементів у вибірці; <br><br>якщо значення ширини передано без зазначення одиниць виміру, то це будуть пікселі <code>px</code></p></td></tr></tbody></table>
 
 {% hint style="warning" %}
-Методи `height()` та `width()` **не змінюють** своєї поведінки залежно від обраної блочної моделі, тобто вони завжди повертають параметри області всередині `margin`, `padding` та `border` елемента.
+Методи `height()` та `width()` **не змінюють** своєї поведінки залежно від обраної блокової моделі, тобто вони завжди повертають параметри області всередині `margin`, `padding` та `border` елемента.
 {% endhint %}
 
 <table data-header-hidden><thead><tr><th width="323">метод</th><th>опис</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">innerHeight()
@@ -65,5 +65,5 @@ alert(`
 
 Щоб легше зрозуміти те, що відбувається, я ще трохи заморочився і переробив кілька картинок з офіційної документації в одну повноцінну ілюстрацію:
 
-![блочна модель](../../.gitbook/assets/box.png)
+![блокова модель](../../.gitbook/assets/box.png)
 
