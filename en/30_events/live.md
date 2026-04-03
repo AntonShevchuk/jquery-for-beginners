@@ -31,7 +31,7 @@ $("body").on("click", "a[href^=\\/]", function() {
 The differences aren't that many, let me explain what's happening:
 
 * first, a `click` event handler is attached to the `<body>` element
-* this handler will only fire when the event relates to the element&#x20;
+* this handler will only fire when the event originates from an element matching the selector `a[href^=\\/]`
 
 This scheme works based on event "bubbling", so by using `event.stopPropagation()` you can prevent "live" handlers from executing.
 

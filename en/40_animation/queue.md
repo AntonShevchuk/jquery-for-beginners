@@ -38,7 +38,7 @@ There's also a wonderful function `stop()` that lets you halt the current animat
 
 <table data-header-hidden><thead><tr><th width="275">parameter</th><th>purpose</th></tr></thead><tbody><tr><td><code>queue</code></td><td>queue name; <br>for working with the animation queue "<code>fx</code>" this parameter is omitted ("<code>fx</code>" is the default queue)</td></tr><tr><td><code>clearQueue</code></td><td>flag to clear the queue</td></tr><tr><td><code>jumpToEnd</code></td><td>apply the animation result, or not</td></tr></tbody></table>
 
-There's an example, and it demands your trial and error:
+Here's an example that begs for some experimentation:
 
 ```javascript
 // a very slow example

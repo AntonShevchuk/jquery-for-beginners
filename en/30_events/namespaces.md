@@ -58,7 +58,7 @@ When we trigger all handlers without a namespace:
 $("p").trigger("click.$");
 ```
 
-> Before version 1.9, you would use an exclamation mark with the event name `click!` for this purpose, and after — this workaround based on a quirk in one regular expression.
+> Before version 1.9, you would use an exclamation mark with the event name `click!` for this purpose, and after — this workaround exploiting a quirk in a regular expression.
 
 And the last case — removing an event handler bound to our "namespace":
 

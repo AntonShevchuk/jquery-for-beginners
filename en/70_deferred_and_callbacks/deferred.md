@@ -40,7 +40,7 @@ If we translate all this into plain English, we get the following scenario:
 * `resolve()` — we found out everything is fine
 * ~~if~~ everything is fine, run the function and output "`third`"
 
-Besides "happy end" scenarios, there are also sad stories when things don't go as we'd like:
+Besides "happy ending" scenarios, there are also sad stories when things don't go as we'd like:
 
 ```javascript
 // initialize the Deferred object
@@ -107,10 +107,10 @@ D.resolve("A-a-a")
 On top of that, there are [`resolveWith()`](https://api.jquery.com/deferred.resolveWith/) and [`rejectWith()`](https://api.jquery.com/deferred.rejectWith/) methods — they let you change the context of the called callback functions (i.e., inside them "`this`" will point to the specified context):
 
 ```javascript
-/// initialize the Deferred object
+// initialize the Deferred object
 var D = $.Deferred();
 
-// electric counter
+// a simple counter
 function Counter () {
   this.counter = 0
   this.tick = function() {

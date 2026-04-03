@@ -2,7 +2,7 @@
 
 Now let's get to CSS, and we'll start, perhaps, with decoding the abbreviation. CSS stands for Cascading Style Sheets, but:
 
-_-- Why is it called "cascading"?_ -- this is a question I often ask candidates during interviews. The answer is an analogy, because it's as solid as a perpendicular frog: imagine a cascade of waterfalls, and you're standing on one of the steps holding an inkwell, pouring its contents into the water -- all the water below will be colored by the ink. Same with CSS: if you set a style at a certain level, it flows down the "cascade" to the web page elements, coloring them with the "ink" of your style.&#x20;
+_-- Why is it called "cascading"?_ -- this is a question I often ask candidates during interviews. The answer is an analogy, and it's a pretty good one: imagine a cascade of waterfalls, and you're standing on one of the steps holding an inkwell, pouring its contents into the water -- all the water below will be colored by the ink. Same with CSS: if you set a style at a certain level, it flows down the "cascade" to the web page elements, coloring them with the "ink" of your style.&#x20;
 
 _-- Why do I need all this?_ -- when working with jQuery, you need to be able to read CSS rules fluently and compose CSS selectors to find the elements you need on the page. Practically every task you'll solve with jQuery starts with finding the right element on the page, so **knowing CSS selectors is mandatory**.
 
@@ -137,10 +137,10 @@ Going back to our waterfall analogy, imagine that on the next step someone pours
 5. and even browsers use `!important`, and such styles have practically the highest priority
 
 {% hint style="info" %}
-There are also priority rules for [CSS animations](https://developer.mozilla.org/ru/docs/Web/CSS/CSS\_animations/Using\_CSS\_animations) and [CSS transitions](https://developer.mozilla.org/ru/docs/Web/CSS/CSS\_transitions/Using\_CSS\_transitions), but that's a whole different story
+There are also priority rules for [CSS animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS\_animations/Using\_CSS\_animations) and [CSS transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS\_transitions/Using\_CSS\_transitions), but that's a whole different story
 {% endhint %}
 
-If your head isn't hurting yet, I'll also mention that when calculating whose rules take precedence, the [specificity](https://developer.mozilla.org/ru/docs/Web/CSS/Specificity) of selectors is analyzed, and here's how the math works:
+If your head isn't hurting yet, I'll also mention that when calculating whose rules take precedence, the [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) of selectors is analyzed, and here's how the math works:
 
 * the calculation uses three weight positions -- `[0:0:0]`
 * for each element identifier (`#id`) -- `[1:0:0]`

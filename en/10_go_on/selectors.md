@@ -52,7 +52,7 @@ $("a[href^=\\/]").addClass("internal");
 
 I'd also like to draw your attention to the [structural pseudo-classes](https://www.w3.org/TR/selectors-3/#structural-pseudos) from the [CSS3](https://www.w3.org/TR/selectors-3/) specification — there are lots of interesting and useful ones, for example:
 
-<table data-header-hidden><thead><tr><th width="321">selector</th><th></th></tr></thead><tbody><tr><td><code>$("ul li:first-child")</code></td><td>first child element</td></tr><tr><td><code>$("ul li:last-child")</code></td><td>last child element</td></tr><tr><td><code>$("ul li:nth-child(2n+1)")</code></td><td><p>selecting elements by a simple equation </p><p>you can read more in the article "<a href="https://web-standards.ru/articles/nth-child/">How nth-child works</a>"</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="321">selector</th><th></th></tr></thead><tbody><tr><td><code>$("ul li:first-child")</code></td><td>first child element</td></tr><tr><td><code>$("ul li:last-child")</code></td><td>last child element</td></tr><tr><td><code>$("ul li:nth-child(2n+1)")</code></td><td><p>selecting elements by a simple equation </p><p>you can read more in the article "<a href="https://css-tricks.com/how-nth-child-works/">How nth-child works</a>"</p></td></tr></tbody></table>
 
 ### Negation Pseudo-class
 
@@ -64,9 +64,7 @@ The negation pseudo-class `:not()` is one of a kind — it lets you select all e
 
 ### The "Election" Results
 
-When using the queries listed above you've found (or haven't found) DOM elements, a jQuery object will be returned containing an array of those elements. Here's what it looks like for the query
-
-:
+When using the queries listed above you've found (or haven't found) DOM elements, a jQuery object will be returned containing an array of those elements. Here's what it looks like:
 
 ![jQuery length](../../.gitbook/assets/jquery-length.png)
 

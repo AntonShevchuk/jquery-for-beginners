@@ -1,6 +1,6 @@
 # Writing Your Own Widget
 
-Your starting point when writing a jQuery UI widget will be the [official documentation](https://jqueryui.pbworks.com/w/page/12138135/Widget%20factory), but since not everyone's English is up to snuff, I'll try to translate and adapt the information presented there.
+Your starting point when writing a jQuery UI widget will be the [official documentation](https://jqueryui.pbworks.com/w/page/12138135/Widget%20factory), but since the docs can be a bit dry, I'll try to present and adapt the information in a more digestible way.
 
 The first thing worth mentioning is that the rules for writing jQuery plugins are too loose, which doesn't help their quality. When creating jQuery UI, they apparently decided to go the route of standardizing the plugin and widget writing process. I can't say how well the idea worked out, but things definitely got better than before. Let me start with the widget skeleton:
 
@@ -80,7 +80,7 @@ Alright, enough with the skeleton — time to move on to functionality. Let's ad
 
 ```javascript
 callMe:function() {
-  console.log("Allo?");
+  console.log("Hello?");
 }
 ```
 
@@ -123,13 +123,13 @@ this._trigger("incomingCall");
 // subscribe to an event during widget initialization
 $("#my").expose({
   incomingCall: function(ev) {
-    console.log("din-don");
+    console.log("ding-dong");
   }
 })
 
 // or after, using widget name + event name as the event name
 $("#my").on("exposeincomingCall", function() {
-  console.log("tru-lya-lya")
+  console.log("tra-la-la")
 });
 ```
 

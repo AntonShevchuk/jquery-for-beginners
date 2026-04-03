@@ -1,6 +1,6 @@
 # Dimensions
 
-Digested the previous section? Good, now it's time for the methods that work with element dimensions.
+Done with the previous section? Good, now it's time for the methods that work with element dimensions.
 
 {% hint style="info" %}
 But before we continue, I recommend refreshing your memory on [calculating the height and width of block elements](../0\_html\_css\_javascript/advanced-css.md#size) ;)
@@ -26,7 +26,7 @@ The `width()` and `width(width)` methods behave the same as `height()`, but work
 </code></pre></td><td><p></p><p>sets the width of all elements in the selection; <br><br>if the width value is passed without units, it will be in pixels <code>px</code></p></td></tr></tbody></table>
 
 {% hint style="warning" %}
-The `height()` and `width()` methods **do not change** their behavior depending on the chosen box model — they always return the dimensions of the area inside the element's `margin`, `padding`, and `border`.
+The `height()` and `width()` methods **do not change** their behavior depending on the box model — they always return the content area dimensions, excluding the element's `margin`, `padding`, and `border`.
 {% endhint %}
 
 <table data-header-hidden><thead><tr><th width="323">method</th><th>description</th></tr></thead><tbody><tr><td><pre class="language-javascript"><code class="lang-javascript">innerHeight()

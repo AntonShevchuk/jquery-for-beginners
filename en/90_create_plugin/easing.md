@@ -4,7 +4,7 @@ description: It's not easy
 
 # Easing
 
-Now let's revisit `easing` — I'll show you an example of a custom function that the animation will follow. To save my imagination, I borrowed an example from an article on the once-popular Habr about animation in the MooTools framework — a visual example of a heartbeat described by the following functions:
+Now let's revisit `easing` — I'll show you an example of a custom function that the animation will follow. To save my imagination, I borrowed an example from an article on [Habr](https://habr.com/) (a popular tech blog platform) about animation in the MooTools framework — a visual example of a heartbeat described by the following functions:
 
 <figure><img src="../../.gitbook/assets/easing.svg" alt=""><figcaption></figcaption></figure>
 

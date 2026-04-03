@@ -59,7 +59,7 @@ What if we need to modify the dropdown?
 Got it covered for every occasion:
 
 ```javascript
-// let's grab the select ahead of time, saving ink
+// let's grab the select ahead of time, for brevity
 let $select = $("form select[name=role]");
 
 // add a new item to the dropdown

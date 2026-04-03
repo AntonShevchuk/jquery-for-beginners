@@ -19,7 +19,7 @@ $("a.button").click(function(){ /* ... */ });
 // after
 var $button = $("a.button");
 $button.addClass("active");
-/* ... .*/
+/* ... */
 $button.click(function(){ /* ... */ });
 ```
 

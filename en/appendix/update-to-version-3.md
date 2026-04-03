@@ -4,7 +4,7 @@ First and foremost, this update affected old browser versions — specifically, 
 
 * Internet Explorer 9+
 * Chrome, Edge, Firefox, and Safari — thanks to built-in update systems in these browsers, the current and previous versions are supported
-* Opera — not a favorite, so only the current version is supported
+* Opera — not as popular, so only the current version is supported
 * Safari Mobile iOS 7+
 * Android 4+
 

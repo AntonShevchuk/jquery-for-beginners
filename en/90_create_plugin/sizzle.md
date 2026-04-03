@@ -38,8 +38,8 @@ $.extend($.expr.pseudos, {
     * @param elements array of all found DOM elements
     */
     test: function(element, i, match, elements) {
-        /* our code goes here, and it will decide who's guilty */
-        return true || false; // deliver the verdict
+        /* our code goes here, and it will decide which elements make the cut */
+        return true || false; // include or exclude the element
     }
 })
 ```

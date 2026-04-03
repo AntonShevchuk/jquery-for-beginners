@@ -1,6 +1,6 @@
 # 30% Events
 
-Before diving into this chapter, let's figure out what web page events actually are. So, events are any user actions — whether it's typing on the keyboard, scrolling the page, moving the mouse, and of course, "clicks".
+Before diving into this chapter, let's figure out what web page events actually are. So, events are user actions — typing on the keyboard, scrolling the page, moving the mouse, and of course, "clicking".
 
 > There are also events created by scripts, along with their handlers — triggers and handlers, but more on that a bit later.
 

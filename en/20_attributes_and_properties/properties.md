@@ -24,7 +24,7 @@ Let's see an example:
 
 {% embed url="https://anton.shevchuk.name/book/code/properties.html" %}
 
-See how the system works without our interference — click the checkbox, the selectbox, try submitting the form.
+See how the system works without our interference — click the checkbox, the dropdown, try submitting the form.
 
 Now let's run a series of experiments (don't forget to refresh the page):
 

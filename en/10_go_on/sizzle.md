@@ -4,7 +4,7 @@
 Skip this section and come back to it when you're curious about how element searching works inside `$(...)`
 {% endhint %}
 
-As its "search engine" for DOM elements, jQuery uses the [Sizzle](https://github.com/jquery/sizzle/wiki) library. This library was once an integral part of jQuery, then it "branched off" into a separate project, which is happily used by both jQuery itself and Dojo Toolkit. But enough backstory, let's get straight to the searching. For this purpose, JavaScript provides the following methods (not jQuery, not Sizzle, but JavaScript):
+As its "search engine" for DOM elements, jQuery uses the [Sizzle](https://github.com/jquery/sizzle/wiki) library. This library was once an integral part of jQuery, then it "branched off" into a separate project, used by both jQuery itself and Dojo Toolkit. But enough backstory, let's get straight to the searching. For this purpose, JavaScript provides the following methods (not jQuery, not Sizzle, but JavaScript):
 
 | `getElementById(id)`            | search by `id="…"`                    |
 | ------------------------------- | ------------------------------------ |

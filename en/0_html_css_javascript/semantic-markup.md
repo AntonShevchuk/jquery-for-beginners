@@ -10,7 +10,7 @@ Looking slightly ahead, it's worth mentioning HTML5 tags: `<article>`, `<aside>`
 >
 > And a couple more interesting resources for good measure:
 >
-> * [https://doka.guide/](https://doka.guide/) -- a reference for web developers
+> * [https://developer.mozilla.org/](https://developer.mozilla.org/en-US/docs/Web) -- a reference for web developers
 > * [https://web.dev/explore](https://web.dev/explore) -- there's a whole community here
 
 Try to avoid redundant elements on the page. Most HTML pages are guilty of having unnecessary block elements:

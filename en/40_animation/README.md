@@ -33,7 +33,7 @@ Moving on â€” the second parameter in these methods can be a callback function â
 // hide all images
 $("img").hide("slow", function() {
     // afterwards, show an alert
-    alert("Images was hidden")
+    alert("Images were hidden")
 });
 ```
 

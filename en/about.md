@@ -4,7 +4,7 @@ This textbook is suitable for both beginner web developers and advanced JavaScri
 
 The following formatting conventions are used throughout the book:
 
-**important** -- remember it, write it down, and always apply it
+**important** – remember it, write it down, and always apply it
 
 `<html>` -- source code within the text is highlighted in monotype font
 
@@ -29,4 +29,4 @@ you get the idea, right?
 
 > a note worth keeping in mind, or perhaps just worth reading and smiling at, will be formatted as an indented text block
 
-You can find code examples in the [author's repository](https://github.com/AntonShevchuk/jquery-for-beginners) on GitHub, and try them live on the [personal blog](https://anton.shevchuk.name/book/code/)
+You can find code examples in the [author's repository](https://github.com/AntonShevchuk/jquery-for-beginners) on GitHub, and try them live on the [personal blog](https://anton.shevchuk.name/book/code/).

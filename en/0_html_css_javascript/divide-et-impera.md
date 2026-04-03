@@ -12,7 +12,7 @@ Here are a few simple rules to remember:
 * never write inline styles `style="color:red"`
 * and one more time for good measure -- never write inline!
 
-Now let me show you some code that deserves some bone-breaking (this is an example of bad code, just to be clear for those who don't get hints):
+Now let me show you some code that deserves a good beating (this is an example of bad code, just to be clear for those who don't get hints):
 
 ```markup
 <script>
@@ -31,7 +31,7 @@ p { line-height:20px; }
 
 Not clear why this is bad? Looks like you've never had to redesign an existing website :) Let me clarify the problem: you get a task -- "_change the font color across all pages of the site_", and there could be three dozen of them. These might not even be just HTML files, but pages of some [template engine](https://en.wikipedia.org/wiki/Template_processor), scattered across twenty folders (and that's not even the worst case). And then it appears -- the red paragraph. The probability of hearing "words of encouragement" directed at the author of this code approaches one. The situation with inline event handlers is similar. Just imagine -- you're writing JavaScript code, everything's great, everything works, until you try to click on the red paragraph. It turns out to be beyond your control, living its own life, ignoring all your efforts. You look at the code, and once again someone hears those words...
 
-By following the four rules of the "red paragraph", you should end up with clean and predictable HTML:
+By following these four rules of the "red paragraph", you should end up with clean and predictable HTML:
 
 ```markup
 <div id="abzac">

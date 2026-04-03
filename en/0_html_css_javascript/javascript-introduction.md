@@ -270,7 +270,7 @@ JavaScript doesn't have all that many data types:
     > In the second example, a surprise may await us if something defines a variable named "undefined"; I'll tell you how to work around this "unpleasantness" later.
 
 {% hint style="info" %}
-I also want to draw your attention to type coercion in JavaScript. This is a topic that causes many questions for beginner developers, and bugs related to it will haunt you for the first six months of work. Open the tutorial page about [operator quirks](https://javascript.info/javascript-specials#%D0%BE%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BE%D0%B2), study it, and when you're ready, move on to the next exercise.
+I also want to draw your attention to type coercion in JavaScript. This is a topic that causes many questions for beginner developers, and bugs related to it will haunt you for the first six months of work. Open the tutorial page about [operator quirks](https://javascript.info/javascript-specials#operators), study it, and when you're ready, move on to the next exercise.
 {% endhint %}
 
 Take a careful look at the code and tell me -- what will the result be:
@@ -647,7 +647,7 @@ function myLog() {
 }
 ```
 
-* the `this` context can be changed using the [`bind()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global\_Objects/Function/bind), [`call()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global\_Objects/Function/call), and [`apply()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global\_Objects/Function/apply) functions
+* the `this` context can be changed using the [`bind()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Function/bind), [`call()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Function/call), and [`apply()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Function/apply) functions
 
 > Everything related to "window" only applies to browsers. And since this book is about jQuery, I'm not covering any other behavior. But I'm dropping a not-so-subtle hint that there's an alternative reality with its own "jQuery", and it goes by the name [cheerio](https://cheerio.js.org/) ;).
 

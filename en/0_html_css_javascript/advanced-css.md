@@ -1,6 +1,6 @@
 ---
 description: >-
-  This section will be useful for beginner layout developers and anyone who wants to do
+  This section will be useful for beginner front-end developers and anyone who wants to do
   a bit more than just showing an alert box on click.
 ---
 
@@ -43,10 +43,10 @@ This visual complexity is meant for humans; browsers don't care about it at all,
 
 ## Naming Classes and Identifiers <a href="#naming-convention" id="naming-convention"></a>
 
-I already touched on this topic when talking about HTML relevance, so here's the thing -- class names can even look like this: `b-service-list__column b-service-list__column_right` and that would be cool, and a "must have" -- but only within the scope of truly large projects. Actually, why am I going on about this? I'll just give you the [starting point](https://ru.bem.info/methodology/) for further study -- there's enough info there for another whole book ;)
+I already touched on this topic when talking about HTML markup, so here's the thing -- class names can even look like this: `b-service-list__column b-service-list__column_right` and that would be cool, and a "must have" -- but only within the scope of truly large projects. Actually, why am I going on about this? I'll just give you the [starting point](https://en.bem.info/methodology/) for further reading -- there's enough material there for a whole separate book ;)
 
 {% hint style="info" %}
-I recommend getting familiar with [BEM principles](https://ru.bem.info/methodology/) -- it's useful for broadening your horizons and leveling up your skills.
+I recommend getting familiar with [BEM principles](https://en.bem.info/methodology/) -- it's useful for broadening your horizons and leveling up your skills.
 {% endhint %}
 
 ## About Colors <a href="#css-colors" id="css-colors"></a>
@@ -105,8 +105,8 @@ Useful articles on the topic:
 
 * [Inline Elements List and What's New in HTML5](https://www.tutorialchip.com/tutorials/inline-elements-list-whats-new-in-html5/)
 * [HTML5 Block Level Elements: Complete List](https://www.tutorialchip.com/tutorials/html5-block-level-elements-complete-list/)
-* [Box Model](https://doka.guide/css/box-model/)
-* [CSS Layout: Flow](https://softwaremaniacs.org/blog/2005/08/27/css-layout-flow/)
+* [Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+* [CSS Layout: Normal Flow](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
 
 ## About Block Element Dimensions <a href="#size" id="size"></a>
 
@@ -120,8 +120,8 @@ This box model is called "content-box", and CSS3 introduced the ability to chang
 
 Useful articles on the topic:
 
-* [Block Elements](https://htmlbook.ru/content/blochnye-elementy)
-* [Inline Elements](https://htmlbook.ru/content/vstroennye-elementy)
+* [Block-level Elements](https://developer.mozilla.org/en-US/docs/Glossary/Block-level_content)
+* [Inline Elements](https://developer.mozilla.org/en-US/docs/Glossary/Inline-level_content)
 
 ## Floating Elements <a href="#float" id="float"></a>
 
@@ -134,10 +134,10 @@ I'd love to tell you more about the CSS `float` property, but I'm afraid the sto
 
 This is the "default" behavior, and you can see how it looks live in the example [css.float.html](https://anton.shevchuk.name/book/code/css.float.html).
 
-The main thing here is to understand what's happening and be able to control it -- that is, if you want to learn at least a little bit of layout :)
+The main thing here is to understand what's happening and be able to control it -- that is, if you want to learn at least a little bit about CSS layout :)
 
 {% hint style="info" %}
-Understanding how `float` works in CSS is one of the many skills a layout developer should have. For a general overview, I recommend the article "[CSS Layout: float](https://softwaremaniacs.org/blog/2005/12/01/css-layout-float/)"
+Understanding how `float` works in CSS is one of the many skills a front-end developer should have. For a general overview, I recommend the article "[CSS Layout: float](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats)"
 {% endhint %}
 
 ## Positioning <a href="#position" id="position"></a>
@@ -153,9 +153,9 @@ I'll just give you a brief intro to `position`. It has five main values:
 {% hint style="info" %}
 For self-study:
 
--- [CSS Layout: Positioning](https://softwaremaniacs.org/blog/2005/08/03/css-layout-positioning/) -- a slightly outdated article, but still here it is
+-- [CSS Layout: Positioning](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning) -- always up to date on MDN
 
--- [CSS-position](https://developer.mozilla.org/ru/docs/Web/CSS/position) -- docs on dev.mozilla.org are always up to date, not always translated though
+-- [CSS-position](https://developer.mozilla.org/en-US/docs/Web/CSS/position) -- docs on dev.mozilla.org are always up to date
 
--- [Doka CSS Reference](https://doka.guide/css/) -- lots of CSS stuff, explained in plain language
+-- [MDN CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS) -- the definitive CSS reference
 {% endhint %}

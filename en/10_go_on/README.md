@@ -9,7 +9,7 @@ We've got the basics down, now it's time to move on to actually studying jQuery.
     ```
 
     > This approach is great for working offline or when you have a really slow internet connection. Pay special attention to the path — scripts are collected in a separate folder "`js`". And this is no accident, you need to train yourself to keep things organized.
-2.  Use a [CDN](https://en.wikipedia.org/wiki/Content\_Delivery\_Network). I prefer the service from [Google](https://developers.google.com/speed/libraries/#jquery), but there's also [Microsoft](https://docs.microsoft.com/en-us/aspnet/ajax/cdn/overview), as well as the universal [https://cdnjs.com/](https://cdnjs.com/libraries/jquery) and [https://www.jsdelivr.com/](https://www.jsdelivr.com/package/npm/jquery) — many of them, by the way, host lots of popular plugins, and a special thanks to them for that.
+2.  Use a [CDN](https://en.wikipedia.org/wiki/Content\_Delivery\_Network). I prefer the service from [Google](https://developers.google.com/speed/libraries/#jquery), but there's also [Microsoft](https://docs.microsoft.com/en-us/aspnet/ajax/cdn/overview), as well as the universal [https://cdnjs.com/](https://cdnjs.com/libraries/jquery) and [https://www.jsdelivr.com/](https://www.jsdelivr.com/package/npm/jquery) — many of them also host lots of popular plugins, which is pretty nice of them.
 
     > There's also a CDN provided by the jQuery developers themselves, but it's far from as advanced as the others, and from my experience it's had stability issues, so be careful when working with it – [https://releases.jquery.com/](https://releases.jquery.com/)
 
@@ -21,6 +21,6 @@ We've got the basics down, now it's time to move on to actually studying jQuery.
     > If you request the file at `jquery@3.7/dist/jquery.min.js`, you'll get the latest available version from the 3.7.x branch — at the time of writing, that was version 3.7.1, and the headers will indicate that this file will be cached on the browser side for 7 days.
     >
     > Same situation with the request `jquery@3/dist/jquery.min.js` — it will return the latest available version from the 3.x.x branch, cached for 7 days.
-3.  Using the [NPM](https://www.npmjs.com/) package manager, install [the library we need](https://www.npmjs.com/package/jquery). This manager lets you install all sorts of libraries and packages — you can't keep track of them all.
+3.  Using the [NPM](https://www.npmjs.com/) package manager, install [the library we need](https://www.npmjs.com/package/jquery). This package manager lets you install all sorts of libraries and packages — there are way too many to keep track of.
 
     > Why do I mention this package manager? Well, maybe one of you will be curious enough to figure out how to work with it on your own :)
